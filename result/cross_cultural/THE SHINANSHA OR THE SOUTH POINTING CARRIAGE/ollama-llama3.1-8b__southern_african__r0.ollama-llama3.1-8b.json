@@ -1,0 +1,133 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Origin Myth",
+  "SETTING_DOMAIN": "Spiritual and Religious",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Kotei",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "from just ruler to wise and just ruler",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Shiyu",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Kotei's mother",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "the world",
+    "the land",
+    "the heavens"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Kotei's mother had a vision that foretold the birth of a great son.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Kotei's mother"
+      ],
+      "LOCATION": "the world",
+      "CAUSE": "Story opening",
+      "EFFECT": "Kotei's birth is foretold",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Kotei grew up to be a just and fair ruler, loved by his people.",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Kotei"
+      ],
+      "LOCATION": "the land",
+      "CAUSE": "Kotei's birth",
+      "EFFECT": "Kotei becomes a just ruler",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Kotei invented the shinansha, a chariot with a figure that always pointed south, guiding him through the thickest of fogs.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Kotei"
+      ],
+      "LOCATION": "the land",
+      "CAUSE": "Kotei's need for a solution",
+      "EFFECT": "Kotei has a new tool to defeat Shiyu",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Kotei's armies were able to cross the river and attack Shiyu's headquarters.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Kotei",
+        "Shiyu"
+      ],
+      "LOCATION": "the land",
+      "CAUSE": "Kotei's use of the shinansha",
+      "EFFECT": "Shiyu is defeated",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "A great Dragon came from the sky, to take Kotei back to the heavens.",
+      "FUNCTION": "RESURRECTION",
+      "CHARACTERS": [
+        "Kotei"
+      ],
+      "LOCATION": "the heavens",
+      "CAUSE": "Kotei's death",
+      "EFFECT": "Kotei is taken home to the ancestors",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Kotei",
+      "TARGET": "Shiyu",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Kotei",
+      "TARGET": "Kotei's mother",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "QUEST",
+    "HELPER_APPEARS",
+    "ORDEAL",
+    "RESURRECTION"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 2952,
+    "excerpt_chars": 2952
+  }
+}

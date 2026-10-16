@@ -1,0 +1,174 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Tragedy",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Dorothea Brooke",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "from idealistic to practical, from romantic to realistic",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Celia Brooke",
+      "ROLE": "DEUTERAGONIST",
+      "TRANSFORMATION": "from innocent to worldly, from naive to experienced",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Mr. Casaubon",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "from self-righteous to bitter, from proud to resentful",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 4
+    },
+    {
+      "CHARACTER": "Will Ladislaw",
+      "ROLE": "TRICKSTER",
+      "TRANSFORMATION": "from charming to manipulative, from idealistic to cynical",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 3
+    },
+    {
+      "CHARACTER": "Sir James Chettam",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "from disapproving to reconciling, from proud to humble",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Mr. Brooke",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "from self-interested to generous, from proud to humble",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    }
+  ],
+  "LOCATIONS": [
+    "Tipton Grange",
+    "Freshitt Hall"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Dorothea and Celia move to Tipton Grange with their uncle",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Dorothea Brooke",
+        "Celia Brooke",
+        "Mr. Brooke"
+      ],
+      "LOCATION": "Tipton Grange",
+      "CAUSE": "Story opening",
+      "EFFECT": "The sisters begin their new life with their uncle",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Dorothea meets Will Ladislaw and is drawn to him",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Dorothea Brooke",
+        "Will Ladislaw"
+      ],
+      "LOCATION": "Freshitt Hall",
+      "CAUSE": "Dorothea's idealism and romanticism",
+      "EFFECT": "Dorothea becomes infatuated with Will",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Mr. Casaubon becomes jealous of Will and Dorothea's relationship",
+      "FUNCTION": "BETRAYAL",
+      "CHARACTERS": [
+        "Mr. Casaubon",
+        "Dorothea Brooke",
+        "Will Ladislaw"
+      ],
+      "LOCATION": "Tipton Grange",
+      "CAUSE": "Mr. Casaubon's possessiveness and jealousy",
+      "EFFECT": "Mr. Casaubon becomes increasingly bitter and resentful",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Dorothea marries Mr. Casaubon, despite her reservations",
+      "FUNCTION": "SACRIFICE",
+      "CHARACTERS": [
+        "Dorothea Brooke",
+        "Mr. Casaubon"
+      ],
+      "LOCATION": "Tipton Grange",
+      "CAUSE": "Dorothea's sense of duty and obligation",
+      "EFFECT": "Dorothea sacrifices her happiness and autonomy",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Dorothea's husband dies, and she is free to marry Will",
+      "FUNCTION": "RESURRECTION",
+      "CHARACTERS": [
+        "Dorothea Brooke",
+        "Will Ladislaw"
+      ],
+      "LOCATION": "Tipton Grange",
+      "CAUSE": "Mr. Casaubon's death",
+      "EFFECT": "Dorothea is finally free to pursue her true love",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Dorothea Brooke",
+      "TARGET": "Will Ladislaw",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Mr. Casaubon",
+      "TARGET": "Dorothea Brooke",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Sir James Chettam",
+      "TARGET": "Dorothea Brooke",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Mr. Brooke",
+      "TARGET": "Dorothea Brooke",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Will Ladislaw",
+      "TARGET": "Dorothea Brooke",
+      "TYPE": "DECEIVES"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "HELPER_APPEARS",
+    "BETRAYAL",
+    "SACRIFICE",
+    "RESURRECTION"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 1790395,
+    "excerpt_chars": 11933
+  }
+}

@@ -1,0 +1,168 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Spiritual and Religious",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Watanabe",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "learns the true nature of the ogre and the old woman",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "The ogre",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "revealed to be the old woman in disguise",
+      "TRANSFORMATION_TYPE": "REVERSAL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "The old woman",
+      "ROLE": "TRICKSTER",
+      "TRANSFORMATION": "revealed to be the ogre in disguise",
+      "TRANSFORMATION_TYPE": "REVERSAL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Hojo",
+      "ROLE": "DEUTERAGONIST",
+      "TRANSFORMATION": "encourages Watanabe to investigate the ogre",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Raiko",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "defeated the ogres in Oeyama",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Kyoto",
+    "Gate of Rashomon",
+    "Watanabe's home"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "The people of Kyoto are terrified by the ogre's appearance",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Watanabe",
+        "Hojo",
+        "Raiko"
+      ],
+      "LOCATION": "Kyoto",
+      "CAUSE": "Story opening",
+      "EFFECT": "The people are in fear",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Watanabe and his companions decide to investigate the ogre",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Watanabe",
+        "Hojo",
+        "Raiko"
+      ],
+      "LOCATION": "Kyoto",
+      "CAUSE": "The people are in fear",
+      "EFFECT": "Watanabe decides to investigate",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Watanabe and the ogre fight at the Gate of Rashomon",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Watanabe",
+        "The ogre"
+      ],
+      "LOCATION": "Gate of Rashomon",
+      "CAUSE": "Watanabe investigates the ogre",
+      "EFFECT": "The ogre escapes",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "The old woman visits Watanabe and requests to see the ogre's arm",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Watanabe",
+        "The old woman"
+      ],
+      "LOCATION": "Watanabe's home",
+      "CAUSE": "Watanabe has the ogre's arm",
+      "EFFECT": "The old woman requests to see the arm",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "The old woman reveals her true nature and attacks Watanabe",
+      "FUNCTION": "BETRAYAL",
+      "CHARACTERS": [
+        "Watanabe",
+        "The old woman"
+      ],
+      "LOCATION": "Watanabe's home",
+      "CAUSE": "The old woman requests to see the arm",
+      "EFFECT": "The ogre escapes",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Watanabe",
+      "TARGET": "The ogre",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Watanabe",
+      "TARGET": "The old woman",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "The ogre",
+      "TARGET": "Watanabe",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Hojo",
+      "TARGET": "Watanabe",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Raiko",
+      "TARGET": "Watanabe",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "QUEST",
+    "ORDEAL",
+    "HELPER_APPEARS",
+    "BETRAYAL"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.5,
+    "seed": 1,
+    "attempts": 1,
+    "source_chars": 11415,
+    "excerpt_chars": 11415
+  }
+}

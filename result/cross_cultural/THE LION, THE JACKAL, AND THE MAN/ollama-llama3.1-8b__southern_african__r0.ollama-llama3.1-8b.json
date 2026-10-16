@@ -1,0 +1,165 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Lion",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "learns humility and respect for others",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Jackal",
+      "ROLE": "TRICKSTER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Hunter",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Old Man",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Boy",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "savannah"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Lion and Jackal walk the savannah, discussing the affairs of the land.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Lion",
+        "Jackal"
+      ],
+      "LOCATION": "savannah",
+      "CAUSE": "Story opening",
+      "EFFECT": "Sets the scene for the story",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Jackal leads Lion to a young boy, saying he is not the strongest of all.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Lion",
+        "Jackal",
+        "Boy"
+      ],
+      "LOCATION": "savannah",
+      "CAUSE": "Jackal's trick",
+      "EFFECT": "Lion is humbled",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Jackal leads Lion to an old man, saying he is not the strongest of all.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Lion",
+        "Jackal",
+        "Old Man"
+      ],
+      "LOCATION": "savannah",
+      "CAUSE": "Jackal's trick",
+      "EFFECT": "Lion is humbled",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Lion challenges the hunter, saying he is the strongest of all.",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Lion",
+        "Hunter"
+      ],
+      "LOCATION": "savannah",
+      "CAUSE": "Lion's boast",
+      "EFFECT": "The hunter accepts the challenge",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "The hunter defeats Lion, and Lion learns humility.",
+      "FUNCTION": "SACRIFICE",
+      "CHARACTERS": [
+        "Lion",
+        "Hunter"
+      ],
+      "LOCATION": "savannah",
+      "CAUSE": "The hunter's victory",
+      "EFFECT": "Lion is humbled and learns respect for others",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Jackal",
+      "TARGET": "Lion",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "Hunter",
+      "TARGET": "Lion",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Lion",
+      "TARGET": "Hunter",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Jackal",
+      "TARGET": "Hunter",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Old Man",
+      "TARGET": "Lion",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "TRICKSTER",
+    "QUEST",
+    "SACRIFICE"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 2834,
+    "excerpt_chars": 2834
+  }
+}

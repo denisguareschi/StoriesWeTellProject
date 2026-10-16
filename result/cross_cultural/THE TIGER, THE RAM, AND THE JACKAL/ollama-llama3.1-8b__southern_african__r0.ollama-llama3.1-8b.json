@@ -1,0 +1,145 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Tiger",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "Tiger learns to overcome his fear through the help of Jackal",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Ram",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "Ram outsmarts the trickster duo",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Jackal",
+      "ROLE": "TRICKSTER",
+      "TRANSFORMATION": "Jackal's cunning plan backfires",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    }
+  ],
+  "LOCATIONS": [
+    "the heart of our beautiful land",
+    "the kraal of Ram",
+    "Tiger's home",
+    "Ram's kraal",
+    "the grasslands"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Tiger returns from hunting, met with a stern gaze by Ram",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Tiger",
+        "Ram"
+      ],
+      "LOCATION": "the kraal of Ram",
+      "CAUSE": "Story opening",
+      "EFFECT": "Tiger flees in fear",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Tiger and Jackal plan to eat Ram",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Tiger",
+        "Jackal"
+      ],
+      "LOCATION": "Tiger's home",
+      "CAUSE": "Tiger's fear of Ram",
+      "EFFECT": "The duo sets off towards Ram's kraal",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Ram outsmarts the trickster duo",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Ram",
+        "Tiger",
+        "Jackal"
+      ],
+      "LOCATION": "Ram's kraal",
+      "CAUSE": "Ram's clever plan",
+      "EFFECT": "Tiger and Jackal are confused and flee",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Tiger and Jackal are chased by Ram",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Tiger",
+        "Jackal",
+        "Ram"
+      ],
+      "LOCATION": "the grasslands",
+      "CAUSE": "Ram's pursuit",
+      "EFFECT": "Tiger and Jackal are exhausted and battered",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Tiger and Jackal return home, exhausted and battered",
+      "FUNCTION": "RETURN",
+      "CHARACTERS": [
+        "Tiger",
+        "Jackal"
+      ],
+      "LOCATION": "Tiger's home",
+      "CAUSE": "Tiger's fear and Jackal's cunning plan backfiring",
+      "EFFECT": "The story concludes",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Ram",
+      "TARGET": "Tiger",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Jackal",
+      "TARGET": "Tiger",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Ram",
+      "TARGET": "Jackal",
+      "TYPE": "OPPOSES"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "TRICKSTER",
+    "ORDEAL",
+    "RETURN"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 3026,
+    "excerpt_chars": 3026
+  }
+}

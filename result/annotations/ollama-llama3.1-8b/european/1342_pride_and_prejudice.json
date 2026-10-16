@@ -1,0 +1,198 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Tragedy",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Elizabeth Bennet",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "learns to navigate complex relationships and societal expectations",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Mr. Darcy",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "overcomes his pride and learns to appreciate Elizabeth",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Jane Bennet",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "meets and falls in love with Mr. Bingley",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 2
+    },
+    {
+      "CHARACTER": "Mr. Bingley",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "falls in love with Jane Bennet",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 2
+    },
+    {
+      "CHARACTER": "Lydia Bennet",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "gets married to Wickham and learns to be more responsible",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Mr. Wickham",
+      "ROLE": "TRICKSTER",
+      "TRANSFORMATION": "gets married to Lydia and learns to be more responsible",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Lady Catherine",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "overcomes her pride and learns to accept Elizabeth",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Mr. Bennet",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "learns to appreciate his daughters and their relationships",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Mrs. Bennet",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "learns to be more responsible and considerate of her daughters",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    }
+  ],
+  "LOCATIONS": [
+    "Hertfordshire",
+    "Netherfield Park",
+    "Rosings",
+    "Pemberley"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "The Bennet family is introduced, and Mrs. Bennet is eager to marry off her daughters.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Elizabeth Bennet",
+        "Mrs. Bennet"
+      ],
+      "LOCATION": "Hertfordshire",
+      "CAUSE": "Story opening",
+      "EFFECT": "The Bennet family is introduced, and the reader is aware of the societal pressures on the daughters.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Mr. Bingley moves into Netherfield Park, and the Bennet family is eager to meet him.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Mr. Bingley",
+        "Jane Bennet",
+        "Elizabeth Bennet"
+      ],
+      "LOCATION": "Netherfield Park",
+      "CAUSE": "Mr. Bingley's arrival",
+      "EFFECT": "The Bennet family meets Mr. Bingley, and Jane and Elizabeth are introduced to him.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Mr. Darcy is introduced, and he is shown to be proud and dismissive of the Bennet family.",
+      "FUNCTION": null,
+      "CHARACTERS": [
+        "Mr. Darcy",
+        "Elizabeth Bennet"
+      ],
+      "LOCATION": "Rosings",
+      "CAUSE": "Mr. Darcy's arrival",
+      "EFFECT": "Mr. Darcy is introduced as a proud and dismissive character, and Elizabeth is aware of his disdain for her family.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Lydia Bennet runs off with Mr. Wickham, causing a scandal and embarrassment for the Bennet family.",
+      "FUNCTION": "BETRAYAL",
+      "CHARACTERS": [
+        "Lydia Bennet",
+        "Mr. Wickham"
+      ],
+      "LOCATION": "Hertfordshire",
+      "CAUSE": "Lydia's actions",
+      "EFFECT": "The Bennet family is embarrassed and scandalized by Lydia's actions, and Mr. Darcy is forced to intervene.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Mr. Darcy proposes to Elizabeth, and she accepts, leading to a reconciliation between the two families.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Mr. Darcy",
+        "Elizabeth Bennet"
+      ],
+      "LOCATION": "Pemberley",
+      "CAUSE": "Mr. Darcy's proposal",
+      "EFFECT": "The two families are reconciled, and Elizabeth and Mr. Darcy are married.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Elizabeth Bennet",
+      "TARGET": "Mr. Darcy",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Mr. Darcy",
+      "TARGET": "Elizabeth Bennet",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Jane Bennet",
+      "TARGET": "Mr. Bingley",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Lydia Bennet",
+      "TARGET": "Mr. Wickham",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Lady Catherine",
+      "TARGET": "Elizabeth Bennet",
+      "TYPE": "OPPOSES"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "HELPER_APPEARS",
+    "BETRAYAL",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "issues": [
+      "FUNCTION invalid in event 3: 'ANTAGONIST'"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 684742,
+    "excerpt_chars": 11753
+  }
+}

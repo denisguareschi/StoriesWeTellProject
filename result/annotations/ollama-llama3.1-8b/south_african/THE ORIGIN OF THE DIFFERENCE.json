@@ -1,0 +1,145 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Origin Myth",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "The Blind Man",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "regains sight and becomes a leader",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 3
+    },
+    {
+      "CHARACTER": "The Hunter",
+      "ROLE": "DEUTERAGONIST",
+      "TRANSFORMATION": "learns to respect the Blind Man's knowledge",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "The Bushman",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "the earth",
+    "the hills"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "In the beginning there were two.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "The Blind Man",
+        "The Hunter"
+      ],
+      "LOCATION": "the earth",
+      "CAUSE": "Story opening",
+      "EFFECT": "The two men are introduced.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "The hunter found at last a hole in the earth from which game proceeded and killed the young.",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "The Hunter"
+      ],
+      "LOCATION": "the earth",
+      "CAUSE": "The hunter's quest for food",
+      "EFFECT": "The hunter kills the young animals.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "The blind man, feeling and smelling them, said, 'They are not game, but cattle.'",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "The Blind Man"
+      ],
+      "LOCATION": "the earth",
+      "CAUSE": "The Blind Man's discovery",
+      "EFFECT": "The Blind Man regains sight and becomes a leader.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "When the other, who now with great trouble had to seek his game, came and saw this, he wanted to anoint himself also.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "The Hunter",
+        "The Blind Man"
+      ],
+      "LOCATION": "the earth",
+      "CAUSE": "The Hunter's trickery",
+      "EFFECT": "The Hunter is burnt by the fire.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Hence sprung the race of Bushmen.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "The Blind Man",
+        "The Hunter",
+        "The Bushman"
+      ],
+      "LOCATION": "the hills",
+      "CAUSE": "The Blind Man's leadership",
+      "EFFECT": "The Bushman race is established.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "The Blind Man",
+      "TARGET": "The Hunter",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "The Blind Man",
+      "TARGET": "The Bushman",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "The Hunter",
+      "TARGET": "The Blind Man",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "The Hunter",
+      "TARGET": "The Bushman",
+      "TYPE": "OPPOSES"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "QUEST",
+    "HELPER_APPEARS",
+    "TRICKSTER",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 1112,
+    "excerpt_chars": 1112
+  }
+}

@@ -1,0 +1,169 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Tragedy",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Sir Walter Elliot",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "His arrogance and vanity are revealed, leading to his downfall.",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Elizabeth Elliot",
+      "ROLE": "DEUTERAGONIST",
+      "TRANSFORMATION": "Her vanity and pride are exposed, leading to her own downfall.",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Anne Elliot",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "Her quiet nature and love for others are revealed, leading to her own happiness.",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Captain Wentworth",
+      "ROLE": "TRICKSTER",
+      "TRANSFORMATION": "His love for Anne is revealed, leading to his own happiness.",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Captain Benwick",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "His love for Anne is revealed, leading to his own happiness.",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Musgrove family",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Kellynch Hall"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "The Elliot family's esteemed heritage is revealed through the ancient stones of Kellynch Hall.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Sir Walter Elliot"
+      ],
+      "LOCATION": "Kellynch Hall",
+      "CAUSE": "Story opening",
+      "EFFECT": "The reader is introduced to the Elliot family's noble history.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "The arrival of the Musgrove family brings a much-needed injection of vitality to the stagnant halls of Kellynch.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Musgrove family"
+      ],
+      "LOCATION": "Kellynch Hall",
+      "CAUSE": "The Elliot family's fortunes are shifting.",
+      "EFFECT": "Anne finds a sense of peace amidst the chaos.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "The news of Captain Wentworth's return from the war sends shockwaves through the community.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Captain Wentworth"
+      ],
+      "LOCATION": "Kellynch Hall",
+      "CAUSE": "The Elliot family's world is turned upside down.",
+      "EFFECT": "Anne's unrequited love is revealed.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "The true nature of the Elliot family's dynamics is revealed through their relationships and obligations.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Sir Walter Elliot",
+        "Elizabeth Elliot",
+        "Anne Elliot"
+      ],
+      "LOCATION": "Kellynch Hall",
+      "CAUSE": "The Elliot family's attention turns to Mary's health.",
+      "EFFECT": "The reader is introduced to the complex web of love, duty, and obligation within the Elliot family.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "The Elliot family's fortunes continue to shift, revealing the true nature of their relationships and obligations.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Sir Walter Elliot",
+        "Elizabeth Elliot",
+        "Anne Elliot",
+        "Captain Wentworth",
+        "Captain Benwick"
+      ],
+      "LOCATION": "Kellynch Hall",
+      "CAUSE": "The Elliot family's dynamics are revealed.",
+      "EFFECT": "The reader is introduced to the quiet, unassuming love that has been present all along.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Sir Walter Elliot",
+      "TARGET": "Elizabeth Elliot",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Sir Walter Elliot",
+      "TARGET": "Anne Elliot",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Captain Wentworth",
+      "TARGET": "Anne Elliot",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Captain Benwick",
+      "TARGET": "Anne Elliot",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "HELPER_APPEARS",
+    "ORDEAL",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "issues": [
+      "event participant 'Musgrove family' not in CHARACTERS: added as SECONDARY"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 3964,
+    "excerpt_chars": 3964
+  }
+}

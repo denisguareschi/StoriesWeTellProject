@@ -1,0 +1,164 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Hero's Journey",
+  "SETTING_DOMAIN": "Spiritual and Religious",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Kotei",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "From troubled emperor to victorious inventor and ascended divine ruler.",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Shiyu",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "None",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Dragon",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "None",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Empress",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "None",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Kotei's mother",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "None",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Kotei's Palace",
+    "Takuroku",
+    "Battlefield",
+    "River",
+    "Heaven"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Kotei's early reign is troubled by the rebel Shiyu, a wicked magician.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Kotei",
+        "Shiyu"
+      ],
+      "LOCATION": "Kotei's Palace",
+      "CAUSE": "Story opening",
+      "EFFECT": "Kotei declares war against Shiyu.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Kotei attacks Shiyu, but Shiyu uses a dense fog to confuse the royal army and retreats.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Kotei",
+        "Shiyu"
+      ],
+      "LOCATION": "Takuroku",
+      "CAUSE": "Kotei declared war.",
+      "EFFECT": "Kotei returns to his Palace to devise a solution.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Kotei invents the shinansha, enabling his army to navigate the fog and pursue Shiyu to a river.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Kotei",
+        "Shiyu"
+      ],
+      "LOCATION": "Battlefield",
+      "CAUSE": "Kotei's determination to conquer Shiyu after the first defeat.",
+      "EFFECT": "Shiyu is driven to a river, but Kotei's march is checked.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Kotei invents the boat, crosses the river, and achieves a complete victory over Shiyu, ending the war.",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Kotei",
+        "Shiyu"
+      ],
+      "LOCATION": "River",
+      "CAUSE": "Kotei's march was checked by the river, and he observed a spider.",
+      "EFFECT": "Peace and prosperity are secured throughout the land.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Kotei ascends to heaven on a great Dragon, signifying the end of his earthly reign.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Kotei",
+        "Dragon",
+        "Empress"
+      ],
+      "LOCATION": "Kotei's Palace",
+      "CAUSE": "Kotei's long and successful reign was finished.",
+      "EFFECT": "Kotei becomes a revered figure, leaving sacred relics.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Kotei",
+      "TARGET": "Shiyu",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Dragon",
+      "TARGET": "Kotei",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Kotei",
+      "TARGET": "Empress",
+      "TYPE": "BONDS_WITH"
+    },
+    {
+      "SOURCE": "Kotei's mother",
+      "TARGET": "Kotei",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "ORDEAL",
+    "HELPER_APPEARS",
+    "QUEST",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "gemini:gemini-2.5-flash",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 6387,
+    "excerpt_chars": 6387
+  }
+}

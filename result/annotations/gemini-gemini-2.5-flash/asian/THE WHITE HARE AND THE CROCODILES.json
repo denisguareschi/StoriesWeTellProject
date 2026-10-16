@@ -1,0 +1,155 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Cautionary Tale",
+  "SETTING_DOMAIN": "Historical and Geographical",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "White Hare",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "From cunning and arrogant to humble, repentant, and healed.",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Crocodiles",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "NONE",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Okuni-nushi-no-Mikoto",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "From unrecognized attendant to revered god and husband.",
+      "TRANSFORMATION_TYPE": "REVERSAL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Spiteful King's Son",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "NONE",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Oki Island",
+    "Inaba",
+    "The Sea",
+    "Pond"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "The White Hare, desiring to cross to Inaba, plans to trick the crocodiles.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "White Hare",
+        "Crocodiles"
+      ],
+      "LOCATION": "Oki Island",
+      "CAUSE": "Story opening",
+      "EFFECT": "The hare engages a crocodile in conversation.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "The White Hare successfully deceives the crocodiles into forming a bridge and crosses to Inaba.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "White Hare",
+        "Crocodiles"
+      ],
+      "LOCATION": "The Sea",
+      "CAUSE": "The hare's cunning plan and the crocodile's simple-mindedness.",
+      "EFFECT": "The hare reaches the mainland but then jeers at the crocodiles.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "The White Hare jeers at the crocodiles, who then take revenge by pulling out all his fur.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "White Hare",
+        "Crocodiles"
+      ],
+      "LOCATION": "Inaba",
+      "CAUSE": "The hare's arrogance and the crocodiles' anger at being tricked.",
+      "EFFECT": "The hare is left severely injured and in great pain.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "A spiteful King's son deceives the injured hare with harmful advice, worsening his condition.",
+      "FUNCTION": "BETRAYAL",
+      "CHARACTERS": [
+        "White Hare",
+        "Spiteful King's Son"
+      ],
+      "LOCATION": "Inaba",
+      "CAUSE": "The hare's vulnerability and the spiteful King's son's malicious disposition.",
+      "EFFECT": "The hare's pain intensifies, and he is further distressed.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Okuni-nushi-no-Mikoto provides the hare with a true remedy, leading to his healing and repentance.",
+      "FUNCTION": "TRANSFORMATION",
+      "CHARACTERS": [
+        "White Hare",
+        "Okuni-nushi-no-Mikoto"
+      ],
+      "LOCATION": "Inaba",
+      "CAUSE": "Okuni-nushi-no-Mikoto's kindness and the hare's honest confession and repentance.",
+      "EFFECT": "The hare is fully healed, learns his lesson, and recognizes Okuni-nushi-no-Mikoto's true nature.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "White Hare",
+      "TARGET": "Crocodiles",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "Crocodiles",
+      "TARGET": "White Hare",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Spiteful King's Son",
+      "TARGET": "White Hare",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "Okuni-nushi-no-Mikoto",
+      "TARGET": "White Hare",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "TRICKSTER",
+    "ORDEAL",
+    "BETRAYAL",
+    "TRANSFORMATION"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "gemini:gemini-2.5-flash",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 11051,
+    "excerpt_chars": 11051
+  }
+}

@@ -1,0 +1,171 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Spiritual and Religious",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Little Brother Monkey",
+      "ROLE": "TRICKSTER",
+      "TRANSFORMATION": "from cunning to punished",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Elder Crab",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "from trusting to betrayed",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 2
+    },
+    {
+      "CHARACTER": "Young Crab",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "from avenger to restorer of balance",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Stone Grandfather",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "null",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Buzzing One the Bee",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "null",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Hard-Shell Brother the Chestnut",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "null",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Singing River",
+    "Great Forest",
+    "Young Crab's home"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Little Brother Monkey met Elder Crab by the Singing River one crisp autumn day.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Little Brother Monkey",
+        "Elder Crab"
+      ],
+      "LOCATION": "Singing River",
+      "CAUSE": "Story opening",
+      "EFFECT": "Elder Crab found a sweet berry cake.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Monkey devoured the cake, giving the seed reluctantly, and they parted.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Little Brother Monkey",
+        "Elder Crab"
+      ],
+      "LOCATION": "Singing River",
+      "CAUSE": "Elder Crab trusted Monkey",
+      "EFFECT": "Elder Crab was betrayed.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Elder Crab watched the fruits ripen, but his legs could not climb.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Elder Crab"
+      ],
+      "LOCATION": "Great Forest",
+      "CAUSE": "Elder Crab's legs could not climb",
+      "EFFECT": "Elder Crab remembered Trickster Monkey.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Young Crab found his father broken, spirit gone, and resolved justice.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Young Crab",
+        "Elder Crab"
+      ],
+      "LOCATION": "Young Crab's home",
+      "CAUSE": "Elder Crab was broken",
+      "EFFECT": "Young Crab sought allies.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Young Crab ended the Trickster's breath, restoring balance and justice.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Young Crab",
+        "Little Brother Monkey"
+      ],
+      "LOCATION": "Young Crab's home",
+      "CAUSE": "Monkey's lies were exposed",
+      "EFFECT": "Balance was restored.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Little Brother Monkey",
+      "TARGET": "Elder Crab",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "Young Crab",
+      "TARGET": "Little Brother Monkey",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Stone Grandfather",
+      "TARGET": "Little Brother Monkey",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Buzzing One the Bee",
+      "TARGET": "Little Brother Monkey",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Hard-Shell Brother the Chestnut",
+      "TARGET": "Little Brother Monkey",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "TRICKSTER",
+    "ORDEAL",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 2763,
+    "excerpt_chars": 2763
+  }
+}

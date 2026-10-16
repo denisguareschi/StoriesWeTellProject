@@ -1,0 +1,146 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Tragedy",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "the young woman",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "from sorrow to hope",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 1
+    },
+    {
+      "CHARACTER": "the young girl",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "from illness to recovery",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 3
+    },
+    {
+      "CHARACTER": "the mistress",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "from devotion to new beginning",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "the guardian",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "null",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": 4
+    }
+  ],
+  "LOCATIONS": [
+    "London",
+    "Lincoln's Inn Hall",
+    "Holborn Hill",
+    "a small, respectable house"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "The fog crept in through the grimy windows of Lincoln's Inn Hall, shrouding the proceedings in an impenetrable veil.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "the young woman"
+      ],
+      "LOCATION": "Lincoln's Inn Hall",
+      "CAUSE": "Story opening",
+      "EFFECT": "The young woman is affected by the fog.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "The child grew weaker, her slender body worn down by the relentless march of her illness.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "the young girl"
+      ],
+      "LOCATION": "a small, respectable house",
+      "CAUSE": "The child's illness",
+      "EFFECT": "The child's health declines.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "The mistress nursed her with a tenderness that bordered on the sacred.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "the mistress",
+        "the young girl"
+      ],
+      "LOCATION": "a small, respectable house",
+      "CAUSE": "The mistress's love for the child",
+      "EFFECT": "The child receives care and comfort.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "The guardian returned, his presence a reminder of the world beyond the small, domestic sphere.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "the guardian",
+        "the mistress"
+      ],
+      "LOCATION": "a small, respectable house",
+      "CAUSE": "The guardian's return",
+      "EFFECT": "The mistress is reminded of the world beyond her domestic sphere.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "The mistress found a sense of belonging, a sense of purpose that had eluded her for so long.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "the mistress"
+      ],
+      "LOCATION": "London",
+      "CAUSE": "The mistress's experiences",
+      "EFFECT": "The mistress finds a new beginning.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "the mistress",
+      "TARGET": "the young girl",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "the guardian",
+      "TARGET": "the mistress",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "ORDEAL",
+    "HELPER_APPEARS",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [
+      "CHANGE_EVENT"
+    ],
+    "issues": [
+      "relation dropped: {'SOURCE': 'the young woman', 'TARGET': 'the fog', 'TYPE': 'OPPOSES'}"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 4349,
+    "excerpt_chars": 4349
+  }
+}

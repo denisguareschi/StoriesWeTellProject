@@ -1,0 +1,138 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Jackal",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "No significant change in nature or status.",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Wolf",
+      "ROLE": "DEUTERAGONIST",
+      "TRANSFORMATION": "From servant to victim of severe beating.",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Man",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "No significant change in nature or status.",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "house"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Jackal and Wolf hire themselves to a man to be his servants.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Jackal",
+        "Wolf",
+        "Man"
+      ],
+      "LOCATION": "house",
+      "CAUSE": "Story opening",
+      "EFFECT": "They are now employed in the man's house.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Jackal smears Wolf's tail with fat and eats the rest of it.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Jackal",
+        "Wolf"
+      ],
+      "LOCATION": "house",
+      "CAUSE": "Jackal's cunning and desire for the fat.",
+      "EFFECT": "The fat is gone, and Wolf is unknowingly implicated.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 3,
+      "EVENT": "The man misses the fat and immediately accuses Jackal of having eaten it.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Man",
+        "Jackal"
+      ],
+      "LOCATION": "house",
+      "CAUSE": "The man discovers the missing fat.",
+      "EFFECT": "Jackal is put on the spot and needs to deflect blame.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Jackal tells the man to look at Wolf's tail to find the thief.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Jackal",
+        "Man",
+        "Wolf"
+      ],
+      "LOCATION": "house",
+      "CAUSE": "Jackal's need to escape accusation.",
+      "EFFECT": "The man investigates Wolf, believing him to be the thief.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "The man thrashes Wolf till he was nearly dead.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Man",
+        "Wolf"
+      ],
+      "LOCATION": "house",
+      "CAUSE": "The man believes Wolf is the thief based on Jackal's deception.",
+      "EFFECT": "Wolf suffers severe injury, and Jackal escapes punishment.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Jackal",
+      "TARGET": "Wolf",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "Jackal",
+      "TARGET": "Man",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "Man",
+      "TARGET": "Wolf",
+      "TYPE": "OPPOSES"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "TRICKSTER",
+    "ORDEAL"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "gemini:gemini-2.5-flash",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 447,
+    "excerpt_chars": 447
+  }
+}

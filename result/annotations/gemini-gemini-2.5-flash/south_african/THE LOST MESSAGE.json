@@ -1,0 +1,172 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Cautionary Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Ants",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Anteater",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": 4
+    },
+    {
+      "CHARACTER": "Centipede",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": 4
+    },
+    {
+      "CHARACTER": "Birds",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": 4
+    },
+    {
+      "CHARACTER": "Insect-king",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Beetle",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": 5
+    }
+  ],
+  "LOCATIONS": [
+    "Ant Colony",
+    "Ground",
+    "Trees"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "The ants are constantly attacked by numerous enemies.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Ants",
+        "Anteater",
+        "Centipede",
+        "Birds"
+      ],
+      "LOCATION": "Ant Colony",
+      "CAUSE": "Story opening",
+      "EFFECT": "Ants decide to hold a council for safety.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "The ants hold a council but fail to agree on a unified defense strategy.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Ants"
+      ],
+      "LOCATION": "Ant Colony",
+      "CAUSE": "Desire to find a solution to constant attacks.",
+      "EFFECT": "Each ant faction resolves to work independently.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Different ant factions build separate defenses based on their own ideas.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Ants"
+      ],
+      "LOCATION": "Ground",
+      "CAUSE": "Inability to reach a consensus at the council.",
+      "EFFECT": "Each faction's individual defenses prove vulnerable.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "All individual ant factions' defenses are easily overcome by their enemies.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Ants",
+        "Anteater",
+        "Centipede",
+        "Birds"
+      ],
+      "LOCATION": "Ground",
+      "CAUSE": "Lack of unified protection and flawed individual strategies.",
+      "EFFECT": "The ants remain prey and embody discord.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "The Insect-king sends a message of unity, but the Beetle fails to deliver it.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Insect-king",
+        "Beetle",
+        "Ants"
+      ],
+      "LOCATION": "Ant Colony",
+      "CAUSE": "The Insect-king hears of the ants' continued disagreement and suffering.",
+      "EFFECT": "The ants never receive the message and remain disunited and vulnerable.",
+      "CAUSED_BY": [
+        2,
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Ants",
+      "TARGET": "Anteater",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Ants",
+      "TARGET": "Centipede",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Ants",
+      "TARGET": "Birds",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Insect-king",
+      "TARGET": "Ants",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "ORDEAL",
+    "HELPER_APPEARS"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [
+      "CHANGE_EVENT"
+    ],
+    "model": "gemini:gemini-2.5-flash",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 2891,
+    "excerpt_chars": 2891
+  }
+}

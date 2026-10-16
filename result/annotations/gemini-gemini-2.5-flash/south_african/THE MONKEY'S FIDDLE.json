@@ -1,0 +1,171 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Hero's Journey",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Monkey",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "From a hungry, accused victim to a powerful, respected figure who restores justice.",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Brer Wolf",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "From a jealous accuser to a humbled, acknowledging victim of Monkey's power.",
+      "TRANSFORMATION_TYPE": "REVERSAL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Jackal",
+      "ROLE": "TRICKSTER",
+      "TRANSFORMATION": "From a cunning manipulator to one who flees in fear.",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Orang Outang",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "NONE",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Lion",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "From a powerful judge to a submissive, fearful figure.",
+      "TRANSFORMATION_TYPE": "REVERSAL",
+      "CHANGE_EVENT": 5
+    }
+  ],
+  "LOCATIONS": [
+    "Monkey's land",
+    "Orang Outang's home",
+    "The Court"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Hunger forces Monkey to leave his land and seek shelter with his great uncle Orang Outang.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Monkey",
+        "Orang Outang"
+      ],
+      "LOCATION": "Monkey's land",
+      "CAUSE": "Story opening",
+      "EFFECT": "Monkey receives shelter and works for Orang Outang.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Orang Outang gives Monkey a magical fiddle and a bow and arrow as recompense for his work.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Monkey",
+        "Orang Outang"
+      ],
+      "LOCATION": "Orang Outang's home",
+      "CAUSE": "Monkey's desire to return home after working.",
+      "EFFECT": "Monkey acquires powerful tools for hunting and compelling others.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Brer Wolf, jealous of Monkey's bow and arrow, falsely accuses Monkey of theft to Jackal.",
+      "FUNCTION": "BETRAYAL",
+      "CHARACTERS": [
+        "Monkey",
+        "Brer Wolf",
+        "Jackal"
+      ],
+      "LOCATION": "Monkey's land",
+      "CAUSE": "Monkey demonstrates the bow's power, leading to Wolf's jealousy.",
+      "EFFECT": "The dispute is brought before the court of animals.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Monkey is sentenced to hang by the court, presided over by Lion, due to Jackal's false testimony.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Monkey",
+        "Brer Wolf",
+        "Jackal",
+        "Lion"
+      ],
+      "LOCATION": "The Court",
+      "CAUSE": "Wolf's accusation and Jackal's manipulative testimony.",
+      "EFFECT": "Monkey faces imminent death but is granted a last wish to play his fiddle.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Monkey uses his magical fiddle to force the entire court to dance, compelling Lion to reverse the sentence and Wolf to acknowledge his lie.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Monkey",
+        "Brer Wolf",
+        "Lion",
+        "Jackal"
+      ],
+      "LOCATION": "The Court",
+      "CAUSE": "Monkey's death sentence and his request to play the fiddle.",
+      "EFFECT": "Monkey is freed, recovers his bow and arrow, and the fearful court disperses.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Monkey",
+      "TARGET": "Brer Wolf",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Orang Outang",
+      "TARGET": "Monkey",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Jackal",
+      "TARGET": "Monkey",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "Lion",
+      "TARGET": "Monkey",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Jackal",
+      "TARGET": "Brer Wolf",
+      "TYPE": "DECEIVES"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "HELPER_APPEARS",
+    "BETRAYAL",
+    "ORDEAL",
+    "TRICKSTER"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "gemini:gemini-2.5-flash",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 4008,
+    "excerpt_chars": 4008
+  }
+}

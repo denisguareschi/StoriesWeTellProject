@@ -1,0 +1,179 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Tragedy",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Pip",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "from a poor orphan to a man with a sense of identity and belonging",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Estella",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "from a cold and distant figure to a more vulnerable and human one",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Joe",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "no significant transformation",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": 3
+    },
+    {
+      "CHARACTER": "Miss Havisham",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "no significant transformation",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": 2
+    },
+    {
+      "CHARACTER": "Magwitch",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "no significant transformation",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": 1
+    },
+    {
+      "CHARACTER": "Orlick",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "no significant transformation",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": 3
+    }
+  ],
+  "LOCATIONS": [
+    "the marsh country",
+    "the churchyard",
+    "the village",
+    "the Blue Boar",
+    "the ruined place",
+    "Miss Havisham's"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Pip meets Magwitch in the churchyard",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Pip",
+        "Magwitch"
+      ],
+      "LOCATION": "the churchyard",
+      "CAUSE": "Story opening",
+      "EFFECT": "Pip's life is changed forever",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Pip meets Estella at Miss Havisham's",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Pip",
+        "Estella",
+        "Miss Havisham"
+      ],
+      "LOCATION": "Miss Havisham's",
+      "CAUSE": "Pip's relationship with Estella begins",
+      "EFFECT": "Pip becomes infatuated with Estella",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Pip's guardian is suspicious of Orlick",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Pip",
+        "Joe",
+        "Orlick"
+      ],
+      "LOCATION": "the Blue Boar",
+      "CAUSE": "Pip's suspicions about Orlick",
+      "EFFECT": "Pip's guardian takes action against Orlick",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Pip and Estella meet again in the ruined place",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Pip",
+        "Estella"
+      ],
+      "LOCATION": "the ruined place",
+      "CAUSE": "Pip and Estella's past relationship is rekindled",
+      "EFFECT": "Pip and Estella's relationship is rekindled",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Pip and Estella part ways again",
+      "FUNCTION": "RETURN",
+      "CHARACTERS": [
+        "Pip",
+        "Estella"
+      ],
+      "LOCATION": "the ruined place",
+      "CAUSE": "Pip and Estella's relationship is rekindled",
+      "EFFECT": "Pip and Estella's relationship is rekindled",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Pip",
+      "TARGET": "Estella",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Pip",
+      "TARGET": "Joe",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Miss Havisham",
+      "TARGET": "Estella",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Magwitch",
+      "TARGET": "Pip",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Orlick",
+      "TARGET": "Pip",
+      "TYPE": "OPPOSES"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "HELPER_APPEARS",
+    "ORDEAL",
+    "RETURN"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [
+      "CHANGE_EVENT"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 993835,
+    "excerpt_chars": 11828
+  }
+}

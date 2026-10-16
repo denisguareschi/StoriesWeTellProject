@@ -1,0 +1,145 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Jackal",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "None",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Lion",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "From powerful hunter to defeated and killed",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Jackal's wife",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "None",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Lioness",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "None",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Hunting grounds",
+    "Near the killed animal",
+    "Crossway",
+    "Lion's house",
+    "Tower"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Lion and Jackal go hunting, and Jackal deceives Lion about who hit the game.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Lion",
+        "Jackal"
+      ],
+      "LOCATION": "Hunting grounds",
+      "CAUSE": "Story opening",
+      "EFFECT": "Jackal gains initial advantage and control over the situation.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Jackal finds the killed animal, eats the best part, and is discovered by Lion.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Jackal",
+        "Lion"
+      ],
+      "LOCATION": "Near the killed animal",
+      "CAUSE": "Jackal's earlier deception and Lion's trust.",
+      "EFFECT": "Lion confronts Jackal, but Jackal quickly deflects blame.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Jackal tricks Lion into staying at the crossway and later prevents Lioness from joining Lion.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Jackal",
+        "Lion",
+        "Lioness"
+      ],
+      "LOCATION": "Crossway",
+      "CAUSE": "Jackal's desire to keep the best share and control the situation.",
+      "EFFECT": "Lion is isolated and made to look foolish, Jackal gains more control.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Jackal and his wife build a tower and lure Lion to it.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Jackal",
+        "Jackal's wife",
+        "Lion"
+      ],
+      "LOCATION": "Tower",
+      "CAUSE": "Jackal's ongoing scheme to eliminate Lion and secure the game.",
+      "EFFECT": "Lion approaches the tower, unaware of the danger.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Jackal repeatedly cuts the thong and kills Lion by throwing a hot stone down his throat.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Jackal",
+        "Lion",
+        "Jackal's wife"
+      ],
+      "LOCATION": "Tower",
+      "CAUSE": "Jackal's final execution of his plan.",
+      "EFFECT": "Lion dies, Jackal escapes with the game.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Jackal",
+      "TARGET": "Lion",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "Jackal's wife",
+      "TARGET": "Jackal",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "TRICKSTER"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "gemini:gemini-2.5-flash",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 3933,
+    "excerpt_chars": 3933
+  }
+}

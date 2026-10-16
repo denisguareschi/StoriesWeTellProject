@@ -1,0 +1,155 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Hero's Journey",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Hohodemi",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "learns to forgive and reconcile with his brother",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Skillful Fisher",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "learns to forgive and reconcile with his brother",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Ryn Jin",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "helps the Happy Hunter",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Princess Tayotama",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Princess Tamayori",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Japan",
+    "Sea King's Palace",
+    "Sea"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "The Happy Hunter and the Skillful Fisher decide to try each other's occupation.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Hohodemi",
+        "Skillful Fisher"
+      ],
+      "LOCATION": "Japan",
+      "CAUSE": "Story opening",
+      "EFFECT": "The brothers start their new occupation",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "The Happy Hunter fails to catch any fish and loses his brother's hook.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Hohodemi"
+      ],
+      "LOCATION": "Sea",
+      "CAUSE": "The Happy Hunter's inexperience with fishing",
+      "EFFECT": "The Happy Hunter is anxious and his brother is angry",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "The Happy Hunter and the Skillful Fisher meet the Sea King and his daughters.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Hohodemi",
+        "Ryn Jin",
+        "Princess Tayotama",
+        "Princess Tamayori"
+      ],
+      "LOCATION": "Sea King's Palace",
+      "CAUSE": "The Happy Hunter's visit to the Sea King's Palace",
+      "EFFECT": "The Happy Hunter is welcomed and feasted by the Sea King and his daughters",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "The Happy Hunter returns to Japan and finds his brother trying to kill him.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Hohodemi",
+        "Skillful Fisher"
+      ],
+      "LOCATION": "Japan",
+      "CAUSE": "The Skillful Fisher's jealousy and anger",
+      "EFFECT": "The Happy Hunter uses the Jewels of the Flow and Ebb of the Tide to save his brother",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "The Skillful Fisher humbles himself and asks for forgiveness.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Hohodemi",
+        "Skillful Fisher"
+      ],
+      "LOCATION": "Japan",
+      "CAUSE": "The Skillful Fisher's realization of his mistake and his brother's power",
+      "EFFECT": "The brothers reconcile and there is peace in Japan",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Hohodemi",
+      "TARGET": "Skillful Fisher",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Hohodemi",
+      "TARGET": "Ryn Jin",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "ORDEAL",
+    "HELPER_APPEARS",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "issues": [
+      "event participant 'Princess Tayotama' not in CHARACTERS: added as SECONDARY",
+      "event participant 'Princess Tamayori' not in CHARACTERS: added as SECONDARY"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.5,
+    "seed": 1,
+    "attempts": 1,
+    "source_chars": 32644,
+    "excerpt_chars": 11830
+  }
+}

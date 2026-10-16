@@ -1,0 +1,130 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Emiko",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "finds her own path in life",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Lady Hiro",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Lord Shinoda",
+      "ROLE": "TRICKSTER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": 4
+    }
+  ],
+  "LOCATIONS": [
+    "Edo",
+    "the garden",
+    "the hut"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "The misty veil of autumn descended upon the city of Edo, shrouding the streets in a damp, gray haze.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Emiko"
+      ],
+      "LOCATION": "Edo",
+      "CAUSE": "Story opening",
+      "EFFECT": "Emiko is troubled",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Lord Shinoda entered, his face aglow with a warm smile.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Lord Shinoda",
+        "Emiko"
+      ],
+      "LOCATION": "the hut",
+      "CAUSE": "Lord Shinoda's presence",
+      "EFFECT": "Emiko feels comfort",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "As they strolled through the garden, the fog began to lift, revealing a world of beauty and wonder that Emiko had never known existed.",
+      "FUNCTION": "TRANSFORMATION",
+      "CHARACTERS": [
+        "Emiko",
+        "Lord Shinoda"
+      ],
+      "LOCATION": "the garden",
+      "CAUSE": "Lord Shinoda's guidance",
+      "EFFECT": "Emiko finds her own path in life",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "The people of Edo often spoke of Lord Shinoda's great kindness, and how he had brought joy and prosperity to all those around him.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Lord Shinoda"
+      ],
+      "LOCATION": "Edo",
+      "CAUSE": "Lord Shinoda's actions",
+      "EFFECT": "Lord Shinoda is respected",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Emiko felt a sense of peace settle over her, a sense of knowing that she would find her own path in life, and that it would be filled with love, kindness, and happiness.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Emiko"
+      ],
+      "LOCATION": "the garden",
+      "CAUSE": "Lord Shinoda's guidance",
+      "EFFECT": "Emiko is at peace",
+      "CAUSED_BY": [
+        3
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Lord Shinoda",
+      "TARGET": "Emiko",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "HELPER_APPEARS",
+    "TRANSFORMATION",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [
+      "CHANGE_EVENT"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 2639,
+    "excerpt_chars": 2639
+  }
+}

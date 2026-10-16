@@ -1,0 +1,186 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Monkey",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "uses cunning to outwit others and reclaim his property",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Orang Outang",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Brer Wolf",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "learns to acknowledge his mistakes",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 3
+    },
+    {
+      "CHARACTER": "Jackal",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "tries to deceive others to get what he wants",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 3
+    },
+    {
+      "CHARACTER": "Lion",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "learns to show mercy",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Tiger",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "other animals",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Monkey's land",
+    "Orang Outang's land",
+    "Court of Lion, Tiger, and other animals"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Monkey is forced to leave his land due to hunger and want.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Monkey",
+        "Orang Outang"
+      ],
+      "LOCATION": "Orang Outang's land",
+      "CAUSE": "Story opening",
+      "EFFECT": "Monkey is forced to seek work elsewhere.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Monkey meets Brer Wolf and helps him hunt a deer with his bow and arrow.",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Monkey",
+        "Brer Wolf"
+      ],
+      "LOCATION": "Monkey's land",
+      "CAUSE": "Monkey's encounter with Brer Wolf",
+      "EFFECT": "Monkey and Brer Wolf become friends.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Wolf accuses Monkey of stealing his bow and arrow, and Jackal takes possession of the bow and arrow.",
+      "FUNCTION": "BETRAYAL",
+      "CHARACTERS": [
+        "Brer Wolf",
+        "Jackal",
+        "Monkey"
+      ],
+      "LOCATION": "Monkey's land",
+      "CAUSE": "Wolf's accusation",
+      "EFFECT": "Monkey is accused of theft and faces punishment.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Monkey plays his charmed fiddle and causes the court to dance uncontrollably.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Monkey",
+        "Lion",
+        "Tiger",
+        "other animals"
+      ],
+      "LOCATION": "Court of Lion, Tiger, and other animals",
+      "CAUSE": "Monkey's use of his charmed fiddle",
+      "EFFECT": "The court is distracted and Monkey is able to reclaim his bow and arrow.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "The court withdraws the sentence against Monkey and he is able to leave with his bow and arrow.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Monkey",
+        "Lion",
+        "Tiger",
+        "other animals"
+      ],
+      "LOCATION": "Court of Lion, Tiger, and other animals",
+      "CAUSE": "Monkey's use of his charmed fiddle",
+      "EFFECT": "Monkey is able to reclaim his property and leave with his head held high.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Monkey",
+      "TARGET": "Orang Outang",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Monkey",
+      "TARGET": "Brer Wolf",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Jackal",
+      "TARGET": "Monkey",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "Lion",
+      "TARGET": "Monkey",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "QUEST",
+    "BETRAYAL",
+    "TRICKSTER",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [
+      "CHANGE_EVENT"
+    ],
+    "issues": [
+      "event participant 'other animals' not in CHARACTERS: added as SECONDARY",
+      "relation dropped: {'SOURCE': 'Wolf', 'TARGET': 'Monkey', 'TYPE': 'OPPOSES'}"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.5,
+    "seed": 1,
+    "attempts": 1,
+    "source_chars": 4008,
+    "excerpt_chars": 4008
+  }
+}

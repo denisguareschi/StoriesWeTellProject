@@ -1,0 +1,224 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Hero's Journey",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Anne Elliot",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "From facing difficulties and heartbreak to a happily married woman.",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Sir Walter Elliot",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "From vain and self-absorbed to shocked and mortified by deception.",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 4
+    },
+    {
+      "CHARACTER": "Captain Wentworth",
+      "ROLE": "DEUTERAGONIST",
+      "TRANSFORMATION": "NONE",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Lady Russell",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "From past transgression to being valued by Captain Wentworth.",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Mrs Clay",
+      "ROLE": "TRICKSTER",
+      "TRANSFORMATION": "NONE",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "William Walter Elliot",
+      "ROLE": "TRICKSTER",
+      "TRANSFORMATION": "NONE",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Elizabeth Elliot",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Mary Musgrove",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Charles Musgrove",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Captain Benwick",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Mrs Smith",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Kellynch Hall, Somersetshire",
+    "South Park, Gloucestershire",
+    "Uppercross, Somerset",
+    "Lyme",
+    "Charmouth",
+    "Bath",
+    "London",
+    "West Indies"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Sir Walter Elliot's vanity and the Elliot family situation are introduced.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Sir Walter Elliot",
+        "Anne Elliot",
+        "Elizabeth Elliot",
+        "Mary Musgrove"
+      ],
+      "LOCATION": "Kellynch Hall, Somersetshire",
+      "CAUSE": "Story opening",
+      "EFFECT": "Establishes the initial state of the Elliot family and Sir Walter's character flaws.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Captain Benwick's admiration for Anne is revealed during a social gathering in Lyme.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Anne Elliot",
+        "Mary Musgrove",
+        "Charles Musgrove",
+        "Captain Benwick"
+      ],
+      "LOCATION": "Lyme",
+      "CAUSE": "Social interactions during Mary's recovery.",
+      "EFFECT": "Anne is flattered, and her desirability is confirmed, causing Mary's jealousy.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 3,
+      "EVENT": "William Walter Elliot plays a double game to prevent Mrs Clay from marrying Sir Walter.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "William Walter Elliot",
+        "Mrs Clay",
+        "Sir Walter Elliot",
+        "Elizabeth Elliot"
+      ],
+      "LOCATION": "Bath",
+      "CAUSE": "William Walter Elliot's self-interest and desire to control Mrs Clay.",
+      "EFFECT": "Mrs Clay leaves Sir Walter's household to be established under William Walter Elliot's protection.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 4,
+      "EVENT": "Sir Walter and Elizabeth are shocked and mortified by Mrs Clay's deception.",
+      "FUNCTION": "BETRAYAL",
+      "CHARACTERS": [
+        "Sir Walter Elliot",
+        "Elizabeth Elliot",
+        "Mrs Clay",
+        "William Walter Elliot"
+      ],
+      "LOCATION": "Bath",
+      "CAUSE": "The revelation of Mrs Clay's and William Walter Elliot's 'double game'.",
+      "EFFECT": "Sir Walter and Elizabeth experience a significant blow to their pride and social standing.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Anne Elliot marries Captain Wentworth and finds lasting happiness and fulfillment.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Anne Elliot",
+        "Captain Wentworth",
+        "Lady Russell",
+        "Mrs Smith"
+      ],
+      "LOCATION": "Kellynch Hall, Somersetshire",
+      "CAUSE": "Anne's steadfastness, Captain Wentworth's renewed affection, and the resolution of past misunderstandings.",
+      "EFFECT": "Anne's personal fulfillment, Mrs Smith's improved circumstances, and Captain Wentworth's acceptance of Lady Russell.",
+      "CAUSED_BY": []
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Anne Elliot",
+      "TARGET": "Captain Wentworth",
+      "TYPE": "BONDS_WITH"
+    },
+    {
+      "SOURCE": "Sir Walter Elliot",
+      "TARGET": "Anne Elliot",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "William Walter Elliot",
+      "TARGET": "Sir Walter Elliot",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "Mrs Clay",
+      "TARGET": "Sir Walter Elliot",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "Lady Russell",
+      "TARGET": "Anne Elliot",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "HELPER_APPEARS",
+    "TRICKSTER",
+    "BETRAYAL",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "issues": [
+      "event participant 'Elizabeth Elliot' not in CHARACTERS: added as SECONDARY",
+      "event participant 'Mary Musgrove' not in CHARACTERS: added as SECONDARY",
+      "event participant 'Charles Musgrove' not in CHARACTERS: added as SECONDARY",
+      "event participant 'Captain Benwick' not in CHARACTERS: added as SECONDARY",
+      "event participant 'Mrs Smith' not in CHARACTERS: added as SECONDARY"
+    ],
+    "model": "gemini:gemini-2.5-flash",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 466817,
+    "excerpt_chars": 12026
+  }
+}

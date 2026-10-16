@@ -1,0 +1,155 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "The narrator",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "learns patience and gentle fortitude through caring for her sister",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 3
+    },
+    {
+      "CHARACTER": "Charley",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "falls ill and requires care",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 3
+    },
+    {
+      "CHARACTER": "Allan",
+      "ROLE": "TRICKSTER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Ada",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "London",
+    "Lincoln's Inn Hall",
+    "the narrator's room",
+    "the porch"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "The narrator reflects on the gloomy London weather",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "The narrator"
+      ],
+      "LOCATION": "London",
+      "CAUSE": "Story opening",
+      "EFFECT": "The narrator is drawn into a personal matter",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "The narrator discovers Charley's illness",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "The narrator",
+        "Charley"
+      ],
+      "LOCATION": "the narrator's room",
+      "CAUSE": "Charley's illness",
+      "EFFECT": "The narrator begins to care for Charley",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "The narrator nurses Charley and reflects on her own life",
+      "FUNCTION": "SACRIFICE",
+      "CHARACTERS": [
+        "The narrator",
+        "Charley"
+      ],
+      "LOCATION": "the narrator's room",
+      "CAUSE": "Charley's illness",
+      "EFFECT": "The narrator learns patience and gentle fortitude",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "The narrator reflects on Allan's kindness and generosity",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "The narrator",
+        "Allan"
+      ],
+      "LOCATION": "the porch",
+      "CAUSE": "Allan's actions",
+      "EFFECT": "The narrator is grateful for Allan's love and care",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "The narrator reflects on her own life and relationships",
+      "FUNCTION": "RETURN",
+      "CHARACTERS": [
+        "The narrator",
+        "Allan",
+        "Ada"
+      ],
+      "LOCATION": "the porch",
+      "CAUSE": "The narrator's reflections",
+      "EFFECT": "The narrator feels grateful and content",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "The narrator",
+      "TARGET": "Charley",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "The narrator",
+      "TARGET": "Allan",
+      "TYPE": "BONDS_WITH"
+    },
+    {
+      "SOURCE": "Allan",
+      "TARGET": "The narrator",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "The narrator",
+      "TARGET": "Ada",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "ORDEAL",
+    "SACRIFICE",
+    "MORAL_REWARD",
+    "RETURN"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 5329,
+    "excerpt_chars": 5329
+  }
+}

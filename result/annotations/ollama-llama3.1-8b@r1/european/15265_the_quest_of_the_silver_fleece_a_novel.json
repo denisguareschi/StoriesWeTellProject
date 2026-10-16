@@ -1,0 +1,182 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Tragedy",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Zora",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "overcomes loneliness and learns to make sacrifices for others",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Mrs. Vanderpool",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "finds companionship and purpose in Zora",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 3
+    },
+    {
+      "CHARACTER": "Bles",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "learns to love and respect Zora",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Emma",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Elspeth",
+      "ROLE": "TRICKSTER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "boy",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "girl",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "swamp",
+    "school",
+    "cabin",
+    "house",
+    "Zora's room"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "The boy wearily dropped his heavy bundle and stood still, listening as the voice of crickets split the shadows and made the silence audible.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "boy"
+      ],
+      "LOCATION": "swamp",
+      "CAUSE": "Story opening",
+      "EFFECT": "The boy is alone and afraid in a strange land.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "The music suddenly ceased. Hoarse staccato cries and peals of laughter shook the old hut, and as the boy stood there peering through the black trees, abruptly the door flew open and a flood of light illumined the wood.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "girl"
+      ],
+      "LOCATION": "cabin",
+      "CAUSE": "The boy's curiosity",
+      "EFFECT": "The boy is distracted from his fear and follows the music.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Zora sat down. There was in her, walking, standing, sitting, a simple directness which Mrs. Vanderpool sensed and met.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Zora",
+        "Mrs. Vanderpool"
+      ],
+      "LOCATION": "school",
+      "CAUSE": "Mrs. Vanderpool's need for help",
+      "EFFECT": "Zora agrees to work for Mrs. Vanderpool and becomes her companion.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Zora turned back steadily to her room, and locked herself in. After all, why shouldn't it be? Why had it not occurred to her before in her blindness? If she had wanted him--and ah, God! was not all her life simply the want of him?",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Zora"
+      ],
+      "LOCATION": "Zora's room",
+      "CAUSE": "Zora's realization of her feelings for Bles",
+      "EFFECT": "Zora is torn between her love for Bles and her sense of duty to Emma.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "She stood very still and lifted up her eyes. The swamp was living, vibrant, tremulous. There where the first long note of night lay shot with burning crimson, burst in sudden radiance the wide beauty of the moon.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Zora",
+        "Bles"
+      ],
+      "LOCATION": "swamp",
+      "CAUSE": "Zora's sacrifice and selflessness",
+      "EFFECT": "Zora and Bles confess their love for each other.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Zora",
+      "TARGET": "Bles",
+      "TYPE": "BONDS_WITH"
+    },
+    {
+      "SOURCE": "Zora",
+      "TARGET": "Elspeth",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "Mrs. Vanderpool",
+      "TARGET": "Zora",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Bles",
+      "TARGET": "Zora",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Zora",
+      "TARGET": "Emma",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "HELPER_APPEARS",
+    "ORDEAL",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "issues": [
+      "event participant 'boy' not in CHARACTERS: added as SECONDARY",
+      "event participant 'girl' not in CHARACTERS: added as SECONDARY"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.5,
+    "seed": 1,
+    "attempts": 1,
+    "source_chars": 621771,
+    "excerpt_chars": 11823
+  }
+}

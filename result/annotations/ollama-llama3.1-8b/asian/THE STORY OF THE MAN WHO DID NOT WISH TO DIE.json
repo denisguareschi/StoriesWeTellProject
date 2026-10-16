@@ -1,0 +1,158 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Spiritual and Religious",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Sentaro",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "learns to appreciate the value of life and the importance of living a good and industrious life",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Jofuku",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "helps Sentaro on his journey",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "The Emperor",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "sends Jofuku on a quest to find the Elixir of Life",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "The Hunter",
+      "ROLE": "TRICKSTER",
+      "TRANSFORMATION": "helps Sentaro on his journey",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "The Messenger",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "teaches Sentaro a lesson",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Japan",
+    "The Country of Perpetual Life",
+    "The Shrine of Jofuku"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Sentaro wishes to live a long life and escape death",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Sentaro"
+      ],
+      "LOCATION": "Japan",
+      "CAUSE": "Story opening",
+      "EFFECT": "Sentaro sets out on a journey to find the Elixir of Life",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Jofuku helps Sentaro on his journey",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Sentaro",
+        "Jofuku"
+      ],
+      "LOCATION": "The Shrine of Jofuku",
+      "CAUSE": "Sentaro prays to Jofuku for help",
+      "EFFECT": "Sentaro is sent to the Country of Perpetual Life",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Sentaro arrives in the Country of Perpetual Life",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Sentaro"
+      ],
+      "LOCATION": "The Country of Perpetual Life",
+      "CAUSE": "Jofuku sends Sentaro to the Country of Perpetual Life",
+      "EFFECT": "Sentaro is amazed by the strange customs of the Country of Perpetual Life",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Sentaro becomes disillusioned with life in the Country of Perpetual Life",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Sentaro"
+      ],
+      "LOCATION": "The Country of Perpetual Life",
+      "CAUSE": "Sentaro realizes that life in the Country of Perpetual Life is not what he expected",
+      "EFFECT": "Sentaro prays to Jofuku to be returned to his native land",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Sentaro is taught a lesson by Jofuku",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Sentaro",
+        "The Messenger"
+      ],
+      "LOCATION": "The Shrine of Jofuku",
+      "CAUSE": "Sentaro prays to Jofuku for help",
+      "EFFECT": "Sentaro learns to appreciate the value of life and the importance of living a good and industrious life",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Sentaro",
+      "TARGET": "Jofuku",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Jofuku",
+      "TARGET": "Sentaro",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "The Hunter",
+      "TARGET": "Sentaro",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "The Messenger",
+      "TARGET": "Sentaro",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "HELPER_APPEARS",
+    "QUEST",
+    "ORDEAL",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 13878,
+    "excerpt_chars": 11848
+  }
+}

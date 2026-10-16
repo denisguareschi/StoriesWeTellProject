@@ -1,0 +1,139 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Spiritual and Religious",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Daydreamer",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "learns to appreciate the natural cycle of life and death",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Grandfather Whispers-to-the-Sky",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "The spirit guide",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "the Riverbend Clan's land",
+    "the Land Where Time Stands Still",
+    "the sacred stone"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Daydreamer wishes to live for many generations, untouched by sickness.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Daydreamer"
+      ],
+      "LOCATION": "the Riverbend Clan's land",
+      "CAUSE": "Story opening",
+      "EFFECT": "Daydreamer decides to seek the Dew of Endless Springs",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Daydreamer embarks on his spirit path, seeking the Dew of Endless Springs.",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Daydreamer"
+      ],
+      "LOCATION": "the Riverbend Clan's land",
+      "CAUSE": "Daydreamer's desire for eternal life",
+      "EFFECT": "Daydreamer meets Grandfather Whispers-to-the-Sky",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Grandfather Whispers-to-the-Sky sends Daydreamer to the Land Where Time Stands Still.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Grandfather Whispers-to-the-Sky",
+        "Daydreamer"
+      ],
+      "LOCATION": "the sacred stone",
+      "CAUSE": "Grandfather Whispers-to-the-Sky's intervention",
+      "EFFECT": "Daydreamer is transported to the Land Where Time Stands Still",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Daydreamer grows weary of life in the Land Where Time Stands Still and longs to return.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Daydreamer"
+      ],
+      "LOCATION": "the Land Where Time Stands Still",
+      "CAUSE": "Daydreamer's experiences in the Land Where Time Stands Still",
+      "EFFECT": "Daydreamer cries out to Grandfather Whispers-to-the-Sky for help",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Daydreamer awakens from his dream and is instructed by the spirit guide to return to his people and live a good life.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Daydreamer",
+        "The spirit guide"
+      ],
+      "LOCATION": "the sacred stone",
+      "CAUSE": "The spirit guide's intervention",
+      "EFFECT": "Daydreamer returns to his people and lives a life of purpose",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Daydreamer",
+      "TARGET": "Grandfather Whispers-to-the-Sky",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Grandfather Whispers-to-the-Sky",
+      "TARGET": "Daydreamer",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "The spirit guide",
+      "TARGET": "Daydreamer",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "QUEST",
+    "HELPER_APPEARS",
+    "ORDEAL",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 5847,
+    "excerpt_chars": 5847
+  }
+}

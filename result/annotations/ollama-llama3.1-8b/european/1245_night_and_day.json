@@ -1,0 +1,158 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Katharine Hilbery",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "gains insight into her own emptiness and the superficiality of her life",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Ralph Denham",
+      "ROLE": "DEUTERAGONIST",
+      "TRANSFORMATION": "gains a deeper understanding of the world and his place in it",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Mrs. Hilbery",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Mr. Fortescue",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Sally Seal",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Mary",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "London",
+    "Manchester",
+    "Highgate",
+    "Chelsea"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Katharine hosts a tea party for her mother and friends",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Katharine Hilbery",
+        "Mrs. Hilbery",
+        "Mr. Fortescue"
+      ],
+      "LOCATION": "London",
+      "CAUSE": "Story opening",
+      "EFFECT": "The party is a success, but Katharine feels empty and unfulfilled",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Katharine reflects on her life and feels disconnected from others",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Katharine Hilbery"
+      ],
+      "LOCATION": "London",
+      "CAUSE": "Katharine's feelings of emptiness and disconnection",
+      "EFFECT": "Katharine begins to question the superficiality of her life",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Ralph Denham meets Katharine and is drawn into her world",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Ralph Denham",
+        "Katharine Hilbery"
+      ],
+      "LOCATION": "London",
+      "CAUSE": "Ralph's encounter with Katharine",
+      "EFFECT": "Ralph is drawn into Katharine's world and begins to see things from her perspective",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Katharine and Ralph have a conversation about their lives and goals",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Katharine Hilbery",
+        "Ralph Denham"
+      ],
+      "LOCATION": "London",
+      "CAUSE": "Katharine and Ralph's conversation",
+      "EFFECT": "Katharine and Ralph gain a deeper understanding of each other and themselves",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Katharine and Ralph share a moment of connection and understanding",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Katharine Hilbery",
+        "Ralph Denham"
+      ],
+      "LOCATION": "London",
+      "CAUSE": "Katharine and Ralph's conversation and connection",
+      "EFFECT": "Katharine and Ralph feel a sense of connection and understanding",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Katharine Hilbery",
+      "TARGET": "Ralph Denham",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Ralph Denham",
+      "TARGET": "Katharine Hilbery",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "ORDEAL",
+    "HELPER_APPEARS",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 946075,
+    "excerpt_chars": 11870
+  }
+}

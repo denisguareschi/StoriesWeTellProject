@@ -1,0 +1,163 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Origin Myth",
+  "SETTING_DOMAIN": "Spiritual and Religious",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Takoda",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "learns to balance pride with love and compassion",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Ahki",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Waneta",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Wanona",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "recovers from illness",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Kanaq",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "the heart of the forest"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Takoda's pride and vanity are revealed",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Takoda"
+      ],
+      "LOCATION": "the heart of the forest",
+      "CAUSE": "Story opening",
+      "EFFECT": "sets the story in motion",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Takoda's daughter, Wanona, falls ill",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Takoda",
+        "Wanona"
+      ],
+      "LOCATION": "the heart of the forest",
+      "CAUSE": "the forces of illness",
+      "EFFECT": "Takoda's heart is heavy with worry",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Waneta visits Takoda and speaks of balance and harmony",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Takoda",
+        "Waneta"
+      ],
+      "LOCATION": "the heart of the forest",
+      "CAUSE": "Takoda's need for guidance",
+      "EFFECT": "Takoda's spirits are lifted",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Ahki appears to Takoda in a vision",
+      "FUNCTION": "RESURRECTION",
+      "CHARACTERS": [
+        "Takoda",
+        "Ahki"
+      ],
+      "LOCATION": "the heart of the forest",
+      "CAUSE": "Takoda's love and memory of Ahki",
+      "EFFECT": "Takoda's heart is filled with peace",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Wanona recovers from her illness",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Takoda",
+        "Wanona"
+      ],
+      "LOCATION": "the heart of the forest",
+      "CAUSE": "the love and care of Takoda's family",
+      "EFFECT": "the balance of the universe is restored",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Takoda",
+      "TARGET": "Ahki",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Takoda",
+      "TARGET": "Waneta",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Takoda",
+      "TARGET": "Wanona",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Waneta",
+      "TARGET": "Takoda",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Kanaq",
+      "TARGET": "Wanona",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "ORDEAL",
+    "HELPER_APPEARS",
+    "RESURRECTION",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 3290,
+    "excerpt_chars": 3290
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Lion",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "From trusting partner to betrayed victim, then to deceased.",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Jackal",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "From hunting partner to cunning murderer.",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 2
+    },
+    {
+      "CHARACTER": "Mrs. Lion",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "From healthy to starving.",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 2
+    },
+    {
+      "CHARACTER": "young Lions",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "From healthy to starving.",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 2
+    }
+  ],
+  "LOCATIONS": [
+    "Dens",
+    "Krantz/Precipice"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Lion and Jackal agree to hunt on shares for their families.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Lion",
+        "Jackal"
+      ],
+      "LOCATION": "Dens",
+      "CAUSE": "Story opening",
+      "EFFECT": "The hunt commences and the Jackal begins his deception.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Lion finds his family starving and mangy due to Jackal's deception.",
+      "FUNCTION": "BETRAYAL",
+      "CHARACTERS": [
+        "Lion",
+        "Jackal",
+        "Mrs. Lion",
+        "young Lions"
+      ],
+      "LOCATION": "Dens",
+      "CAUSE": "Jackal's decision to hoard meat and starve the Lion's family.",
+      "EFFECT": "Lion becomes enraged and vows to kill the Jackal.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Lion confronts Jackal on a high krantz, but cannot reach him.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Lion",
+        "Jackal"
+      ],
+      "LOCATION": "Krantz/Precipice",
+      "CAUSE": "Lion's fury and pursuit of the Jackal.",
+      "EFFECT": "Jackal begins a series of deceptions to harm the Lion.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Jackal twice tricks the Lion by cutting the reim, causing him to fall and be injured.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Lion",
+        "Jackal"
+      ],
+      "LOCATION": "Krantz/Precipice",
+      "CAUSE": "Jackal's cunning and desire to harm the Lion.",
+      "EFFECT": "Lion is severely bruised and famished, making him vulnerable.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Jackal kills the Lion by dropping a red-hot stone wrapped in fat into his mouth.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Lion",
+        "Jackal"
+      ],
+      "LOCATION": "Krantz/Precipice",
+      "CAUSE": "Lion's hunger and trust in the Jackal's false offer.",
+      "EFFECT": "The Lion dies, and the Jackal's family rejoices.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Jackal",
+      "TARGET": "Lion",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "Jackal",
+      "TARGET": "Lion",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Lion",
+      "TARGET": "Mrs. Lion",
+      "TYPE": "BONDS_WITH"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "BETRAYAL",
+    "ORDEAL",
+    "TRICKSTER"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "gemini:gemini-2.5-flash",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 4442,
+    "excerpt_chars": 4442
+  }
+}

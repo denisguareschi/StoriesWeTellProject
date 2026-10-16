@@ -1,0 +1,174 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Ooka-sama",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "narrator reflects on life and relationships",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Saki",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "narrator cares for Saki's illness",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": 2
+    },
+    {
+      "CHARACTER": "Ayame",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "narrator values Ayame's companionship",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Kenji",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "narrator appreciates Kenji's kindness",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": 4
+    },
+    {
+      "CHARACTER": "Haru",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "narrator reflects on life and relationships",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 4
+    },
+    {
+      "CHARACTER": "Oyakata-sama",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Edo",
+    "Sakurada Gate"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "A thick, damp mist settled in the old capital of Edo.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Ooka-sama"
+      ],
+      "LOCATION": "Edo",
+      "CAUSE": "Story opening",
+      "EFFECT": "The mist affects daily life in Edo.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Saki vanished and reappeared five days later, shivering uncontrollably.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Saki",
+        "Haru"
+      ],
+      "LOCATION": "Edo",
+      "CAUSE": "Saki's illness",
+      "EFFECT": "Haru cares for Saki.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Ooka-sama explained to Oyakata-sama why he must seclude himself from all, especially Ayame.",
+      "FUNCTION": "SACRIFICE",
+      "CHARACTERS": [
+        "Ooka-sama",
+        "Oyakata-sama"
+      ],
+      "LOCATION": "Edo",
+      "CAUSE": "Saki's illness",
+      "EFFECT": "Ooka-sama prioritizes Saki's care.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Kenji came home and comforted Haru.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Kenji",
+        "Haru"
+      ],
+      "LOCATION": "Edo",
+      "CAUSE": "Haru's emotional state",
+      "EFFECT": "Haru feels comforted.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Ooka-sama reflected on life and relationships, appreciating the kindness of those around him.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Ooka-sama"
+      ],
+      "LOCATION": "Edo",
+      "CAUSE": "The experiences of the past",
+      "EFFECT": "Ooka-sama feels grateful and at peace.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Ooka-sama",
+      "TARGET": "Saki",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Ooka-sama",
+      "TARGET": "Ayame",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Ooka-sama",
+      "TARGET": "Kenji",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Ayame",
+      "TARGET": "Ooka-sama",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Kenji",
+      "TARGET": "Haru",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "HELPER_APPEARS",
+    "SACRIFICE",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [
+      "CHANGE_EVENT"
+    ],
+    "issues": [
+      "event participant 'Oyakata-sama' not in CHARACTERS: added as SECONDARY"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 3564,
+    "excerpt_chars": 3564
+  }
+}

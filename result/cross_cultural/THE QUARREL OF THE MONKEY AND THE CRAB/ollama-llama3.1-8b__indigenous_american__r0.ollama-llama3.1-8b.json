@@ -1,0 +1,166 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Cautionary Tale",
+  "SETTING_DOMAIN": "Spiritual and Religious",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "the cunning monkey",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "from cunning to punished",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "the brave crab",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "from sorrow to justice",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "the mortar",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "from hidden to active",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "the bee",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "from hidden to active",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "the chestnut",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "from hidden to active",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    }
+  ],
+  "LOCATIONS": [
+    "the winding riverbank"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "The monkey and the crab played together, their laughter echoing through the trees.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "the cunning monkey",
+        "the brave crab"
+      ],
+      "LOCATION": "the winding riverbank",
+      "CAUSE": "Story opening",
+      "EFFECT": "The story begins with the monkey and crab's friendship.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "The monkey proposed an exchange, offering to trade the seed for the dumpling.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "the cunning monkey",
+        "the brave crab"
+      ],
+      "LOCATION": "the winding riverbank",
+      "CAUSE": "The monkey's cunning words",
+      "EFFECT": "The crab is deceived and gives up the dumpling.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "The monkey pulled off the ripe persimmons, one by one, and hurled them at the defenseless crab.",
+      "FUNCTION": "BETRAYAL",
+      "CHARACTERS": [
+        "the cunning monkey",
+        "the brave crab"
+      ],
+      "LOCATION": "the winding riverbank",
+      "CAUSE": "The monkey's wicked intent",
+      "EFFECT": "The crab is wounded and his father is killed.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "The young crab and his friends set a trap for the monkey at the memorial feast.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "the brave crab",
+        "the mortar",
+        "the bee",
+        "the chestnut"
+      ],
+      "LOCATION": "the winding riverbank",
+      "CAUSE": "The young crab's desire for justice",
+      "EFFECT": "The monkey is punished for his crimes.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "The monkey was punished for his crimes, and his wicked spirit was finally at peace.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "the cunning monkey",
+        "the brave crab"
+      ],
+      "LOCATION": "the winding riverbank",
+      "CAUSE": "The young crab's justice",
+      "EFFECT": "The story ends with the monkey punished and the moral order restored.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "the cunning monkey",
+      "TARGET": "the brave crab",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "the brave crab",
+      "TARGET": "the cunning monkey",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "the mortar",
+      "TARGET": "the brave crab",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "the bee",
+      "TARGET": "the brave crab",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "the chestnut",
+      "TARGET": "the brave crab",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "TRICKSTER",
+    "BETRAYAL",
+    "HELPER_APPEARS",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 2787,
+    "excerpt_chars": 2787
+  }
+}

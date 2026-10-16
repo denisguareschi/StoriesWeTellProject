@@ -1,0 +1,142 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Tiger",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "Tiger is tricked and outwitted by Ram",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Ram",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "Ram uses cunning to escape",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Jackal",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "Jackal is tricked by Ram and dragged by Tiger",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    }
+  ],
+  "LOCATIONS": [
+    "kraal",
+    "Tiger's place"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Tiger meets Ram and asks for his name",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Tiger",
+        "Ram"
+      ],
+      "LOCATION": "kraal",
+      "CAUSE": "Story opening",
+      "EFFECT": "Tiger is curious about Ram",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Tiger runs away from Ram and tells Jackal about the encounter",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Tiger",
+        "Jackal"
+      ],
+      "LOCATION": "Tiger's place",
+      "CAUSE": "Tiger's encounter with Ram",
+      "EFFECT": "Jackal and Tiger plan to eat Ram",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Jackal and Tiger go to Ram's kraal",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Jackal",
+        "Tiger",
+        "Ram"
+      ],
+      "LOCATION": "kraal",
+      "CAUSE": "Jackal and Tiger's plan",
+      "EFFECT": "Ram is aware of the threat",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Ram and his wife come up with a plan to escape",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Ram"
+      ],
+      "LOCATION": "kraal",
+      "CAUSE": "Ram's situation",
+      "EFFECT": "Ram and his wife escape",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Tiger and Jackal are tricked by Ram and escape",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Tiger",
+        "Jackal",
+        "Ram"
+      ],
+      "LOCATION": "kraal",
+      "CAUSE": "Ram's plan",
+      "EFFECT": "Tiger and Jackal escape, but Ram escapes",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Ram",
+      "TARGET": "Tiger",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Jackal",
+      "TARGET": "Tiger",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Ram",
+      "TARGET": "Jackal",
+      "TYPE": "DECEIVES"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "QUEST",
+    "HELPER_APPEARS",
+    "ORDEAL",
+    "TRICKSTER"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 2225,
+    "excerpt_chars": 2225
+  }
+}

@@ -1,0 +1,145 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Hero's Journey",
+  "SETTING_DOMAIN": "Historical and Geographical",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Emperor Kotei",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "from ruler to wise and just leader",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Empress",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Shiyu",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Dragon",
+      "ROLE": "TRICKSTER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "our fair land",
+    "the battlefield",
+    "the banks of a swollen river",
+    "a fortress beyond",
+    "the courtyard"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Emperor Kotei, the son of Emperor Yuhi, ruled over our fair land.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Emperor Kotei"
+      ],
+      "LOCATION": "our fair land",
+      "CAUSE": "Story opening",
+      "EFFECT": "The Emperor's reign begins",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Shiyu, the wicked magician, had usurped the hearts of many, and his malevolent powers seemed invincible.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Shiyu"
+      ],
+      "LOCATION": "our fair land",
+      "CAUSE": "Shiyu's rebellion",
+      "EFFECT": "The Emperor faces a dire challenge",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Kotei, a master of the human heart and a weaver of wisdom, refused to yield.",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Emperor Kotei"
+      ],
+      "LOCATION": "our fair land",
+      "CAUSE": "Kotei's determination",
+      "EFFECT": "The South Pointing shinansha is born",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Kotei led his army into battle once more, and the rebel's magic still sought to confound them.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Emperor Kotei",
+        "Shiyu"
+      ],
+      "LOCATION": "the banks of a swollen river",
+      "CAUSE": "The battle between Kotei and Shiyu",
+      "EFFECT": "The Emperor's men follow the direction of the shinansha",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "The Emperor's ingenuity and perseverance succeeded, for the boats were built, and the army crossed, pursuing the rebel into his stronghold.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Emperor Kotei",
+        "Shiyu"
+      ],
+      "LOCATION": "the courtyard",
+      "CAUSE": "Kotei's victory",
+      "EFFECT": "The Emperor's reign reaches its hundredth year",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Emperor Kotei",
+      "TARGET": "Shiyu",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Empress",
+      "TARGET": "Emperor Kotei",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "QUEST",
+    "ORDEAL",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "issues": [
+      "relation dropped: {'SOURCE': 'Dragon', 'TARGET': 'Emperor Kotei', 'TYPE': 'TRICKSTER'}"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 3057,
+    "excerpt_chars": 3057
+  }
+}

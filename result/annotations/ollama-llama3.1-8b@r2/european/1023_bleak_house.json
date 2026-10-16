@@ -1,0 +1,151 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Tragedy",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Esther Summerson",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "from isolated to connected with family and community",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "John Jarndyce",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Richard Carstone",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Ada Clare",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Charley",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "London",
+    "Lincoln's Inn Hall",
+    "Temple Bar",
+    "Esther's room",
+    "The porch"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "The story begins on a foggy and wet day in London.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Esther Summerson"
+      ],
+      "LOCATION": "London",
+      "CAUSE": "Story opening",
+      "EFFECT": "Esther is introduced as the protagonist",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Esther receives news that her guardian, John Jarndyce, has been injured.",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Esther Summerson",
+        "John Jarndyce"
+      ],
+      "LOCATION": "Lincoln's Inn Hall",
+      "CAUSE": "John Jarndyce's injury",
+      "EFFECT": "Esther becomes concerned for John Jarndyce's well-being",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Charley falls ill and Esther becomes her nurse.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Esther Summerson",
+        "Charley"
+      ],
+      "LOCATION": "Esther's room",
+      "CAUSE": "Charley's illness",
+      "EFFECT": "Esther takes on a caregiving role",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "John Jarndyce's health improves, and Esther is able to visit him.",
+      "FUNCTION": "RETURN",
+      "CHARACTERS": [
+        "Esther Summerson",
+        "John Jarndyce"
+      ],
+      "LOCATION": "Lincoln's Inn Hall",
+      "CAUSE": "John Jarndyce's recovery",
+      "EFFECT": "Esther is able to reconnect with John Jarndyce",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Esther reflects on her own life and relationships, and feels grateful for the love and support of those around her.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Esther Summerson"
+      ],
+      "LOCATION": "The porch",
+      "CAUSE": "Esther's reflection",
+      "EFFECT": "Esther feels a sense of closure and completion",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Esther Summerson",
+      "TARGET": "John Jarndyce",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Esther Summerson",
+      "TARGET": "Charley",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "QUEST",
+    "HELPER_APPEARS",
+    "RETURN",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.5,
+    "seed": 2,
+    "attempts": 1,
+    "source_chars": 1934752,
+    "excerpt_chars": 11607
+  }
+}

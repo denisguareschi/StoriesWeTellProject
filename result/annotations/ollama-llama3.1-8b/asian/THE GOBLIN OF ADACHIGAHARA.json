@@ -1,0 +1,123 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Tragedy",
+  "SETTING_DOMAIN": "Spiritual and Religious",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "the priest",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "learns to fear and respect the supernatural",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "the old woman",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "revealed to be a cannibal goblin",
+      "TRANSFORMATION_TYPE": "REVERSAL",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Adachigahara",
+    "the cottage",
+    "outside the cottage"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "A priest, a belated traveler, came to the plain of Adachigahara.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "the priest"
+      ],
+      "LOCATION": "Adachigahara",
+      "CAUSE": "Story opening",
+      "EFFECT": "The priest is lost and needs a place to stay.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "The old woman, a kind and hospitable host, lets the priest stay in her cottage.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "the priest",
+        "the old woman"
+      ],
+      "LOCATION": "the cottage",
+      "CAUSE": "The priest's need for a place to stay",
+      "EFFECT": "The priest is safe for the night.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "The priest, despite the old woman's warnings, looks into the forbidden room and sees the goblin's lair.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "the priest",
+        "the old woman"
+      ],
+      "LOCATION": "the cottage",
+      "CAUSE": "The priest's curiosity",
+      "EFFECT": "The priest is horrified and frightened.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "The old woman, revealed to be a cannibal goblin, chases the priest out of the cottage.",
+      "FUNCTION": "BETRAYAL",
+      "CHARACTERS": [
+        "the priest",
+        "the old woman"
+      ],
+      "LOCATION": "the cottage",
+      "CAUSE": "The priest's discovery of the goblin's lair",
+      "EFFECT": "The priest is in danger.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "The priest escapes from the goblin and thanks Buddha for his protection.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "the priest"
+      ],
+      "LOCATION": "outside the cottage",
+      "CAUSE": "The priest's prayer to Buddha",
+      "EFFECT": "The priest is safe.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "the old woman",
+      "TARGET": "the priest",
+      "TYPE": "OPPOSES"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "HELPER_APPEARS",
+    "ORDEAL",
+    "BETRAYAL",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 8791,
+    "excerpt_chars": 8791
+  }
+}

@@ -1,0 +1,140 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Lion",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "from proud to broken and humiliated",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Jackal",
+      "ROLE": "TRICKSTER",
+      "TRANSFORMATION": "from cunning to cruel",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Jackal's wife",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "from wise to complicit",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    }
+  ],
+  "LOCATIONS": [
+    "Kalahari",
+    "River",
+    "Bank"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "The Lion caught an eland and left it on the bank to guard.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Lion"
+      ],
+      "LOCATION": "Bank",
+      "CAUSE": "Story opening",
+      "EFFECT": "The Lion's eland is left unattended.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Jackal and his wife feasted on the eland, leaving nothing but bones.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Jackal",
+        "Jackal's wife"
+      ],
+      "LOCATION": "Bank",
+      "CAUSE": "Jackal's desire for food",
+      "EFFECT": "The eland is consumed.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "The Lion returned and asked Jackal for help, but Jackal pretended to assist.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Lion",
+        "Jackal"
+      ],
+      "LOCATION": "Bank",
+      "CAUSE": "The Lion's need for help",
+      "EFFECT": "The Lion is left stranded.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Jackal gave the Lion a rotten rope, which snapped, sending the Lion tumbling down the hill.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Lion",
+        "Jackal"
+      ],
+      "LOCATION": "Bank",
+      "CAUSE": "Jackal's deceit",
+      "EFFECT": "The Lion is injured.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "The Lion lay broken and humiliated, while Jackal and his wife walked away, their hearts full of deceit.",
+      "FUNCTION": "SACRIFICE",
+      "CHARACTERS": [
+        "Lion",
+        "Jackal",
+        "Jackal's wife"
+      ],
+      "LOCATION": "Bank",
+      "CAUSE": "Jackal's cruelty",
+      "EFFECT": "The Lion's pride is crushed.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Jackal",
+      "TARGET": "Lion",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "Jackal's wife",
+      "TARGET": "Lion",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Lion",
+      "TARGET": "Jackal",
+      "TYPE": "OPPOSES"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "TRICKSTER",
+    "SACRIFICE"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 2910,
+    "excerpt_chars": 2910
+  }
+}

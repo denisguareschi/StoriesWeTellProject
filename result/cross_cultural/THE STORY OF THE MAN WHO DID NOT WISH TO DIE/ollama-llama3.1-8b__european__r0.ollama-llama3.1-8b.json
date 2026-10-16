@@ -1,0 +1,163 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Spiritual and Religious",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Edward Fanshawe",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "from fearing death to valuing life",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Jofuku",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "The Kindly Hunter",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "The Robber",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "The Messenger",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Ashwood",
+    "Mount Fuji",
+    "The Country of Perpetual Life",
+    "The Shrine of Jofuku"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Edward Fanshawe, a gentleman from Ashwood, begins to fear death and wishes to live for six hundred years.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Edward Fanshawe"
+      ],
+      "LOCATION": "Ashwood",
+      "CAUSE": "Story opening",
+      "EFFECT": "Edward's desire for immortality",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Edward sets out on a quest to find the Elixir of Life, leaving his relatives to manage his estate.",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Edward Fanshawe"
+      ],
+      "LOCATION": "Ashwood",
+      "CAUSE": "Edward's desire for immortality",
+      "EFFECT": "Edward's journey begins",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Jofuku appears to Edward in a vision and offers him a different solution: the Country of Perpetual Life.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Edward Fanshawe",
+        "Jofuku"
+      ],
+      "LOCATION": "The Shrine of Jofuku",
+      "CAUSE": "Edward's journey",
+      "EFFECT": "Edward is given a new goal",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Edward travels to the Country of Perpetual Life on the back of a paper crane, where he discovers that the inhabitants long for death.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Edward Fanshawe"
+      ],
+      "LOCATION": "The Country of Perpetual Life",
+      "CAUSE": "Jofuku's solution",
+      "EFFECT": "Edward's experiences in the Country of Perpetual Life",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Edward returns to Ashwood, chastened by his experience, and determines to live a virtuous life.",
+      "FUNCTION": "RETURN",
+      "CHARACTERS": [
+        "Edward Fanshawe"
+      ],
+      "LOCATION": "Ashwood",
+      "CAUSE": "Edward's experiences in the Country of Perpetual Life",
+      "EFFECT": "Edward's transformation",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Edward Fanshawe",
+      "TARGET": "Jofuku",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Jofuku",
+      "TARGET": "Edward Fanshawe",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "The Kindly Hunter",
+      "TARGET": "Edward Fanshawe",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "The Robber",
+      "TARGET": "Edward Fanshawe",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "The Messenger",
+      "TARGET": "Edward Fanshawe",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "QUEST",
+    "HELPER_APPEARS",
+    "ORDEAL",
+    "RETURN"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 4861,
+    "excerpt_chars": 4861
+  }
+}

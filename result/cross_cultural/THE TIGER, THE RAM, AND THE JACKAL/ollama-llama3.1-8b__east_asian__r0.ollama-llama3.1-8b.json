@@ -1,0 +1,164 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Kaito",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "learns to confront his fears",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Hiro",
+      "ROLE": "TRICKSTER",
+      "TRANSFORMATION": "uses cunning to outwit hunters",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Genji",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "helps Kaito in his quest",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Yumi",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "helps Hiro in his trick",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Jackal",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "tries to hunt Hiro",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    }
+  ],
+  "LOCATIONS": [
+    "Akakawa",
+    "Hiro's kraal",
+    "Genji's home"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Kaito, a skilled hunter, had ventured out to claim his share of the evening's bounty.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Kaito"
+      ],
+      "LOCATION": "Akakawa",
+      "CAUSE": "Story opening",
+      "EFFECT": "Kaito sets out to hunt",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Kaito inquired, 'Greetings, honorable Hiro-san! May I know your name?'",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Kaito",
+        "Hiro"
+      ],
+      "LOCATION": "Hiro's kraal",
+      "CAUSE": "Kaito meets Hiro",
+      "EFFECT": "Hiro introduces himself",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Genji's eyes sparkled with intrigue, 'Ha! A worthy meal, indeed. We shall pay Hiro a visit tomorrow, and claim him as our own.'",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Genji",
+        "Kaito"
+      ],
+      "LOCATION": "Genji's home",
+      "CAUSE": "Genji learns about Hiro",
+      "EFFECT": "Genji plans to hunt Hiro",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Hiro, with the child in his arms, pretended to be torn between his hunger and his duty to care for his child.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Hiro",
+        "Yumi"
+      ],
+      "LOCATION": "Hiro's kraal",
+      "CAUSE": "Hiro and Yumi plan to trick Kaito",
+      "EFFECT": "Kaito is deceived",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Kaito fled, dragging his friend behind him, over hills and through valleys, until they reached the safety of their own home.",
+      "FUNCTION": "SACRIFICE",
+      "CHARACTERS": [
+        "Kaito",
+        "Genji"
+      ],
+      "LOCATION": "Akakawa",
+      "CAUSE": "Kaito is tricked by Hiro",
+      "EFFECT": "Kaito and Genji escape",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Hiro",
+      "TARGET": "Kaito",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "Genji",
+      "TARGET": "Kaito",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Yumi",
+      "TARGET": "Hiro",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Kaito",
+      "TARGET": "Genji",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Hiro",
+      "TARGET": "Genji",
+      "TYPE": "OPPOSES"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "HELPER_APPEARS",
+    "TRICKSTER",
+    "SACRIFICE"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 2632,
+    "excerpt_chars": 2632
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Spiritual and Religious",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "old man",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "learns to forgive and understand his wife's transformation",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "old woman",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "repents of her cross, unkind ways",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Suzume San (Miss Sparrow)",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "transforms into a fairy and helps the old man",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": 2
+    },
+    {
+      "CHARACTER": "Lady Sparrow",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "helps the old man and forgives his wife",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": 2
+    }
+  ],
+  "LOCATIONS": [
+    "Japan",
+    "bamboo grove",
+    "home"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "The old woman scolds and cuts off the sparrow's tongue.",
+      "FUNCTION": "BETRAYAL",
+      "CHARACTERS": [
+        "old woman",
+        "Suzume San (Miss Sparrow)"
+      ],
+      "LOCATION": "home",
+      "CAUSE": "Story opening",
+      "EFFECT": "The sparrow is punished.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "The old man follows the sparrow to her house and is entertained.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "old man",
+        "Suzume San (Miss Sparrow)",
+        "Lady Sparrow"
+      ],
+      "LOCATION": "bamboo grove",
+      "CAUSE": "The sparrow's actions",
+      "EFFECT": "The old man is happy and entertained.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "The old woman visits the Lady Sparrow's house and asks for the big box.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "old woman",
+        "Lady Sparrow"
+      ],
+      "LOCATION": "bamboo grove",
+      "CAUSE": "The old woman's actions",
+      "EFFECT": "The Lady Sparrow gives her the big box.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "The old woman opens the big box and is frightened by the demons.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "old woman"
+      ],
+      "LOCATION": "bamboo grove",
+      "CAUSE": "The old woman's actions",
+      "EFFECT": "The old woman is frightened and runs away.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "The old woman repents of her cross, unkind ways and becomes a good old woman.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "old woman"
+      ],
+      "LOCATION": "home",
+      "CAUSE": "The old woman's experiences",
+      "EFFECT": "The old woman changes her ways.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "old woman",
+      "TARGET": "Suzume San (Miss Sparrow)",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "old man",
+      "TARGET": "Suzume San (Miss Sparrow)",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Lady Sparrow",
+      "TARGET": "old woman",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "BETRAYAL",
+    "HELPER_APPEARS",
+    "CALL_TO_ADVENTURE",
+    "ORDEAL",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 17436,
+    "excerpt_chars": 11709
+  }
+}

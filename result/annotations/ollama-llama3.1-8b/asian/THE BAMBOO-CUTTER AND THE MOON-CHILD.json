@@ -1,0 +1,159 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Spiritual and Religious",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "The Bamboo-Cutter",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "from poor to wealthy",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Princess Moonlight",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "from tiny to full-grown, from human to divine",
+      "TRANSFORMATION_TYPE": "REVERSAL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "The Old Woman",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "The Knight",
+      "ROLE": "TRICKSTER",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "The Emperor",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "the bamboo forest",
+    "the old couple's house",
+    "Mount Horai",
+    "the Palace",
+    "Mount Fuji"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "The Bamboo-Cutter finds a tiny human being in a bamboo stem.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "The Bamboo-Cutter",
+        "Princess Moonlight"
+      ],
+      "LOCATION": "the bamboo forest",
+      "CAUSE": "Story opening",
+      "EFFECT": "The Bamboo-Cutter finds a new child.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "The Bamboo-Cutter's wealth increases after finding gold in the bamboos.",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "The Bamboo-Cutter",
+        "Princess Moonlight"
+      ],
+      "LOCATION": "the old couple's house",
+      "CAUSE": "The Bamboo-Cutter's wealth increases.",
+      "EFFECT": "The Bamboo-Cutter becomes wealthy.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "The Knight presents a branch from Mount Horai to Princess Moonlight.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "The Knight",
+        "Princess Moonlight",
+        "The Bamboo-Cutter"
+      ],
+      "LOCATION": "the old couple's house",
+      "CAUSE": "The Knight's deception.",
+      "EFFECT": "The Princess is suspicious of the Knight.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "The Princess is revealed to be a divine being and must return to the moon.",
+      "FUNCTION": "RESURRECTION",
+      "CHARACTERS": [
+        "Princess Moonlight",
+        "The Bamboo-Cutter"
+      ],
+      "LOCATION": "the old couple's house",
+      "CAUSE": "The Princess's divine nature is revealed.",
+      "EFFECT": "The Princess must return to the moon.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "The Princess says goodbye to the Bamboo-Cutter and returns to the moon.",
+      "FUNCTION": "RETURN",
+      "CHARACTERS": [
+        "Princess Moonlight",
+        "The Bamboo-Cutter"
+      ],
+      "LOCATION": "the old couple's house",
+      "CAUSE": "The Princess's divine nature is revealed.",
+      "EFFECT": "The Princess returns to the moon.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "The Bamboo-Cutter",
+      "TARGET": "Princess Moonlight",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "The Knight",
+      "TARGET": "Princess Moonlight",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "The Emperor",
+      "TARGET": "Princess Moonlight",
+      "TYPE": "BONDS_WITH"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "HELPER_APPEARS",
+    "QUEST",
+    "TRICKSTER",
+    "RESURRECTION",
+    "RETURN"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 30343,
+    "excerpt_chars": 11459
+  }
+}

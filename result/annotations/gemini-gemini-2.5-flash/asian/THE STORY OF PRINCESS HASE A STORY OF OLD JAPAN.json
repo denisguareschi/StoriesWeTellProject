@@ -1,0 +1,169 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Hero's Journey",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Hase-Hime",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "From an obedient child enduring hardship to a wise, devout, and respected mistress.",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Princess Terute",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "From a cruel step-mother to a disgraced fugitive.",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Prince Toyonari Fujiwara",
+      "ROLE": "DEUTERAGONIST",
+      "TRANSFORMATION": "From a sorrowful and anxious father to a relieved and proud father.",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Princess Murasaki",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "NONE",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Katoda",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "From a loyal servant to a highly rewarded retainer.",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    }
+  ],
+  "LOCATIONS": [
+    "Nara",
+    "Temple of Hase-no-Kwannon",
+    "Prince Toyonari's ancient house",
+    "River Tatsuta",
+    "Hibari Mountains",
+    "Cottage"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Prince Toyonari and Princess Murasaki, sorrowful over childlessness, make a pilgrimage to the Temple of Hase-no-Kwannon.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Prince Toyonari Fujiwara",
+        "Princess Murasaki"
+      ],
+      "LOCATION": "Temple of Hase-no-Kwannon",
+      "CAUSE": "Story opening",
+      "EFFECT": "Their prayer is answered, and Hase-Hime is born.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Princess Terute attempts to poison Hase-Hime but accidentally poisons her own son.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Princess Terute",
+        "Hase-Hime"
+      ],
+      "LOCATION": "Prince Toyonari's ancient house",
+      "CAUSE": "Princess Terute's hatred for Hase-Hime.",
+      "EFFECT": "Terute's son dies, and her hatred for Hase-Hime intensifies.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 3,
+      "EVENT": "Hase-Hime calms the River Tatsuta with a poem, saving the Emperor from illness.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Hase-Hime"
+      ],
+      "LOCATION": "River Tatsuta",
+      "CAUSE": "The Emperor's illness due to the roaring river and the court's suggestion of Hase-Hime's poetic ability.",
+      "EFFECT": "The river calms, the Emperor recovers, and Hase-Hime's reputation grows.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 4,
+      "EVENT": "Princess Terute's continued hatred leads to Hase-Hime's disappearance from the house.",
+      "FUNCTION": "RESURRECTION",
+      "CHARACTERS": [
+        "Hase-Hime",
+        "Princess Terute",
+        "Katoda"
+      ],
+      "LOCATION": "Prince Toyonari's ancient house",
+      "CAUSE": "Princess Terute's intensified hatred and desire to harm Hase-Hime.",
+      "EFFECT": "Hase-Hime lives in a lonely cottage, and Prince Toyonari is anxious.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Prince Toyonari finds Hase-Hime in the Hibari Mountains, leading to Terute's flight and Hase-Hime's restoration.",
+      "FUNCTION": "RETURN",
+      "CHARACTERS": [
+        "Hase-Hime",
+        "Prince Toyonari Fujiwara",
+        "Princess Terute",
+        "Katoda"
+      ],
+      "LOCATION": "Hibari Mountains",
+      "CAUSE": "Prince Toyonari's search for his lost daughter.",
+      "EFFECT": "Hase-Hime is restored to her family, Terute is punished, Katoda is rewarded, and Hase-Hime lives a long, respected life.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Princess Terute",
+      "TARGET": "Hase-Hime",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Prince Toyonari Fujiwara",
+      "TARGET": "Hase-Hime",
+      "TYPE": "BONDS_WITH"
+    },
+    {
+      "SOURCE": "Katoda",
+      "TARGET": "Hase-Hime",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Princess Murasaki",
+      "TARGET": "Prince Toyonari Fujiwara",
+      "TYPE": "BONDS_WITH"
+    },
+    {
+      "SOURCE": "Princess Murasaki",
+      "TARGET": "Hase-Hime",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "ORDEAL",
+    "RESURRECTION",
+    "RETURN"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "issues": [
+      "ROLE invalid for 'Princess Terute': 'ANTAOGNIST' -> SECONDARY"
+    ],
+    "model": "gemini:gemini-2.5-flash",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 16641,
+    "excerpt_chars": 11826
+  }
+}

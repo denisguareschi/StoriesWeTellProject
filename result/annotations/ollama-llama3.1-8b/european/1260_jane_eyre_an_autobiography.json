@@ -1,0 +1,175 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Tragedy",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Jane Eyre",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "from a timid and isolated child to a strong and independent woman",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Mrs. Reed",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "remains unchanged and unchangeable",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Mr. Eyre",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "recovers his sight and becomes more independent",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 4
+    },
+    {
+      "CHARACTER": "St. John Rivers",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "remains unchanged and dedicated to his mission",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Diana and Mary Rivers",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "get married and start their own families",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Bessie",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Eminent oculist",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Gateshead",
+    "London",
+    "India",
+    "England"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Jane is excluded from privileges intended for happy children",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Jane Eyre",
+        "Mrs. Reed"
+      ],
+      "LOCATION": "Gateshead",
+      "CAUSE": "Story opening",
+      "EFFECT": "Jane feels isolated and unhappy",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Jane decides to stay with her aunt and try to change her behavior",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Jane Eyre",
+        "Bessie"
+      ],
+      "LOCATION": "Gateshead",
+      "CAUSE": "Jane's desire to change and please her aunt",
+      "EFFECT": "Jane starts to take steps to improve herself",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Jane visits her aunt in her room and tries to reconcile with her",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Jane Eyre",
+        "Mrs. Reed"
+      ],
+      "LOCATION": "Gateshead",
+      "CAUSE": "Jane's desire to reconcile with her aunt",
+      "EFFECT": "Jane's aunt remains unchanged and unchangeable",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Mr. Eyre recovers his sight with the help of an oculist",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Mr. Eyre",
+        "Eminent oculist"
+      ],
+      "LOCATION": "London",
+      "CAUSE": "Mr. Eyre's desire to recover his sight",
+      "EFFECT": "Mr. Eyre becomes more independent and happy",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Jane and Mr. Eyre are happy together, and St. John Rivers leaves for India",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Jane Eyre",
+        "Mr. Eyre",
+        "St. John Rivers"
+      ],
+      "LOCATION": "England",
+      "CAUSE": "The culmination of Jane's journey and her happiness with Mr. Eyre",
+      "EFFECT": "St. John Rivers leaves for India to continue his mission",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Jane Eyre",
+      "TARGET": "Mrs. Reed",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Jane Eyre",
+      "TARGET": "Mr. Eyre",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "St. John Rivers",
+      "TARGET": "Jane Eyre",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "QUEST",
+    "HELPER_APPEARS",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "issues": [
+      "event participant 'Bessie' not in CHARACTERS: added as SECONDARY",
+      "event participant 'Eminent oculist' not in CHARACTERS: added as SECONDARY"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 1024424,
+    "excerpt_chars": 11611
+  }
+}

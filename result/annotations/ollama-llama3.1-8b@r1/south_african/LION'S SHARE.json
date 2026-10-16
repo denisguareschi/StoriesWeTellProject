@@ -1,0 +1,165 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Lion",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "exposed by his own trickster nature",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Jackal",
+      "ROLE": "TRICKSTER",
+      "TRANSFORMATION": "exploits Lion's trust and gullibility",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Lioness",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "no change",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Lion's children",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "no change",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Jackal's wife",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "no change",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "forest",
+    "crossway",
+    "Lion's house",
+    "Jackal's house",
+    "neighborhood of the killed animal"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Lion and Jackal went together a-hunting.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Lion",
+        "Jackal"
+      ],
+      "LOCATION": "forest",
+      "CAUSE": "Story opening",
+      "EFFECT": "They go hunting together.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Jackal soon found the killed animal, crept inside of it, and devoured the best portion.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Jackal"
+      ],
+      "LOCATION": "neighborhood of the killed animal",
+      "CAUSE": "Jackal's previous trick",
+      "EFFECT": "Lion's family gets less food.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Jackal threw, grumbling, the worst portion to Lion's children, and said, 'There, you brood of the big-eyed one!'",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Jackal",
+        "Lion's children"
+      ],
+      "LOCATION": "Lion's house",
+      "CAUSE": "Jackal's previous trick",
+      "EFFECT": "Lion's children get less food.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Lion fell heavily to the bottom, groaning aloud, as he had been seriously hurt.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Lion"
+      ],
+      "LOCATION": "neighborhood of the killed animal",
+      "CAUSE": "Jackal's previous trick",
+      "EFFECT": "Lion is seriously hurt.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Lion fell to the ground and lay there pleading for water, while Jackal climbed down and made his escape.",
+      "FUNCTION": "SACRIFICE",
+      "CHARACTERS": [
+        "Lion",
+        "Jackal"
+      ],
+      "LOCATION": "neighborhood of the killed animal",
+      "CAUSE": "Jackal's previous trick",
+      "EFFECT": "Lion is punished, Jackal escapes.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Lion",
+      "TARGET": "Jackal",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Jackal",
+      "TARGET": "Lion",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "Lion",
+      "TARGET": "Lioness",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Jackal",
+      "TARGET": "Jackal's wife",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Lion",
+      "TARGET": "Lion's children",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "TRICKSTER",
+    "ORDEAL",
+    "SACRIFICE"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.5,
+    "seed": 1,
+    "attempts": 1,
+    "source_chars": 3933,
+    "excerpt_chars": 3933
+  }
+}

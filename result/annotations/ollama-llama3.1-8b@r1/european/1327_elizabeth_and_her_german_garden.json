@@ -1,0 +1,169 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "The narrator",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "learns to appreciate the simple things in life",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Aunt Bertha",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Minora",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": 4
+    },
+    {
+      "CHARACTER": "The stork",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": 2
+    },
+    {
+      "CHARACTER": "The overseer",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "The Russian workers",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "the garden",
+    "the house",
+    "the cornfields",
+    "the meadows",
+    "the heath",
+    "the pine forests"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "The narrator is writing in the garden, enjoying the beauty of nature",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "The narrator"
+      ],
+      "LOCATION": "the garden",
+      "CAUSE": "Story opening",
+      "EFFECT": "The narrator is inspired to appreciate the simple things in life",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "The narrator meets the stork and learns about his life",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "The narrator",
+        "The stork"
+      ],
+      "LOCATION": "the garden",
+      "CAUSE": "The narrator's encounter with the stork",
+      "EFFECT": "The narrator learns to appreciate the stork's hard work and dedication",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "The narrator is frustrated with the Russian workers who refuse to work on Saints' days",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "The narrator",
+        "The Russian workers"
+      ],
+      "LOCATION": "the garden",
+      "CAUSE": "The narrator's frustration with the workers",
+      "EFFECT": "The narrator is exasperated by the workers' behavior",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "The narrator receives a bottle of embrocation from Minora and is suspicious of her motives",
+      "FUNCTION": "BETRAYAL",
+      "CHARACTERS": [
+        "The narrator",
+        "Minora"
+      ],
+      "LOCATION": "the house",
+      "CAUSE": "Minora's gift",
+      "EFFECT": "The narrator is wary of Minora's intentions",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "The narrator reflects on the beauty of nature and the impermanence of life",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "The narrator"
+      ],
+      "LOCATION": "the garden",
+      "CAUSE": "The narrator's reflection on life",
+      "EFFECT": "The narrator feels a sense of peace and contentment",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "The narrator",
+      "TARGET": "The stork",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "The narrator",
+      "TARGET": "Minora",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "The narrator",
+      "TARGET": "Aunt Bertha",
+      "TYPE": "OPPOSES"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "HELPER_APPEARS",
+    "ORDEAL",
+    "BETRAYAL",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [
+      "CHANGE_EVENT"
+    ],
+    "issues": [
+      "event participant 'The Russian workers' not in CHARACTERS: added as SECONDARY"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.5,
+    "seed": 1,
+    "attempts": 1,
+    "source_chars": 261861,
+    "excerpt_chars": 11963
+  }
+}

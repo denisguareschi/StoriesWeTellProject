@@ -1,0 +1,179 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Tragedy",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "The Monkey",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "Changes from cunning and deceitful to punished and defeated",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "The Crab",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "Changes from simple-minded to avenging his father's death",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "The Mortar",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "None",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "The Bee",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "None",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "The Chestnut",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "None",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "The Young Crab",
+      "ROLE": "DEUTERAGONIST",
+      "TRANSFORMATION": "None",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Japan",
+    "River bank",
+    "Forest",
+    "Tree"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "A pink-faced monkey and a yellow crab were playing together along the bank of a river.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "The Monkey",
+        "The Crab"
+      ],
+      "LOCATION": "River bank",
+      "CAUSE": "Story opening",
+      "EFFECT": "The two animals are introduced",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "The monkey proposed an exchange of the persimmon-seed for the rice-dumpling.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "The Monkey",
+        "The Crab"
+      ],
+      "LOCATION": "River bank",
+      "CAUSE": "The monkey's cunning persuasion",
+      "EFFECT": "The crab agrees to the exchange",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "The crab planted the persimmon-seed and it grew into a tree.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "The Crab",
+        "The Monkey"
+      ],
+      "LOCATION": "Tree",
+      "CAUSE": "The crab's actions",
+      "EFFECT": "The tree grows and bears fruit",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "The monkey killed the crab by throwing persimmons at him.",
+      "FUNCTION": "BETRAYAL",
+      "CHARACTERS": [
+        "The Monkey",
+        "The Crab"
+      ],
+      "LOCATION": "Tree",
+      "CAUSE": "The monkey's greed and cunning",
+      "EFFECT": "The crab is killed",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "The young crab avenged his father's death by killing the monkey.",
+      "FUNCTION": "SACRIFICE",
+      "CHARACTERS": [
+        "The Young Crab",
+        "The Monkey"
+      ],
+      "LOCATION": "Tree",
+      "CAUSE": "The young crab's actions",
+      "EFFECT": "The monkey is punished",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "The Monkey",
+      "TARGET": "The Crab",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "The Crab",
+      "TARGET": "The Monkey",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "The Young Crab",
+      "TARGET": "The Monkey",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "The Mortar",
+      "TARGET": "The Monkey",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "The Bee",
+      "TARGET": "The Monkey",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "The Chestnut",
+      "TARGET": "The Monkey",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "TRICKSTER",
+    "HELPER_APPEARS",
+    "BETRAYAL",
+    "SACRIFICE"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.5,
+    "seed": 1,
+    "attempts": 1,
+    "source_chars": 14241,
+    "excerpt_chars": 11870
+  }
+}

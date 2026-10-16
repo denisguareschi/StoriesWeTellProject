@@ -1,0 +1,175 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Hero's Journey",
+  "SETTING_DOMAIN": "Historical and Geographical",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Prince Yamato Take",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "from youth to brave warrior",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Kumaso",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "null",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Takeru",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "null",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Princess Ototachibana",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "null",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Governor of Owari",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "null",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Monster Serpent",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "null",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "King Keiko",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Japan",
+    "Southern Island of Kiushiu",
+    "Ise",
+    "Owari",
+    "Omi",
+    "Ibuki Mountain"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "King Keiko orders Prince Yamato Take to subdue the brigands and rid the land of their evil lives.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Prince Yamato Take",
+        "King Keiko"
+      ],
+      "LOCATION": "Japan",
+      "CAUSE": "Story opening",
+      "EFFECT": "Prince Yamato Take sets out on his mission",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Prince Yamato Take visits the temples of Ise and receives a sword and a flint-bag from his aunt, the Princess Ototachibana.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Prince Yamato Take",
+        "Princess Ototachibana"
+      ],
+      "LOCATION": "Ise",
+      "CAUSE": "Prince Yamato Take's previous success",
+      "EFFECT": "Prince Yamato Take receives valuable gifts",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "The Governor of Owari lures Prince Yamato Take into a trap and sets fire to the grass around him.",
+      "FUNCTION": "BETRAYAL",
+      "CHARACTERS": [
+        "Prince Yamato Take",
+        "Governor of Owari"
+      ],
+      "LOCATION": "Owari",
+      "CAUSE": "Governor's treachery",
+      "EFFECT": "Prince Yamato Take is surrounded by fire",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Prince Yamato Take uses the flint-bag and the sword of Murakumo to escape from the fire and kill the Governor's men.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Prince Yamato Take"
+      ],
+      "LOCATION": "Owari",
+      "CAUSE": "Prince Yamato Take's bravery",
+      "EFFECT": "Prince Yamato Take escapes from the trap",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Prince Yamato Take kills the monster serpent and is poisoned, but eventually recovers and returns home.",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Prince Yamato Take",
+        "Monster Serpent"
+      ],
+      "LOCATION": "Ibuki Mountain",
+      "CAUSE": "Prince Yamato Take's determination",
+      "EFFECT": "Prince Yamato Take returns home a hero",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Prince Yamato Take",
+      "TARGET": "Princess Ototachibana",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Prince Yamato Take",
+      "TARGET": "Governor of Owari",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Prince Yamato Take",
+      "TARGET": "Monster Serpent",
+      "TYPE": "OPPOSES"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "HELPER_APPEARS",
+    "BETRAYAL",
+    "ORDEAL",
+    "QUEST"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "issues": [
+      "event participant 'King Keiko' not in CHARACTERS: added as SECONDARY"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 28421,
+    "excerpt_chars": 11811
+  }
+}

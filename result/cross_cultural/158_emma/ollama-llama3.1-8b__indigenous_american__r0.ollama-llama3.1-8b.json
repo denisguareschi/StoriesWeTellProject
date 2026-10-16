@@ -1,0 +1,183 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Emma",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "overcomes self-centeredness and learns to trust her heart",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 3
+    },
+    {
+      "CHARACTER": "Miss Taylor",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "null",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Mr. Knightley",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "null",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Mr. Weston",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "null",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Harriet",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "null",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "her father",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Robert Martin",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "the shadow of the great oak",
+    "the woods"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Emma's governess, Miss Taylor, had departed to join a new life with a kind and gentle man, Mr. Weston.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Emma",
+        "Miss Taylor",
+        "Mr. Weston"
+      ],
+      "LOCATION": "the shadow of the great oak",
+      "CAUSE": "Story opening",
+      "EFFECT": "Emma feels the loss deeply",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Emma began to realize that she would miss her dear governess terribly.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Emma"
+      ],
+      "LOCATION": "the shadow of the great oak",
+      "CAUSE": "Miss Taylor's departure",
+      "EFFECT": "Emma feels a deep sense of loss",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Emma found comfort in the love and support of her friends and family.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Emma",
+        "Mr. Knightley",
+        "her father"
+      ],
+      "LOCATION": "the shadow of the great oak",
+      "CAUSE": "Emma's sorrow",
+      "EFFECT": "Emma's heart begins to heal",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Harriet found love with a kind and gentle man, Robert Martin.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Harriet",
+        "Robert Martin"
+      ],
+      "LOCATION": "the woods",
+      "CAUSE": "Emma's growth",
+      "EFFECT": "Emma is overjoyed for her dear friend",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Emma would marry Mr. Knightley, and together they would build a life filled with love, kindness, and compassion.",
+      "FUNCTION": "RETURN",
+      "CHARACTERS": [
+        "Emma",
+        "Mr. Knightley"
+      ],
+      "LOCATION": "the shadow of the great oak",
+      "CAUSE": "Emma's growth",
+      "EFFECT": "Emma is ready for the challenges ahead",
+      "CAUSED_BY": [
+        3
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Emma",
+      "TARGET": "Miss Taylor",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Emma",
+      "TARGET": "Mr. Knightley",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Emma",
+      "TARGET": "Harriet",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Mr. Knightley",
+      "TARGET": "Emma",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Miss Taylor",
+      "TARGET": "Emma",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "HELPER_APPEARS",
+    "ORDEAL",
+    "MORAL_REWARD",
+    "RETURN"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "issues": [
+      "event participant 'her father' not in CHARACTERS: added as SECONDARY",
+      "event participant 'Robert Martin' not in CHARACTERS: added as SECONDARY"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 2884,
+    "excerpt_chars": 2884
+  }
+}

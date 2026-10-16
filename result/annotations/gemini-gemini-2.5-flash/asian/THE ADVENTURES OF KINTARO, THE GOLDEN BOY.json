@@ -1,0 +1,163 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Hero's Journey",
+  "SETTING_DOMAIN": "Professional and Organizational",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Kintaro",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "from strong mountain boy to a great samurai hero and leader",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 4
+    },
+    {
+      "CHARACTER": "Kintaro's Mother",
+      "ROLE": "DEUTERAGONIST",
+      "TRANSFORMATION": "from isolated, fearful widow to proud mother living happily in the Capital",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Sadamitsu",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "NONE",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Lord Minamoto-no-Raiko",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "NONE",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Cannibal Monster",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "defeated and killed",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    }
+  ],
+  "LOCATIONS": [
+    "Ashigara Mountains",
+    "River bank",
+    "Kintaro's cottage",
+    "The Capital",
+    "Monster's den"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Kintaro is born in the Ashigara Mountains and grows up with immense strength, befriending animals.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Kintaro",
+        "Kintaro's Mother"
+      ],
+      "LOCATION": "Ashigara Mountains",
+      "CAUSE": "Story opening",
+      "EFFECT": "Kintaro develops extraordinary strength and unique companions.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Kintaro pulls down a large tree to create a bridge across a river for himself and his animal friends.",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Kintaro"
+      ],
+      "LOCATION": "River bank",
+      "CAUSE": "The party needed to cross the river.",
+      "EFFECT": "They cross the river, and a woodcutter observes Kintaro's strength.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 3,
+      "EVENT": "General Sadamitsu, disguised as a woodcutter, witnesses Kintaro's strength and recruits him to serve Lord Raiko.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Sadamitsu",
+        "Kintaro",
+        "Kintaro's Mother"
+      ],
+      "LOCATION": "Kintaro's cottage",
+      "CAUSE": "Sadamitsu's mission to find strong boys and his observation of Kintaro.",
+      "EFFECT": "Kintaro's fate is settled to become a samurai.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Kintaro is presented to Lord Raiko, becomes a vassal, and later the Chief of 'The Four Braves'.",
+      "FUNCTION": "TRANSFORMATION",
+      "CHARACTERS": [
+        "Kintaro",
+        "Lord Minamoto-no-Raiko",
+        "Sadamitsu"
+      ],
+      "LOCATION": "The Capital",
+      "CAUSE": "Sadamitsu brought Kintaro to Lord Raiko.",
+      "EFFECT": "Kintaro gains status and a new role in the army.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Kintaro defeats a cannibal monster, becoming a great hero and fulfilling his promise to his mother.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Kintaro",
+        "Cannibal Monster",
+        "Kintaro's Mother"
+      ],
+      "LOCATION": "Monster's den",
+      "CAUSE": "News of the monster and Lord Raiko's order.",
+      "EFFECT": "Kintaro becomes the greatest hero, gains power, honor, wealth, and builds a home for his mother.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Kintaro",
+      "TARGET": "Kintaro's Mother",
+      "TYPE": "BONDS_WITH"
+    },
+    {
+      "SOURCE": "Sadamitsu",
+      "TARGET": "Kintaro",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Lord Minamoto-no-Raiko",
+      "TARGET": "Kintaro",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Kintaro",
+      "TARGET": "Cannibal Monster",
+      "TYPE": "OPPOSES"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "QUEST",
+    "HELPER_APPEARS",
+    "TRANSFORMATION",
+    "ORDEAL"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "gemini:gemini-2.5-flash",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 16491,
+    "excerpt_chars": 11971
+  }
+}

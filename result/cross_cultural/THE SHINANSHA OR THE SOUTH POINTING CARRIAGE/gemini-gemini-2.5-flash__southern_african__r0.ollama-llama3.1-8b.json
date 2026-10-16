@@ -1,0 +1,154 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Hero's Journey",
+  "SETTING_DOMAIN": "Spiritual and Religious",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Kgosi Thabo",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "from troubled chief to wise leader",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Zwilakhe",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "from rebel to defeated",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Jabulani",
+      "ROLE": "DEUTERAGONIST",
+      "TRANSFORMATION": "from father to wise leader",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Thabo's wife",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "from wife to wise leader",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "The Sky Serpent",
+      "ROLE": "TRICKSTER",
+      "TRANSFORMATION": "from messenger to ascended",
+      "TRANSFORMATION_TYPE": "REVERSAL",
+      "CHANGE_EVENT": 5
+    }
+  ],
+  "LOCATIONS": [
+    "the veld",
+    "the northern sky",
+    "the Great River",
+    "the stronghold",
+    "the royal kraal"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Jabulani's wife had a vision of her child's greatness.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Jabulani"
+      ],
+      "LOCATION": "the veld",
+      "CAUSE": "Story opening",
+      "EFFECT": "Thabo's birth",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Zwilakhe's dark magic troubles Kgosi Thabo's early reign.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Kgosi Thabo",
+        "Zwilakhe"
+      ],
+      "LOCATION": "the veld",
+      "CAUSE": "Zwilakhe's dark magic",
+      "EFFECT": "Thabo's troubles",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Kgosi Thabo's warriors are blinded by Zwilakhe's mist.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Kgosi Thabo",
+        "Zwilakhe"
+      ],
+      "LOCATION": "the veld",
+      "CAUSE": "Zwilakhe's mist",
+      "EFFECT": "Thabo's defeat",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Kgosi Thabo builds the *Isiqondisi-Mzansi* and defeats Zwilakhe.",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Kgosi Thabo",
+        "Zwilakhe"
+      ],
+      "LOCATION": "the veld",
+      "CAUSE": "Thabo's determination",
+      "EFFECT": "Zwilakhe's defeat",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Kgosi Thabo ascends to the heavens on the Sky Serpent.",
+      "FUNCTION": "RESURRECTION",
+      "CHARACTERS": [
+        "Kgosi Thabo",
+        "The Sky Serpent"
+      ],
+      "LOCATION": "the royal kraal",
+      "CAUSE": "Thabo's time is done",
+      "EFFECT": "Thabo's ascension",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Kgosi Thabo",
+      "TARGET": "Zwilakhe",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Kgosi Thabo",
+      "TARGET": "The Sky Serpent",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "ORDEAL",
+    "QUEST",
+    "RESURRECTION"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "issues": [
+      "relation dropped: {'SOURCE': \"Jabulani's wife\", 'TARGET': 'Kgosi Thabo', 'TYPE': 'HELPS'}"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 5658,
+    "excerpt_chars": 5658
+  }
+}

@@ -1,0 +1,203 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Hero's Journey",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Jane Eyre",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "From oppressed child to self-possessed, loving, and happy woman",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 2
+    },
+    {
+      "CHARACTER": "Mrs. Reed",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "Remains stern and unforgiving",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Edward",
+      "ROLE": "DEUTERAGONIST",
+      "TRANSFORMATION": "Recovers partial sight and finds happiness with Jane",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 4
+    },
+    {
+      "CHARACTER": "Bessie",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "None",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "St. John Rivers",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "Pursues his missionary path to its spiritual conclusion",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Eliza Reed",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "John Reed",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Georgiana Reed",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Diana Rivers",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Mary Rivers",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Gateshead",
+    "Mrs. Reed's room",
+    "Jane's home",
+    "London",
+    "India"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Jane is excluded and mistreated by Mrs. Reed and her cousins, finding solace in a book.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Jane Eyre",
+        "Mrs. Reed",
+        "Eliza Reed",
+        "John Reed",
+        "Georgiana Reed"
+      ],
+      "LOCATION": "Gateshead",
+      "CAUSE": "Story opening",
+      "EFFECT": "Jane feels isolated and seeks refuge in reading.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Jane returns to Gateshead, asserts her presence, and seeks reconciliation with Mrs. Reed, showing a new resolve.",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Jane Eyre",
+        "Bessie",
+        "Eliza Reed"
+      ],
+      "LOCATION": "Gateshead",
+      "CAUSE": "Jane's desire to see her dying aunt and her personal growth",
+      "EFFECT": "Jane takes control of her visit and prepares to confront Mrs. Reed.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 3,
+      "EVENT": "Jane confronts Mrs. Reed, who remains cold and unforgiving, leading Jane to a determination to 'subdue her.'",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Jane Eyre",
+        "Mrs. Reed",
+        "Bessie"
+      ],
+      "LOCATION": "Mrs. Reed's room",
+      "CAUSE": "Jane's attempt at reconciliation and Mrs. Reed's unyielding nature",
+      "EFFECT": "Jane's internal resolve to overcome Mrs. Reed's influence.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Edward recovers partial sight, and he and Jane live a happy, loving life together.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Jane Eyre",
+        "Edward"
+      ],
+      "LOCATION": "Jane's home",
+      "CAUSE": "Edward's medical treatment and Jane's devoted care",
+      "EFFECT": "Jane and Edward's domestic bliss and Edward's ability to see his child.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 5,
+      "EVENT": "St. John Rivers pursues his missionary path in India, anticipating his spiritual reward, while Jane and Edward's family thrives.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "St. John Rivers",
+        "Jane Eyre",
+        "Edward",
+        "Diana Rivers",
+        "Mary Rivers"
+      ],
+      "LOCATION": "India",
+      "CAUSE": "St. John's unwavering commitment and the passage of time",
+      "EFFECT": "St. John's anticipated spiritual reward and the continued happiness of Jane's family.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Jane Eyre",
+      "TARGET": "Mrs. Reed",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Jane Eyre",
+      "TARGET": "Edward",
+      "TYPE": "BONDS_WITH"
+    },
+    {
+      "SOURCE": "Bessie",
+      "TARGET": "Jane Eyre",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "QUEST",
+    "ORDEAL",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "issues": [
+      "event participant 'Eliza Reed' not in CHARACTERS: added as SECONDARY",
+      "event participant 'John Reed' not in CHARACTERS: added as SECONDARY",
+      "event participant 'Georgiana Reed' not in CHARACTERS: added as SECONDARY",
+      "event participant 'Diana Rivers' not in CHARACTERS: added as SECONDARY",
+      "event participant 'Mary Rivers' not in CHARACTERS: added as SECONDARY"
+    ],
+    "model": "gemini:gemini-2.5-flash",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 1024424,
+    "excerpt_chars": 11611
+  }
+}

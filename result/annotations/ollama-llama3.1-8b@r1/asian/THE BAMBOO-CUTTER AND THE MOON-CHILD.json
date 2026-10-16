@@ -1,0 +1,173 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Spiritual and Religious",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "The Bamboo-Cutter",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "from poverty to wealth",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Princess Moonlight",
+      "ROLE": "DEUTERAGONIST",
+      "TRANSFORMATION": "from being a child to a grown woman",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "The Knight",
+      "ROLE": "TRICKSTER",
+      "TRANSFORMATION": "from a deceiver to a punished character",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 3
+    },
+    {
+      "CHARACTER": "The Old Woman",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "from a helper to a witness",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": 2
+    },
+    {
+      "CHARACTER": "The Emperor",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "from a helper to a recipient of a gift",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "The Messenger",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "the bamboo grove",
+    "the bamboo-cutter's house",
+    "Mount Horai",
+    "the Palace",
+    "Mount Fuji"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "The Bamboo-Cutter finds a child in a bamboo stem.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "The Bamboo-Cutter",
+        "Princess Moonlight"
+      ],
+      "LOCATION": "the bamboo grove",
+      "CAUSE": "Story opening",
+      "EFFECT": "The Bamboo-Cutter finds a child.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "The Bamboo-Cutter presents the child to his wife.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "The Bamboo-Cutter",
+        "The Old Woman"
+      ],
+      "LOCATION": "the bamboo-cutter's house",
+      "CAUSE": "ID 1",
+      "EFFECT": "The Old Woman helps to care for the child.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "The Knight presents a branch to the Princess.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "The Knight",
+        "The Bamboo-Cutter",
+        "Princess Moonlight"
+      ],
+      "LOCATION": "the bamboo-cutter's house",
+      "CAUSE": "ID 2",
+      "EFFECT": "The Princess is suspicious of the Knight.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "The Princess is punished and must leave the Bamboo-Cutter's house.",
+      "FUNCTION": "SACRIFICE",
+      "CHARACTERS": [
+        "The Bamboo-Cutter",
+        "Princess Moonlight",
+        "The Messenger"
+      ],
+      "LOCATION": "the bamboo-cutter's house",
+      "CAUSE": "ID 3",
+      "EFFECT": "The Princess must leave the Bamboo-Cutter's house.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "The Princess returns to the moon.",
+      "FUNCTION": "RESURRECTION",
+      "CHARACTERS": [
+        "The Bamboo-Cutter",
+        "Princess Moonlight",
+        "The Messenger"
+      ],
+      "LOCATION": "the bamboo-cutter's house",
+      "CAUSE": "ID 4",
+      "EFFECT": "The Princess returns to the moon.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "The Bamboo-Cutter",
+      "TARGET": "Princess Moonlight",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "The Old Woman",
+      "TARGET": "The Bamboo-Cutter",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "The Emperor",
+      "TARGET": "The Bamboo-Cutter",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "HELPER_APPEARS",
+    "TRICKSTER",
+    "SACRIFICE",
+    "RESURRECTION"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [
+      "CHANGE_EVENT"
+    ],
+    "issues": [
+      "event participant 'The Messenger' not in CHARACTERS: added as SECONDARY",
+      "relation dropped: {'SOURCE': 'The Knight', 'TARGET': 'The Princess', 'TYPE': 'DECEIVES'}"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.5,
+    "seed": 1,
+    "attempts": 1,
+    "source_chars": 30343,
+    "excerpt_chars": 11459
+  }
+}

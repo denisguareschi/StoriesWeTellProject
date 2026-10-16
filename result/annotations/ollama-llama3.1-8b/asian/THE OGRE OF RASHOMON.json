@@ -1,0 +1,179 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Watanabe",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "learns to confront and defeat the ogre",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "The Old Woman/Ogre",
+      "ROLE": "TRICKSTER",
+      "TRANSFORMATION": "transforms from old woman to ogre",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Hojo",
+      "ROLE": "DEUTERAGONIST",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Raiko",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "The Servant",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "The People of Kyoto",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "The Ogre",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Kyoto",
+    "Gate of Rashomon",
+    "Watanabe's house"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "The people of Kyoto are terrified by accounts of a dreadful ogre.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "The People of Kyoto"
+      ],
+      "LOCATION": "Kyoto",
+      "CAUSE": "Story opening",
+      "EFFECT": "The people are afraid to go out at night",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Watanabe and his companions discuss the rumor of the ogre.",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Watanabe",
+        "Hojo"
+      ],
+      "LOCATION": "Kyoto",
+      "CAUSE": "The rumor of the ogre",
+      "EFFECT": "Watanabe decides to investigate",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Watanabe fights the ogre at the Gate of Rashomon.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Watanabe",
+        "The Ogre"
+      ],
+      "LOCATION": "Gate of Rashomon",
+      "CAUSE": "Watanabe's investigation",
+      "EFFECT": "Watanabe cuts off the ogre's arm",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "The old woman comes to Watanabe's house and asks to see the ogre's arm.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Watanabe",
+        "The Old Woman/Ogre"
+      ],
+      "LOCATION": "Watanabe's house",
+      "CAUSE": "The old woman's request",
+      "EFFECT": "Watanabe shows the old woman the arm",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "The old woman transforms into the ogre and escapes with the arm.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Watanabe",
+        "The Old Woman/Ogre"
+      ],
+      "LOCATION": "Watanabe's house",
+      "CAUSE": "The old woman's transformation",
+      "EFFECT": "The ogre escapes with the arm",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Watanabe",
+      "TARGET": "The Ogre",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Hojo",
+      "TARGET": "Watanabe",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Raiko",
+      "TARGET": "The Ogre",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "The Servant",
+      "TARGET": "Watanabe",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "QUEST",
+    "ORDEAL",
+    "HELPER_APPEARS",
+    "TRICKSTER"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "issues": [
+      "event participant 'The People of Kyoto' not in CHARACTERS: added as SECONDARY",
+      "event participant 'The Ogre' not in CHARACTERS: added as SECONDARY",
+      "relation dropped: {'SOURCE': 'Watanabe', 'TARGET': 'The Old Woman', 'TYPE': 'HELPS'}"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 11415,
+    "excerpt_chars": 11415
+  }
+}

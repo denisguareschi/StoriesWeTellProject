@@ -1,0 +1,213 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Crocodile",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "uses deception to gain power",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Lion",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Otter",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Tortoise",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Alligator",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Jackal",
+      "ROLE": "TRICKSTER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Wolf",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Baboon",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Yellow Snake",
+      "ROLE": "TRICKSTER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Elephant",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "river",
+    "veldt",
+    "vaarland willow",
+    "sea-cow pool"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Crocodile sent Otter to spy on the other river.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Crocodile",
+        "Otter"
+      ],
+      "LOCATION": "river",
+      "CAUSE": "Story opening",
+      "EFFECT": "Otter reports back to Crocodile",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Crocodile sent Tortoise and Alligator to Lion to negotiate a treaty.",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Crocodile",
+        "Tortoise",
+        "Alligator",
+        "Lion"
+      ],
+      "LOCATION": "veldt",
+      "CAUSE": "Crocodile wants to make peace with Lion",
+      "EFFECT": "Lion agrees to meet with Crocodile",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Lion and Crocodile meet at the vaarland willow to discuss the treaty.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Crocodile",
+        "Lion",
+        "Wolf",
+        "Jackal",
+        "Baboon"
+      ],
+      "LOCATION": "vaarland willow",
+      "CAUSE": "Lion agrees to meet with Crocodile",
+      "EFFECT": "Crocodile explains the benefits of the treaty",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Lion agrees to escort Crocodile and his subjects to the sea-cow pool.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Crocodile",
+        "Lion",
+        "Jackal",
+        "Wolf",
+        "Baboon"
+      ],
+      "LOCATION": "veldt",
+      "CAUSE": "Crocodile convinces Lion to help him",
+      "EFFECT": "The animals prepare to trek to the sea-cow pool",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Crocodile betrays Lion and his subjects, and they are attacked by the Boers.",
+      "FUNCTION": "BETRAYAL",
+      "CHARACTERS": [
+        "Crocodile",
+        "Lion",
+        "Jackal",
+        "Wolf",
+        "Baboon"
+      ],
+      "LOCATION": "sea-cow pool",
+      "CAUSE": "Crocodile's betrayal",
+      "EFFECT": "The animals are attacked by the Boers",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Crocodile",
+      "TARGET": "Lion",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Lion",
+      "TARGET": "Crocodile",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Jackal",
+      "TARGET": "Crocodile",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "Wolf",
+      "TARGET": "Crocodile",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Baboon",
+      "TARGET": "Crocodile",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "QUEST",
+    "HELPER_APPEARS",
+    "MORAL_REWARD",
+    "BETRAYAL"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.5,
+    "seed": 1,
+    "attempts": 1,
+    "source_chars": 8714,
+    "excerpt_chars": 8714
+  }
+}

@@ -1,0 +1,159 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Jackal",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "None",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Lion",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "None",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": 4
+    },
+    {
+      "CHARACTER": "Lioness",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "None",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Lion's children",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "None",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Jackal's wife and children",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "None",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": 5
+    }
+  ],
+  "LOCATIONS": [
+    "Hunting Ground",
+    "Home",
+    "Eland Carcass",
+    "Distant Place"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Lion and Jackal hunt Eland, and Jackal claims the kill despite Lion's denial.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Lion",
+        "Jackal"
+      ],
+      "LOCATION": "Hunting Ground",
+      "CAUSE": "Story opening",
+      "EFFECT": "They decide to return later for the carcass.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Jackal secretly returns to the eland, fakes a blood trail, and cuts out all the fat from the carcass.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Jackal",
+        "Lion"
+      ],
+      "LOCATION": "Eland Carcass",
+      "CAUSE": "Jackal's desire to cheat Lion out of the fat.",
+      "EFFECT": "Lion follows the false trail, Jackal gets the fat.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Lion discovers Jackal's trick, tracks him to the eland carcass, and confronts him.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Lion",
+        "Jackal"
+      ],
+      "LOCATION": "Eland Carcass",
+      "CAUSE": "Lion following the false spoor and realizing he was deceived.",
+      "EFFECT": "Jackal is caught and upbraided.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Jackal lies about preparing the fat for Lion, who then gives him the lungs for his own family.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Jackal",
+        "Lion"
+      ],
+      "LOCATION": "Eland Carcass",
+      "CAUSE": "Lion's confrontation and Jackal's need to escape punishment.",
+      "EFFECT": "Jackal receives the lungs and is sent to Lion's home.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Jackal gives the lungs to Lion's wife, keeps the fat for his own family, insults Lion's children, and flees with his family.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Jackal",
+        "Lioness",
+        "Lion's children",
+        "Jackal's wife and children"
+      ],
+      "LOCATION": "Home",
+      "CAUSE": "Jackal being sent to Lion's home with the lungs.",
+      "EFFECT": "Jackal successfully escapes with the fat and his family, leaving Lion deceived again.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Jackal",
+      "TARGET": "Lion",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "Lion",
+      "TARGET": "Jackal",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Jackal",
+      "TARGET": "Jackal's wife and children",
+      "TYPE": "BONDS_WITH"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "TRICKSTER",
+    "ORDEAL"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [
+      "CHANGE_EVENT"
+    ],
+    "model": "gemini:gemini-2.5-flash",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 1691,
+    "excerpt_chars": 1691
+  }
+}

@@ -1,0 +1,147 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Tragedy",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Prince Prospero",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "from happiness to despair and death",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "The mummer",
+      "ROLE": "TRICKSTER",
+      "TRANSFORMATION": "from unknown to revealed as the Red Death",
+      "TRANSFORMATION_TYPE": "REVERSAL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "The courtiers",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "from revelry to fear and death",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "the waltzers",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "the abbey",
+    "the seven chambers",
+    "the velvet apartment"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "The Prince Prospero summons a thousand hale and light-hearted friends from among the knights and dames of his court, and with these retired to the deep seclusion of one of his castellated abbeys.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Prince Prospero"
+      ],
+      "LOCATION": "the abbey",
+      "CAUSE": "Story opening",
+      "EFFECT": "The courtiers are gathered in the abbey",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "The orchestra were constrained to pause, momentarily, in their performance, to harken to the sound; and thus the waltzers perforce ceased their evolutions; and there was a brief disconcert of the whole gay company; and, while the chimes of the clock yet rang, it was observed that the giddiest grew pale, and the more aged and sedate passed their hands over their brows as if in confused revery or meditation.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "the waltzers"
+      ],
+      "LOCATION": "the seven chambers",
+      "CAUSE": "The sound of the clock",
+      "EFFECT": "The waltzers are frightened",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "The mummer, who had gone so far as to assume the type of the Red Death, stalked to and fro among the waltzers.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "The mummer"
+      ],
+      "LOCATION": "the seven chambers",
+      "CAUSE": "The mummer's actions",
+      "EFFECT": "The waltzers are frightened",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "The Prince Prospero, maddening with rage and the shame of his own momentary cowardice, rushed hurriedly through the six chambers, while none followed him on account of a deadly terror that had seized upon all.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Prince Prospero"
+      ],
+      "LOCATION": "the seven chambers",
+      "CAUSE": "The mummer's actions",
+      "EFFECT": "The Prince Prospero is enraged",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "The Prince Prospero, having attained the extremity of the velvet apartment, turned suddenly and confronted his pursuer. There was a sharp cry--and the dagger dropped gleaming upon the sable carpet, upon which, instantly afterwards, fell prostrate in death the Prince Prospero.",
+      "FUNCTION": "SACRIFICE",
+      "CHARACTERS": [
+        "Prince Prospero",
+        "The mummer"
+      ],
+      "LOCATION": "the velvet apartment",
+      "CAUSE": "The confrontation between the Prince and the mummer",
+      "EFFECT": "The Prince Prospero is killed",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Prince Prospero",
+      "TARGET": "The mummer",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "the waltzers",
+      "TARGET": "The mummer",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "The courtiers",
+      "TARGET": "The mummer",
+      "TYPE": "OPPOSES"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "ORDEAL",
+    "TRICKSTER",
+    "SACRIFICE"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "issues": [
+      "event participant 'the waltzers' not in CHARACTERS: added as SECONDARY"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.5,
+    "seed": 1,
+    "attempts": 1,
+    "source_chars": 13808,
+    "excerpt_chars": 11677
+  }
+}

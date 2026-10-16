@@ -1,0 +1,153 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Tragedy",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "The Farmer",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "loses his wife and nearly eats her soup",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "The Badger",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "from villain to punished",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "The Old Woman",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "killed by the badger",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 2
+    },
+    {
+      "CHARACTER": "The Rabbit",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "avenges the old woman's death",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    }
+  ],
+  "LOCATIONS": [
+    "the mountains",
+    "the farm",
+    "the storehouse",
+    "the hills",
+    "the sea"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "The badger spoils the farmer's vegetables and rice.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "The Farmer",
+        "The Badger"
+      ],
+      "LOCATION": "the farm",
+      "CAUSE": "Story opening",
+      "EFFECT": "The farmer decides to catch the badger.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "The badger is caught in a trap and hung upside down.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "The Badger"
+      ],
+      "LOCATION": "the storehouse",
+      "CAUSE": "The farmer's trouble and patience are rewarded.",
+      "EFFECT": "The badger tries to escape.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "The old woman unties the badger and lets him down.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "The Old Woman",
+        "The Badger"
+      ],
+      "LOCATION": "the storehouse",
+      "CAUSE": "The badger's distress and the old woman's kindness.",
+      "EFFECT": "The badger kills the old woman.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "The badger is punished by the rabbit.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "The Badger",
+        "The Rabbit"
+      ],
+      "LOCATION": "the hills",
+      "CAUSE": "The rabbit's anger and desire for revenge.",
+      "EFFECT": "The badger is burned and his back is healed.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "The badger is killed by the rabbit.",
+      "FUNCTION": "SACRIFICE",
+      "CHARACTERS": [
+        "The Badger",
+        "The Rabbit"
+      ],
+      "LOCATION": "the sea",
+      "CAUSE": "The rabbit's plan to kill the badger.",
+      "EFFECT": "The badger is punished for his crimes.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "The Badger",
+      "TARGET": "The Old Woman",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "The Badger",
+      "TARGET": "The Farmer",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "The Rabbit",
+      "TARGET": "The Badger",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "ORDEAL",
+    "HELPER_APPEARS",
+    "MORAL_REWARD",
+    "SACRIFICE"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "issues": [
+      "relation dropped: {'SOURCE': 'The Rabbit', 'TARGET': 'The Old Farmer', 'TYPE': 'HELPS'}"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 12414,
+    "excerpt_chars": 11966
+  }
+}

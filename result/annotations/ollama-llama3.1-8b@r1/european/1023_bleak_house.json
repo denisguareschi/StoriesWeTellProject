@@ -1,0 +1,181 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Tragedy",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Allan",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "from selfish to selfless, prioritizing others' needs",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Ada",
+      "ROLE": "DEUTERAGONIST",
+      "TRANSFORMATION": "from selfish to selfless, prioritizing others' needs",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Charley",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "from healthy to ill, then back to health",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 3
+    },
+    {
+      "CHARACTER": "Esther",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Richard",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "from selfish to selfless, prioritizing others' needs",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Lord High Chancellor",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "London",
+    "Lincoln's Inn Hall",
+    "Temple Bar",
+    "Essex marshes",
+    "Kentish heights",
+    "Various locations in London",
+    "Ada's room"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "The Lord High Chancellor sits in Lincoln's Inn Hall, surrounded by fog.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Lord High Chancellor"
+      ],
+      "LOCATION": "Lincoln's Inn Hall",
+      "CAUSE": "Story opening",
+      "EFFECT": "Sets the scene for the story",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "The search for the missing boy continues, but no one is found.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Allan",
+        "Ada",
+        "Charley"
+      ],
+      "LOCATION": "Various locations in London",
+      "CAUSE": "The boy's disappearance",
+      "EFFECT": "Raises the stakes for the characters",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Charley falls ill and is nursed by Ada.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Ada",
+        "Charley"
+      ],
+      "LOCATION": "Ada's room",
+      "CAUSE": "Charley's illness",
+      "EFFECT": "Ada takes on a caregiving role",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Allan and Ada's relationship deepens as they care for Charley.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Allan",
+        "Ada"
+      ],
+      "LOCATION": "Various locations in London",
+      "CAUSE": "Charley's illness",
+      "EFFECT": "Allan and Ada's bond grows stronger",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "The story concludes with Allan and Ada reflecting on their relationship and the lessons they've learned from Charley's illness.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Allan",
+        "Ada"
+      ],
+      "LOCATION": "Various locations in London",
+      "CAUSE": "Charley's recovery",
+      "EFFECT": "The story comes full circle, with Allan and Ada's relationship at its core",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Allan",
+      "TARGET": "Ada",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Ada",
+      "TARGET": "Charley",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Allan",
+      "TARGET": "Charley",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Allan",
+      "TARGET": "Ada",
+      "TYPE": "BONDS_WITH"
+    },
+    {
+      "SOURCE": "Ada",
+      "TARGET": "Allan",
+      "TYPE": "BONDS_WITH"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "ORDEAL",
+    "HELPER_APPEARS",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [
+      "CHANGE_EVENT"
+    ],
+    "issues": [
+      "event participant 'Lord High Chancellor' not in CHARACTERS: added as SECONDARY"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.5,
+    "seed": 1,
+    "attempts": 1,
+    "source_chars": 1934752,
+    "excerpt_chars": 11607
+  }
+}

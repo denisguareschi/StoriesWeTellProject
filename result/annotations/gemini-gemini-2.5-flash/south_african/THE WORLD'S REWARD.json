@@ -1,0 +1,221 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "The Dog",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "From discarded pet to resourceful leader of a new community.",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "The Bull",
+      "ROLE": "DEUTERAGONIST",
+      "TRANSFORMATION": "From solitary old animal to loyal companion in a new community.",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "The Man",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "None.",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "The Robbers",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "From confident thieves to terrified and defeated fugitives.",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "The Ram",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "From solitary animal to loyal companion in a new community.",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "The Donkey",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "From solitary animal to loyal companion in a new community.",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "The Cat",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "The Cock",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "The Goose",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Man's House",
+    "Veldt",
+    "House"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "The man decides to dispose of his old dog, who then resolves to leave.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "The Man",
+        "The Dog"
+      ],
+      "LOCATION": "Man's House",
+      "CAUSE": "Story opening",
+      "EFFECT": "The dog begins a journey to find a new life.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "The dog gathers other old animals to join him on his journey.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "The Dog",
+        "The Bull",
+        "The Ram",
+        "The Donkey",
+        "The Cat",
+        "The Cock",
+        "The Goose"
+      ],
+      "LOCATION": "Veldt",
+      "CAUSE": "The dog's quest for companionship and a new life.",
+      "EFFECT": "A group of seven animals forms, seeking a new home.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "The animals use a trick to scare the robbers out of a house, taking possession of it and their food.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "The Dog",
+        "The Bull",
+        "The Ram",
+        "The Donkey",
+        "The Cat",
+        "The Cock",
+        "The Goose",
+        "The Robbers"
+      ],
+      "LOCATION": "House",
+      "CAUSE": "The animals are hungry and need shelter from the night.",
+      "EFFECT": "The animals gain shelter and food, and plan to stay.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "The animals set up positions to defend the house and ambush any returning robbers.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "The Dog",
+        "The Bull",
+        "The Ram",
+        "The Donkey",
+        "The Cat",
+        "The Cock",
+        "The Goose"
+      ],
+      "LOCATION": "House",
+      "CAUSE": "The animals want to secure their new home and remaining food.",
+      "EFFECT": "The animals are prepared for the robbers' return.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "A robber returns to the house and is severely beaten and terrified by the ambushing animals.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "The Dog",
+        "The Bull",
+        "The Ram",
+        "The Donkey",
+        "The Cat",
+        "The Cock",
+        "The Goose",
+        "The Robbers"
+      ],
+      "LOCATION": "House",
+      "CAUSE": "The robbers' captain sends a man back to check the house.",
+      "EFFECT": "The robbers are completely deterred, and the animals secure their new home.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "The Man",
+      "TARGET": "The Dog",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "The Dog",
+      "TARGET": "The Bull",
+      "TYPE": "BONDS_WITH"
+    },
+    {
+      "SOURCE": "The Dog",
+      "TARGET": "The Ram",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "The Robbers",
+      "TARGET": "The Dog",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "The Dog",
+      "TARGET": "The Robbers",
+      "TYPE": "DECEIVES"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "HELPER_APPEARS",
+    "TRICKSTER",
+    "ORDEAL",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "issues": [
+      "event participant 'The Cat' not in CHARACTERS: added as SECONDARY",
+      "event participant 'The Cock' not in CHARACTERS: added as SECONDARY",
+      "event participant 'The Goose' not in CHARACTERS: added as SECONDARY"
+    ],
+    "model": "gemini:gemini-2.5-flash",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 4687,
+    "excerpt_chars": 4687
+  }
+}

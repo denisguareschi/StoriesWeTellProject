@@ -1,0 +1,130 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Origin Myth",
+  "SETTING_DOMAIN": "Spiritual and Religious",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "the wife",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "finds hope and renewal in the face of hardship",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "the husband's friend",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "the husband",
+      "ROLE": "DEUTERAGONIST",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "the land of the Kalahari",
+    "a small village",
+    "the porch of their home"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "The fog had rolled in, a thick mist that obscured the view and made the world feel small and grey.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "the wife"
+      ],
+      "LOCATION": "the land of the Kalahari",
+      "CAUSE": "Story opening",
+      "EFFECT": "The wife is drawn to the porch of their home",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "The wife found herself drawn to the porch of their home, a place where she had sat with her beloved husband many times before.",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "the wife"
+      ],
+      "LOCATION": "a small village",
+      "CAUSE": "The fog had rolled in",
+      "EFFECT": "The wife sits on the porch, lost in thought",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "The husband's friend came to join her on the porch.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "the wife",
+        "the husband's friend"
+      ],
+      "LOCATION": "the porch of their home",
+      "CAUSE": "The wife's presence on the porch",
+      "EFFECT": "The husband's friend provides comfort and support",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "As they sat together on the porch, the wife and her husband's friend talked of the past and the present.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "the wife",
+        "the husband's friend"
+      ],
+      "LOCATION": "the porch of their home",
+      "CAUSE": "The presence of the husband's friend",
+      "EFFECT": "The wife finds comfort and support",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "The fog began to clear, and the sun broke through, casting a warm and golden light over the village.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "the wife",
+        "the husband's friend"
+      ],
+      "LOCATION": "the land of the Kalahari",
+      "CAUSE": "The conversation on the porch",
+      "EFFECT": "The wife finds hope and renewal",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "the wife",
+      "TARGET": "the husband's friend",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "QUEST",
+    "HELPER_APPEARS",
+    "ORDEAL",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 3004,
+    "excerpt_chars": 3004
+  }
+}

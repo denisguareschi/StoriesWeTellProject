@@ -1,0 +1,166 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Tink-tinkje",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "Achieves kingship through cunning and escapes punishment",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 2
+    },
+    {
+      "CHARACTER": "Vulture",
+      "ROLE": "DEUTERAGONIST",
+      "TRANSFORMATION": "Is tricked out of kingship",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 2
+    },
+    {
+      "CHARACTER": "Owl",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "None",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "White-crow",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "Becomes permanently silent",
+      "TRANSFORMATION_TYPE": "REVERSAL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Other birds",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "None",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Earth",
+    "Sky",
+    "Mouse hole",
+    "Tree"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "The birds assemble and decide to choose a king based on who can fly the highest.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Other birds",
+        "Vulture",
+        "Tink-tinkje"
+      ],
+      "LOCATION": "Earth",
+      "CAUSE": "Story opening",
+      "EFFECT": "The birds begin the flying contest.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Vulture flies highest, but Tink-tinkje, hidden on Vulture's wing, claims kingship.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Tink-tinkje",
+        "Vulture",
+        "Other birds"
+      ],
+      "LOCATION": "Sky",
+      "CAUSE": "The flying contest.",
+      "EFFECT": "The other birds become enraged at Tink-tinkje's deception.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "The enraged birds pursue Tink-tinkje, forcing him to take refuge in a mouse hole.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Tink-tinkje",
+        "Other birds"
+      ],
+      "LOCATION": "Mouse hole",
+      "CAUSE": "Tink-tinkje's trickery and claim to kingship.",
+      "EFFECT": "Tink-tinkje is trapped, and the birds appoint a guard.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Owl is appointed guard but falls asleep, allowing Tink-tinkje to escape the mouse hole.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Owl",
+        "Tink-tinkje",
+        "Other birds"
+      ],
+      "LOCATION": "Mouse hole",
+      "CAUSE": "The birds' need to capture Tink-tinkje.",
+      "EFFECT": "Tink-tinkje escapes, frustrating the other birds.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Tink-tinkje escapes to a tree, and White-crow, disgusted by the failure, vows never to speak again.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Tink-tinkje",
+        "White-crow",
+        "Other birds"
+      ],
+      "LOCATION": "Tree",
+      "CAUSE": "Owl's failure to guard and Tink-tinkje's successful escape.",
+      "EFFECT": "Tink-tinkje remains free, and White-crow undergoes a permanent transformation.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Tink-tinkje",
+      "TARGET": "Vulture",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "Other birds",
+      "TARGET": "Tink-tinkje",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Owl",
+      "TARGET": "Other birds",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "White-crow",
+      "TARGET": "Other birds",
+      "TYPE": "BONDS_WITH"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "TRICKSTER",
+    "ORDEAL",
+    "HELPER_APPEARS",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "gemini:gemini-2.5-flash",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 2520,
+    "excerpt_chars": 2520
+  }
+}

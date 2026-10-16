@@ -1,0 +1,159 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Spiritual and Religious",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Julian",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "learns to accept mortality",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Saint Jonah",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Brother Jonah",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Emperor Valerius",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "The celestial herald",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "a verdant valley",
+    "the mountainous regions",
+    "a secluded chapel",
+    "the Undying Isles",
+    "Julian's ancestral home"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Julian pondered whether a life of strict temperance might grant him such an extraordinary longevity.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Julian"
+      ],
+      "LOCATION": "a verdant valley",
+      "CAUSE": "Story opening",
+      "EFFECT": "Julian decides to embark on a quest for immortality",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Julian resolved to embark on his own quest, hoping to find the reclusive figures and join their ranks, thereby securing the waters of eternal life.",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Julian"
+      ],
+      "LOCATION": "the mountainous regions",
+      "CAUSE": "Julian's desire for immortality",
+      "EFFECT": "Julian sets out on his journey",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "A gilded swallow figurine, which had rested on the altar, suddenly pulsed with life, growing in size until it was large enough for Julian to mount.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Julian",
+        "Saint Jonah"
+      ],
+      "LOCATION": "a secluded chapel",
+      "CAUSE": "Julian's prayer",
+      "EFFECT": "Julian is transported to the Undying Isles",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Julian believed he had found his heart's desire, but soon discovered a strange paradox: the islanders, though prosperous and healthy, yearned for death.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Julian"
+      ],
+      "LOCATION": "the Undying Isles",
+      "CAUSE": "Julian's arrival on the island",
+      "EFFECT": "Julian is faced with the islanders' desire for death",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Julian awoke with a start, his own cries echoing in the silent chapel. He was drenched in cold sweat, utterly bewildered.",
+      "FUNCTION": "RESURRECTION",
+      "CHARACTERS": [
+        "Julian"
+      ],
+      "LOCATION": "a secluded chapel",
+      "CAUSE": "Julian's dream",
+      "EFFECT": "Julian is given a new perspective on life and mortality",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Julian",
+      "TARGET": "Saint Jonah",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Julian",
+      "TARGET": "Brother Jonah",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Emperor Valerius",
+      "TARGET": "Julian",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "The celestial herald",
+      "TARGET": "Julian",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "QUEST",
+    "HELPER_APPEARS",
+    "ORDEAL",
+    "RESURRECTION"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 5589,
+    "excerpt_chars": 5589
+  }
+}

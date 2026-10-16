@@ -1,0 +1,16 @@
+# Core (all pure-python wheels available for Python 3.13)
+networkx>=3.4
+numpy>=2.0
+scipy>=1.13
+scikit-learn>=1.5
+matplotlib>=3.9
+seaborn>=0.13
+python-dotenv>=1.0
+
+# LLM access - only free modes are used (see ROADMAP.md)
+google-genai>=1.0        # Gemini free tier (optional; needs GEMINI_API_KEY)
+# Ollama (local, no key) and Groq free tier are called with the standard library.
+
+# Optional
+spacy>=3.7               # NER baseline in `validate`; then: python -m spacy download en_core_web_sm
+# sentence-transformers  # better semantic metric (falls back to TF-IDF/LSA)

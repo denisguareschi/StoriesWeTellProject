@@ -1,0 +1,147 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Origin Myth",
+  "SETTING_DOMAIN": "Spiritual and Religious",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Ayita",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "overcomes illness and spiritual wandering",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Hina",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "develops strength and guidance in caring for her sister",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Takoda",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "The Great Spirit",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Tikini",
+    "between two great rivers"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Ayita fell ill and her spirit began to wander.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Ayita"
+      ],
+      "LOCATION": "Tikini",
+      "CAUSE": "Story opening",
+      "EFFECT": "The village is in distress.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Hina prayed to the Great Spirit for strength and guidance to care for her sister.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Hina",
+        "The Great Spirit"
+      ],
+      "LOCATION": "Tikini",
+      "CAUSE": "Ayita's illness",
+      "EFFECT": "Hina receives guidance and strength.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Takoda, the healer, came to visit the village and told Hina that Ayita's illness was a test.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Takoda",
+        "Hina"
+      ],
+      "LOCATION": "Tikini",
+      "CAUSE": "Ayita's illness",
+      "EFFECT": "Hina receives wisdom and guidance.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Hina continued to care for Ayita with love and devotion, and Ayita began to recover.",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Hina",
+        "Ayita"
+      ],
+      "LOCATION": "Tikini",
+      "CAUSE": "Takoda's guidance",
+      "EFFECT": "Ayita's health improves.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Ayita fully recovered, and the village came together to celebrate.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Ayita",
+        "Hina",
+        "Takoda"
+      ],
+      "LOCATION": "Tikini",
+      "CAUSE": "Hina's love and care",
+      "EFFECT": "The village is restored to harmony.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Hina",
+      "TARGET": "Ayita",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Takoda",
+      "TARGET": "Hina",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "The Great Spirit",
+      "TARGET": "Hina",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "HELPER_APPEARS",
+    "QUEST",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 2722,
+    "excerpt_chars": 2722
+  }
+}

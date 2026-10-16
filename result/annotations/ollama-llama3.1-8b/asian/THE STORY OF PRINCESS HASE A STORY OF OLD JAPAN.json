@@ -1,0 +1,159 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Spiritual and Religious",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Prince Toyonari Fujiwara",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "from sorrow to joy, from childlessness to parenthood",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Princess Murasaki",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "from childlessness to motherhood",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 2
+    },
+    {
+      "CHARACTER": "Hase-Hime",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "from childlessness to motherhood, from step-daughter to beloved daughter",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Princess Terute",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "from wickedness to punishment",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Katoda",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "from faithful servant to rewarded servant",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    }
+  ],
+  "LOCATIONS": [
+    "Nara",
+    "Hibari Mountains"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Prince Toyonari and his wife went to the temple of Kwannon at Hase and stayed there for a long time, both daily offering incense and praying to Kwannon, the Heavenly Mother, to grant them the desire of their whole lives.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Prince Toyonari Fujiwara",
+        "Princess Murasaki"
+      ],
+      "LOCATION": "Nara",
+      "CAUSE": "Story opening",
+      "EFFECT": "Their prayer was answered",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "A daughter was born at last to the Princess Murasaki, and great was the joy of her heart.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Princess Murasaki",
+        "Hase-Hime"
+      ],
+      "LOCATION": "Nara",
+      "CAUSE": "Event 1",
+      "EFFECT": "Hase-Hime was born",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "When the little girl was five years old her mother fell dangerously ill and all the doctors and their medicines could not save her.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Princess Murasaki",
+        "Hase-Hime"
+      ],
+      "LOCATION": "Nara",
+      "CAUSE": "Event 2",
+      "EFFECT": "Princess Murasaki died",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "The wicked woman had carefully marked the poisoned bottle, but on coming into the room she had grown nervous, and pouring out the wine hurriedly had unconsciously given the poisoned cup to her own child.",
+      "FUNCTION": "BETRAYAL",
+      "CHARACTERS": [
+        "Princess Terute",
+        "Hase-Hime"
+      ],
+      "LOCATION": "Nara",
+      "CAUSE": "Event 3",
+      "EFFECT": "The little boy died",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "The Prince’s astonishment and indignation knew no bounds. He gave up the hunt at once and hurried home with his daughter.",
+      "FUNCTION": "RETURN",
+      "CHARACTERS": [
+        "Prince Toyonari Fujiwara",
+        "Hase-Hime"
+      ],
+      "LOCATION": "Hibari Mountains",
+      "CAUSE": "Event 4",
+      "EFFECT": "Hase-Hime was reunited with her father",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Princess Murasaki",
+      "TARGET": "Hase-Hime",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Princess Terute",
+      "TARGET": "Hase-Hime",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Katoda",
+      "TARGET": "Hase-Hime",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "HELPER_APPEARS",
+    "ORDEAL",
+    "BETRAYAL",
+    "RETURN"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "issues": [
+      "relation dropped: {'SOURCE': 'Prince Toyonari', 'TARGET': 'Princess Murasaki', 'TYPE': 'HELPS'}",
+      "relation dropped: {'SOURCE': 'Prince Toyonari', 'TARGET': 'Hase-Hime', 'TYPE': 'HELPS'}"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 16641,
+    "excerpt_chars": 11826
+  }
+}

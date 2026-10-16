@@ -1,0 +1,171 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Emilia",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "from comfort and indulgence to self-reliance and love",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Miss Taylor",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "from governess to confidante and friend",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Mr. Weston",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "from suitor to husband",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Mr. Knightley",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "from steady anchor to partner and husband",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Mr. Frank Churchill",
+      "ROLE": "TRICKSTER",
+      "TRANSFORMATION": "from charming suitor to obstacle",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Emilia's father",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "from indulgent to supportive",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    }
+  ],
+  "LOCATIONS": [
+    "Highbury"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Miss Taylor's marriage to Mr. Weston signals a new chapter in their lives.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Miss Taylor",
+        "Mr. Weston"
+      ],
+      "LOCATION": "Highbury",
+      "CAUSE": "Story opening",
+      "EFFECT": "Emilia's life is affected by the change",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Emilia is drawn into the social whirl of Highbury by Mr. Frank Churchill.",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Emilia",
+        "Mr. Frank Churchill"
+      ],
+      "LOCATION": "Highbury",
+      "CAUSE": "Mr. Frank Churchill's arrival",
+      "EFFECT": "Emilia becomes more social and outgoing",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Emilia's father struggles to accept her union with Mr. Knightley.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Emilia's father",
+        "Emilia",
+        "Mr. Knightley"
+      ],
+      "LOCATION": "Highbury",
+      "CAUSE": "Emilia's engagement to Mr. Knightley",
+      "EFFECT": "Emilia's father's anxieties are revealed",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Mr. Knightley helps Emilia's father to accept her union.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Mr. Knightley",
+        "Emilia's father"
+      ],
+      "LOCATION": "Highbury",
+      "CAUSE": "Mr. Knightley's intervention",
+      "EFFECT": "Emilia's father becomes more supportive",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Emilia and Mr. Knightley get married.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Emilia",
+        "Mr. Knightley"
+      ],
+      "LOCATION": "Highbury",
+      "CAUSE": "Emilia's growth and self-reliance",
+      "EFFECT": "Emilia and Mr. Knightley's union is sealed",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Emilia",
+      "TARGET": "Miss Taylor",
+      "TYPE": "BONDS_WITH"
+    },
+    {
+      "SOURCE": "Emilia",
+      "TARGET": "Mr. Knightley",
+      "TYPE": "BONDS_WITH"
+    },
+    {
+      "SOURCE": "Mr. Frank Churchill",
+      "TARGET": "Emilia",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "Mr. Knightley",
+      "TARGET": "Emilia's father",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Emilia's father",
+      "TARGET": "Emilia",
+      "TYPE": "OPPOSES"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "HELPER_APPEARS",
+    "QUEST",
+    "ORDEAL",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 3675,
+    "excerpt_chars": 3675
+  }
+}

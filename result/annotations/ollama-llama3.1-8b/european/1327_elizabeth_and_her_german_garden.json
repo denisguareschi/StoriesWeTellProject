@@ -1,0 +1,149 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "The narrator",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "learns to appreciate the beauty of nature and the people around her",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "The stork",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "helps the narrator with her work",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": 2
+    },
+    {
+      "CHARACTER": "Minora",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "tries to manipulate the narrator",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 4
+    },
+    {
+      "CHARACTER": "The narrator's Aunt Bertha",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "tries to manipulate the narrator",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 3
+    }
+  ],
+  "LOCATIONS": [
+    "the garden",
+    "the house",
+    "the Hirschwald"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "The narrator writes in her garden, enjoying the beauty of nature.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "The narrator"
+      ],
+      "LOCATION": "the garden",
+      "CAUSE": "Story opening",
+      "EFFECT": "The narrator is happy and content.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "The narrator meets the stork and learns about his life.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "The narrator",
+        "The stork"
+      ],
+      "LOCATION": "the garden",
+      "CAUSE": "The narrator meets the stork",
+      "EFFECT": "The narrator learns about the stork's life.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "The narrator's Aunt Bertha tries to manipulate her with riddles.",
+      "FUNCTION": "BETRAYAL",
+      "CHARACTERS": [
+        "The narrator",
+        "The narrator's Aunt Bertha"
+      ],
+      "LOCATION": "the house",
+      "CAUSE": "The narrator's Aunt Bertha tries to manipulate her",
+      "EFFECT": "The narrator feels frustrated and trapped.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "The narrator receives a bottle of embrocation from Minora and decides to distance herself from her.",
+      "FUNCTION": "SACRIFICE",
+      "CHARACTERS": [
+        "The narrator",
+        "Minora"
+      ],
+      "LOCATION": "the house",
+      "CAUSE": "Minora sends the narrator the embrocation",
+      "EFFECT": "The narrator decides to distance herself from Minora.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "The narrator spends Easter in her garden, enjoying the beauty of nature and feeling grateful for the new life and hope it brings.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "The narrator"
+      ],
+      "LOCATION": "the garden",
+      "CAUSE": "The narrator spends Easter in her garden",
+      "EFFECT": "The narrator feels happy and content.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "The narrator",
+      "TARGET": "The stork",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "The narrator",
+      "TARGET": "Minora",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "The narrator's Aunt Bertha",
+      "TARGET": "The narrator",
+      "TYPE": "DECEIVES"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "HELPER_APPEARS",
+    "BETRAYAL",
+    "SACRIFICE",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [
+      "CHANGE_EVENT"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 261861,
+    "excerpt_chars": 11963
+  }
+}

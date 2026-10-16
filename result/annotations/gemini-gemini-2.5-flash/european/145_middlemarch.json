@@ -1,0 +1,178 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Hero's Journey",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Dorothea Brooke",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "From naive idealist to woman of quiet, diffusive good impact.",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Mr. Casaubon",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "From ambitious scholar to man consumed by jealousy and control.",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 3
+    },
+    {
+      "CHARACTER": "Will Ladislaw",
+      "ROLE": "DEUTERAGONIST",
+      "TRANSFORMATION": "From potential threat to Dorothea's partner and husband.",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": 4
+    },
+    {
+      "CHARACTER": "Celia Brooke",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "From acquiescent sister to advocate for family reconciliation.",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Sir James Chettam",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "From opposing Ladislaw to tolerating him for family harmony.",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Mr. Brooke",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "None",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Tipton Grange",
+    "Freshitt Hall",
+    "Middlemarch"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Dorothea's idealistic nature and desire for a lofty purpose are introduced.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Dorothea Brooke"
+      ],
+      "LOCATION": "Tipton Grange",
+      "CAUSE": "Story opening",
+      "EFFECT": "Her unconventional approach to life and marriage.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Dorothea develops an attachment to Will Ladislaw, fueling Mr. Casaubon's jealousy.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Dorothea Brooke",
+        "Mr. Casaubon",
+        "Will Ladislaw"
+      ],
+      "LOCATION": "Tipton Grange",
+      "CAUSE": "Dorothea's natural inclination and Will's presence.",
+      "EFFECT": "Mr. Casaubon decides to control Dorothea's future after his death.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Mr. Casaubon creates a vindictive will to prevent Dorothea from marrying Will.",
+      "FUNCTION": "BETRAYAL",
+      "CHARACTERS": [
+        "Mr. Casaubon",
+        "Dorothea Brooke",
+        "Will Ladislaw"
+      ],
+      "LOCATION": "Tipton Grange",
+      "CAUSE": "Mr. Casaubon's jealousy and illness.",
+      "EFFECT": "Dorothea faces a difficult choice after Casaubon's death.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Dorothea marries Will Ladislaw, giving up her estate and facing societal disapproval.",
+      "FUNCTION": "SACRIFICE",
+      "CHARACTERS": [
+        "Dorothea Brooke",
+        "Will Ladislaw",
+        "Sir James Chettam"
+      ],
+      "LOCATION": "Middlemarch",
+      "CAUSE": "Mr. Casaubon's death and Dorothea's love for Will.",
+      "EFFECT": "Societal judgment and a quiet, unconventional life for Dorothea.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Celia and Sir James reconcile with Dorothea, whose life has a quiet, diffusive good effect.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Dorothea Brooke",
+        "Celia Brooke",
+        "Sir James Chettam",
+        "Will Ladislaw",
+        "Mr. Brooke"
+      ],
+      "LOCATION": "Tipton Grange",
+      "CAUSE": "Celia's plea and the passage of time, allowing for reconciliation.",
+      "EFFECT": "Dorothea's spirit finds its 'fine issues' and contributes to the 'growing good of the world'.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Dorothea Brooke",
+      "TARGET": "Will Ladislaw",
+      "TYPE": "BONDS_WITH"
+    },
+    {
+      "SOURCE": "Mr. Casaubon",
+      "TARGET": "Will Ladislaw",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Celia Brooke",
+      "TARGET": "Dorothea Brooke",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Sir James Chettam",
+      "TARGET": "Will Ladislaw",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Dorothea Brooke",
+      "TARGET": "Celia Brooke",
+      "TYPE": "BONDS_WITH"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "ORDEAL",
+    "BETRAYAL",
+    "SACRIFICE",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "gemini:gemini-2.5-flash",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 1790395,
+    "excerpt_chars": 11933
+  }
+}

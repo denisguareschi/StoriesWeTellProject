@@ -1,0 +1,162 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Artistic and Creative",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Alice",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "grows from a child to a young woman, with a simple and loving heart",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "White Rabbit",
+      "ROLE": "TRICKSTER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": 1
+    },
+    {
+      "CHARACTER": "March Hare",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": 2
+    },
+    {
+      "CHARACTER": "Hatter",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": 2
+    },
+    {
+      "CHARACTER": "Queen",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": 4
+    }
+  ],
+  "LOCATIONS": [
+    "Wonderland",
+    "Alice's home"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Alice follows the White Rabbit down a rabbit-hole",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Alice",
+        "White Rabbit"
+      ],
+      "LOCATION": "Wonderland",
+      "CAUSE": "Story opening",
+      "EFFECT": "Alice enters Wonderland",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Alice meets the March Hare and the Hatter at a tea party",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Alice",
+        "March Hare",
+        "Hatter"
+      ],
+      "LOCATION": "Wonderland",
+      "CAUSE": "Alice encounters the March Hare and the Hatter",
+      "EFFECT": "Alice meets new characters in Wonderland",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Alice is put on trial by the Queen",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Alice",
+        "Queen"
+      ],
+      "LOCATION": "Wonderland",
+      "CAUSE": "Alice's actions in Wonderland",
+      "EFFECT": "Alice is put on trial",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Alice is sentenced to death by the Queen",
+      "FUNCTION": "BETRAYAL",
+      "CHARACTERS": [
+        "Alice",
+        "Queen"
+      ],
+      "LOCATION": "Wonderland",
+      "CAUSE": "The Queen's sentence",
+      "EFFECT": "Alice is sentenced to death",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Alice wakes up from her dream and returns home",
+      "FUNCTION": "RETURN",
+      "CHARACTERS": [
+        "Alice"
+      ],
+      "LOCATION": "Alice's home",
+      "CAUSE": "Alice wakes up from her dream",
+      "EFFECT": "Alice returns home",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Alice",
+      "TARGET": "White Rabbit",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Alice",
+      "TARGET": "March Hare",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Alice",
+      "TARGET": "Hatter",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Queen",
+      "TARGET": "Alice",
+      "TYPE": "OPPOSES"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "HELPER_APPEARS",
+    "ORDEAL",
+    "BETRAYAL",
+    "RETURN"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [
+      "CHANGE_EVENT"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 144348,
+    "excerpt_chars": 11973
+  }
+}

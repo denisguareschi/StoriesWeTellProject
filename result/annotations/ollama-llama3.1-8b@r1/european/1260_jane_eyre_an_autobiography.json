@@ -1,0 +1,171 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Tragedy",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Jane Eyre",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "overcomes her physical and emotional inferiority",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Mrs. Reed",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "remains unchanged and unchangeable",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Mr. Eyre",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "regains his sight and becomes more confident",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 4
+    },
+    {
+      "CHARACTER": "St. John Rivers",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "remains steadfast in his faith and devotion",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Diana and Mary Rivers",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "get married and start their own families",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Bessie",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Gateshead",
+    "London",
+    "Unknown"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Jane is kept at a distance by Mrs. Reed due to her behavior",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Jane Eyre",
+        "Mrs. Reed"
+      ],
+      "LOCATION": "Gateshead",
+      "CAUSE": "Story opening",
+      "EFFECT": "Jane is isolated and unhappy",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Jane decides to stay with Mrs. Reed and try to improve her situation",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Jane Eyre",
+        "Bessie"
+      ],
+      "LOCATION": "Gateshead",
+      "CAUSE": "Jane's determination to change",
+      "EFFECT": "Jane is given a room and begins to make efforts to improve",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Jane visits Mrs. Reed in her bedroom and tries to reconcile with her",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Jane Eyre",
+        "Mrs. Reed"
+      ],
+      "LOCATION": "Gateshead",
+      "CAUSE": "Jane's desire to forgive and forget",
+      "EFFECT": "Mrs. Reed remains unchanged and unchangeable",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Mr. Eyre regains his sight and becomes more confident",
+      "FUNCTION": "TRANSFORMATION",
+      "CHARACTERS": [
+        "Mr. Eyre",
+        "Jane Eyre"
+      ],
+      "LOCATION": "London",
+      "CAUSE": "Mr. Eyre's determination to recover his sight",
+      "EFFECT": "Mr. Eyre becomes more confident and happy",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Jane and Mr. Eyre get married and start a new life together",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Jane Eyre",
+        "Mr. Eyre"
+      ],
+      "LOCATION": "Unknown",
+      "CAUSE": "Jane and Mr. Eyre's love and determination",
+      "EFFECT": "Jane and Mr. Eyre are happy and fulfilled",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Jane Eyre",
+      "TARGET": "Mrs. Reed",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Jane Eyre",
+      "TARGET": "Mr. Eyre",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "St. John Rivers",
+      "TARGET": "Jane Eyre",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Diana and Mary Rivers",
+      "TARGET": "Jane Eyre",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "QUEST",
+    "HELPER_APPEARS",
+    "TRANSFORMATION",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "issues": [
+      "event participant 'Bessie' not in CHARACTERS: added as SECONDARY"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.5,
+    "seed": 1,
+    "attempts": 1,
+    "source_chars": 1024424,
+    "excerpt_chars": 11611
+  }
+}

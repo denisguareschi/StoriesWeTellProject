@@ -1,0 +1,166 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Origin Myth",
+  "SETTING_DOMAIN": "Spiritual and Religious",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Kotei",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "from inexperienced youth to wise and powerful ruler",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Shiyu",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "The Empress",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "The courtiers",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "The Dragon",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "China",
+    "Takuroku",
+    "the Palace",
+    "the battlefield",
+    "the river",
+    "the meadows"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Kotei was born after his mother had a vision foretelling his greatness.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Kotei"
+      ],
+      "LOCATION": "the meadows",
+      "CAUSE": "Story opening",
+      "EFFECT": "Kotei's destiny is set in motion",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Kotei declared war against the rebel Shiyu.",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Kotei",
+        "Shiyu"
+      ],
+      "LOCATION": "Takuroku",
+      "CAUSE": "Kotei's desire for peace and his frustration with Shiyu's magic",
+      "EFFECT": "The war begins",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Kotei invented the shinansha, which allowed him to navigate through the rebel's fog.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Kotei"
+      ],
+      "LOCATION": "the Palace",
+      "CAUSE": "Kotei's determination to defeat Shiyu",
+      "EFFECT": "Kotei gains an advantage over Shiyu",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Kotei and his men used the shinansha to cross the river and attack Shiyu's headquarters.",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Kotei",
+        "Shiyu"
+      ],
+      "LOCATION": "the river",
+      "CAUSE": "Kotei's use of the shinansha and his determination to defeat Shiyu",
+      "EFFECT": "Kotei gains a complete victory over Shiyu",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Kotei's time on earth came to an end, and he was taken up to heaven by a Dragon.",
+      "FUNCTION": "RESURRECTION",
+      "CHARACTERS": [
+        "Kotei",
+        "The Dragon",
+        "The Empress",
+        "The courtiers"
+      ],
+      "LOCATION": "the Palace",
+      "CAUSE": "Kotei's age and his destiny",
+      "EFFECT": "Kotei's legacy lives on",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Kotei",
+      "TARGET": "Shiyu",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Kotei",
+      "TARGET": "The Empress",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "The Empress",
+      "TARGET": "Kotei",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "The courtiers",
+      "TARGET": "Kotei",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "QUEST",
+    "TRICKSTER",
+    "RESURRECTION"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "issues": [
+      "event participant 'The Dragon' not in CHARACTERS: added as SECONDARY"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.5,
+    "seed": 2,
+    "attempts": 1,
+    "source_chars": 6387,
+    "excerpt_chars": 6387
+  }
+}

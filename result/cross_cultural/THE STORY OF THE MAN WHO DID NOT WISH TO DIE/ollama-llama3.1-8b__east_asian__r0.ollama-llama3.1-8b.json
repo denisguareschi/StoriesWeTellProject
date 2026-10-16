@@ -1,0 +1,131 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Origin Myth",
+  "SETTING_DOMAIN": "Spiritual and Religious",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Kaito",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "learns to value simple, fleeting moments of existence",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Jofuku's priest",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "misty mountains of old",
+    "Mount Fuji",
+    "land of Perpetual Life",
+    "Jofuku's shrine",
+    "Kaito's ancestral home"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Kaito, a man in his thirties, lives a life of carefree indulgence, unmindful of the passing years.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Kaito"
+      ],
+      "LOCATION": "misty mountains of old",
+      "CAUSE": "Story opening",
+      "EFFECT": "Kaito becomes aware of his own mortality",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Kaito sets out on a perilous journey to find the hermits who possess the secret of the 'Elixir of Life'.",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Kaito"
+      ],
+      "LOCATION": "Mount Fuji",
+      "CAUSE": "Kaito's desire for eternal life",
+      "EFFECT": "Kaito encounters a humble hunter who reveals the existence of a notorious bandit",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Kaito seeks the counsel of the venerable priest at Jofuku's shrine.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Kaito",
+        "Jofuku's priest"
+      ],
+      "LOCATION": "Jofuku's shrine",
+      "CAUSE": "Kaito's search for the hermits",
+      "EFFECT": "Jofuku grants Kaito a boon and sends him to the land of Perpetual Life",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Kaito arrives in the land of Perpetual Life, where he finds himself in a world unlike any he has ever known.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Kaito"
+      ],
+      "LOCATION": "land of Perpetual Life",
+      "CAUSE": "Jofuku's boon",
+      "EFFECT": "Kaito becomes perplexed by the islanders' customs and traditions",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Kaito prays to Jofuku, begging to be returned to his native land, and is granted his wish.",
+      "FUNCTION": "RESURRECTION",
+      "CHARACTERS": [
+        "Kaito"
+      ],
+      "LOCATION": "land of Perpetual Life",
+      "CAUSE": "Kaito's genuine resolve",
+      "EFFECT": "Kaito returns to his ancestral home, his spirit renewed",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Kaito",
+      "TARGET": "Jofuku's priest",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Jofuku's priest",
+      "TARGET": "Kaito",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "QUEST",
+    "HELPER_APPEARS",
+    "ORDEAL",
+    "RESURRECTION"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "issues": [
+      "event participant \"Jofuku's priest\" not in CHARACTERS: added as SECONDARY"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 5106,
+    "excerpt_chars": 5106
+  }
+}

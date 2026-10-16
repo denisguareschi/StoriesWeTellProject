@@ -1,0 +1,156 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Tragedy",
+  "SETTING_DOMAIN": "Spiritual and Religious",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Urashima Taro",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "from young fisherman to old man",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "The Princess",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "The Man",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "The Boys",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "The Fishes",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Japan",
+    "Mizu-no-ye",
+    "Sea Palace",
+    "Village",
+    "Beach"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Urashima Taro rescues a tortoise from cruel boys",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Urashima Taro",
+        "The Boys"
+      ],
+      "LOCATION": "Mizu-no-ye",
+      "CAUSE": "Story opening",
+      "EFFECT": "The tortoise is saved",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "The tortoise is revealed to be the Princess",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Urashima Taro",
+        "The Princess"
+      ],
+      "LOCATION": "Sea Palace",
+      "CAUSE": "The tortoise's true identity is revealed",
+      "EFFECT": "Urashima Taro is invited to stay in the Sea Palace",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Urashima Taro is welcomed to the Sea Palace",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Urashima Taro",
+        "The Princess",
+        "The Fishes"
+      ],
+      "LOCATION": "Sea Palace",
+      "CAUSE": "Urashima Taro's kindness is rewarded",
+      "EFFECT": "Urashima Taro is treated as a guest of honor",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Urashima Taro returns to the village",
+      "FUNCTION": "RETURN",
+      "CHARACTERS": [
+        "Urashima Taro",
+        "The Man"
+      ],
+      "LOCATION": "Village",
+      "CAUSE": "Urashima Taro's time in the Sea Palace comes to an end",
+      "EFFECT": "Urashima Taro is shocked to find that he has aged 300 years",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Urashima Taro opens the tamate-bako and is punished",
+      "FUNCTION": "BETRAYAL",
+      "CHARACTERS": [
+        "Urashima Taro"
+      ],
+      "LOCATION": "Beach",
+      "CAUSE": "Urashima Taro's disobedience",
+      "EFFECT": "Urashima Taro is transformed into an old man and dies",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Urashima Taro",
+      "TARGET": "The Princess",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "The Man",
+      "TARGET": "Urashima Taro",
+      "TYPE": "OPPOSES"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "HELPER_APPEARS",
+    "MORAL_REWARD",
+    "RETURN",
+    "BETRAYAL"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "issues": [
+      "event participant 'The Boys' not in CHARACTERS: added as SECONDARY",
+      "event participant 'The Fishes' not in CHARACTERS: added as SECONDARY"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 22259,
+    "excerpt_chars": 11775
+  }
+}

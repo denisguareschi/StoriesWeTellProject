@@ -1,0 +1,148 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Jackal",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "learns to trick others",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 3
+    },
+    {
+      "CHARACTER": "Monkey",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "gets caught and killed",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Boer",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": 5
+    }
+  ],
+  "LOCATIONS": [
+    "Boer's kraal",
+    "stone kopje"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Jackal steals a lamb from Boer's kraal.",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Jackal",
+        "Boer"
+      ],
+      "LOCATION": "Boer's kraal",
+      "CAUSE": "Story opening",
+      "EFFECT": "Jackal gets away with the lamb.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Jackal gets caught in the wip.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Jackal",
+        "Boer"
+      ],
+      "LOCATION": "Boer's kraal",
+      "CAUSE": "Jackal's trickery is discovered.",
+      "EFFECT": "Jackal is caught and helpless.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Monkey convinces Jackal to let him try the wip.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Jackal",
+        "Monkey"
+      ],
+      "LOCATION": "stone kopje",
+      "CAUSE": "Monkey's persuasion",
+      "EFFECT": "Monkey gets caught in the wip.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Monkey tries to convince Boer that he is the one who stole the lambs.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Monkey",
+        "Boer"
+      ],
+      "LOCATION": "Boer's kraal",
+      "CAUSE": "Monkey's attempt to deceive Boer",
+      "EFFECT": "Boer is suspicious but doesn't believe Monkey.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Boer shoots Monkey dead, thinking he is the lamb thief.",
+      "FUNCTION": "BETRAYAL",
+      "CHARACTERS": [
+        "Boer",
+        "Monkey"
+      ],
+      "LOCATION": "Boer's kraal",
+      "CAUSE": "Boer's mistake",
+      "EFFECT": "Monkey is killed.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Jackal",
+      "TARGET": "Monkey",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Monkey",
+      "TARGET": "Jackal",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Boer",
+      "TARGET": "Jackal",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Boer",
+      "TARGET": "Monkey",
+      "TYPE": "OPPOSES"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "QUEST",
+    "ORDEAL",
+    "HELPER_APPEARS",
+    "TRICKSTER",
+    "BETRAYAL"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [
+      "CHANGE_EVENT"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 2008,
+    "excerpt_chars": 2008
+  }
+}

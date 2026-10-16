@@ -1,0 +1,178 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Hero's Journey",
+  "SETTING_DOMAIN": "Spiritual and Religious",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Momotaro",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "from ordinary boy to hero",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Old Man",
+      "ROLE": "DEUTERAGONIST",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Old Woman",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Dog",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Pheasant",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Monkey",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Demon King",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Japan",
+    "Island of Devils",
+    "River",
+    "Hills and valleys",
+    "Field"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "The old woman finds a peach in the river and brings it home.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Old Woman"
+      ],
+      "LOCATION": "River",
+      "CAUSE": "Story opening",
+      "EFFECT": "The old woman is happy and excited.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Momotaro meets the dog and the monkey on his journey to the Island of Devils.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Momotaro",
+        "Dog",
+        "Monkey"
+      ],
+      "LOCATION": "Hills and valleys",
+      "CAUSE": "Momotaro's journey to the Island of Devils",
+      "EFFECT": "The dog and the monkey join Momotaro on his journey.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Momotaro meets the pheasant on his journey to the Island of Devils.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Momotaro",
+        "Pheasant"
+      ],
+      "LOCATION": "Field",
+      "CAUSE": "Momotaro's journey to the Island of Devils",
+      "EFFECT": "The pheasant joins Momotaro on his journey.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Momotaro and his companions arrive at the Island of Devils and fight the demons.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Momotaro",
+        "Dog",
+        "Monkey",
+        "Pheasant",
+        "Demon King"
+      ],
+      "LOCATION": "Island of Devils",
+      "CAUSE": "Momotaro's journey to the Island of Devils",
+      "EFFECT": "The demons are defeated and the prisoners are freed.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Momotaro defeats the Demon King and returns home with the treasure.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Momotaro",
+        "Demon King"
+      ],
+      "LOCATION": "Island of Devils",
+      "CAUSE": "Momotaro's defeat of the Demon King",
+      "EFFECT": "The country is freed from the robber devils and Momotaro is hailed as a hero.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Momotaro",
+      "TARGET": "Dog",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Momotaro",
+      "TARGET": "Pheasant",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Momotaro",
+      "TARGET": "Monkey",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Demon King",
+      "TARGET": "Momotaro",
+      "TYPE": "OPPOSES"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "HELPER_APPEARS",
+    "ORDEAL",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 22605,
+    "excerpt_chars": 11918
+  }
+}

@@ -1,0 +1,190 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Vulture",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "tries to become king",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 1
+    },
+    {
+      "CHARACTER": "Tink-tinkje",
+      "ROLE": "TRICKSTER",
+      "TRANSFORMATION": "outwits Vulture and becomes king",
+      "TRANSFORMATION_TYPE": "REVERSAL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Owl",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "helps Vulture, then falls asleep",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 4
+    },
+    {
+      "CHARACTER": "White-crow",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "stops speaking",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Peacock",
+      "ROLE": "DEUTERAGONIST",
+      "TRANSFORMATION": "participates in election",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Eagle",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "participates in election",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Ostrich",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "participates in election",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "sky",
+    "earth",
+    "tree"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "The birds assemble to elect a king.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Vulture",
+        "Tink-tinkje",
+        "Owl",
+        "White-crow",
+        "Peacock",
+        "Eagle",
+        "Ostrich"
+      ],
+      "LOCATION": "sky",
+      "CAUSE": "Story opening",
+      "EFFECT": "The birds decide to elect a king.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Vulture flies highest and claims to be king.",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Vulture",
+        "Tink-tinkje"
+      ],
+      "LOCATION": "sky",
+      "CAUSE": "The birds decide to elect a king.",
+      "EFFECT": "Tink-tinkje hides on Vulture's feathers.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Tink-tinkje mocks Vulture's claim to be king.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Tink-tinkje",
+        "Vulture"
+      ],
+      "LOCATION": "sky",
+      "CAUSE": "Vulture flies highest and claims to be king.",
+      "EFFECT": "Vulture becomes tired.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Owl falls asleep while guarding Tink-tinkje.",
+      "FUNCTION": "SACRIFICE",
+      "CHARACTERS": [
+        "Owl",
+        "Tink-tinkje"
+      ],
+      "LOCATION": "earth",
+      "CAUSE": "The birds decide to get Tink-tinkje out.",
+      "EFFECT": "Tink-tinkje escapes.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Tink-tinkje outwits the birds and becomes king.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Tink-tinkje",
+        "Vulture",
+        "Owl",
+        "White-crow",
+        "Peacock",
+        "Eagle",
+        "Ostrich"
+      ],
+      "LOCATION": "tree",
+      "CAUSE": "Owl falls asleep while guarding Tink-tinkje.",
+      "EFFECT": "White-crow stops speaking.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Tink-tinkje",
+      "TARGET": "Vulture",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "Owl",
+      "TARGET": "Tink-tinkje",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Vulture",
+      "TARGET": "Tink-tinkje",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "White-crow",
+      "TARGET": "Tink-tinkje",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Peacock",
+      "TARGET": "Tink-tinkje",
+      "TYPE": "OPPOSES"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "QUEST",
+    "TRICKSTER",
+    "SACRIFICE",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.5,
+    "seed": 1,
+    "attempts": 1,
+    "source_chars": 2520,
+    "excerpt_chars": 2520
+  }
+}

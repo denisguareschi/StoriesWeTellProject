@@ -1,0 +1,371 @@
+{
+  "annotator": "ollama-llama3.1-8b",
+  "n_stories": 60,
+  "stories_per_zone": {
+    "asian": 20,
+    "european": 20,
+    "south_african": 20
+  },
+  "protocol": {
+    "v2-sampled-single-pass": 60
+  },
+  "derived_fields": {
+    "CHANGE_EVENT": 16
+  },
+  "mean_similarity": {
+    "ged": 0.17534639473682884,
+    "motif": 0.1684874979365558,
+    "role": 0.17149568815769767,
+    "wl": 0.3065652723095024,
+    "composite": 0.20547371328514616
+  },
+  "metric_spearman": {
+    "ged~motif": 0.17552516853293298,
+    "ged~role": 0.2350532293820989,
+    "ged~wl": 0.2389871972785361,
+    "motif~role": 0.4627922228893209,
+    "motif~wl": 0.12446744683292212,
+    "role~wl": 0.3383784671501665
+  },
+  "k": 2,
+  "silhouette_scan": {
+    "2": 0.09348129502529302,
+    "3": 0.05287937352448952,
+    "4": 0.03163900879144087,
+    "5": 0.0182329252124049,
+    "6": 0.007208890729853223,
+    "7": 0.02072620105283906,
+    "8": 0.03847164141674668
+  },
+  "cluster_sizes": {
+    "C0: Helper | asian 34%": 59,
+    "C1: Sacrifice+Betrayal | south_african 100%": 1
+  },
+  "cluster_stability": {
+    "mean_ari": 0.4953997490645135,
+    "sd_ari": 0.42696092191030677,
+    "n_boot": 200
+  },
+  "cluster_zone_association": {
+    "ari": 0.0,
+    "p_value": 1.0
+  },
+  "zone_separation": {
+    "overall": {
+      "observed": 0.015600545000620802,
+      "null_mean": -1.3544730488594658e-05,
+      "p_value": 0.0003999200159968006
+    },
+    "pairwise": {
+      "asian vs european": {
+        "observed": -0.0031827863856399574,
+        "null_mean": -2.5086054391670198e-05,
+        "p_value": 0.762247550489902
+      },
+      "asian vs south_african": {
+        "observed": 0.019589501561735445,
+        "null_mean": -3.7379702957128334e-05,
+        "p_value": 0.0007998400319936012
+      },
+      "european vs south_african": {
+        "observed": 0.03039491982576692,
+        "null_mean": -2.217628861713927e-05,
+        "p_value": 0.0001999600079984003
+      }
+    },
+    "silhouette_by_zone": -0.00416111708735612
+  },
+  "mean_within_zone_similarity": {
+    "asian": 0.2309282481895483,
+    "european": 0.22098968009542602,
+    "south_african": 0.19623313360562505
+  },
+  "functions": [
+    {
+      "function": "QUEST",
+      "presence": {
+        "asian": 0.45,
+        "european": 0.3,
+        "south_african": 0.5
+      },
+      "mean_share": {
+        "asian": 0.09,
+        "european": 0.06000000000000001,
+        "south_african": 0.10999999999999999
+      },
+      "kruskal_H": 1.9723333333333504,
+      "p_value": 0.37300380188589977,
+      "epsilon2": 0.0,
+      "q_value": 0.6838403034574828,
+      "label": "shared"
+    },
+    {
+      "function": "SACRIFICE",
+      "presence": {
+        "asian": 0.35,
+        "european": 0.3,
+        "south_african": 0.2
+      },
+      "mean_share": {
+        "asian": 0.07,
+        "european": 0.06,
+        "south_african": 0.04
+      },
+      "kruskal_H": 1.1299589603282973,
+      "p_value": 0.5683718095341153,
+      "epsilon2": 0.0,
+      "q_value": 0.7815112381094085,
+      "label": "shared"
+    },
+    {
+      "function": "TRICKSTER",
+      "presence": {
+        "asian": 0.35,
+        "european": 0.15,
+        "south_african": 0.8
+      },
+      "mean_share": {
+        "asian": 0.06999999999999999,
+        "european": 0.04,
+        "south_african": 0.26
+      },
+      "kruskal_H": 20.095190144805308,
+      "p_value": 4.328973264644923e-05,
+      "epsilon2": 0.31745947622465454,
+      "q_value": 0.00047618705911094155,
+      "label": "culture-bound"
+    },
+    {
+      "function": "TRANSFORMATION",
+      "presence": {
+        "asian": 0.0,
+        "european": 0.05,
+        "south_african": 0.0
+      },
+      "mean_share": {
+        "asian": 0.0,
+        "european": 0.01,
+        "south_african": 0.0
+      },
+      "kruskal_H": 2.0000000000000453,
+      "p_value": 0.3678794411714342,
+      "epsilon2": 7.946859544685331e-16,
+      "q_value": 0.6838403034574828,
+      "label": "shared"
+    },
+    {
+      "function": "MORAL_REWARD",
+      "presence": {
+        "asian": 0.5,
+        "european": 0.6,
+        "south_african": 0.3
+      },
+      "mean_share": {
+        "asian": 0.1,
+        "european": 0.12250000000000001,
+        "south_african": 0.07
+      },
+      "kruskal_H": 3.2299449454888314,
+      "p_value": 0.19889614543049353,
+      "epsilon2": 0.02157798149980406,
+      "q_value": 0.6838403034574828,
+      "label": "shared"
+    },
+    {
+      "function": "BETRAYAL",
+      "presence": {
+        "asian": 0.5,
+        "european": 0.35,
+        "south_african": 0.4
+      },
+      "mean_share": {
+        "asian": 0.1,
+        "european": 0.0725,
+        "south_african": 0.08
+      },
+      "kruskal_H": 0.7071111111111527,
+      "p_value": 0.7021869811165704,
+      "epsilon2": 0.0,
+      "q_value": 0.8277816911026333,
+      "label": "shared"
+    },
+    {
+      "function": "HELPER_APPEARS",
+      "presence": {
+        "asian": 0.9,
+        "european": 0.85,
+        "south_african": 0.55
+      },
+      "mean_share": {
+        "asian": 0.22000000000000006,
+        "european": 0.25250000000000006,
+        "south_african": 0.12
+      },
+      "kruskal_H": 9.301011116993132,
+      "p_value": 0.009556769203162865,
+      "epsilon2": 0.12808791433321284,
+      "q_value": 0.052562230617395754,
+      "label": "universal"
+    },
+    {
+      "function": "RETURN",
+      "presence": {
+        "asian": 0.15,
+        "european": 0.15,
+        "south_african": 0.05
+      },
+      "mean_share": {
+        "asian": 0.030000000000000006,
+        "european": 0.030000000000000006,
+        "south_african": 0.01
+      },
+      "kruskal_H": 1.2722371967655286,
+      "p_value": 0.52934303475794,
+      "epsilon2": 0.0,
+      "q_value": 0.7815112381094085,
+      "label": "shared"
+    },
+    {
+      "function": "CALL_TO_ADVENTURE",
+      "presence": {
+        "asian": 0.85,
+        "european": 0.85,
+        "south_african": 0.9
+      },
+      "mean_share": {
+        "asian": 0.18000000000000002,
+        "european": 0.19250000000000003,
+        "south_african": 0.18000000000000005
+      },
+      "kruskal_H": 0.5686319945074276,
+      "p_value": 0.7525288100933031,
+      "epsilon2": 0.0,
+      "q_value": 0.8277816911026333,
+      "label": "universal"
+    },
+    {
+      "function": "ORDEAL",
+      "presence": {
+        "asian": 0.6,
+        "european": 0.5,
+        "south_african": 0.6
+      },
+      "mean_share": {
+        "asian": 0.12000000000000002,
+        "european": 0.12000000000000002,
+        "south_african": 0.12000000000000002
+      },
+      "kruskal_H": 0.08206317009561602,
+      "p_value": 0.959798814177607,
+      "epsilon2": 0.0,
+      "q_value": 0.959798814177607,
+      "label": "universal"
+    },
+    {
+      "function": "RESURRECTION",
+      "presence": {
+        "asian": 0.1,
+        "european": 0.2,
+        "south_african": 0.05
+      },
+      "mean_share": {
+        "asian": 0.02,
+        "european": 0.04,
+        "south_african": 0.01
+      },
+      "kruskal_H": 2.226415094339583,
+      "p_value": 0.32850357866159574,
+      "epsilon2": 0.003972194637536545,
+      "q_value": 0.6838403034574828,
+      "label": "shared"
+    }
+  ],
+  "top_cross_zone_pairs": [
+    {
+      "similarity": 0.567477405630076,
+      "a": "THE STORY OF PRINCESS HASE A STORY OF OLD JAPAN",
+      "b": "11_alices_adventures_in_wonderland",
+      "zone_a": "asian",
+      "zone_b": "european"
+    },
+    {
+      "similarity": 0.46496857060654834,
+      "a": "THE GOBLIN OF ADACHIGAHARA",
+      "b": "11_alices_adventures_in_wonderland",
+      "zone_a": "asian",
+      "zone_b": "european"
+    },
+    {
+      "similarity": 0.4596793732016372,
+      "a": "THE STORY OF PRINCESS HASE A STORY OF OLD JAPAN",
+      "b": "1400_great_expectations",
+      "zone_a": "asian",
+      "zone_b": "european"
+    },
+    {
+      "similarity": 0.4470580624812427,
+      "a": "THE HAPPY HUNTER AND THE SKILLFUL FISHER",
+      "b": "105_persuasion",
+      "zone_a": "asian",
+      "zone_b": "european"
+    },
+    {
+      "similarity": 0.4272772365372073,
+      "a": "THE STORY OF PRINCESS HASE A STORY OF OLD JAPAN",
+      "b": "1023_bleak_house",
+      "zone_a": "asian",
+      "zone_b": "european"
+    },
+    {
+      "similarity": 0.41335022128010734,
+      "a": "THE STORY OF THE MAN WHO DID NOT WISH TO DIE",
+      "b": "1023_bleak_house",
+      "zone_a": "asian",
+      "zone_b": "european"
+    },
+    {
+      "similarity": 0.4080679526034924,
+      "a": "THE ADVENTURES OF KINTARO, THE GOLDEN BOY",
+      "b": "1260_jane_eyre_an_autobiography",
+      "zone_a": "asian",
+      "zone_b": "european"
+    },
+    {
+      "similarity": 0.40408966771747523,
+      "a": "THE SHINANSHA OR THE SOUTH POINTING CARRIAGE",
+      "b": "1260_jane_eyre_an_autobiography",
+      "zone_a": "asian",
+      "zone_b": "european"
+    },
+    {
+      "similarity": 0.3973561510956396,
+      "a": "THE QUARREL OF THE MONKEY AND THE CRAB",
+      "b": "110_tess_of_the_durbervilles_a_pure_woman",
+      "zone_a": "asian",
+      "zone_b": "european"
+    },
+    {
+      "similarity": 0.39444508550839685,
+      "a": "1155_the_secret_adversary",
+      "b": "THE LIONESS AND THE OSTRICH",
+      "zone_a": "european",
+      "zone_b": "south_african"
+    }
+  ],
+  "arc_by_zone": {
+    "asian": {
+      "Hero's Journey": 6,
+      "Trickster Tale": 8,
+      "Tragedy": 5,
+      "null": 1
+    },
+    "european": {
+      "Tragedy": 13,
+      "Trickster Tale": 7
+    },
+    "south_african": {
+      "Trickster Tale": 19,
+      "Origin Myth": 1
+    }
+  }
+}

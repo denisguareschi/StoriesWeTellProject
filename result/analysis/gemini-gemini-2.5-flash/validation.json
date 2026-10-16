@@ -1,0 +1,31 @@
+{
+  "annotator": "gemini-gemini-2.5-flash",
+  "grounding": {
+    "asian": {
+      "grounding_rate": 0.9895833333333334,
+      "mean_schema_repairs": 0.2,
+      "stories": 20
+    },
+    "european": {
+      "grounding_rate": 0.976,
+      "mean_schema_repairs": 1.2,
+      "stories": 20
+    },
+    "south_african": {
+      "grounding_rate": 1.0,
+      "mean_schema_repairs": 0.45,
+      "stories": 20
+    }
+  },
+  "litbank": {
+    "n_novels": 20,
+    "llm_recall_at_k": 0.4383333333333333,
+    "spacy_recall_at_k": 0.4800000000000001
+  },
+  "manual": {
+    "n_stories": 12,
+    "arc_agreement": 0.6666666666666666,
+    "function_agreement": 0.45,
+    "function_kappa": 0.37341772151898744
+  }
+}

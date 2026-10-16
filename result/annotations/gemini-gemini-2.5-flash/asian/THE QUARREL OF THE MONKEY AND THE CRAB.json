@@ -1,0 +1,177 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Cautionary Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Young Crab",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "From grieving son to determined avenger",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 4
+    },
+    {
+      "CHARACTER": "Monkey",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "From cunning trickster to unrepentant murderer, then punished",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Old Crab",
+      "ROLE": "DEUTERAGONIST",
+      "TRANSFORMATION": "From simple-minded victim to murdered father",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": 3
+    },
+    {
+      "CHARACTER": "Mortar",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "NONE",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Bee",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "NONE",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Chestnut",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "NONE",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "River bank",
+    "Forest",
+    "Crab's home"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "The monkey deceives the old crab into exchanging a rice-dumpling for a persimmon-seed.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Monkey",
+        "Old Crab"
+      ],
+      "LOCATION": "River bank",
+      "CAUSE": "Story opening",
+      "EFFECT": "The monkey eats the dumpling, and the crab plants the seed.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "The old crab cultivates the persimmon tree, but cannot reach the ripe fruit and asks the monkey for help.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Old Crab",
+        "Monkey"
+      ],
+      "LOCATION": "Crab's home",
+      "CAUSE": "The persimmon tree grew and bore fruit, but the crab couldn't reach it.",
+      "EFFECT": "The monkey comes to the tree, devising a cunning plan to keep all fruit.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "The monkey brutally kills the old crab by throwing unripe persimmons at him.",
+      "FUNCTION": "BETRAYAL",
+      "CHARACTERS": [
+        "Monkey",
+        "Old Crab"
+      ],
+      "LOCATION": "Crab's home",
+      "CAUSE": "The monkey's greed for the persimmons and refusal to share.",
+      "EFFECT": "The old crab dies, and the monkey flees the scene.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "The young crab discovers his murdered father, vows revenge, and recruits helpers.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Young Crab",
+        "Mortar",
+        "Bee",
+        "Chestnut"
+      ],
+      "LOCATION": "Crab's home",
+      "CAUSE": "The monkey murdered the old crab.",
+      "EFFECT": "A plan for revenge is formulated, and allies are gathered to punish the monkey.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "The young crab and his helpers ambush and kill the monkey, avenging the old crab.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Young Crab",
+        "Monkey",
+        "Mortar",
+        "Bee",
+        "Chestnut"
+      ],
+      "LOCATION": "Crab's home",
+      "CAUSE": "The young crab's revenge plot, executed with his helpers.",
+      "EFFECT": "The wicked monkey is punished, and the old crab's death is avenged.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Young Crab",
+      "TARGET": "Monkey",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Mortar",
+      "TARGET": "Young Crab",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Bee",
+      "TARGET": "Young Crab",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Chestnut",
+      "TARGET": "Young Crab",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Monkey",
+      "TARGET": "Old Crab",
+      "TYPE": "DECEIVES"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "TRICKSTER",
+    "CALL_TO_ADVENTURE",
+    "BETRAYAL",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "gemini:gemini-2.5-flash",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 14241,
+    "excerpt_chars": 11870
+  }
+}

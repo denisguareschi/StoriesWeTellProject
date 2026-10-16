@@ -1,0 +1,169 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Vulture",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "loses leadership due to trickery",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Tink-tinkje",
+      "ROLE": "TRICKSTER",
+      "TRANSFORMATION": "gains power through trickery",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Owl",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "fails to protect Vulture",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "White-crow",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "loses ability to speak",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Other birds",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "lose trust in Vulture",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    }
+  ],
+  "LOCATIONS": [
+    "sky",
+    "earth",
+    "mouse hole",
+    "tree"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "The birds wanted a king. Men have a king, so have animals, and why shouldn't they? All had assembled.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Vulture",
+        "Tink-tinkje",
+        "Other birds"
+      ],
+      "LOCATION": "sky",
+      "CAUSE": "Story opening",
+      "EFFECT": "The birds want a king.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "He who can fly the highest will be king.",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Vulture",
+        "Tink-tinkje",
+        "Other birds"
+      ],
+      "LOCATION": "sky",
+      "CAUSE": "The birds want a king.",
+      "EFFECT": "The birds decide to fly up to find the king.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Vulture flew for three whole days without stopping, straight toward the sun.",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Vulture",
+        "Tink-tinkje"
+      ],
+      "LOCATION": "sky",
+      "CAUSE": "The birds decide to fly up to find the king.",
+      "EFFECT": "Vulture is still flying.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Tink-tinkje mocked Vulture and flew above him.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Tink-tinkje",
+        "Vulture"
+      ],
+      "LOCATION": "sky",
+      "CAUSE": "Vulture is still flying.",
+      "EFFECT": "Tink-tinkje gains power through trickery.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Vulture was tired and now flew direct to earth. Tink-tinkje must die because he had taken advantage of Vulture's feathers and there hidden himself.",
+      "FUNCTION": "BETRAYAL",
+      "CHARACTERS": [
+        "Vulture",
+        "Tink-tinkje",
+        "Other birds"
+      ],
+      "LOCATION": "earth",
+      "CAUSE": "Tink-tinkje gains power through trickery.",
+      "EFFECT": "Vulture loses leadership due to trickery.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Vulture",
+      "TARGET": "Tink-tinkje",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "Tink-tinkje",
+      "TARGET": "Vulture",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "Owl",
+      "TARGET": "Vulture",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Other birds",
+      "TARGET": "Tink-tinkje",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "White-crow",
+      "TARGET": "Tink-tinkje",
+      "TYPE": "OPPOSES"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "QUEST",
+    "TRICKSTER",
+    "BETRAYAL"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 2520,
+    "excerpt_chars": 2520
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Tragedy",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "the father",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "learns to forgive and appreciate his daughter",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "the daughter",
+      "ROLE": "DEUTERAGONIST",
+      "TRANSFORMATION": "grows in the likeness of her dead mother's character",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 3
+    },
+    {
+      "CHARACTER": "the step-mother",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "humbles herself and asks forgiveness",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "the wife",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "null",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "the Province of Echigo",
+    "the capital",
+    "the household"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "The father is summoned to the capital on business.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "the father",
+        "the wife",
+        "the daughter"
+      ],
+      "LOCATION": "the Province of Echigo",
+      "CAUSE": "Story opening",
+      "EFFECT": "The father must leave his family behind.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "The wife dies, leaving the father and daughter behind.",
+      "FUNCTION": "SACRIFICE",
+      "CHARACTERS": [
+        "the wife",
+        "the father",
+        "the daughter"
+      ],
+      "LOCATION": "the household",
+      "CAUSE": "The wife's death",
+      "EFFECT": "The father and daughter are left alone.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "The daughter discovers that she can see her mother's face in a mirror.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "the daughter"
+      ],
+      "LOCATION": "the household",
+      "CAUSE": "The daughter's grief and longing",
+      "EFFECT": "The daughter finds comfort in seeing her mother's face.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "The step-mother's jealousy and suspicion lead her to accuse the daughter of using magic.",
+      "FUNCTION": "BETRAYAL",
+      "CHARACTERS": [
+        "the step-mother",
+        "the father",
+        "the daughter"
+      ],
+      "LOCATION": "the household",
+      "CAUSE": "The step-mother's jealousy",
+      "EFFECT": "The father suspects the daughter and intends to scold her.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "The father realizes his mistake and forgives the daughter, while the step-mother humbles herself and asks forgiveness.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "the father",
+        "the step-mother",
+        "the daughter"
+      ],
+      "LOCATION": "the household",
+      "CAUSE": "The father's realization and the step-mother's humility",
+      "EFFECT": "The family is reunited and lives happily ever after.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "the father",
+      "TARGET": "the daughter",
+      "TYPE": "BONDS_WITH"
+    },
+    {
+      "SOURCE": "the step-mother",
+      "TARGET": "the daughter",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "the step-mother",
+      "TARGET": "the father",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "SACRIFICE",
+    "HELPER_APPEARS",
+    "BETRAYAL",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 27801,
+    "excerpt_chars": 11777
+  }
+}

@@ -1,0 +1,192 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Emma McChesney",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "from a mother to a woman who finds happiness in her son's success",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Jock McChesney",
+      "ROLE": "DEUTERAGONIST",
+      "TRANSFORMATION": "from a young man to a successful builder of ideas",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "T.A. Buck",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "from a colleague to a romantic interest",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Sam Hupp",
+      "ROLE": "TRICKSTER",
+      "TRANSFORMATION": "from a salesman to a representative of the changing times",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 2
+    },
+    {
+      "CHARACTER": "Bartholomew Berg",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "from a colleague to a supportive figure",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 2
+    },
+    {
+      "CHARACTER": "old salesman",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "new salesman",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Hopper",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "New York City"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "The old salesman, known for his oily tongue and persuasive ways, is replaced by a new, more modern salesman.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "old salesman",
+        "new salesman"
+      ],
+      "LOCATION": "New York City",
+      "CAUSE": "Story opening",
+      "EFFECT": "The old salesman's methods are no longer effective.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "The advertising experts discuss how to market the new petticoats, with some suggesting a novelty campaign and others emphasizing durability and style.",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Emma McChesney",
+        "Hopper",
+        "Sam Hupp",
+        "Bartholomew Berg"
+      ],
+      "LOCATION": "New York City",
+      "CAUSE": "The need to market the new petticoats",
+      "EFFECT": "The advertising experts are unable to agree on a marketing strategy.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Emma McChesney reveals her true intentions for the petticoats, which are to appeal to everyday women rather than the fashionable types.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Emma McChesney",
+        "Bartholomew Berg"
+      ],
+      "LOCATION": "New York City",
+      "CAUSE": "The need for a clear marketing strategy",
+      "EFFECT": "The advertising experts begin to understand Emma's vision.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Jock McChesney prepares to leave for Chicago, and his mother is overcome with emotion as she watches him go.",
+      "FUNCTION": "SACRIFICE",
+      "CHARACTERS": [
+        "Emma McChesney",
+        "Jock McChesney"
+      ],
+      "LOCATION": "New York City",
+      "CAUSE": "Jock's departure",
+      "EFFECT": "Emma is left feeling lonely and isolated.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "T.A. Buck proposes to Emma McChesney, and she accepts.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "T.A. Buck",
+        "Emma McChesney"
+      ],
+      "LOCATION": "New York City",
+      "CAUSE": "Emma's emotional state and T.A.'s proposal",
+      "EFFECT": "Emma and T.A. are engaged to be married.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Emma McChesney",
+      "TARGET": "Jock McChesney",
+      "TYPE": "BONDS_WITH"
+    },
+    {
+      "SOURCE": "T.A. Buck",
+      "TARGET": "Emma McChesney",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Sam Hupp",
+      "TARGET": "Emma McChesney",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "Bartholomew Berg",
+      "TARGET": "Emma McChesney",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Jock McChesney",
+      "TARGET": "Emma McChesney",
+      "TYPE": "BONDS_WITH"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "TRICKSTER",
+    "QUEST",
+    "HELPER_APPEARS",
+    "SACRIFICE",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "issues": [
+      "event participant 'old salesman' not in CHARACTERS: added as SECONDARY",
+      "event participant 'new salesman' not in CHARACTERS: added as SECONDARY",
+      "event participant 'Hopper' not in CHARACTERS: added as SECONDARY"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 144600,
+    "excerpt_chars": 12009
+  }
+}

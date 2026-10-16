@@ -1,0 +1,173 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Tragedy",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Sir Walter Elliot",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "from vanity to self-awareness",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Lady Elliot",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "from youthful infatuation to maturity",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Anne Elliot",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "from self-doubt to self-acceptance",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Captain Wentworth",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "from pride to love",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Mrs. Clay",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "from scheming to self-awareness",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Elizabeth Elliot",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Kellynch Hall",
+    "Uppercross",
+    "Bath",
+    "London"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Sir Walter Elliot reads the Baronetage",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Sir Walter Elliot"
+      ],
+      "LOCATION": "Kellynch Hall",
+      "CAUSE": "Story opening",
+      "EFFECT": "Sir Walter's vanity is revealed",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Anne Elliot's family is in financial trouble",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Anne Elliot",
+        "Sir Walter Elliot",
+        "Lady Elliot"
+      ],
+      "LOCATION": "Kellynch Hall",
+      "CAUSE": "Financial difficulties",
+      "EFFECT": "Anne's family is in crisis",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Captain Wentworth and Anne Elliot meet",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Captain Wentworth",
+        "Anne Elliot"
+      ],
+      "LOCATION": "Uppercross",
+      "CAUSE": "Social gathering",
+      "EFFECT": "Anne and Captain Wentworth develop feelings for each other",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Mrs. Clay's true nature is revealed",
+      "FUNCTION": "BETRAYAL",
+      "CHARACTERS": [
+        "Mrs. Clay",
+        "Sir Walter Elliot",
+        "Elizabeth Elliot"
+      ],
+      "LOCATION": "Bath",
+      "CAUSE": "Mrs. Clay's deception is discovered",
+      "EFFECT": "Sir Walter and Elizabeth are shocked and mortified",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Anne Elliot and Captain Wentworth get married",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Anne Elliot",
+        "Captain Wentworth"
+      ],
+      "LOCATION": "London",
+      "CAUSE": "Anne and Captain Wentworth's love for each other",
+      "EFFECT": "Anne and Captain Wentworth are happy together",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Sir Walter Elliot",
+      "TARGET": "Lady Elliot",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Anne Elliot",
+      "TARGET": "Captain Wentworth",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Mrs. Clay",
+      "TARGET": "Sir Walter Elliot",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "Captain Wentworth",
+      "TARGET": "Anne Elliot",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "ORDEAL",
+    "HELPER_APPEARS",
+    "BETRAYAL",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "issues": [
+      "event participant 'Elizabeth Elliot' not in CHARACTERS: added as SECONDARY"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 466817,
+    "excerpt_chars": 12026
+  }
+}

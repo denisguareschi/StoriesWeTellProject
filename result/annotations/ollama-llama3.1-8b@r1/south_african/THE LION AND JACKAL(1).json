@@ -1,0 +1,139 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Jackal",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "uses deception to achieve his goals",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 3
+    },
+    {
+      "CHARACTER": "Tiger",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "trusts Jackal with his children's education",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Wolf",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "no change",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Jackal's farm",
+    "Tiger's farm"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Jackal convinces Tiger to hire him as a schoolmaster for his children.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Jackal",
+        "Tiger"
+      ],
+      "LOCATION": "Tiger's farm",
+      "CAUSE": "Story opening",
+      "EFFECT": "Tiger agrees to hire Jackal.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Tiger's children are sent to live with Jackal, who promises to educate them.",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Tiger",
+        "Jackal"
+      ],
+      "LOCATION": "Jackal's farm",
+      "CAUSE": "Event 1",
+      "EFFECT": "The children are taken away from Tiger.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Jackal deceives Mrs. Tiger by showing her a fake schoolroom and pretending to care for the children.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Jackal",
+        "Tiger"
+      ],
+      "LOCATION": "Jackal's farm",
+      "CAUSE": "Event 2",
+      "EFFECT": "Mrs. Tiger is deceived and continues to visit the farm.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Mrs. Tiger discovers Jackal's deception and finds a letter explaining that the children are on a picnic.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Tiger",
+        "Jackal"
+      ],
+      "LOCATION": "Jackal's farm",
+      "CAUSE": "Event 3",
+      "EFFECT": "Mrs. Tiger is fooled again.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "The farm becomes deserted, and a spider's web appears on the door.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Jackal",
+        "Tiger"
+      ],
+      "LOCATION": "Jackal's farm",
+      "CAUSE": "Event 4",
+      "EFFECT": "The story concludes with Jackal's deception exposed.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Jackal",
+      "TARGET": "Tiger",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Tiger",
+      "TARGET": "Jackal",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "QUEST",
+    "TRICKSTER",
+    "ORDEAL",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "issues": [
+      "relation dropped: {'SOURCE': 'Jackal', 'TARGET': 'Mrs. Tiger', 'TYPE': 'DECEIVES'}"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.5,
+    "seed": 1,
+    "attempts": 1,
+    "source_chars": 8231,
+    "excerpt_chars": 8231
+  }
+}

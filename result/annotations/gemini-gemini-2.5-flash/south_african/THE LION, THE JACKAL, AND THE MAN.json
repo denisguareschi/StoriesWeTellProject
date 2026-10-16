@@ -1,0 +1,151 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Cautionary Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Lion",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "From boastful and overconfident to humbled and acknowledging others' strength",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Jackal",
+      "ROLE": "TRICKSTER",
+      "TRANSFORMATION": "NONE",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Man",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "NONE",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Dogs",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "NONE",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Wilderness",
+    "Rocky Kopje"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Lion boasts about his immense strength to Jackal during their conversation.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Lion",
+        "Jackal"
+      ],
+      "LOCATION": "Wilderness",
+      "CAUSE": "Story opening",
+      "EFFECT": "Jackal challenges Lion's boast.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Jackal challenges Lion to find an animal stronger than him and leads him on a journey.",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Lion",
+        "Jackal"
+      ],
+      "LOCATION": "Wilderness",
+      "CAUSE": "Lion's boast and Jackal's cunning.",
+      "EFFECT": "They encounter a young hunter.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Jackal directs Lion to confront a young hunter, then retreats to observe from a kopje.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Lion",
+        "Jackal",
+        "Man",
+        "Dogs"
+      ],
+      "LOCATION": "Wilderness",
+      "CAUSE": "Jackal's challenge and their journey.",
+      "EFFECT": "Lion initiates the confrontation with the hunter.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Lion is attacked by the hunter's dogs, shot, and wounded with a knife, forcing him to retreat.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Lion",
+        "Man",
+        "Dogs"
+      ],
+      "LOCATION": "Wilderness",
+      "CAUSE": "Lion's confrontation with the hunter.",
+      "EFFECT": "Lion is defeated and humbled.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Lion admits to Jackal that the hunter is stronger, acknowledging his own defeat and newfound respect.",
+      "FUNCTION": "TRANSFORMATION",
+      "CHARACTERS": [
+        "Lion",
+        "Jackal"
+      ],
+      "LOCATION": "Rocky Kopje",
+      "CAUSE": "The severe ordeal with the hunter.",
+      "EFFECT": "Lion's pride is humbled, and he learns a lesson.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Jackal",
+      "TARGET": "Lion",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "Man",
+      "TARGET": "Lion",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Dogs",
+      "TARGET": "Man",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "QUEST",
+    "TRICKSTER",
+    "ORDEAL",
+    "TRANSFORMATION"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "gemini:gemini-2.5-flash",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 2675,
+    "excerpt_chars": 2673
+  }
+}

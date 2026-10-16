@@ -1,0 +1,174 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Spiritual and Religious",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "The narrator",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "learns about the Moonstone's history and its significance",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "John Herncastle",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "his actions are driven by a desire for the Moonstone",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 1
+    },
+    {
+      "CHARACTER": "General Baird",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "helps the narrator understand the Moonstone's history",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 2
+    },
+    {
+      "CHARACTER": "Mr. Godfrey Ablewhite",
+      "ROLE": "TRICKSTER",
+      "TRANSFORMATION": "his actions are driven by a desire for the Moonstone",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 3
+    },
+    {
+      "CHARACTER": "Rachel Verinder",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "helps the narrator understand the Moonstone's significance",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 3
+    },
+    {
+      "CHARACTER": "The three Brahmins",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "their actions are driven by a desire to protect the Moonstone",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    }
+  ],
+  "LOCATIONS": [
+    "Seringapatam",
+    "Benares",
+    "England",
+    "India"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "The narrator explains the reason for his reserve towards John Herncastle",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "The narrator",
+        "John Herncastle"
+      ],
+      "LOCATION": "England",
+      "CAUSE": "Story opening",
+      "EFFECT": "The narrator's reserve is explained",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "The narrator describes the history of the Moonstone",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "The narrator",
+        "General Baird"
+      ],
+      "LOCATION": "Benares",
+      "CAUSE": "The narrator's desire to understand the Moonstone's history",
+      "EFFECT": "The narrator learns about the Moonstone's history",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Mr. Godfrey Ablewhite's conversation with Rachel Verinder is overheard by the narrator",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Mr. Godfrey Ablewhite",
+        "Rachel Verinder",
+        "The narrator"
+      ],
+      "LOCATION": "England",
+      "CAUSE": "The narrator's curiosity about Mr. Godfrey Ablewhite's actions",
+      "EFFECT": "The narrator learns about Mr. Godfrey Ablewhite's intentions",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "The three Brahmins are seen on the rocky platform, preparing to part ways",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "The three Brahmins",
+        "The narrator"
+      ],
+      "LOCATION": "India",
+      "CAUSE": "The narrator's desire to understand the Moonstone's significance",
+      "EFFECT": "The narrator learns about the Moonstone's significance",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "The curtain is drawn aside, revealing the shrine and the Moonstone",
+      "FUNCTION": "RESURRECTION",
+      "CHARACTERS": [
+        "The narrator",
+        "The three Brahmins"
+      ],
+      "LOCATION": "India",
+      "CAUSE": "The narrator's desire to see the Moonstone",
+      "EFFECT": "The narrator sees the Moonstone",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "The narrator",
+      "TARGET": "John Herncastle",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Mr. Godfrey Ablewhite",
+      "TARGET": "Rachel Verinder",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "The narrator",
+      "TARGET": "General Baird",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "The narrator",
+      "TARGET": "The three Brahmins",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "TRICKSTER",
+    "HELPER_APPEARS",
+    "RESURRECTION"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [
+      "CHANGE_EVENT"
+    ],
+    "issues": [
+      "relation dropped: {'SOURCE': 'The three Brahmins', 'TARGET': 'The Moonstone', 'TYPE': 'HELPS'}"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 1073926,
+    "excerpt_chars": 11953
+  }
+}

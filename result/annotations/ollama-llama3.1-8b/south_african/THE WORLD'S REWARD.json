@@ -1,0 +1,216 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "the man",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "learns to appreciate his old dog",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 1
+    },
+    {
+      "CHARACTER": "the old dog",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "leads the man to a new understanding",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "the old bull",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "joins the man and the dog on their journey",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "the ram",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "joins the man, the dog, and the bull on their journey",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "the donkey",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "joins the man, the dog, the bull, and the ram on their journey",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "the cat",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "joins the man, the dog, the bull, the ram, and the donkey on their journey",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "the goose",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "joins the man, the dog, the bull, the ram, the donkey, and the cat on their journey",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "the cock",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "joins the man, the dog, the bull, the ram, the donkey, the cat, and the goose on their journey",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "the robber",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "learns a lesson about the consequences of his actions",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    }
+  ],
+  "LOCATIONS": [
+    "the veldt",
+    "the land of the aged",
+    "the house",
+    "the man's house"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "The man wants to get rid of his old dog.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "the man",
+        "the old dog"
+      ],
+      "LOCATION": "the man's house",
+      "CAUSE": "Story opening",
+      "EFFECT": "The old dog decides to leave.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "The old dog meets the old bull and convinces him to join their journey.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "the old dog",
+        "the old bull"
+      ],
+      "LOCATION": "the veldt",
+      "CAUSE": "The old dog's plan",
+      "EFFECT": "The old bull joins the old dog on their journey.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "The old dog and the old bull meet the ram and convince him to join their journey.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "the old dog",
+        "the old bull",
+        "the ram"
+      ],
+      "LOCATION": "the veldt",
+      "CAUSE": "The old dog's plan",
+      "EFFECT": "The ram joins the old dog and the old bull on their journey.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "The group of animals, now including the donkey, the cat, the goose, and the cock, come across a house and see robbers eating inside.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "the old dog",
+        "the old bull",
+        "the ram",
+        "the donkey",
+        "the cat",
+        "the goose",
+        "the cock"
+      ],
+      "LOCATION": "the house",
+      "CAUSE": "The group's hunger",
+      "EFFECT": "The group comes up with a plan to get food.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "The robber tries to escape but is thwarted by the group of animals.",
+      "FUNCTION": "SACRIFICE",
+      "CHARACTERS": [
+        "the robber",
+        "the old dog",
+        "the old bull",
+        "the ram",
+        "the donkey",
+        "the cat",
+        "the goose",
+        "the cock"
+      ],
+      "LOCATION": "the house",
+      "CAUSE": "The robber's attempt to escape",
+      "EFFECT": "The robber learns a lesson about the consequences of his actions.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "the old dog",
+      "TARGET": "the old bull",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "the old dog",
+      "TARGET": "the ram",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "the old dog",
+      "TARGET": "the donkey",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "the old dog",
+      "TARGET": "the cat",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "the old dog",
+      "TARGET": "the goose",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "the old dog",
+      "TARGET": "the cock",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "HELPER_APPEARS",
+    "ORDEAL",
+    "SACRIFICE"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [
+      "CHANGE_EVENT"
+    ],
+    "issues": [
+      "relation dropped: {'SOURCE': 'the robber', 'TARGET': 'the group of animals', 'TYPE': 'OPPOSES'}"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 4687,
+    "excerpt_chars": 4687
+  }
+}

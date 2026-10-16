@@ -1,0 +1,163 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Origin Myth",
+  "SETTING_DOMAIN": "Spiritual and Religious",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Takumi",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "learns the value of living a simple and virtuous life",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Jofuku",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "helps Takumi on his journey",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Emperor Shin-no-Shiko",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "lived for centuries and built the great wall of China",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Hunter",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "tells Takumi of a notorious robber",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Robber",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "lives in the mountains",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Japan",
+    "Country of Perpetual Life",
+    "Shrine of Jofuku",
+    "Island"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Takumi heard tales of the great Emperor Shin-no-Shiko, who had lived for centuries and built the great wall of China.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Takumi"
+      ],
+      "LOCATION": "Japan",
+      "CAUSE": "Story opening",
+      "EFFECT": "Takumi wants to live a long life, free from sickness and pain",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Takumi decided to seek out the wisdom of the great hermits who lived on the sacred mountain, Fuji.",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Takumi"
+      ],
+      "LOCATION": "Japan",
+      "CAUSE": "Takumi wants to live a long life",
+      "EFFECT": "Takumi sets out on his journey",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Jofuku appeared to Takumi in a vision, and told him that he would help him in another way.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Takumi",
+        "Jofuku"
+      ],
+      "LOCATION": "Shrine of Jofuku",
+      "CAUSE": "Takumi seeks out the wisdom of the great hermits",
+      "EFFECT": "Takumi is sent to the Country of Perpetual Life",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Takumi stayed in the Country of Perpetual Life for a long time, but as the years passed, he grew tired of living forever.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Takumi"
+      ],
+      "LOCATION": "Country of Perpetual Life",
+      "CAUSE": "Takumi lives in the Country of Perpetual Life",
+      "EFFECT": "Takumi wants to return home",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Takumi returned home, and gave up his vain desires for eternal life.",
+      "FUNCTION": "RETURN",
+      "CHARACTERS": [
+        "Takumi"
+      ],
+      "LOCATION": "Japan",
+      "CAUSE": "Takumi wants to return home",
+      "EFFECT": "Takumi lives a good and industrious life",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Takumi",
+      "TARGET": "Jofuku",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Jofuku",
+      "TARGET": "Takumi",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Takumi",
+      "TARGET": "Emperor Shin-no-Shiko",
+      "TYPE": "BONDS_WITH"
+    },
+    {
+      "SOURCE": "Takumi",
+      "TARGET": "Hunter",
+      "TYPE": "BONDS_WITH"
+    },
+    {
+      "SOURCE": "Takumi",
+      "TARGET": "Robber",
+      "TYPE": "OPPOSES"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "QUEST",
+    "HELPER_APPEARS",
+    "ORDEAL",
+    "RETURN"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 3510,
+    "excerpt_chars": 3510
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Lion",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "From powerful hunter to fatally injured victim",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Jackal",
+      "ROLE": "TRICKSTER",
+      "TRANSFORMATION": "From subordinate to successful deceiver who escapes consequences",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 2
+    },
+    {
+      "CHARACTER": "Jackal's wife",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "NONE",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "High bank",
+    "River"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Lion catches an eland and asks Jackal to guard it while he drinks water.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Lion",
+        "Jackal"
+      ],
+      "LOCATION": "High bank",
+      "CAUSE": "Story opening",
+      "EFFECT": "Jackal is left alone with the eland, creating an opportunity for deception.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Jackal removes a stone Lion needed to return and eats the eland with his wife.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Jackal",
+        "Jackal's wife",
+        "Lion"
+      ],
+      "LOCATION": "High bank",
+      "CAUSE": "Lion's absence and trust in Jackal.",
+      "EFFECT": "Lion cannot scale the bank, and the eland is consumed by Jackal.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Jackal gives Lion a rotten rope, which breaks as Lion climbs, causing him to roll down.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Jackal",
+        "Jackal's wife",
+        "Lion"
+      ],
+      "LOCATION": "High bank",
+      "CAUSE": "Lion's inability to climb the bank and Jackal's continued deception.",
+      "EFFECT": "Lion is at the bottom of the bank, injured and frustrated.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Jackal again offers a rope, but cuts it as Lion nears the top, sending him down again.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Jackal",
+        "Jackal's wife",
+        "Lion"
+      ],
+      "LOCATION": "High bank",
+      "CAUSE": "Lion's persistent need for help and Jackal's escalating malice.",
+      "EFFECT": "Lion is further injured and enraged by Jackal's repeated betrayal.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Jackal gives Lion a third bad rope, breaks it, fatally injuring Lion, and then leaves him to die.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Jackal",
+        "Jackal's wife",
+        "Lion"
+      ],
+      "LOCATION": "High bank",
+      "CAUSE": "Jackal's persistent deception and Lion's vulnerability.",
+      "EFFECT": "Lion is fatally hurt, and Jackal escapes without consequence.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Jackal",
+      "TARGET": "Lion",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "Jackal's wife",
+      "TARGET": "Jackal",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Lion",
+      "TARGET": "Jackal",
+      "TYPE": "OPPOSES"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "TRICKSTER"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "gemini:gemini-2.5-flash",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 2447,
+    "excerpt_chars": 2445
+  }
+}

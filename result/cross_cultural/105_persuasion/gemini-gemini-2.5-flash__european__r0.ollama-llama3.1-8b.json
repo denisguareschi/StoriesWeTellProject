@@ -1,0 +1,193 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Tragedy",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Sir Walter Elliot",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "from self-absorbed to accepting of his daughter's love",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Lady Elliot",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "from young and foolish to wise and kind",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Anne Elliot",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "from quiet and invisible to confident and loved",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Captain Wentworth",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "from melancholy to happy",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Mr. Elliot",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "from scheming to exposed",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 4
+    },
+    {
+      "CHARACTER": "Mrs. Clay",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "from opportunistic to revealed",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 4
+    },
+    {
+      "CHARACTER": "Elizabeth Elliot",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Lady Russell",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Kellynch Hall",
+    "Lyme",
+    "Uppercross"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Sir Walter Elliot's vanity is shielded by his late wife, Lady Elliot.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Sir Walter Elliot",
+        "Lady Elliot"
+      ],
+      "LOCATION": "Kellynch Hall",
+      "CAUSE": "Story opening",
+      "EFFECT": "Sir Walter's vanity is protected",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Anne Elliot's quiet nature makes her invisible to her father's self-absorbed gaze.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Sir Walter Elliot",
+        "Anne Elliot"
+      ],
+      "LOCATION": "Kellynch Hall",
+      "CAUSE": "Anne's quiet nature",
+      "EFFECT": "Anne feels invisible",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Mr. Elliot and Mrs. Clay's schemes are exposed, leaving Sir Walter and his eldest daughter Elizabeth mortified.",
+      "FUNCTION": "BETRAYAL",
+      "CHARACTERS": [
+        "Mr. Elliot",
+        "Mrs. Clay",
+        "Sir Walter Elliot",
+        "Elizabeth Elliot"
+      ],
+      "LOCATION": "Kellynch Hall",
+      "CAUSE": "Mr. Elliot and Mrs. Clay's schemes",
+      "EFFECT": "Sir Walter and Elizabeth are mortified",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Anne's path becomes clear, and she receives Lady Russell's blessing to marry Captain Wentworth.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Anne Elliot",
+        "Lady Russell",
+        "Captain Wentworth"
+      ],
+      "LOCATION": "Uppercross",
+      "CAUSE": "Lady Russell's blessing",
+      "EFFECT": "Anne's path becomes clear",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Anne and Captain Wentworth get married, and Anne finds happiness.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Anne Elliot",
+        "Captain Wentworth"
+      ],
+      "LOCATION": "Uppercross",
+      "CAUSE": "Anne and Captain Wentworth's love",
+      "EFFECT": "Anne finds happiness",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Sir Walter Elliot",
+      "TARGET": "Lady Elliot",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Anne Elliot",
+      "TARGET": "Captain Wentworth",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Mr. Elliot",
+      "TARGET": "Sir Walter Elliot",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Mrs. Clay",
+      "TARGET": "Sir Walter Elliot",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Captain Wentworth",
+      "TARGET": "Anne Elliot",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "HELPER_APPEARS",
+    "CALL_TO_ADVENTURE",
+    "BETRAYAL",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "issues": [
+      "event participant 'Elizabeth Elliot' not in CHARACTERS: added as SECONDARY",
+      "event participant 'Lady Russell' not in CHARACTERS: added as SECONDARY"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 3877,
+    "excerpt_chars": 3877
+  }
+}

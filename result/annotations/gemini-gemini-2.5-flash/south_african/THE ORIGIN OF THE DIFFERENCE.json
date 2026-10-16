@@ -1,0 +1,127 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Origin Myth",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Blind Man",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "recovers his sight, establishes cattle herding, and becomes the Hottentot ancestor.",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 3
+    },
+    {
+      "CHARACTER": "Hunter",
+      "ROLE": "DEUTERAGONIST",
+      "TRANSFORMATION": "gets burned, is exiled to the hills, and becomes the Bushman ancestor.",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    }
+  ],
+  "LOCATIONS": [
+    "a hole in the earth",
+    "the hills"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "The Hunter finds a hole in the earth from which game proceeds and kills the young.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Hunter"
+      ],
+      "LOCATION": "a hole in the earth",
+      "CAUSE": "Story opening",
+      "EFFECT": "The Blind Man identifies the 'game' as cattle.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "The Blind Man, feeling and smelling the killed young, identifies them as cattle.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Blind Man",
+        "Hunter"
+      ],
+      "LOCATION": "a hole in the earth",
+      "CAUSE": "The Hunter brings the 'game' to the Blind Man.",
+      "EFFECT": "The Blind Man later recovers his sight and acts upon this knowledge.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "The Blind Man recovers his sight, sees the cows and calves, builds a kraal, and anoints himself.",
+      "FUNCTION": "TRANSFORMATION",
+      "CHARACTERS": [
+        "Blind Man"
+      ],
+      "LOCATION": "a hole in the earth",
+      "CAUSE": "His earlier identification of cattle and subsequent recovery of sight.",
+      "EFFECT": "The Hunter observes the Blind Man's new way of life and wants to emulate it.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "The Hunter, seeing the Blind Man's new life, wants to anoint himself, but the Blind Man gives him deceptive advice.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Blind Man",
+        "Hunter"
+      ],
+      "LOCATION": "a hole in the earth",
+      "CAUSE": "The Hunter's desire to emulate the Blind Man's new status.",
+      "EFFECT": "The Hunter follows the deceptive advice.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "The Hunter throws the ointment into the fire, gets burned, escapes, and is told to hunt honey in the hills.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Hunter",
+        "Blind Man"
+      ],
+      "LOCATION": "a hole in the earth",
+      "CAUSE": "The Blind Man's deceptive advice.",
+      "EFFECT": "The permanent separation of the two groups and their distinct modes of life.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Blind Man",
+      "TARGET": "Hunter",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "Blind Man",
+      "TARGET": "Hunter",
+      "TYPE": "OPPOSES"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "HELPER_APPEARS",
+    "TRANSFORMATION",
+    "TRICKSTER",
+    "ORDEAL"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "gemini:gemini-2.5-flash",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 1112,
+    "excerpt_chars": 1112
+  }
+}

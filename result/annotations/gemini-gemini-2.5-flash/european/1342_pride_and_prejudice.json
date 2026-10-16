@@ -1,0 +1,234 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Hero's Journey",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Elizabeth Bennet",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "From prejudiced and curious to understanding and loving",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 3
+    },
+    {
+      "CHARACTER": "Mr. Darcy",
+      "ROLE": "DEUTERAGONIST",
+      "TRANSFORMATION": "From haughty and misunderstood to open and benevolent",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 3
+    },
+    {
+      "CHARACTER": "Mrs. Bennet",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "NONE",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Mr. Wickham",
+      "ROLE": "TRICKSTER",
+      "TRANSFORMATION": "From seemingly charming to revealed as deceitful",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 3
+    },
+    {
+      "CHARACTER": "Lady Catherine",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "From indignant opponent to reconciled relative",
+      "TRANSFORMATION_TYPE": "REVERSAL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Mr. Bennet",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Mr. Bingley",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Jane Bennet",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Lydia Bennet",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Miss Bingley",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Georgiana Darcy",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "The Gardiners",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Netherfield Park",
+    "Rosings",
+    "Pemberley",
+    "Hertfordshire"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Mrs. Bennet learns Mr. Bingley, a wealthy single man, has rented Netherfield Park and immediately plans for her daughters to marry him.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Mrs. Bennet",
+        "Mr. Bennet",
+        "Mr. Bingley"
+      ],
+      "LOCATION": "Netherfield Park",
+      "CAUSE": "Story opening",
+      "EFFECT": "Mrs. Bennet begins her quest to marry off her daughters.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Mr. Darcy meets Elizabeth and delivers a letter explaining his past actions regarding Mr. Bingley and Mr. Wickham.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Mr. Darcy",
+        "Elizabeth Bennet"
+      ],
+      "LOCATION": "Rosings",
+      "CAUSE": "Elizabeth's previous accusations against Darcy",
+      "EFFECT": "Elizabeth receives crucial information that challenges her perceptions.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 3,
+      "EVENT": "Elizabeth reads Darcy's letter, which reveals Mr. Wickham's deceit and clarifies Darcy's true character and motives.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Elizabeth Bennet",
+        "Mr. Darcy",
+        "Mr. Wickham",
+        "Mr. Bingley",
+        "Jane Bennet"
+      ],
+      "LOCATION": "Rosings",
+      "CAUSE": "Mr. Darcy's delivery of the letter.",
+      "EFFECT": "Elizabeth's prejudice against Darcy begins to dissolve, and her opinion of Wickham is shattered.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Elizabeth and Mr. Darcy marry, overcoming previous misunderstandings and societal opposition.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Elizabeth Bennet",
+        "Mr. Darcy",
+        "Lady Catherine"
+      ],
+      "LOCATION": "Pemberley",
+      "CAUSE": "Elizabeth's changed understanding of Darcy and his persistence, leading to their mutual affection.",
+      "EFFECT": "They establish a new life together and begin to resolve family conflicts.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Elizabeth and Darcy establish their life at Pemberley, assisting family members like Wickham and Lydia, and reconciling with Lady Catherine.",
+      "FUNCTION": "RETURN",
+      "CHARACTERS": [
+        "Elizabeth Bennet",
+        "Mr. Darcy",
+        "Mr. Wickham",
+        "Lydia Bennet",
+        "Lady Catherine",
+        "Miss Bingley",
+        "Georgiana Darcy",
+        "The Gardiners"
+      ],
+      "LOCATION": "Pemberley",
+      "CAUSE": "Their marriage and commitment to each other and their families.",
+      "EFFECT": "A harmonious and stable social order is established, with lingering minor issues.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Elizabeth Bennet",
+      "TARGET": "Mr. Darcy",
+      "TYPE": "BONDS_WITH"
+    },
+    {
+      "SOURCE": "Mr. Darcy",
+      "TARGET": "Mr. Wickham",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Lady Catherine",
+      "TARGET": "Elizabeth Bennet",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Mr. Wickham",
+      "TARGET": "Elizabeth Bennet",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "Mrs. Bennet",
+      "TARGET": "Elizabeth Bennet",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "HELPER_APPEARS",
+    "ORDEAL",
+    "MORAL_REWARD",
+    "RETURN"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "issues": [
+      "event participant 'Mr. Bennet' not in CHARACTERS: added as SECONDARY",
+      "event participant 'Mr. Bingley' not in CHARACTERS: added as SECONDARY",
+      "event participant 'Jane Bennet' not in CHARACTERS: added as SECONDARY",
+      "event participant 'Lydia Bennet' not in CHARACTERS: added as SECONDARY",
+      "event participant 'Miss Bingley' not in CHARACTERS: added as SECONDARY",
+      "event participant 'Georgiana Darcy' not in CHARACTERS: added as SECONDARY",
+      "event participant 'The Gardiners' not in CHARACTERS: added as SECONDARY"
+    ],
+    "model": "gemini:gemini-2.5-flash",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 684742,
+    "excerpt_chars": 11753
+  }
+}

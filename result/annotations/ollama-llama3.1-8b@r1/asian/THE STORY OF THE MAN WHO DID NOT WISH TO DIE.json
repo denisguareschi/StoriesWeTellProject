@@ -1,0 +1,170 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Spiritual and Religious",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Sentaro",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "learns the value of a good and useful life",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Jofuku",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "helps Sentaro in his quest",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Shin-no-Shiko",
+      "ROLE": "TRICKSTER",
+      "TRANSFORMATION": "searches for the Elixir of Life",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "The Emperor",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "tries to find the Elixir of Life",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "The Hunter",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "helps Sentaro on his quest",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "The Messenger",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "teaches Sentaro a lesson",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Japan",
+    "Mount Fuji",
+    "The Country of Perpetual Life"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Sentaro wishes to live a long life without sickness",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Sentaro"
+      ],
+      "LOCATION": "Japan",
+      "CAUSE": "Story opening",
+      "EFFECT": "Sentaro sets out to find the Elixir of Life",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Jofuku sends Sentaro to the Country of Perpetual Life",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Jofuku",
+        "Sentaro"
+      ],
+      "LOCATION": "Japan",
+      "CAUSE": "Jofuku helps Sentaro",
+      "EFFECT": "Sentaro is transported to the Country of Perpetual Life",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Sentaro finds that the people in the Country of Perpetual Life long for death",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Sentaro"
+      ],
+      "LOCATION": "The Country of Perpetual Life",
+      "CAUSE": "Sentaro is confused by the people's attitude towards death",
+      "EFFECT": "Sentaro is faced with a difficult task",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Sentaro is told to return to his own land and live a good life",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "The Messenger",
+        "Sentaro"
+      ],
+      "LOCATION": "The Country of Perpetual Life",
+      "CAUSE": "The Messenger teaches Sentaro a lesson",
+      "EFFECT": "Sentaro learns the value of a good and useful life",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Sentaro returns to his old home and tries to live a good life",
+      "FUNCTION": "RETURN",
+      "CHARACTERS": [
+        "Sentaro"
+      ],
+      "LOCATION": "Japan",
+      "CAUSE": "Sentaro's desire for death is not real",
+      "EFFECT": "Sentaro's life changes for the better",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Jofuku",
+      "TARGET": "Sentaro",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "The Emperor",
+      "TARGET": "Jofuku",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "The Hunter",
+      "TARGET": "Sentaro",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "The Messenger",
+      "TARGET": "Sentaro",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Sentaro",
+      "TARGET": "Jofuku",
+      "TYPE": "OPPOSES"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "HELPER_APPEARS",
+    "ORDEAL",
+    "MORAL_REWARD",
+    "RETURN"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.5,
+    "seed": 1,
+    "attempts": 1,
+    "source_chars": 13878,
+    "excerpt_chars": 11848
+  }
+}

@@ -1,0 +1,185 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Hero's Journey",
+  "SETTING_DOMAIN": "Historical and Geographical",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Jim Hawkins",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "Experiences a harrowing adventure, ending haunted by the island.",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "John Silver",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "NONE",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Captain Smollett",
+      "ROLE": "DEUTERAGONIST",
+      "TRANSFORMATION": "NONE",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Squire Trelawney",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "NONE",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Dr. Livesey",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "NONE",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Ben Gunn",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "From marooned wild man to settled, though still eccentric, member of society.",
+      "TRANSFORMATION_TYPE": "REVERSAL",
+      "CHANGE_EVENT": 5
+    }
+  ],
+  "LOCATIONS": [
+    "Admiral Benbow inn",
+    "Treasure Island",
+    "Spanish America",
+    "Bristol"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "A mysterious old seaman takes lodging at the Admiral Benbow inn, bringing a sea-chest and a sense of dread.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Jim Hawkins"
+      ],
+      "LOCATION": "Admiral Benbow inn",
+      "CAUSE": "Story opening",
+      "EFFECT": "Jim and his family become involved in the pirate's secrets and fears.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "The loyal crew, including Jim, defends the log-house on Treasure Island against the mutineers' cannonade.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Jim Hawkins",
+        "Captain Smollett",
+        "Squire Trelawney",
+        "Dr. Livesey",
+        "John Silver"
+      ],
+      "LOCATION": "Treasure Island",
+      "CAUSE": "The mutiny and the loyalists taking refuge on the island.",
+      "EFFECT": "The loyalists survive the attack, but the mutineers steal their stores.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Jim Hawkins returns to the stockade on Treasure Island and is reunited with his friends, having been guided by Ben Gunn.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Jim Hawkins",
+        "Ben Gunn",
+        "Captain Smollett",
+        "Squire Trelawney",
+        "Dr. Livesey"
+      ],
+      "LOCATION": "Treasure Island",
+      "CAUSE": "Jim's separation from the main group and Ben Gunn's presence on the island.",
+      "EFFECT": "Jim is safe, and Ben Gunn's unique knowledge and assistance become available to the loyalists.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "John Silver escapes from the ship with a sack of treasure, with Ben Gunn's connivance to save the protagonists' lives.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "John Silver",
+        "Ben Gunn",
+        "Jim Hawkins",
+        "Squire Trelawney",
+        "Dr. Livesey"
+      ],
+      "LOCATION": "Spanish America",
+      "CAUSE": "The protagonists' victory and their decision to bring Silver along, combined with Ben Gunn's fear of Silver.",
+      "EFFECT": "Silver is gone, but with some of the treasure, and the protagonists are 'cheaply quit of him.'",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "The HISPANIOLA returns to Bristol, bringing the remaining treasure and the surviving loyal crew members home.",
+      "FUNCTION": "RETURN",
+      "CHARACTERS": [
+        "Jim Hawkins",
+        "Captain Smollett",
+        "Squire Trelawney",
+        "Dr. Livesey",
+        "Ben Gunn"
+      ],
+      "LOCATION": "Bristol",
+      "CAUSE": "The successful conclusion of the treasure hunt and the escape from Treasure Island.",
+      "EFFECT": "The characters disperse, some enriched and transformed, while Jim remains haunted by the experience.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Jim Hawkins",
+      "TARGET": "Captain Smollett",
+      "TYPE": "BONDS_WITH"
+    },
+    {
+      "SOURCE": "Jim Hawkins",
+      "TARGET": "John Silver",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Ben Gunn",
+      "TARGET": "Jim Hawkins",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Squire Trelawney",
+      "TARGET": "Jim Hawkins",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Dr. Livesey",
+      "TARGET": "Jim Hawkins",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "ORDEAL",
+    "HELPER_APPEARS",
+    "TRICKSTER",
+    "RETURN"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "gemini:gemini-2.5-flash",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 360783,
+    "excerpt_chars": 11870
+  }
+}

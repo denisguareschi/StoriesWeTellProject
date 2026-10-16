@@ -1,0 +1,246 @@
+{
+  "annotator": "ollama-llama3.1-8b",
+  "n_stories": 5,
+  "n_retellings": 20,
+  "n_cross": 15,
+  "n_control": 5,
+  "noise_floor_mean": 0.41104919931650985,
+  "control_floor_mean": 0.3700631139052347,
+  "mean_composite_cross": 0.2956879977338588,
+  "mean_semantic_cross": 0.06938960487984495,
+  "semantic_backend": "tfidf-lsa",
+  "metrics_mean_cross": {
+    "ged": 0.26632688820162603,
+    "motif": 0.20007784613047766,
+    "role": 0.321957765851377,
+    "wl": 0.3943894907519543
+  },
+  "outcomes": {
+    "hybrid": 6,
+    "distorted": 4,
+    "preserved": 5
+  },
+  "arc_preserved_rate": 0.4,
+  "drift_matrix": {
+    "east_asian": {
+      "european": 0.6810595190383041,
+      "east_asian": 0.5949876128515176,
+      "southern_african": 0.6788036259581084,
+      "indigenous_american": 0.7042199253608263
+    },
+    "european": {
+      "european": 0.682360795959637,
+      "east_asian": 0.7339172741928033,
+      "southern_african": 0.6874529198511052,
+      "indigenous_american": 0.7648452174162925
+    }
+  },
+  "function_stability": {
+    "QUEST": {
+      "retention": 0.4444444444444444,
+      "retention_ci95": [
+        0.0,
+        1.0
+      ],
+      "n_original_stories": 3,
+      "intrusion": 0.16666666666666666,
+      "intrusion_ci95": [
+        0.0,
+        0.3333333333333333
+      ]
+    },
+    "SACRIFICE": {
+      "retention": 0.3333333333333333,
+      "retention_ci95": [
+        NaN,
+        NaN
+      ],
+      "n_original_stories": 1,
+      "intrusion": 0.25,
+      "intrusion_ci95": [
+        0.08333333333333333,
+        0.3333333333333333
+      ]
+    },
+    "TRICKSTER": {
+      "retention": NaN,
+      "retention_ci95": [
+        NaN,
+        NaN
+      ],
+      "n_original_stories": 0,
+      "intrusion": 0.3333333333333333,
+      "intrusion_ci95": [
+        0.0,
+        0.7333333333333333
+      ]
+    },
+    "TRANSFORMATION": {
+      "retention": NaN,
+      "retention_ci95": [
+        NaN,
+        NaN
+      ],
+      "n_original_stories": 0,
+      "intrusion": 0.06666666666666667,
+      "intrusion_ci95": [
+        0.0,
+        0.2
+      ]
+    },
+    "MORAL_REWARD": {
+      "retention": 0.7777777777777778,
+      "retention_ci95": [
+        0.3333333333333333,
+        1.0
+      ],
+      "n_original_stories": 3,
+      "intrusion": 0.6666666666666666,
+      "intrusion_ci95": [
+        0.3333333333333333,
+        1.0
+      ]
+    },
+    "BETRAYAL": {
+      "retention": 0.5,
+      "retention_ci95": [
+        0.3333333333333333,
+        0.6666666666666666
+      ],
+      "n_original_stories": 2,
+      "intrusion": 0.1111111111111111,
+      "intrusion_ci95": [
+        0.0,
+        0.3333333333333333
+      ]
+    },
+    "HELPER_APPEARS": {
+      "retention": 0.7333333333333333,
+      "retention_ci95": [
+        0.5333333333333333,
+        0.9333333333333333
+      ],
+      "n_original_stories": 5,
+      "intrusion": NaN,
+      "intrusion_ci95": [
+        NaN,
+        NaN
+      ]
+    },
+    "RETURN": {
+      "retention": 0.0,
+      "retention_ci95": [
+        NaN,
+        NaN
+      ],
+      "n_original_stories": 1,
+      "intrusion": 0.08333333333333333,
+      "intrusion_ci95": [
+        0.0,
+        0.25
+      ]
+    },
+    "CALL_TO_ADVENTURE": {
+      "retention": 0.8666666666666667,
+      "retention_ci95": [
+        0.7333333333333333,
+        1.0
+      ],
+      "n_original_stories": 5,
+      "intrusion": NaN,
+      "intrusion_ci95": [
+        NaN,
+        NaN
+      ]
+    },
+    "ORDEAL": {
+      "retention": 0.5555555555555556,
+      "retention_ci95": [
+        0.0,
+        1.0
+      ],
+      "n_original_stories": 3,
+      "intrusion": 0.8333333333333334,
+      "intrusion_ci95": [
+        0.6666666666666666,
+        1.0
+      ]
+    },
+    "RESURRECTION": {
+      "retention": 0.3333333333333333,
+      "retention_ci95": [
+        NaN,
+        NaN
+      ],
+      "n_original_stories": 1,
+      "intrusion": 0.08333333333333333,
+      "intrusion_ci95": [
+        0.0,
+        0.25
+      ]
+    }
+  },
+  "role_alignment": {
+    "ANTAGONIST": {
+      "preservation_rate": 0.5,
+      "mean_jaccard": 0.375,
+      "aligned": 4,
+      "lost": 2,
+      "added": 2
+    },
+    "HELPER": {
+      "preservation_rate": 0.5333333333333333,
+      "mean_jaccard": 0.4625,
+      "aligned": 8,
+      "lost": 4,
+      "added": 3
+    },
+    "DEUTERAGONIST": {
+      "preservation_rate": 0.0,
+      "mean_jaccard": 0.0,
+      "aligned": 0,
+      "lost": 0,
+      "added": 6
+    },
+    "PROTAGONIST": {
+      "preservation_rate": 1.0,
+      "mean_jaccard": 0.42674603174603176,
+      "aligned": 15,
+      "lost": 0,
+      "added": 0
+    },
+    "TRICKSTER": {
+      "preservation_rate": 0.14285714285714285,
+      "mean_jaccard": 1.0,
+      "aligned": 1,
+      "lost": 2,
+      "added": 4
+    },
+    "SECONDARY": {
+      "preservation_rate": 0.3333333333333333,
+      "mean_jaccard": 0.16666666666666666,
+      "aligned": 3,
+      "lost": 3,
+      "added": 3
+    }
+  },
+  "per_generator": {
+    "gemini:gemini-2.5-flash": {
+      "n_cross": 15,
+      "n_control": 5,
+      "mean_sim_cross": 0.2956879977338588,
+      "mean_sim_control": 0.3700631139052347,
+      "mean_semantic_cross": 0.06938960487984495,
+      "arc_preserved_rate": 0.4,
+      "outcomes": {
+        "hybrid": 6,
+        "distorted": 4,
+        "preserved": 5
+      }
+    }
+  },
+  "cross_vs_control_test": {
+    "n_pairs": 5,
+    "note": "fewer than 6 pairs: no test performed"
+  }
+}

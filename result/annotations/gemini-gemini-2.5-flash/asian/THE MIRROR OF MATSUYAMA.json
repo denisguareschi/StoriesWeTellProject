@@ -1,0 +1,161 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Cautionary Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Daughter",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "Grows in patience, filial piety, and character, becoming like her mother.",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 3
+    },
+    {
+      "CHARACTER": "Father",
+      "ROLE": "DEUTERAGONIST",
+      "TRANSFORMATION": "From suspicion to understanding and shame, recognizing daughter's virtue.",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Step-mother",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "From jealous and wicked to repentant and loving.",
+      "TRANSFORMATION_TYPE": "REVERSAL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Mother",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "null",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Home"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "The father is suddenly summoned to the capital on business, separating the family.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Father",
+        "Mother",
+        "Daughter"
+      ],
+      "LOCATION": "Home",
+      "CAUSE": "Story opening",
+      "EFFECT": "Father departs, leaving mother and daughter alone.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "The mother dies, leaving the father and daughter in profound grief.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Mother",
+        "Father",
+        "Daughter"
+      ],
+      "LOCATION": "Home",
+      "CAUSE": "Mother's illness and passing after father's departure.",
+      "EFFECT": "Daughter experiences intense loneliness and sorrow.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "The daughter finds comfort in the mirror, believing the reflection to be her mother's soul.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Daughter",
+        "Mother"
+      ],
+      "LOCATION": "Home",
+      "CAUSE": "Daughter's intense grief and remembrance of her mother's last words.",
+      "EFFECT": "Daughter's sorrow is lightened, and she grows in character.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "The father remarries, and the step-mother becomes jealous and suspicious of the daughter.",
+      "FUNCTION": "BETRAYAL",
+      "CHARACTERS": [
+        "Father",
+        "Daughter",
+        "Step-mother"
+      ],
+      "LOCATION": "Home",
+      "CAUSE": "Father's remarriage and the step-mother's inherent 'petty and mean' nature, fueled by the daughter's mirror use.",
+      "EFFECT": "The daughter faces a 'trying position' and adversity under the new regime.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "The father understands the mirror's truth, and the step-mother repents, restoring family harmony.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Father",
+        "Daughter",
+        "Step-mother"
+      ],
+      "LOCATION": "Home",
+      "CAUSE": "Father's confrontation with the daughter and the daughter's explanation, overheard by the step-mother.",
+      "EFFECT": "The family lives happily, and the step-mother transforms into a loving figure.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Daughter",
+      "TARGET": "Father",
+      "TYPE": "BONDS_WITH"
+    },
+    {
+      "SOURCE": "Daughter",
+      "TARGET": "Mother",
+      "TYPE": "BONDS_WITH"
+    },
+    {
+      "SOURCE": "Step-mother",
+      "TARGET": "Daughter",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Father",
+      "TARGET": "Daughter",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Step-mother",
+      "TARGET": "Daughter",
+      "TYPE": "BONDS_WITH"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "ORDEAL",
+    "HELPER_APPEARS",
+    "BETRAYAL",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "gemini:gemini-2.5-flash",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 27801,
+    "excerpt_chars": 11777
+  }
+}

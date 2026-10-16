@@ -1,0 +1,171 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Cautionary Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Old Man",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "From poor, childless farmer to rich, respected, and famous 'Hana-Saka-Jijii'.",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Shiro",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "From beloved pet to a source of magical blessings even after death.",
+      "TRANSFORMATION_TYPE": "REVERSAL",
+      "CHANGE_EVENT": 2
+    },
+    {
+      "CHARACTER": "Wicked Neighbor",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "From envious neighbor to imprisoned impostor.",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Old Man's Wife",
+      "ROLE": "DEUTERAGONIST",
+      "TRANSFORMATION": "From supportive wife to partner in prosperity.",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Daimio",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "From local lord to patron of the Old Man.",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Field",
+    "Cottage",
+    "Neighbor's house",
+    "Garden",
+    "Palace"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Shiro digs up a treasure of gold coins for the Old Man in the field.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Old Man",
+        "Shiro",
+        "Wicked Neighbor"
+      ],
+      "LOCATION": "Field",
+      "CAUSE": "Story opening",
+      "EFFECT": "The Old Man becomes rich, and the Wicked Neighbor becomes envious.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "The Wicked Neighbor borrows Shiro, takes him to his field, and kills him out of envy.",
+      "FUNCTION": "BETRAYAL",
+      "CHARACTERS": [
+        "Wicked Neighbor",
+        "Shiro",
+        "Old Man"
+      ],
+      "LOCATION": "Field",
+      "CAUSE": "Wicked Neighbor's envy of the Old Man's wealth.",
+      "EFFECT": "The Old Man grieves and asks for the tree where Shiro was buried.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "The Old Man makes a mortar from Shiro's tree, which miraculously produces an endless supply of rice cakes.",
+      "FUNCTION": "TRANSFORMATION",
+      "CHARACTERS": [
+        "Old Man",
+        "Old Man's Wife",
+        "Wicked Neighbor"
+      ],
+      "LOCATION": "Cottage",
+      "CAUSE": "The Old Man's desire to honor Shiro's memory.",
+      "EFFECT": "The Old Man and his wife are provided for, and the Wicked Neighbor becomes envious again.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "The Wicked Neighbor destroys the magical mortar, but its ashes, when scattered by the Old Man, make withered trees bloom.",
+      "FUNCTION": "TRANSFORMATION",
+      "CHARACTERS": [
+        "Wicked Neighbor",
+        "Old Man"
+      ],
+      "LOCATION": "Neighbor's house",
+      "CAUSE": "The Wicked Neighbor's envy and attempt to replicate the magic, followed by the Old Man's desire to preserve Shiro's memory.",
+      "EFFECT": "The Old Man gains a new magical ability, and his garden becomes famous.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "The Old Man makes trees bloom for the Daimio and is rewarded, while the Wicked Neighbor attempts to imitate him, fails, and is imprisoned.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Old Man",
+        "Daimio",
+        "Wicked Neighbor"
+      ],
+      "LOCATION": "Palace",
+      "CAUSE": "The Old Man's fame and the Wicked Neighbor's continued envy and deception.",
+      "EFFECT": "The Old Man lives a rich and happy life, and the Wicked Neighbor is punished for his evil deeds.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Old Man",
+      "TARGET": "Shiro",
+      "TYPE": "BONDS_WITH"
+    },
+    {
+      "SOURCE": "Wicked Neighbor",
+      "TARGET": "Old Man",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Shiro",
+      "TARGET": "Old Man",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Wicked Neighbor",
+      "TARGET": "Daimio",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "Daimio",
+      "TARGET": "Old Man",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "HELPER_APPEARS",
+    "BETRAYAL",
+    "TRANSFORMATION",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "gemini:gemini-2.5-flash",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 14401,
+    "excerpt_chars": 11983
+  }
+}

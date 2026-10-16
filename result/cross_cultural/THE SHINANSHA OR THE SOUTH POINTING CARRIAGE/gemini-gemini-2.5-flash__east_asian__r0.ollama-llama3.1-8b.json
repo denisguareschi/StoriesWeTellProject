@@ -1,0 +1,150 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Origin Myth",
+  "SETTING_DOMAIN": "Spiritual and Religious",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Emperor Kotetsu",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "from a ruler plagued by war to a wise and benevolent leader",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Empress Kōmei",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "from a concerned mother to a supportive empress",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Shura-ō",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "from a powerful warlord to a defeated sorcerer",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "The Dragon",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "from a celestial being to a vehicle for the emperor's ascension",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    }
+  ],
+  "LOCATIONS": [
+    "Yamato",
+    "Musashino Plain",
+    "Palace",
+    "River",
+    "Mountain Fortress"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Emperor Kotetsu was born, heralded by a divine omen.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Emperor Kotetsu",
+        "Empress Kōmei"
+      ],
+      "LOCATION": "Palace",
+      "CAUSE": "Story opening",
+      "EFFECT": "The emperor's birth sets the story in motion.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Shura-ō, a warlord, coveted the throne and fought against Emperor Kotetsu.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Emperor Kotetsu",
+        "Shura-ō"
+      ],
+      "LOCATION": "Musashino Plain",
+      "CAUSE": "Shura-ō's ambition",
+      "EFFECT": "The war between the emperor and Shura-ō began.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Emperor Kotetsu built the Minami-sashi Guruma, a device to guide his men through mist or illusion.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Emperor Kotetsu"
+      ],
+      "LOCATION": "Palace",
+      "CAUSE": "The emperor's need for a solution to Shura-ō's magic",
+      "EFFECT": "The Minami-sashi Guruma was invented.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Emperor Kotetsu led his army across the river, attacking Shura-ō's fortress.",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Emperor Kotetsu",
+        "Shura-ō"
+      ],
+      "LOCATION": "River",
+      "CAUSE": "The emperor's determination to defeat Shura-ō",
+      "EFFECT": "Shura-ō was defeated.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Emperor Kotetsu ascended onto the dragon's back, and it took him to the Celestial Plain.",
+      "FUNCTION": "RESURRECTION",
+      "CHARACTERS": [
+        "Emperor Kotetsu",
+        "The Dragon"
+      ],
+      "LOCATION": "Palace",
+      "CAUSE": "The emperor's time in the world was complete",
+      "EFFECT": "The emperor joined the Kami.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Emperor Kotetsu",
+      "TARGET": "Empress Kōmei",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Shura-ō",
+      "TARGET": "Emperor Kotetsu",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "The Dragon",
+      "TARGET": "Emperor Kotetsu",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "ORDEAL",
+    "HELPER_APPEARS",
+    "QUEST",
+    "RESURRECTION"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 4968,
+    "excerpt_chars": 4968
+  }
+}

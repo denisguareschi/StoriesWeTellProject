@@ -1,0 +1,136 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Tragedy",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "narrator",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "from pity to repulsion",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Bartleby",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "from mysterious to pitied",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "grub-man",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "None",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Wall-street",
+    "the Tombs",
+    "the yard"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "The narrator describes his life and work as a lawyer.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "narrator"
+      ],
+      "LOCATION": "Wall-street",
+      "CAUSE": "Story opening",
+      "EFFECT": "Introduction to the narrator's life",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "The narrator meets Bartleby, a scrivener.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "narrator",
+        "Bartleby"
+      ],
+      "LOCATION": "Wall-street",
+      "CAUSE": "Introduction to Bartleby",
+      "EFFECT": "Introduction to Bartleby's mysterious nature",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "The narrator discovers Bartleby's strange behavior.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "narrator",
+        "Bartleby"
+      ],
+      "LOCATION": "Wall-street",
+      "CAUSE": "Introduction to Bartleby's strange behavior",
+      "EFFECT": "Introduction to the narrator's concern for Bartleby",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "The narrator tries to get information from Bartleby.",
+      "FUNCTION": "SACRIFICE",
+      "CHARACTERS": [
+        "narrator",
+        "Bartleby"
+      ],
+      "LOCATION": "Wall-street",
+      "CAUSE": "Introduction to Bartleby's refusal to answer questions",
+      "EFFECT": "Introduction to the narrator's growing concern for Bartleby",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "The narrator decides to release Bartleby from his duties.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "narrator",
+        "Bartleby"
+      ],
+      "LOCATION": "the Tombs",
+      "CAUSE": "Introduction to the narrator's decision to release Bartleby",
+      "EFFECT": "Introduction to the narrator's final confrontation with Bartleby",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "narrator",
+      "TARGET": "Bartleby",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "narrator",
+      "TARGET": "grub-man",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "HELPER_APPEARS",
+    "ORDEAL",
+    "SACRIFICE",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.5,
+    "seed": 1,
+    "attempts": 1,
+    "source_chars": 82408,
+    "excerpt_chars": 11991
+  }
+}

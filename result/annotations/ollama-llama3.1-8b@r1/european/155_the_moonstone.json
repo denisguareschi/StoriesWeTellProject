@@ -1,0 +1,164 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Spiritual and Religious",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "The narrator",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "learns about the Moonstone and its history",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 1
+    },
+    {
+      "CHARACTER": "John Herncastle",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "his actions are revealed to be deceitful",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 2
+    },
+    {
+      "CHARACTER": "Mr. Godfrey Ablewhite",
+      "ROLE": "TRICKSTER",
+      "TRANSFORMATION": "his true nature is revealed",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 3
+    },
+    {
+      "CHARACTER": "Rachel Verinder",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "helps the narrator uncover the truth",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 4
+    },
+    {
+      "CHARACTER": "The three Brahmins",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "undergo a purification ritual",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    }
+  ],
+  "LOCATIONS": [
+    "England",
+    "India",
+    "Seringapatam",
+    "Benares",
+    "Lady Verinder's house"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "The narrator begins to write a letter to his relatives in England",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "The narrator"
+      ],
+      "LOCATION": "England",
+      "CAUSE": "Story opening",
+      "EFFECT": "The narrator sets out to explain his actions",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "The narrator reveals John Herncastle's deceitful actions",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "The narrator",
+        "John Herncastle"
+      ],
+      "LOCATION": "England",
+      "CAUSE": "The narrator's letter",
+      "EFFECT": "John Herncastle's true nature is revealed",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Mr. Godfrey Ablewhite's true nature is revealed",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "The narrator",
+        "Mr. Godfrey Ablewhite",
+        "Rachel Verinder"
+      ],
+      "LOCATION": "England",
+      "CAUSE": "The narrator overhears a conversation",
+      "EFFECT": "Mr. Godfrey Ablewhite's true nature is revealed",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Rachel Verinder helps the narrator uncover the truth",
+      "FUNCTION": null,
+      "CHARACTERS": [
+        "The narrator",
+        "Rachel Verinder"
+      ],
+      "LOCATION": "England",
+      "CAUSE": "The narrator's investigation",
+      "EFFECT": "The truth about Mr. Godfrey Ablewhite is revealed",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "The three Brahmins undergo a purification ritual",
+      "FUNCTION": null,
+      "CHARACTERS": [
+        "The narrator",
+        "The three Brahmins"
+      ],
+      "LOCATION": "India",
+      "CAUSE": "The Brahmins' actions",
+      "EFFECT": "The Brahmins are purified",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "John Herncastle",
+      "TARGET": "The narrator",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Mr. Godfrey Ablewhite",
+      "TARGET": "The narrator",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "Rachel Verinder",
+      "TARGET": "The narrator",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "The three Brahmins",
+      "TARGET": "The narrator",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "TRICKSTER"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "issues": [
+      "FUNCTION invalid in event 4: 'HELPER'",
+      "FUNCTION invalid in event 5: 'HELPER'"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.5,
+    "seed": 1,
+    "attempts": 1,
+    "source_chars": 1073926,
+    "excerpt_chars": 11953
+  }
+}

@@ -1,0 +1,179 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Spiritual and Religious",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Walter of the Cedar Lodge Clan",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "exploits his lineage and vanity to secure his standing",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 4
+    },
+    {
+      "CHARACTER": "Gentle Heart Woman",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Little Lark",
+      "ROLE": "DEUTERAGONIST",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": 2
+    },
+    {
+      "CHARACTER": "Quiet Waters",
+      "ROLE": "DEUTERAGONIST",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Strong Current Wentworth",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Sly Fox Woman",
+      "ROLE": "TRICKSTER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": 4
+    },
+    {
+      "CHARACTER": "Brave Spirit Benwick",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": 3
+    },
+    {
+      "CHARACTER": "Harville family",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "River's Bend Territory",
+    "Saltwater Gathering",
+    "Great Trading Post in the Far Lands"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Walter of the Cedar Lodge Clan seeks his own comfort",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Walter of the Cedar Lodge Clan"
+      ],
+      "LOCATION": "River's Bend Territory",
+      "CAUSE": "Story opening",
+      "EFFECT": "Walter's schemes are set in motion",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Little Lark finds herself at the Saltwater Gathering",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Little Lark",
+        "Harville family"
+      ],
+      "LOCATION": "Saltwater Gathering",
+      "CAUSE": "Little Lark's stumble",
+      "EFFECT": "Little Lark receives help from the Harville family",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Brave Spirit Benwick betrays Quiet Waters' trust",
+      "FUNCTION": "BETRAYAL",
+      "CHARACTERS": [
+        "Brave Spirit Benwick",
+        "Quiet Waters"
+      ],
+      "LOCATION": "Saltwater Gathering",
+      "CAUSE": "Brave Spirit's cowardice",
+      "EFFECT": "Quiet Waters is disappointed",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Sly Fox Woman becomes involved with Walter of the Cedar Lodge Clan",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Sly Fox Woman",
+        "Walter of the Cedar Lodge Clan"
+      ],
+      "LOCATION": "Great Trading Post in the Far Lands",
+      "CAUSE": "Sly Fox Woman's cunning",
+      "EFFECT": "Walter's standing is secured",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Quiet Waters and Strong Current Wentworth get married",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Quiet Waters",
+        "Strong Current Wentworth"
+      ],
+      "LOCATION": "River's Bend Territory",
+      "CAUSE": "Quiet Waters' happiness",
+      "EFFECT": "Quiet Waters finds her spring of happiness",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Walter of the Cedar Lodge Clan",
+      "TARGET": "Sly Fox Woman",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "Strong Current Wentworth",
+      "TARGET": "Quiet Waters",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "QUEST",
+    "HELPER_APPEARS",
+    "BETRAYAL",
+    "TRICKSTER",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [
+      "CHANGE_EVENT"
+    ],
+    "issues": [
+      "event participant 'Harville family' not in CHARACTERS: added as SECONDARY",
+      "relation dropped: {'SOURCE': 'Brave Spirit Benwick', 'TARGET': 'Quiet Waters', 'TYPE': 'BETRAYAL'}",
+      "relation dropped: {'SOURCE': 'Wise Woman Raven', 'TARGET': 'Quiet Waters', 'TYPE': 'HELPS'}",
+      "relation dropped: {'SOURCE': 'Healer Woman Swift Hand', 'TARGET': 'Quiet Waters', 'TYPE': 'HELPS'}"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 5968,
+    "excerpt_chars": 5968
+  }
+}

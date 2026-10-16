@@ -1,0 +1,164 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Little Jackal",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "outwits Lion multiple times",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Lion",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "learns to respect Little Jackal's cunning",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Lion's wife",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Little Jackal's wife",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Lion's children",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Lion's house",
+    "Little Jackal's house",
+    "a high rock",
+    "a place where Lion and Little Jackal hunt",
+    "a meeting of animals"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Little Jackal and Lion agree to hunt together",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Little Jackal",
+        "Lion"
+      ],
+      "LOCATION": "a place where Lion and Little Jackal hunt",
+      "CAUSE": "Story opening",
+      "EFFECT": "Little Jackal and Lion start hunting together",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Lion goes to hunt while Little Jackal takes the meat to his house",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Little Jackal",
+        "Lion"
+      ],
+      "LOCATION": "Little Jackal's house",
+      "CAUSE": "Lion's absence",
+      "EFFECT": "Little Jackal outwits Lion and takes the meat",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Lion tries to get the meat from Little Jackal's house but fails",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Lion",
+        "Little Jackal"
+      ],
+      "LOCATION": "Little Jackal's house",
+      "CAUSE": "Lion's hunger and Little Jackal's cunning",
+      "EFFECT": "Lion fails to get the meat",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Little Jackal outwits Lion again by making horns and attending the meeting",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Little Jackal",
+        "Lion"
+      ],
+      "LOCATION": "a meeting of animals",
+      "CAUSE": "Lion's trust in Little Jackal",
+      "EFFECT": "Little Jackal outwits Lion again",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Lion finally learns to respect Little Jackal's cunning and they become companions",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Lion",
+        "Little Jackal"
+      ],
+      "LOCATION": "a place where Lion and Little Jackal hunt",
+      "CAUSE": "Lion's realization",
+      "EFFECT": "Lion and Little Jackal become companions",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Little Jackal",
+      "TARGET": "Lion",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Lion",
+      "TARGET": "Little Jackal",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Little Jackal",
+      "TARGET": "Lion's wife",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Lion",
+      "TARGET": "Little Jackal's wife",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "TRICKSTER",
+    "ORDEAL",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [
+      "CHANGE_EVENT"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 4969,
+    "excerpt_chars": 4967
+  }
+}

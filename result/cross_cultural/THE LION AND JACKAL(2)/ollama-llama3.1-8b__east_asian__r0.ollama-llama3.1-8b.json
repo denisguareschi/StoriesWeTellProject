@@ -1,0 +1,151 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "shishi",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "from majestic to wounded",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 3
+    },
+    {
+      "CHARACTER": "Kaito",
+      "ROLE": "TRICKSTER",
+      "TRANSFORMATION": "from loyal companion to treacherous",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 3
+    },
+    {
+      "CHARACTER": "O-ka",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "from innocent to complicit",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 3
+    }
+  ],
+  "LOCATIONS": [
+    "mist-shrouded hills",
+    "nearby kawa",
+    "hut",
+    "hillside"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "The shishi lay dying, its tawny coat matted with dirt.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "shishi"
+      ],
+      "LOCATION": "mist-shrouded hills",
+      "CAUSE": "Story opening",
+      "EFFECT": "The shishi's condition sets the story in motion.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Kaito gave the shishi a sly tug, causing it to tumble down the hillside.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Kaito",
+        "shishi"
+      ],
+      "LOCATION": "hillside",
+      "CAUSE": "Kaito's treachery",
+      "EFFECT": "The shishi is injured.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Kaito handed down a new rope, which broke, causing the shishi to fall again.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Kaito",
+        "shishi"
+      ],
+      "LOCATION": "hillside",
+      "CAUSE": "Kaito's deception",
+      "EFFECT": "The shishi is severely injured.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Kaito and O-ka walked away, leaving the wounded shishi to its fate.",
+      "FUNCTION": "BETRAYAL",
+      "CHARACTERS": [
+        "Kaito",
+        "O-ka",
+        "shishi"
+      ],
+      "LOCATION": "hillside",
+      "CAUSE": "Kaito and O-ka's treachery",
+      "EFFECT": "The shishi is abandoned.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "The mist closed in, shrouding the scene in a veil of secrecy.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "shishi"
+      ],
+      "LOCATION": "mist-shrouded hills",
+      "CAUSE": "The consequences of Kaito and O-ka's actions",
+      "EFFECT": "The moral order is restored.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Kaito",
+      "TARGET": "shishi",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "Kaito",
+      "TARGET": "O-ka",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "O-ka",
+      "TARGET": "Kaito",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "shishi",
+      "TARGET": "Kaito",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "shishi",
+      "TARGET": "O-ka",
+      "TYPE": "OPPOSES"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "TRICKSTER",
+    "BETRAYAL",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 2457,
+    "excerpt_chars": 2457
+  }
+}

@@ -1,0 +1,168 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Hero's Journey",
+  "SETTING_DOMAIN": "Spiritual and Religious",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Bright-Path",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "from inexperienced leader to wise and powerful leader",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Shadow-Heart",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "from powerful but defeated leader to vanquished foe",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Chief Sky-Giver",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "The gentle wife of Chief Sky-Giver",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "The spider-friend",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "The Winged-Spirit-Serpent",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Whispering-Grasslands",
+    "Great River",
+    "village"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "A Chief was born, a child destined for greatness.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Bright-Path"
+      ],
+      "LOCATION": "village",
+      "CAUSE": "Story opening",
+      "EFFECT": "The birth of Bright-Path sets the story in motion.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Shadow-Heart sought to claim power.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Shadow-Heart"
+      ],
+      "LOCATION": "Whispering-Grasslands",
+      "CAUSE": "Shadow-Heart's ambition",
+      "EFFECT": "The land is threatened by Shadow-Heart's power.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Bright-Path crafted a special sled, the Sun-Seeker's Guide.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Bright-Path"
+      ],
+      "LOCATION": "village",
+      "CAUSE": "Bright-Path's wisdom and resourcefulness",
+      "EFFECT": "The Sun-Seeker's Guide helps Bright-Path navigate the spirit-mists.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Bright-Path and his warriors defeated Shadow-Heart.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Bright-Path",
+        "Shadow-Heart"
+      ],
+      "LOCATION": "Whispering-Grasslands",
+      "CAUSE": "Bright-Path's determination and the Sun-Seeker's Guide",
+      "EFFECT": "Shadow-Heart is vanquished, and peace is restored.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Bright-Path's journey on this earth-path is complete.",
+      "FUNCTION": "SACRIFICE",
+      "CHARACTERS": [
+        "Bright-Path"
+      ],
+      "LOCATION": "village",
+      "CAUSE": "Bright-Path's time on earth has come to an end",
+      "EFFECT": "Bright-Path's spirit ascends to the Star People.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Bright-Path",
+      "TARGET": "Shadow-Heart",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Bright-Path",
+      "TARGET": "Chief Sky-Giver",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Bright-Path",
+      "TARGET": "The spider-friend",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Bright-Path",
+      "TARGET": "The Winged-Spirit-Serpent",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Shadow-Heart",
+      "TARGET": "Bright-Path",
+      "TYPE": "OPPOSES"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "HELPER_APPEARS",
+    "ORDEAL",
+    "SACRIFICE"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 4077,
+    "excerpt_chars": 4077
+  }
+}

@@ -1,0 +1,182 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Lion",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "protects his people and property",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Baboon",
+      "ROLE": "DEUTERAGONIST",
+      "TRANSFORMATION": "learns to be cautious and vigilant",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 3
+    },
+    {
+      "CHARACTER": "Jackal",
+      "ROLE": "TRICKSTER",
+      "TRANSFORMATION": "gets caught and punished",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Tortoise",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "saves the day with his clever plan",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 4
+    },
+    {
+      "CHARACTER": "Hyena",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "executes the sentence",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Leopard",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Hare",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "the land",
+    "the dam"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Lion called together a number of animals to devise a plan for retaining water.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Lion"
+      ],
+      "LOCATION": "the land",
+      "CAUSE": "Story opening",
+      "EFFECT": "The animals gather to discuss the plan.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "The animals worked together to build a dam, but Jackal did not contribute.",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Lion",
+        "Baboon",
+        "Leopard",
+        "Hyena",
+        "Hare",
+        "Tortoise",
+        "Jackal"
+      ],
+      "LOCATION": "the dam",
+      "CAUSE": "The animals' need for a plan",
+      "EFFECT": "The dam is built.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Jackal tricks Baboon into giving up his knobkirrie and allowing himself to be bound.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Jackal",
+        "Baboon"
+      ],
+      "LOCATION": "the dam",
+      "CAUSE": "Jackal's cunning and Baboon's gullibility",
+      "EFFECT": "Baboon is tied up and unable to move.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Tortoise proposes a plan to catch Jackal, and it is accepted.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Tortoise",
+        "Lion"
+      ],
+      "LOCATION": "the dam",
+      "CAUSE": "The animals' need to catch Jackal",
+      "EFFECT": "Tortoise is tasked with catching Jackal.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Tortoise catches Jackal using his clever plan, and Jackal is punished.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Tortoise",
+        "Jackal"
+      ],
+      "LOCATION": "the dam",
+      "CAUSE": "Tortoise's plan and Jackal's own actions",
+      "EFFECT": "Jackal is caught and punished.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Lion",
+      "TARGET": "Baboon",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Jackal",
+      "TARGET": "Baboon",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "Tortoise",
+      "TARGET": "Jackal",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Hyena",
+      "TARGET": "Jackal",
+      "TYPE": "OPPOSES"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "QUEST",
+    "TRICKSTER",
+    "HELPER_APPEARS",
+    "ORDEAL"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "issues": [
+      "event participant 'Leopard' not in CHARACTERS: added as SECONDARY",
+      "event participant 'Hare' not in CHARACTERS: added as SECONDARY"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 6011,
+    "excerpt_chars": 6011
+  }
+}

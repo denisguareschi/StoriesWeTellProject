@@ -1,0 +1,164 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Monkey",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "From condemned animal facing death to cherished family member living in peace.",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Monkey-man",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "From cruel master planning to kill his old servant to grateful and kind owner.",
+      "TRANSFORMATION_TYPE": "REVERSAL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Boar",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "NONE",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Wife",
+      "ROLE": "DEUTERAGONIST",
+      "TRANSFORMATION": "NONE",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Man's home",
+    "Forest"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "The monkey-man decides to sell the old monkey to the butcher due to his declining performance.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Monkey-man",
+        "Wife",
+        "Monkey"
+      ],
+      "LOCATION": "Man's home",
+      "CAUSE": "Story opening",
+      "EFFECT": "The monkey overhears the conversation and fears for his life.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "The monkey escapes the house and seeks the wise boar's counsel in the nearby forest.",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Monkey",
+        "Boar"
+      ],
+      "LOCATION": "Forest",
+      "CAUSE": "Monkey overhearing his master's plan to sell him.",
+      "EFFECT": "The boar is flattered and agrees to help the monkey.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "The boar devises a trick to make the monkey appear heroic by staging a child 'kidnapping'.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Boar",
+        "Monkey"
+      ],
+      "LOCATION": "Forest",
+      "CAUSE": "The monkey's plea for help and the boar's wisdom.",
+      "EFFECT": "The monkey returns home to await the execution of the plan.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "The boar 'kidnaps' the child, and the monkey 'rescues' it, returning it safely to its parents.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Boar",
+        "Monkey",
+        "Monkey-man",
+        "Wife"
+      ],
+      "LOCATION": "Man's home",
+      "CAUSE": "The boar's plan and the monkey's cooperation.",
+      "EFFECT": "The monkey-man and wife are filled with gratitude and admiration for the monkey.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "The monkey-man cancels the sale to the butcher and rewards the monkey with a peaceful life, never striking him again.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Monkey-man",
+        "Wife",
+        "Monkey"
+      ],
+      "LOCATION": "Man's home",
+      "CAUSE": "The monkey's perceived heroism in saving their child.",
+      "EFFECT": "The monkey lives the rest of his days in peace and comfort.",
+      "CAUSED_BY": [
+        3
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Monkey-man",
+      "TARGET": "Monkey",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Boar",
+      "TARGET": "Monkey",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Boar",
+      "TARGET": "Monkey-man",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "Wife",
+      "TARGET": "Monkey",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Monkey",
+      "TARGET": "Monkey-man",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "QUEST",
+    "TRICKSTER",
+    "ORDEAL",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [
+      "CAUSED_BY"
+    ],
+    "model": "gemini:gemini-2.5-flash",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 4772,
+    "excerpt_chars": 4772
+  }
+}

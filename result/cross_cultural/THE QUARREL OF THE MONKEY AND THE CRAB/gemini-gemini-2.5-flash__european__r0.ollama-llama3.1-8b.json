@@ -1,0 +1,186 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Crab",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "learns to be cautious and vigilant",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Ape",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "exposed and punished for his deceit",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Cecil",
+      "ROLE": "DEUTERAGONIST",
+      "TRANSFORMATION": "avenges his father's death and brings peace to the valley",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Millstone",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "helps bring the Ape to justice",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Bee",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "helps bring the Ape to justice",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Chestnut",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "helps bring the Ape to justice",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "verdant valley",
+    "brook",
+    "sun-dappled meadow",
+    "woodland canopy",
+    "burrow",
+    "ancient oak",
+    "forest",
+    "Crab's cottage",
+    "tree"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "The Crab and the Ape play by the water's edge, and the Ape tricks the Crab into exchanging a bun for a pip.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Crab",
+        "Ape"
+      ],
+      "LOCATION": "verdant valley",
+      "CAUSE": "Story opening",
+      "EFFECT": "The Crab is deceived and loses his bun.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "The Crab plants the pip and it grows into a tree, bearing fruit.",
+      "FUNCTION": "TRANSFORMATION",
+      "CHARACTERS": [
+        "Crab"
+      ],
+      "LOCATION": "burrow",
+      "CAUSE": "The Crab's care and diligence",
+      "EFFECT": "The tree grows and bears fruit.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "The Ape climbs the tree and plucks unripe fruit, injuring the Crab.",
+      "FUNCTION": "BETRAYAL",
+      "CHARACTERS": [
+        "Ape",
+        "Crab"
+      ],
+      "LOCATION": "tree",
+      "CAUSE": "The Ape's greed and deceit",
+      "EFFECT": "The Crab is injured.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "The Ape is tricked into attending the Crab's wake, where he is punished by the Crab's friends.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Ape",
+        "Cecil",
+        "Millstone",
+        "Bee",
+        "Chestnut"
+      ],
+      "LOCATION": "Crab's cottage",
+      "CAUSE": "The Ape's deceit and the friends' plan",
+      "EFFECT": "The Ape is punished and the Crab's friends are rewarded.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "The Ape is killed by Cecil, and the valley is at peace.",
+      "FUNCTION": "SACRIFICE",
+      "CHARACTERS": [
+        "Ape",
+        "Cecil"
+      ],
+      "LOCATION": "Crab's cottage",
+      "CAUSE": "The Ape's deceit and Cecil's vengeance",
+      "EFFECT": "The Ape is punished and the valley is at peace.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Ape",
+      "TARGET": "Crab",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "Crab",
+      "TARGET": "Ape",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Cecil",
+      "TARGET": "Ape",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Millstone",
+      "TARGET": "Ape",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Bee",
+      "TARGET": "Ape",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Chestnut",
+      "TARGET": "Ape",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "TRICKSTER",
+    "TRANSFORMATION",
+    "BETRAYAL",
+    "MORAL_REWARD",
+    "SACRIFICE"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 5152,
+    "excerpt_chars": 5152
+  }
+}

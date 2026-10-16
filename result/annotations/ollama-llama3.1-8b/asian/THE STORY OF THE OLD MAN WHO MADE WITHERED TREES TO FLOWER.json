@@ -1,0 +1,145 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": null,
+  "SETTING_DOMAIN": "Spiritual and Religious",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "The old man",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "learns to appreciate the value of kindness and generosity",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Shiro",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "helps the old man become rich and prosperous",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 2
+    },
+    {
+      "CHARACTER": "The wicked old man",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "meets with punishment for his evil doings",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "the old man's house",
+    "the field",
+    "the garden"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "The old man and his wife supported themselves by cultivating a small plot of land.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "The old man"
+      ],
+      "LOCATION": "the old man's house",
+      "CAUSE": "Story opening",
+      "EFFECT": "The old man and his wife are struggling to make ends meet.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Shiro was heard barking for a long time in the field at the back of his master's house.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Shiro",
+        "The old man"
+      ],
+      "LOCATION": "the field",
+      "CAUSE": "Shiro's barking",
+      "EFFECT": "The old man discovers a treasure of gold coins.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "The wicked old man borrowed Shiro from the old man.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "The wicked old man",
+        "The old man"
+      ],
+      "LOCATION": "the old man's house",
+      "CAUSE": "The wicked old man's request",
+      "EFFECT": "The old man is deceived.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "The wicked old man killed Shiro and buried him under a yenoki tree.",
+      "FUNCTION": "BETRAYAL",
+      "CHARACTERS": [
+        "The wicked old man",
+        "Shiro"
+      ],
+      "LOCATION": "the field",
+      "CAUSE": "The wicked old man's cruelty",
+      "EFFECT": "The old man is heartbroken.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "The old man scattered ashes from the mortar on the trees in his garden, and they burst into bloom.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "The old man",
+        "Shiro"
+      ],
+      "LOCATION": "the garden",
+      "CAUSE": "The old man's kindness and generosity",
+      "EFFECT": "The old man becomes rich and prosperous.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "The old man",
+      "TARGET": "Shiro",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "The wicked old man",
+      "TARGET": "The old man",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "The old man",
+      "TARGET": "The wicked old man",
+      "TYPE": "OPPOSES"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "HELPER_APPEARS",
+    "TRICKSTER",
+    "BETRAYAL",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "issues": [
+      "NARRATIVE_ARC invalid: 'MORAL_REWARD'",
+      "6 events instead of 5"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 14401,
+    "excerpt_chars": 11983
+  }
+}

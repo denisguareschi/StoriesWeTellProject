@@ -1,0 +1,161 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Lion",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "exposed to Jackal's trickery",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 3
+    },
+    {
+      "CHARACTER": "Jackal",
+      "ROLE": "TRICKSTER",
+      "TRANSFORMATION": "successful in cheating Lion",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 3
+    },
+    {
+      "CHARACTER": "Lioness",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Eland",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "killed",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 1
+    },
+    {
+      "CHARACTER": "Lion's wife and children",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "savannah"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Lion and Jackal lie in wait for Eland.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Lion",
+        "Jackal",
+        "Eland"
+      ],
+      "LOCATION": "savannah",
+      "CAUSE": "Story opening",
+      "EFFECT": "The hunt begins.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Jackal hits Eland and sings out, but Lion claims he hit.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Lion",
+        "Jackal",
+        "Eland"
+      ],
+      "LOCATION": "savannah",
+      "CAUSE": "Event 1",
+      "EFFECT": "Lion and Jackal go home.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Jackal cheats Lion by following his own spoor and cutting out the fat.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Lion",
+        "Jackal"
+      ],
+      "LOCATION": "savannah",
+      "CAUSE": "Event 2",
+      "EFFECT": "Lion discovers Jackal's deception.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Lion returns and finds Jackal in the carcass of Eland.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Lion",
+        "Jackal"
+      ],
+      "LOCATION": "savannah",
+      "CAUSE": "Event 3",
+      "EFFECT": "Lion upbraids Jackal.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Jackal gives the fat to his own family and pelted Lion's children with the lungs.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Lion",
+        "Jackal",
+        "Lion's wife and children"
+      ],
+      "LOCATION": "savannah",
+      "CAUSE": "Event 4",
+      "EFFECT": "The story ends with Jackal's trickery exposed.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Lion",
+      "TARGET": "Jackal",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Jackal",
+      "TARGET": "Lion",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "Lion",
+      "TARGET": "Lioness",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Jackal",
+      "TARGET": "Lion's wife and children",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "TRICKSTER",
+    "ORDEAL",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 1691,
+    "excerpt_chars": 1691
+  }
+}

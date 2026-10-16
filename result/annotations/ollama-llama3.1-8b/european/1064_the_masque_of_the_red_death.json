@@ -1,0 +1,154 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Tragedy",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Prince Prospero",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "from happiness to despair and death",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "The Red Death",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "from a figure to a reality",
+      "TRANSFORMATION_TYPE": "REVERSAL",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "The Stranger",
+      "ROLE": "TRICKSTER",
+      "TRANSFORMATION": "from a figure to a reality",
+      "TRANSFORMATION_TYPE": "REVERSAL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "the friends",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "the orchestra",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "the abbey",
+    "the seven chambers",
+    "the blue chamber",
+    "the violet chamber"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "The Prince Prospero summons a thousand friends to his abbey to escape the Red Death.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Prince Prospero"
+      ],
+      "LOCATION": "the abbey",
+      "CAUSE": "Story opening",
+      "EFFECT": "The friends arrive at the abbey.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "The Prince Prospero entertains his friends at a masked ball.",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Prince Prospero",
+        "the friends"
+      ],
+      "LOCATION": "the seven chambers",
+      "CAUSE": "The friends are at the abbey",
+      "EFFECT": "The ball is in full swing.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "The orchestra pauses due to the sound of the clock striking midnight.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "the orchestra"
+      ],
+      "LOCATION": "the seven chambers",
+      "CAUSE": "The clock strikes midnight",
+      "EFFECT": "The music stops.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "The stranger appears at the ball, dressed as the Red Death.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "The Stranger",
+        "Prince Prospero"
+      ],
+      "LOCATION": "the blue chamber",
+      "CAUSE": "The stranger appears",
+      "EFFECT": "The Prince Prospero is enraged.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "The Prince Prospero attacks the stranger, but is killed by the Red Death.",
+      "FUNCTION": "SACRIFICE",
+      "CHARACTERS": [
+        "Prince Prospero",
+        "The Stranger"
+      ],
+      "LOCATION": "the violet chamber",
+      "CAUSE": "The Prince Prospero attacks the stranger",
+      "EFFECT": "The Prince Prospero is killed.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Prince Prospero",
+      "TARGET": "The Red Death",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "The Stranger",
+      "TARGET": "Prince Prospero",
+      "TYPE": "DECEIVES"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "QUEST",
+    "ORDEAL",
+    "TRICKSTER",
+    "SACRIFICE"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "issues": [
+      "event participant 'the friends' not in CHARACTERS: added as SECONDARY",
+      "event participant 'the orchestra' not in CHARACTERS: added as SECONDARY"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 13808,
+    "excerpt_chars": 11677
+  }
+}

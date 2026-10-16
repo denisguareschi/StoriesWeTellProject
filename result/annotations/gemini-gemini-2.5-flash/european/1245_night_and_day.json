@@ -1,0 +1,170 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Hero's Journey",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Katharine Hilbery",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "From detached and unexhilarated to connected and hopeful, sharing a vision for the future.",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Mary",
+      "ROLE": "DEUTERAGONIST",
+      "TRANSFORMATION": "From despondent and feeling like a 'hollow machine' to having a fleeting vision of a 'scheme of things'.",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 3
+    },
+    {
+      "CHARACTER": "Ralph",
+      "ROLE": "DEUTERAGONIST",
+      "TRANSFORMATION": "From an implied state to sharing a profound connection and vision with Katharine.",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Mr. Denham",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "NONE",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Mrs. Hilbery",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "NONE",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Mrs. Seal",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Drawing-room",
+    "Office",
+    "Charing Cross Road",
+    "Omnibus",
+    "River",
+    "House"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Katharine Hilbery, feeling unexhilarated, pours tea at a social gathering where Mr. Denham makes an awkward entrance.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Katharine Hilbery",
+        "Mr. Denham",
+        "Mrs. Hilbery"
+      ],
+      "LOCATION": "Drawing-room",
+      "CAUSE": "Story opening",
+      "EFFECT": "Katharine's internal observation of the scene and Mr. Denham's discomfort.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Mary feels profound despondency and a lack of faith or purpose in her work and life, questioning her own existence.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Mary",
+        "Mrs. Seal"
+      ],
+      "LOCATION": "Office",
+      "CAUSE": "Her internal state and observation of her work environment.",
+      "EFFECT": "She reflects on her feeling like a 'hollow machine' and her inability to feel fear or excitement.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 3,
+      "EVENT": "Mary observes others with a 'flame' in their eyes, which she lacks, and has a fleeting vision of a 'scheme of things'.",
+      "FUNCTION": "TRANSFORMATION",
+      "CHARACTERS": [
+        "Mary"
+      ],
+      "LOCATION": "Charing Cross Road",
+      "CAUSE": "Her deep internal questioning and observation of people.",
+      "EFFECT": "She moves from acute self-consciousness to a broader, albeit fleeting, conception of existence.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Katharine and Ralph discuss past figures and begin to sketch a future habitation and account of the future, finding a shared vision.",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Katharine Hilbery",
+        "Ralph"
+      ],
+      "LOCATION": "Omnibus",
+      "CAUSE": "Their shared reflection on life and the desire for meaning/order.",
+      "EFFECT": "They develop a shared sense of purpose and connection.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 5,
+      "EVENT": "Katharine and Ralph walk to the river, share a moment of profound connection and thanksgiving, and return to the house.",
+      "FUNCTION": "RETURN",
+      "CHARACTERS": [
+        "Katharine Hilbery",
+        "Ralph"
+      ],
+      "LOCATION": "River",
+      "CAUSE": "Their shared journey and developing connection.",
+      "EFFECT": "A sense of security, connection, and a quiet good night, implying a new beginning.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Katharine Hilbery",
+      "TARGET": "Ralph",
+      "TYPE": "BONDS_WITH"
+    },
+    {
+      "SOURCE": "Mary",
+      "TARGET": "Mrs. Seal",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Mrs. Hilbery",
+      "TARGET": "Katharine Hilbery",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Mr. Denham",
+      "TARGET": "Katharine Hilbery",
+      "TYPE": "OPPOSES"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "ORDEAL",
+    "TRANSFORMATION",
+    "QUEST",
+    "RETURN"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "issues": [
+      "event participant 'Mrs. Seal' not in CHARACTERS: added as SECONDARY"
+    ],
+    "model": "gemini:gemini-2.5-flash",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 946075,
+    "excerpt_chars": 11870
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Hero's Journey",
+  "SETTING_DOMAIN": "Spiritual and Religious",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Hidesato",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "from brave warrior to wise and resourceful hero",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Dragon King",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "from serpent-dragon to human form",
+      "TRANSFORMATION_TYPE": "REVERSAL",
+      "CHANGE_EVENT": 2
+    },
+    {
+      "CHARACTER": "Centipede",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "from monstrous creature to defeated enemy",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    }
+  ],
+  "LOCATIONS": [
+    "Lake Biwa",
+    "Bridge of Seta-no-Karashi",
+    "Palace beneath the lake",
+    "Mountain beyond the lake"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Hidesato encounters the serpent-dragon on the bridge",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Hidesato",
+        "Dragon King"
+      ],
+      "LOCATION": "Bridge of Seta-no-Karashi",
+      "CAUSE": "Story opening",
+      "EFFECT": "Hidesato must decide whether to turn back or face the serpent-dragon",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "The serpent-dragon transforms into the Dragon King",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Hidesato",
+        "Dragon King"
+      ],
+      "LOCATION": "Bridge of Seta-no-Karashi",
+      "CAUSE": "The Dragon King's magic",
+      "EFFECT": "Hidesato is surprised and curious about the transformation",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "The Dragon King asks Hidesato to kill the centipede",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Hidesato",
+        "Dragon King"
+      ],
+      "LOCATION": "Palace beneath the lake",
+      "CAUSE": "The Dragon King's request",
+      "EFFECT": "Hidesato agrees to help the Dragon King",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Hidesato tries to kill the centipede with arrows",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Hidesato",
+        "Centipede"
+      ],
+      "LOCATION": "Mountain beyond the lake",
+      "CAUSE": "The centipede's invulnerability",
+      "EFFECT": "Hidesato's arrows are ineffective against the centipede",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Hidesato kills the centipede with his last arrow",
+      "FUNCTION": "SACRIFICE",
+      "CHARACTERS": [
+        "Hidesato",
+        "Centipede"
+      ],
+      "LOCATION": "Mountain beyond the lake",
+      "CAUSE": "Hidesato's resourcefulness and bravery",
+      "EFFECT": "The centipede is defeated, and the Dragon King is grateful",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Hidesato",
+      "TARGET": "Dragon King",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Dragon King",
+      "TARGET": "Hidesato",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Hidesato",
+      "TARGET": "Centipede",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Centipede",
+      "TARGET": "Hidesato",
+      "TYPE": "OPPOSES"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "TRICKSTER",
+    "HELPER_APPEARS",
+    "ORDEAL",
+    "SACRIFICE"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 12359,
+    "excerpt_chars": 11844
+  }
+}

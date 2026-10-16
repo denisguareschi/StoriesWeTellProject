@@ -1,0 +1,143 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Hero's Journey",
+  "SETTING_DOMAIN": "Spiritual and Religious",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Kotei",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "from struggling to inventing and leading a successful war",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Shiyu",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "The Empress",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "The courtiers",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "China",
+    "Takuroku",
+    "The Palace"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Kotei's mother had a vision foretelling her son's greatness.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Kotei"
+      ],
+      "LOCATION": "China",
+      "CAUSE": "Story opening",
+      "EFFECT": "Kotei's future is set in motion",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Kotei declared war against the rebel Shiyu.",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Kotei",
+        "Shiyu"
+      ],
+      "LOCATION": "Takuroku",
+      "CAUSE": "Kotei's determination to conquer Shiyu",
+      "EFFECT": "The war begins",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Kotei invented the shinansha to counter Shiyu's magic.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Kotei"
+      ],
+      "LOCATION": "The Palace",
+      "CAUSE": "Kotei's need for a solution to Shiyu's magic",
+      "EFFECT": "Kotei gains an advantage over Shiyu",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Kotei used the shinansha to defeat Shiyu's army.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Kotei",
+        "Shiyu"
+      ],
+      "LOCATION": "Takuroku",
+      "CAUSE": "Kotei's use of the shinansha",
+      "EFFECT": "Kotei's army gains the upper hand",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Kotei's time on earth came to an end, and he ascended to heaven on a Dragon.",
+      "FUNCTION": "SACRIFICE",
+      "CHARACTERS": [
+        "Kotei",
+        "The Empress",
+        "The courtiers"
+      ],
+      "LOCATION": "The Palace",
+      "CAUSE": "Kotei's completion of his life's work",
+      "EFFECT": "Kotei's legacy is secured",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Kotei",
+      "TARGET": "Shiyu",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Kotei",
+      "TARGET": "The Empress",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "QUEST",
+    "TRICKSTER",
+    "ORDEAL",
+    "SACRIFICE"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.5,
+    "seed": 1,
+    "attempts": 1,
+    "source_chars": 6387,
+    "excerpt_chars": 6387
+  }
+}

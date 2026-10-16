@@ -1,0 +1,136 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Tragedy",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "The narrator",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "from pity to repulsion towards Bartleby",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 3
+    },
+    {
+      "CHARACTER": "Bartleby",
+      "ROLE": "DEUTERAGONIST",
+      "TRANSFORMATION": "from a quiet, reserved man to a morbid, hopeless one",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 3
+    },
+    {
+      "CHARACTER": "The turnkey",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Wall-street",
+    "The Tombs",
+    "The yard"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "The narrator introduces himself and his business, and mentions Bartleby.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "The narrator",
+        "Bartleby"
+      ],
+      "LOCATION": "Wall-street",
+      "CAUSE": "Story opening",
+      "EFFECT": "The narrator becomes aware of Bartleby's strange behavior.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "The narrator discovers Bartleby's strange behavior and his reluctance to answer questions.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "The narrator",
+        "Bartleby"
+      ],
+      "LOCATION": "Wall-street",
+      "CAUSE": "The narrator's observations of Bartleby",
+      "EFFECT": "The narrator becomes concerned about Bartleby's well-being.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "The narrator's pity for Bartleby turns to repulsion.",
+      "FUNCTION": "TRANSFORMATION",
+      "CHARACTERS": [
+        "The narrator",
+        "Bartleby"
+      ],
+      "LOCATION": "Wall-street",
+      "CAUSE": "The narrator's observations of Bartleby's behavior",
+      "EFFECT": "The narrator's attitude towards Bartleby changes.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "The narrator tries to persuade Bartleby to leave, but he refuses.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "The narrator",
+        "Bartleby"
+      ],
+      "LOCATION": "The Tombs",
+      "CAUSE": "The narrator's attempts to persuade Bartleby",
+      "EFFECT": "Bartleby's behavior becomes more extreme.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "The narrator finds Bartleby dead in the yard.",
+      "FUNCTION": "RESURRECTION",
+      "CHARACTERS": [
+        "The narrator",
+        "Bartleby"
+      ],
+      "LOCATION": "The yard",
+      "CAUSE": "Bartleby's death",
+      "EFFECT": "The narrator is shocked and saddened by Bartleby's death.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "The narrator",
+      "TARGET": "Bartleby",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "The turnkey",
+      "TARGET": "Bartleby",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "ORDEAL",
+    "TRANSFORMATION",
+    "RESURRECTION"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 82408,
+    "excerpt_chars": 11991
+  }
+}

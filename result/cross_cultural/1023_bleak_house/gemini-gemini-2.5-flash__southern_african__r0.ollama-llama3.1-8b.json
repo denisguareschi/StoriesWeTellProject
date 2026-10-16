@@ -1,0 +1,199 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Origin Myth",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Nomusa",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "learns to love and appreciate her life and relationships",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Lerato",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "recovers from illness and finds peace",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 4
+    },
+    {
+      "CHARACTER": "Zola",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "grows and develops as a person",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Dumisani",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "supports and loves Nomusa",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Mkhulu Jabulani",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "helps and supports Nomusa",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Kgosi Thabiso",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "presides over the Great Cattle Dispute",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Thando",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "goes missing",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Sizwe",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "grows and develops as a person",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "the elders",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "the Great *Kgotla*",
+    "the homestead",
+    "the river's edge",
+    "Nomusa's hut"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "The season of the heavy mists had come, cloaking the Great *Kgotla* where the elders gathered to hear disputes.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Kgosi Thabiso",
+        "the elders"
+      ],
+      "LOCATION": "the Great *Kgotla*",
+      "CAUSE": "Story opening",
+      "EFFECT": "The elders gather to hear disputes",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "The rains had been relentless, soaking the earth, washing away all tracks.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Nomusa",
+        "Lerato"
+      ],
+      "LOCATION": "the homestead",
+      "CAUSE": "The rains had been relentless",
+      "EFFECT": "Lerato goes missing",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "One evening, as my young helper, *Lerato*, was weaving a mat by the fire in my hut, I felt the ground beneath my feet tremble.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Nomusa",
+        "Lerato"
+      ],
+      "LOCATION": "Nomusa's hut",
+      "CAUSE": "Lerato is weaving a mat",
+      "EFFECT": "Nomusa feels the ground tremble",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Lerato fell into a deep sickness. Before the next sun had climbed high, her fever burned like a veld fire.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Nomusa",
+        "Lerato"
+      ],
+      "LOCATION": "Nomusa's hut",
+      "CAUSE": "Lerato's sickness",
+      "EFFECT": "Lerato's condition worsens",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "I try to tell this tale with a light heart, for the journey nears its end, but when I speak of him, the tears of joy and memory well in my eyes.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Nomusa",
+        "Dumisani",
+        "Zola",
+        "Sizwe"
+      ],
+      "LOCATION": "Nomusa's hut",
+      "CAUSE": "The journey nears its end",
+      "EFFECT": "Nomusa reflects on her life and relationships",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Nomusa",
+      "TARGET": "Lerato",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Nomusa",
+      "TARGET": "Dumisani",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Nomusa",
+      "TARGET": "Zola",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Nomusa",
+      "TARGET": "Mkhulu Jabulani",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Dumisani",
+      "TARGET": "Nomusa",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "HELPER_APPEARS",
+    "ORDEAL",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "issues": [
+      "event participant 'the elders' not in CHARACTERS: added as SECONDARY"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 10281,
+    "excerpt_chars": 10281
+  }
+}

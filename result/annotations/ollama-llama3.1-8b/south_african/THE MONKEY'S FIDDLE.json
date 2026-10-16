@@ -1,0 +1,172 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Monkey",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "uses cunning and music to outwit his enemies",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Orang Outang",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Brer Wolf",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "learns to acknowledge his mistakes",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Jackal",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Lion",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Tiger",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Monkey's land",
+    "Orang Outang's land",
+    "Court of Lion, Tiger, and other animals"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Monkey is forced to leave his land due to hunger and want",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Monkey"
+      ],
+      "LOCATION": "Monkey's land",
+      "CAUSE": "Story opening",
+      "EFFECT": "Monkey seeks work elsewhere",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Monkey meets Brer Wolf and uses his bow and arrow to kill a deer",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Monkey",
+        "Brer Wolf"
+      ],
+      "LOCATION": "Monkey's land",
+      "CAUSE": "Monkey's arrival",
+      "EFFECT": "Monkey and Wolf become friends",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Wolf accuses Monkey of stealing his bow and arrow",
+      "FUNCTION": "BETRAYAL",
+      "CHARACTERS": [
+        "Brer Wolf",
+        "Monkey",
+        "Jackal"
+      ],
+      "LOCATION": "Monkey's land",
+      "CAUSE": "Wolf's jealousy",
+      "EFFECT": "Monkey is accused of theft",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Monkey's evidence is weak, and he is sentenced to hang",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Monkey",
+        "Lion",
+        "Tiger",
+        "Jackal"
+      ],
+      "LOCATION": "Court of Lion, Tiger, and other animals",
+      "CAUSE": "Monkey's weak evidence",
+      "EFFECT": "Monkey is sentenced to death",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Monkey plays his charmed fiddle and the court is forced to dance, leading to Wolf's confession and Monkey's acquittal",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Monkey",
+        "Lion",
+        "Tiger",
+        "Brer Wolf",
+        "Jackal"
+      ],
+      "LOCATION": "Court of Lion, Tiger, and other animals",
+      "CAUSE": "Monkey's music",
+      "EFFECT": "Monkey is acquitted and Wolf confesses",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Jackal",
+      "TARGET": "Monkey",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "Lion",
+      "TARGET": "Monkey",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Tiger",
+      "TARGET": "Monkey",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "QUEST",
+    "BETRAYAL",
+    "ORDEAL",
+    "TRICKSTER"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "issues": [
+      "relation dropped: {'SOURCE': 'Monkey', 'TARGET': 'Wolf', 'TYPE': 'OPPOSES'}",
+      "relation dropped: {'SOURCE': 'Wolf', 'TARGET': 'Monkey', 'TYPE': 'OPPOSES'}"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 4008,
+    "excerpt_chars": 4008
+  }
+}

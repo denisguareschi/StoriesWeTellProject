@@ -1,0 +1,165 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Lion",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "learns to recognize Jackal's deception",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Jackal",
+      "ROLE": "TRICKSTER",
+      "TRANSFORMATION": "uses cunning to cheat Lion",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Lioness",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "receiving fat from Jackal, indirectly",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Lion's wife",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "receiving lungs from Jackal, indirectly",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Jackal's wife and children",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "receiving fat and lungs from Jackal",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "savannah"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Lion and Jackal lie in wait for Eland.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Lion",
+        "Jackal"
+      ],
+      "LOCATION": "savannah",
+      "CAUSE": "Story opening",
+      "EFFECT": "Lion and Jackal wait for Eland",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Lion shoots and misses, but Jackal hits and sings out.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Lion",
+        "Jackal"
+      ],
+      "LOCATION": "savannah",
+      "CAUSE": "Lion and Jackal lie in wait for Eland",
+      "EFFECT": "Jackal claims to have hit",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Lion follows Jackal's blood-stained spoor.",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Lion",
+        "Jackal"
+      ],
+      "LOCATION": "savannah",
+      "CAUSE": "Jackal's deception",
+      "EFFECT": "Lion discovers Jackal's deception",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Lion returns to the dead Eland and finds Jackal inside.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Lion",
+        "Jackal"
+      ],
+      "LOCATION": "savannah",
+      "CAUSE": "Lion follows Jackal's spoor",
+      "EFFECT": "Lion discovers Jackal inside the carcass",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Lion upbraids Jackal and Jackal gives the fat to his own family.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Lion",
+        "Jackal",
+        "Jackal's wife and children"
+      ],
+      "LOCATION": "savannah",
+      "CAUSE": "Lion discovers Jackal's deception",
+      "EFFECT": "Lion's wife and children are punished",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Lion",
+      "TARGET": "Jackal",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Jackal",
+      "TARGET": "Lion",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "Lion",
+      "TARGET": "Lioness",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Lion",
+      "TARGET": "Lion's wife",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Jackal",
+      "TARGET": "Jackal's wife and children",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "TRICKSTER",
+    "QUEST",
+    "ORDEAL",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.5,
+    "seed": 1,
+    "attempts": 1,
+    "source_chars": 1691,
+    "excerpt_chars": 1691
+  }
+}

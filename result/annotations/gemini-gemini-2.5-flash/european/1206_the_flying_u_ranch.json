@@ -1,0 +1,177 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Hero's Journey",
+  "SETTING_DOMAIN": "Professional and Organizational",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Weary",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "None",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Dunk Whittaker",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "None",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Pink",
+      "ROLE": "DEUTERAGONIST",
+      "TRANSFORMATION": "None",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "The Old Man",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "Recovers from injury/illness",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Miguel Rapponi",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "None",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Oleson",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "None",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Bunk-house",
+    "Denson coulee",
+    "Flying U ranch"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Miguel Rapponi arrives at the Flying U bunk-house and immediately clashes with the Happy Family due to his appearance and manner.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Miguel Rapponi",
+        "The Old Man",
+        "Weary",
+        "Pink"
+      ],
+      "LOCATION": "Bunk-house",
+      "CAUSE": "Story opening",
+      "EFFECT": "The Happy Family develops an immediate dislike for Miguel.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Weary and Pink discover that Dunk Whittaker's sheep have trespassed and overgrazed the Flying U's land in Denson coulee.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Weary",
+        "Pink",
+        "Dunk Whittaker",
+        "Oleson"
+      ],
+      "LOCATION": "Denson coulee",
+      "CAUSE": "Dunk Whittaker's herders drove sheep onto Flying U land.",
+      "EFFECT": "Weary decides to confront Dunk about the damage.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 3,
+      "EVENT": "Weary confronts Dunk Whittaker about the trespassing sheep and cunningly extracts information about his partnership with Oleson.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Weary",
+        "Dunk Whittaker",
+        "Oleson",
+        "Pink"
+      ],
+      "LOCATION": "Denson coulee",
+      "CAUSE": "Weary's discovery of the overgrazing and his desire to resolve the conflict.",
+      "EFFECT": "Weary learns that Dunk owns half the sheep and that Oleson is his partner, enabling him to plan a resolution.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Weary secretly obtains an option from Oleson to buy the ranch, outfit, and all sheep at a good price for the Flying U.",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Weary",
+        "Oleson"
+      ],
+      "LOCATION": "Denson coulee",
+      "CAUSE": "Weary's successful information gathering from Dunk and his strategic thinking.",
+      "EFFECT": "The Flying U gains the opportunity to resolve the sheep conflict and potentially profit.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "The Old Man returns home, injured but recovering, and the Flying U outfit successfully buys and resells the Dot sheep outfit for a profit, restoring peace.",
+      "FUNCTION": "RETURN",
+      "CHARACTERS": [
+        "The Old Man",
+        "Weary",
+        "Pink"
+      ],
+      "LOCATION": "Flying U ranch",
+      "CAUSE": "The Old Man's recovery and Weary's successful negotiation.",
+      "EFFECT": "Life on the Flying U ranch returns to its usual pleasant level.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Weary",
+      "TARGET": "Dunk Whittaker",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Weary",
+      "TARGET": "The Old Man",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Dunk Whittaker",
+      "TARGET": "Oleson",
+      "TYPE": "BONDS_WITH"
+    },
+    {
+      "SOURCE": "Weary",
+      "TARGET": "Miguel Rapponi",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Pink",
+      "TARGET": "Weary",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "TRICKSTER",
+    "QUEST",
+    "RETURN"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "gemini:gemini-2.5-flash",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 229791,
+    "excerpt_chars": 11901
+  }
+}

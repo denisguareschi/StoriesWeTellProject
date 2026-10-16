@@ -1,0 +1,170 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Tragedy",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Jack Durbeyfield",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "discovers noble ancestry and struggles with identity",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 2
+    },
+    {
+      "CHARACTER": "Parson Tringham",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "helps Jack discover his true identity",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Angel Clare",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "helps Tess with her situation",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Tess",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "struggles with her identity and circumstances",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 4
+    },
+    {
+      "CHARACTER": "'Liza-Lu",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "helps Tess and Angel",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Marlott",
+    "Shaston",
+    "Vale of Blakemore",
+    "Wintoncester",
+    "road",
+    "gravel-cliff"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Jack Durbeyfield meets Parson Tringham on the road",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Jack Durbeyfield",
+        "Parson Tringham"
+      ],
+      "LOCATION": "road",
+      "CAUSE": "Story opening",
+      "EFFECT": "Jack learns about his noble ancestry",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Parson Tringham tells Jack about his noble ancestry",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Parson Tringham",
+        "Jack Durbeyfield"
+      ],
+      "LOCATION": "road",
+      "CAUSE": "Parson's discovery",
+      "EFFECT": "Jack is amazed and struggles with his identity",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Tess and Angel discuss their situation",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Tess",
+        "Angel Clare"
+      ],
+      "LOCATION": "gravel-cliff",
+      "CAUSE": "Tess's circumstances",
+      "EFFECT": "Tess and Angel consider their options",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Tess decides to leave the dairy",
+      "FUNCTION": "SACRIFICE",
+      "CHARACTERS": [
+        "Tess",
+        "Angel Clare"
+      ],
+      "LOCATION": "gravel-cliff",
+      "CAUSE": "Tess's decision",
+      "EFFECT": "Tess and Angel's relationship is affected",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Angel and Tess see the black flag on the tower",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Angel Clare",
+        "'Liza-Lu",
+        "Tess"
+      ],
+      "LOCATION": "Wintoncester",
+      "CAUSE": "The President of the Immortals",
+      "EFFECT": "Justice is done, and the story reaches its tragic conclusion",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Parson Tringham",
+      "TARGET": "Jack Durbeyfield",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Angel Clare",
+      "TARGET": "Tess",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Tess",
+      "TARGET": "Angel Clare",
+      "TYPE": "BONDS_WITH"
+    },
+    {
+      "SOURCE": "Angel Clare",
+      "TARGET": "'Liza-Lu",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Jack Durbeyfield",
+      "TARGET": "Parson Tringham",
+      "TYPE": "OPPOSES"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "HELPER_APPEARS",
+    "ORDEAL",
+    "SACRIFICE",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.5,
+    "seed": 1,
+    "attempts": 1,
+    "source_chars": 837458,
+    "excerpt_chars": 11675
+  }
+}

@@ -1,0 +1,203 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Hero's Journey",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Kintaro",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "from a child to a strong and brave hero",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Yama-uba",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "from a worried mother to a proud mother",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Sadamitsu",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "from a woodcutter to a general",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Lord Raiko",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "from a lord to a mentor",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "The cannibal monster",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "from a monster to a defeated enemy",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "bear",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "deer",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "monkey",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "hare",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Kyoto",
+    "Ashigara Mountains",
+    "River",
+    "Capital",
+    "Cottage"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Kintaro's mother fled to the Ashigara Mountains after her husband's death.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Kintaro"
+      ],
+      "LOCATION": "Ashigara Mountains",
+      "CAUSE": "Story opening",
+      "EFFECT": "Kintaro's mother is alone and in danger.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Kintaro was born and grew up in the Ashigara Mountains.",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Kintaro"
+      ],
+      "LOCATION": "Ashigara Mountains",
+      "CAUSE": "Kintaro's mother's desire for a child",
+      "EFFECT": "Kintaro grows up strong and brave.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Kintaro and his animal friends had a wrestling match.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Kintaro",
+        "bear",
+        "deer",
+        "monkey",
+        "hare"
+      ],
+      "LOCATION": "River",
+      "CAUSE": "Kintaro's desire for fun and competition",
+      "EFFECT": "Kintaro's strength and bravery are demonstrated.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Kintaro's mother met Sadamitsu, a general, who offered to take Kintaro to the Capital to train as a samurai.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Kintaro",
+        "Sadamitsu"
+      ],
+      "LOCATION": "Cottage",
+      "CAUSE": "Sadamitsu's desire to find strong boys for the army",
+      "EFFECT": "Kintaro's fate is settled, and he will become a samurai.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Kintaro became a hero and defeated the cannibal monster.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Kintaro",
+        "The cannibal monster"
+      ],
+      "LOCATION": "Capital",
+      "CAUSE": "Kintaro's desire to prove himself as a hero",
+      "EFFECT": "Kintaro's promise to his mother is fulfilled, and he becomes a great hero.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Kintaro",
+      "TARGET": "bear",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Kintaro",
+      "TARGET": "deer",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Kintaro",
+      "TARGET": "monkey",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Kintaro",
+      "TARGET": "hare",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Sadamitsu",
+      "TARGET": "Kintaro",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "QUEST",
+    "ORDEAL",
+    "HELPER_APPEARS",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "issues": [
+      "event participant 'bear' not in CHARACTERS: added as SECONDARY",
+      "event participant 'deer' not in CHARACTERS: added as SECONDARY",
+      "event participant 'monkey' not in CHARACTERS: added as SECONDARY",
+      "event participant 'hare' not in CHARACTERS: added as SECONDARY"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 16491,
+    "excerpt_chars": 11971
+  }
+}

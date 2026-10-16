@@ -1,0 +1,162 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Cautionary Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Old Man",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Old Woman",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "changes from cruel and greedy to kind and repentant",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Sparrow",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Demons",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Home",
+    "Forest",
+    "Bamboo Grove",
+    "Wayside"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "The old woman cuts the sparrow's tongue and drives it away after it mistakenly eats her starch.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Old Woman",
+        "Sparrow"
+      ],
+      "LOCATION": "Home",
+      "CAUSE": "Story opening",
+      "EFFECT": "The sparrow is injured and leaves; the old man is distressed by its disappearance.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "The old man searches for his pet sparrow and is led by her to her beautiful fairy home in the bamboo grove.",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Old Man",
+        "Sparrow"
+      ],
+      "LOCATION": "Bamboo Grove",
+      "CAUSE": "The old man's distress over the sparrow's disappearance and his search.",
+      "EFFECT": "The old man discovers the sparrow's true nature and is entertained.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "The Lady Sparrow offers the old man a choice of two boxes, and he humbly chooses the small one, which contains treasure.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Old Man",
+        "Sparrow"
+      ],
+      "LOCATION": "Bamboo Grove",
+      "CAUSE": "The sparrow's gratitude for the old man's past kindness.",
+      "EFFECT": "The old man receives wealth; the old woman becomes greedy upon hearing about it.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "The greedy old woman finds the sparrow's house and demands the large box, which she takes without thanks.",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Old Woman",
+        "Sparrow"
+      ],
+      "LOCATION": "Bamboo Grove",
+      "CAUSE": "The old woman's greed, fueled by her husband's treasure.",
+      "EFFECT": "The old woman carries the heavy box home, eager to open it.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "The old woman opens the large box, is terrified by demons, and repents her unkind ways, transforming into a good person.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Old Woman",
+        "Demons",
+        "Old Man"
+      ],
+      "LOCATION": "Wayside",
+      "CAUSE": "The old woman's greed and impatience to open the box.",
+      "EFFECT": "The old woman is punished and changes her character; the couple lives happily.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Old Man",
+      "TARGET": "Sparrow",
+      "TYPE": "BONDS_WITH"
+    },
+    {
+      "SOURCE": "Old Woman",
+      "TARGET": "Old Man",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Old Woman",
+      "TARGET": "Sparrow",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Sparrow",
+      "TARGET": "Old Man",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Demons",
+      "TARGET": "Old Woman",
+      "TYPE": "OPPOSES"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "ORDEAL",
+    "QUEST",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "issues": [
+      "ROLE invalid for 'Old Woman': 'ANTAOGNIST' -> SECONDARY"
+    ],
+    "model": "gemini:gemini-2.5-flash",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 17436,
+    "excerpt_chars": 11709
+  }
+}

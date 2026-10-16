@@ -1,0 +1,230 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Emiko",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "learns to balance her own desires with the needs of others",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Tayoko-sensei",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "marries and moves away, leaving Emiko to grow up",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 2
+    },
+    {
+      "CHARACTER": "Lord Morioka",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "comes to accept Emiko's marriage to Kageyama-dono",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Kageyama-dono",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "helps Emiko and Lord Morioka come to terms with her marriage",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "O-Haru-san",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "gets married and moves away",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 4
+    },
+    {
+      "CHARACTER": "Furuhata-sama",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "helps Emiko plan a dance and eventually proposes to her",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 3
+    },
+    {
+      "CHARACTER": "Okusama Nishimura",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "helps Emiko and Lord Morioka come to terms with her marriage",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "O-Junko-san",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "leaves Matsuoka-mura and gets married",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 4
+    },
+    {
+      "CHARACTER": "Tanaka-san",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "gets married and moves away",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 4
+    },
+    {
+      "CHARACTER": "Lord John",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "helps Emiko and Kageyama-dono get married",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Isabella",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "helps Emiko and Kageyama-dono get married",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "O-Elton-san",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "helps Emiko and Kageyama-dono get married",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Nishimura-san",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Matsuoka-mura",
+    "Morioka-yashiki",
+    "Nishimura-bekkaku",
+    "Kōyama",
+    "Capital"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Tayoko-sensei is to marry Nishimura-san",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Emiko",
+        "Tayoko-sensei",
+        "Nishimura-san"
+      ],
+      "LOCATION": "Matsuoka-mura",
+      "CAUSE": "Story opening",
+      "EFFECT": "Emiko feels a deep personal loss",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Emiko and her father are left to dine in the vast yashiki",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Emiko",
+        "Lord Morioka"
+      ],
+      "LOCATION": "Morioka-yashiki",
+      "CAUSE": "Tayoko-sensei's marriage",
+      "EFFECT": "Emiko feels a void in her days",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Furuhata-sama and Emiko plan a dance",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Emiko",
+        "Furuhata-sama"
+      ],
+      "LOCATION": "Nishimura-bekkaku",
+      "CAUSE": "Furuhata-sama's desire to dance again",
+      "EFFECT": "Emiko and Furuhata-sama come up with a plan to have a dance",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "O-Haru-san gets married and moves away",
+      "FUNCTION": "SACRIFICE",
+      "CHARACTERS": [
+        "O-Haru-san",
+        "Tanaka-san"
+      ],
+      "LOCATION": "Matsuoka-mura",
+      "CAUSE": "O-Haru-san's marriage",
+      "EFFECT": "Emiko feels a sense of loss",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Emiko and Kageyama-dono get married",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Emiko",
+        "Kageyama-dono",
+        "Lord Morioka"
+      ],
+      "LOCATION": "Morioka-yashiki",
+      "CAUSE": "The pilfering of Okusama Nishimura's turkeys",
+      "EFFECT": "Emiko and Kageyama-dono get married",
+      "CAUSED_BY": [
+        2,
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Emiko",
+      "TARGET": "Tayoko-sensei",
+      "TYPE": "BONDS_WITH"
+    },
+    {
+      "SOURCE": "Emiko",
+      "TARGET": "Furuhata-sama",
+      "TYPE": "BONDS_WITH"
+    },
+    {
+      "SOURCE": "Emiko",
+      "TARGET": "Kageyama-dono",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Kageyama-dono",
+      "TARGET": "Emiko",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Lord Morioka",
+      "TARGET": "Emiko",
+      "TYPE": "OPPOSES"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "ORDEAL",
+    "QUEST",
+    "SACRIFICE",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "issues": [
+      "event participant 'Nishimura-san' not in CHARACTERS: added as SECONDARY"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 10030,
+    "excerpt_chars": 10030
+  }
+}

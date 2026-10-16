@@ -1,0 +1,140 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Jackal",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "uses cunning to deceive",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": 2
+    },
+    {
+      "CHARACTER": "Wolf",
+      "ROLE": "DEUTERAGONIST",
+      "TRANSFORMATION": "suffers harm due to deception",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Man",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": 5
+    }
+  ],
+  "LOCATIONS": [
+    "house"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Jackal and Wolf went and hired themselves to a man to be his servants.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Jackal",
+        "Wolf"
+      ],
+      "LOCATION": "house",
+      "CAUSE": "Story opening",
+      "EFFECT": "sets the story in motion",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Jackal rose and smeared Wolf's tail with some fat, and then ate all the rest of it in the house.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Jackal"
+      ],
+      "LOCATION": "house",
+      "CAUSE": "ID 1",
+      "EFFECT": "deceives the man",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "The man missed the fat, and he immediately accused Jackal of having eaten it.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Man"
+      ],
+      "LOCATION": "house",
+      "CAUSE": "ID 2",
+      "EFFECT": "confronts Jackal",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "The man did so, and then thrashed Wolf till he was nearly dead.",
+      "FUNCTION": "SACRIFICE",
+      "CHARACTERS": [
+        "Man",
+        "Wolf"
+      ],
+      "LOCATION": "house",
+      "CAUSE": "ID 3",
+      "EFFECT": "harm comes to Wolf",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "The man did so, and then thrashed Wolf till he was nearly dead.",
+      "FUNCTION": "BETRAYAL",
+      "CHARACTERS": [
+        "Man",
+        "Wolf"
+      ],
+      "LOCATION": "house",
+      "CAUSE": "ID 3",
+      "EFFECT": "Wolf suffers harm",
+      "CAUSED_BY": [
+        3
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Jackal",
+      "TARGET": "Wolf",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "Man",
+      "TARGET": "Wolf",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Man",
+      "TARGET": "Jackal",
+      "TYPE": "OPPOSES"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "TRICKSTER",
+    "ORDEAL",
+    "SACRIFICE",
+    "BETRAYAL"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [
+      "CHANGE_EVENT"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 447,
+    "excerpt_chars": 447
+  }
+}

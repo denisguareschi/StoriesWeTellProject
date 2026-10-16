@@ -1,0 +1,160 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Jackal",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "Successfully uses cunning to exploit others and escape consequences.",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 2
+    },
+    {
+      "CHARACTER": "Tiger",
+      "ROLE": "DEUTERAGONIST",
+      "TRANSFORMATION": "From trusting parent to victim of betrayal and loss.",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Mrs. Tiger",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "From concerned parent to victim of deception and loss.",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Other Jackals",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "Transformed from tailed to tailless.",
+      "TRANSFORMATION_TYPE": "REVERSAL",
+      "CHANGE_EVENT": 2
+    },
+    {
+      "CHARACTER": "Tiger's Children",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "Transformed from living children to being consumed.",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    }
+  ],
+  "LOCATIONS": [
+    "Boer's goose pen",
+    "Jackal's house",
+    "Tiger's farm"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Jackal loses his tail in an iron trap while attempting to steal from the Boer's goose pen.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Jackal"
+      ],
+      "LOCATION": "Boer's goose pen",
+      "CAUSE": "Story opening",
+      "EFFECT": "Jackal is injured and faces potential humiliation.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Jackal calls a meeting and deceives other jackals into cutting off their tails.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Jackal",
+        "Other Jackals"
+      ],
+      "LOCATION": "Jackal's house",
+      "CAUSE": "Jackal's injury and desire to avoid humiliation.",
+      "EFFECT": "Other jackals become tailless, Jackal avoids being mocked.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Tiger, seeking a progressive education for his children, hires Jackal as a schoolmaster.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Tiger",
+        "Jackal"
+      ],
+      "LOCATION": "Tiger's farm",
+      "CAUSE": "Tiger's desire for his children's education and Jackal's reputation.",
+      "EFFECT": "Jackal gains a new opportunity for deception and profit.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 4,
+      "EVENT": "Jackal convinces Tiger and Mrs. Tiger to send their children to his farm for schooling, demanding payment and restricting visits.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Jackal",
+        "Tiger",
+        "Mrs. Tiger",
+        "Tiger's Children"
+      ],
+      "LOCATION": "Jackal's house",
+      "CAUSE": "Tiger's trust in Jackal and Jackal's manipulative nature.",
+      "EFFECT": "Tiger's children are placed under Jackal's control, and Jackal secures a steady supply of food.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Jackal systematically eats Tiger's children, deceives Mrs. Tiger during her visits, and then abandons his house.",
+      "FUNCTION": "BETRAYAL",
+      "CHARACTERS": [
+        "Jackal",
+        "Mrs. Tiger",
+        "Tiger's Children"
+      ],
+      "LOCATION": "Jackal's house",
+      "CAUSE": "Jackal's inherent cunning and predatory nature, and the children being in his care.",
+      "EFFECT": "Tiger's children are lost, Jackal escapes, Mrs. Tiger discovers the deception.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Jackal",
+      "TARGET": "Tiger",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "Jackal",
+      "TARGET": "Mrs. Tiger",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "Jackal",
+      "TARGET": "Other Jackals",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "Tiger",
+      "TARGET": "Mrs. Tiger",
+      "TYPE": "BONDS_WITH"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "ORDEAL",
+    "TRICKSTER",
+    "CALL_TO_ADVENTURE",
+    "BETRAYAL"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "gemini:gemini-2.5-flash",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 8231,
+    "excerpt_chars": 8231
+  }
+}

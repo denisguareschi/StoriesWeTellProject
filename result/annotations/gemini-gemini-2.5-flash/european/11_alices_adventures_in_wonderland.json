@@ -1,0 +1,186 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Hero's Journey",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Alice",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "Becomes more assertive and less naive through her experiences.",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "White Rabbit",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "NONE",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Alice's Sister",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "NONE",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Cheshire Cat",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "NONE",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "March Hare",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "NONE",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Queen of Hearts",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "NONE",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Hatter",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Bank",
+    "Rabbit-hole / Deep well",
+    "Near March Hare's house",
+    "March Hare's house / Tea-party location",
+    "Courtroom"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Alice, bored, sees the White Rabbit with a watch and follows it down a rabbit-hole.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Alice",
+        "White Rabbit"
+      ],
+      "LOCATION": "Bank",
+      "CAUSE": "Story opening",
+      "EFFECT": "Alice begins her journey into a strange world.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Alice falls down a deep well, entering a fantastical and disorienting world.",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Alice"
+      ],
+      "LOCATION": "Rabbit-hole / Deep well",
+      "CAUSE": "Alice followed the White Rabbit into the hole.",
+      "EFFECT": "Alice is fully immersed in Wonderland and its absurdities.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Alice encounters the Cheshire Cat, who offers cryptic advice before vanishing.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Alice",
+        "Cheshire Cat"
+      ],
+      "LOCATION": "Near March Hare's house",
+      "CAUSE": "Alice is exploring the strange world after her fall.",
+      "EFFECT": "Alice continues her journey, heading towards the March Hare's house.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Alice attends the Mad Tea-Party and is treated rudely by the March Hare and Hatter.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Alice",
+        "March Hare",
+        "Hatter"
+      ],
+      "LOCATION": "March Hare's house / Tea-party location",
+      "CAUSE": "Alice approaches the house and is confronted by its inhabitants.",
+      "EFFECT": "Alice is frustrated by the illogical behavior and leaves the party.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Alice defies the Queen of Hearts, causing the dream world to collapse, and wakes up on the bank with her sister.",
+      "FUNCTION": "RETURN",
+      "CHARACTERS": [
+        "Alice",
+        "Queen of Hearts",
+        "Alice's Sister"
+      ],
+      "LOCATION": "Courtroom",
+      "CAUSE": "Alice's growing assertiveness against the Queen's tyranny.",
+      "EFFECT": "Alice realizes her adventures were a dream and returns to reality.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Alice",
+      "TARGET": "Alice's Sister",
+      "TYPE": "BONDS_WITH"
+    },
+    {
+      "SOURCE": "Alice",
+      "TARGET": "Queen of Hearts",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Alice",
+      "TARGET": "March Hare",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Alice",
+      "TARGET": "Hatter",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "White Rabbit",
+      "TARGET": "Alice",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "QUEST",
+    "HELPER_APPEARS",
+    "ORDEAL",
+    "RETURN"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "issues": [
+      "event participant 'Hatter' not in CHARACTERS: added as SECONDARY"
+    ],
+    "model": "gemini:gemini-2.5-flash",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 144348,
+    "excerpt_chars": 11973
+  }
+}

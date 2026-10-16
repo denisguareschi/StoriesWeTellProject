@@ -1,0 +1,193 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Tragedy",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Emma Woodhouse",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "learns to balance her own desires with the needs of others",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Mr. Knightley",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "helps Emma to see her own flaws and to grow as a person",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Miss Taylor",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "leaves Emma's life, causing Emma to feel lonely",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 1
+    },
+    {
+      "CHARACTER": "Mr. Weston",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "marries Miss Taylor, leaving Emma's life",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 1
+    },
+    {
+      "CHARACTER": "Harriet Smith",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "gets married to Robert Martin, causing Emma to feel left out",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 3
+    },
+    {
+      "CHARACTER": "Mr. Elton",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "marries Emma, causing Emma to learn to balance her own desires with the needs of others",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Robert Martin",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Mr. Woodhouse",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Hartfield",
+    "Randalls"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Miss Taylor gets married",
+      "FUNCTION": "SACRIFICE",
+      "CHARACTERS": [
+        "Emma Woodhouse",
+        "Miss Taylor",
+        "Mr. Weston"
+      ],
+      "LOCATION": "Randalls",
+      "CAUSE": "Story opening",
+      "EFFECT": "Emma feels lonely",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Emma tries to help Harriet with her marriage plans",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Emma Woodhouse",
+        "Harriet Smith",
+        "Mr. Knightley"
+      ],
+      "LOCATION": "Hartfield",
+      "CAUSE": "Emma wants to help Harriet",
+      "EFFECT": "Emma feels happy",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Harriet gets married",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Emma Woodhouse",
+        "Harriet Smith",
+        "Robert Martin"
+      ],
+      "LOCATION": "Hartfield",
+      "CAUSE": "Harriet's marriage plans are finalized",
+      "EFFECT": "Emma feels left out",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Emma and Mr. Knightley plan their wedding",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Emma Woodhouse",
+        "Mr. Knightley",
+        "Mr. Woodhouse"
+      ],
+      "LOCATION": "Hartfield",
+      "CAUSE": "Emma and Mr. Knightley fall in love",
+      "EFFECT": "Emma feels happy",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Emma and Mr. Knightley get married",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Emma Woodhouse",
+        "Mr. Knightley",
+        "Mr. Elton"
+      ],
+      "LOCATION": "Hartfield",
+      "CAUSE": "Emma and Mr. Knightley's wedding plans are finalized",
+      "EFFECT": "Emma feels happy",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Emma Woodhouse",
+      "TARGET": "Mr. Knightley",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Emma Woodhouse",
+      "TARGET": "Miss Taylor",
+      "TYPE": "BONDS_WITH"
+    },
+    {
+      "SOURCE": "Mr. Knightley",
+      "TARGET": "Emma Woodhouse",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Mr. Elton",
+      "TARGET": "Emma Woodhouse",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Harriet Smith",
+      "TARGET": "Emma Woodhouse",
+      "TYPE": "BONDS_WITH"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "SACRIFICE",
+    "HELPER_APPEARS",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "issues": [
+      "event participant 'Robert Martin' not in CHARACTERS: added as SECONDARY",
+      "event participant 'Mr. Woodhouse' not in CHARACTERS: added as SECONDARY"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.5,
+    "seed": 1,
+    "attempts": 1,
+    "source_chars": 883027,
+    "excerpt_chars": 11837
+  }
+}

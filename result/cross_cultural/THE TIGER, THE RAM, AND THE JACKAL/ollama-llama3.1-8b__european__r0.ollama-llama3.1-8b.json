@@ -1,0 +1,166 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Godric",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "learns to outsmart Reginald",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Reginald",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "exposes his cunning",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Finnley",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "helps Godric outsmart Reginald",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Reginald's wife",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "helps Reginald outsmart Godric and Finnley",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 4
+    },
+    {
+      "CHARACTER": "Reginald's child",
+      "ROLE": "TRICKSTER",
+      "TRANSFORMATION": "used as a trick to deceive Godric and Finnley",
+      "TRANSFORMATION_TYPE": "REVERSAL",
+      "CHANGE_EVENT": 4
+    }
+  ],
+  "LOCATIONS": [
+    "Ashwood",
+    "Reginald's cottage"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Godric returns home, shaken by his encounter with Reginald",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Godric"
+      ],
+      "LOCATION": "Ashwood",
+      "CAUSE": "Story opening",
+      "EFFECT": "Godric seeks help from Finnley",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Godric and Finnley plan to visit Reginald and enjoy a feast",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Godric",
+        "Finnley"
+      ],
+      "LOCATION": "Ashwood",
+      "CAUSE": "Godric's encounter with Reginald",
+      "EFFECT": "Godric and Finnley set off towards Reginald's cottage",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Reginald and his wife prepare to deceive Godric and Finnley",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Reginald",
+        "Reginald's wife"
+      ],
+      "LOCATION": "Reginald's cottage",
+      "CAUSE": "Godric and Finnley's approach",
+      "EFFECT": "Reginald's child is used as a trick",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Godric and Finnley are deceived by Reginald and his wife",
+      "FUNCTION": "BETRAYAL",
+      "CHARACTERS": [
+        "Godric",
+        "Finnley",
+        "Reginald",
+        "Reginald's wife"
+      ],
+      "LOCATION": "Reginald's cottage",
+      "CAUSE": "Reginald's trick",
+      "EFFECT": "Godric and Finnley are bound and flee",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Godric and Finnley learn a valuable lesson and return home",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Godric",
+        "Finnley"
+      ],
+      "LOCATION": "Ashwood",
+      "CAUSE": "Godric and Finnley's experience",
+      "EFFECT": "Godric learns to outsmart Reginald",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Reginald",
+      "TARGET": "Godric",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Finnley",
+      "TARGET": "Reginald",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Reginald's wife",
+      "TARGET": "Godric",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "Godric",
+      "TARGET": "Finnley",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Reginald",
+      "TARGET": "Reginald's child",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "QUEST",
+    "TRICKSTER",
+    "BETRAYAL",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 2806,
+    "excerpt_chars": 2806
+  }
+}

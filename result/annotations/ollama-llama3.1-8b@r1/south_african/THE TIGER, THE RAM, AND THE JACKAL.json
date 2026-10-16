@@ -1,0 +1,142 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Tiger",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "overcome by fear",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 2
+    },
+    {
+      "CHARACTER": "Ram",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "tricks Tiger and Jackal",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Jackal",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "helps Tiger",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "kraal",
+    "Tiger's place"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Tiger meets Ram and asks his name",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Tiger",
+        "Ram"
+      ],
+      "LOCATION": "kraal",
+      "CAUSE": "Story opening",
+      "EFFECT": "Tiger flees",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Tiger tells Jackal about Ram",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Tiger",
+        "Jackal"
+      ],
+      "LOCATION": "Tiger's place",
+      "CAUSE": "Tiger's encounter with Ram",
+      "EFFECT": "Jackal agrees to help Tiger",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Jackal and Tiger go to Ram's kraal",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Tiger",
+        "Jackal"
+      ],
+      "LOCATION": "kraal",
+      "CAUSE": "Jackal's plan",
+      "EFFECT": "Ram prepares to defend himself",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Ram tricks Tiger and Jackal",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Ram",
+        "Tiger",
+        "Jackal"
+      ],
+      "LOCATION": "kraal",
+      "CAUSE": "Ram's cunning",
+      "EFFECT": "Tiger flees with Jackal",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Tiger and Jackal return home",
+      "FUNCTION": "RETURN",
+      "CHARACTERS": [
+        "Tiger",
+        "Jackal"
+      ],
+      "LOCATION": "Tiger's place",
+      "CAUSE": "Tiger's fear",
+      "EFFECT": "Ram escapes",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Tiger",
+      "TARGET": "Ram",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Jackal",
+      "TARGET": "Tiger",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Ram",
+      "TARGET": "Tiger",
+      "TYPE": "DECEIVES"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "HELPER_APPEARS",
+    "QUEST",
+    "TRICKSTER",
+    "RETURN"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.5,
+    "seed": 1,
+    "attempts": 1,
+    "source_chars": 2225,
+    "excerpt_chars": 2225
+  }
+}

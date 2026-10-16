@@ -1,0 +1,190 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Hero's Journey",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Narrator",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "From concern over 'old looks' and enduring hardship to self-acceptance and profound contentment",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Allan",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "NONE",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Charley",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "From healthy to severely ill, facing death",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 2
+    },
+    {
+      "CHARACTER": "Ada",
+      "ROLE": "DEUTERAGONIST",
+      "TRANSFORMATION": "From companion to isolated, then purified by sorrow and more beautiful",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 4
+    },
+    {
+      "CHARACTER": "Guardian",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "NONE",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Lord High Chancellor",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "NONE",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Richard",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "London",
+    "Lincoln's Inn Hall",
+    "Narrator's room",
+    "Sitting-room",
+    "Garden",
+    "Porch"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "The High Court of Chancery operates amidst the oppressive fog and mud of London, symbolizing a pervasive societal ill.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Narrator",
+        "Lord High Chancellor"
+      ],
+      "LOCATION": "Lincoln's Inn Hall",
+      "CAUSE": "Story opening",
+      "EFFECT": "Establishes a bleak, problematic world that the protagonist's journey will contrast.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Charley, the narrator's maid, falls severely ill, prompting the narrator to isolate herself and Charley from others.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Narrator",
+        "Charley",
+        "Ada",
+        "Guardian"
+      ],
+      "LOCATION": "Narrator's room",
+      "CAUSE": "Charley's sudden illness",
+      "EFFECT": "Narrator's self-seclusion and intensive nursing of Charley.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 3,
+      "EVENT": "The narrator diligently nurses Charley through her life-threatening illness, making personal sacrifices and enduring emotional isolation.",
+      "FUNCTION": "SACRIFICE",
+      "CHARACTERS": [
+        "Narrator",
+        "Charley",
+        "Ada",
+        "Guardian"
+      ],
+      "LOCATION": "Narrator's room",
+      "CAUSE": "Charley's worsening condition and the narrator's commitment to care.",
+      "EFFECT": "Charley's survival (implied) and narrator's deepened understanding of love and duty.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "The narrator marries Allan, a kind and respected doctor, and together they establish a prosperous and loving family life with children.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Narrator",
+        "Allan",
+        "Ada",
+        "Richard"
+      ],
+      "LOCATION": "Porch",
+      "CAUSE": "The narrator's virtuous character and Allan's love.",
+      "EFFECT": "Narrator's deep contentment, public esteem, and a fulfilling domestic life.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "The narrator reflects on her profound happiness, her husband's love, and her acceptance of her own appearance, recognizing her inner worth.",
+      "FUNCTION": "TRANSFORMATION",
+      "CHARACTERS": [
+        "Narrator",
+        "Allan"
+      ],
+      "LOCATION": "Porch",
+      "CAUSE": "Allan's affirmation of her beauty and her life experiences.",
+      "EFFECT": "A sense of peace, fulfillment, and a complete personal arc.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Narrator",
+      "TARGET": "Allan",
+      "TYPE": "BONDS_WITH"
+    },
+    {
+      "SOURCE": "Allan",
+      "TARGET": "Narrator",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Narrator",
+      "TARGET": "Ada",
+      "TYPE": "BONDS_WITH"
+    },
+    {
+      "SOURCE": "Narrator",
+      "TARGET": "Charley",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Lord High Chancellor",
+      "TARGET": "Narrator",
+      "TYPE": "OPPOSES"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "ORDEAL",
+    "SACRIFICE",
+    "MORAL_REWARD",
+    "TRANSFORMATION"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "issues": [
+      "event participant 'Richard' not in CHARACTERS: added as SECONDARY"
+    ],
+    "model": "gemini:gemini-2.5-flash",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 1934752,
+    "excerpt_chars": 11607
+  }
+}

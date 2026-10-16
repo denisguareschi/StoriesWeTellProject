@@ -1,0 +1,192 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Historical and Geographical",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Jim Hawkins",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "from a boy to a young man",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Captain Flint",
+      "ROLE": "TRICKSTER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Ben Gunn",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "from marooned to helping the protagonist",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Long John Silver",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "from a trusted member of the crew to a traitor",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Dr. Livesey",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Squire Trelawney",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Captain Smollett",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "The old sea-dog",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Treasure Island",
+    "The Admiral Benbow inn",
+    "The log-house",
+    "The HISPANIOLA"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "The old sea-dog arrived at the Admiral Benbow inn.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Jim Hawkins"
+      ],
+      "LOCATION": "The Admiral Benbow inn",
+      "CAUSE": "The arrival of the old sea-dog",
+      "EFFECT": "The beginning of the story",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "The old sea-dog asked for a place to stay and a glass of rum.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Jim Hawkins",
+        "The old sea-dog"
+      ],
+      "LOCATION": "The Admiral Benbow inn",
+      "CAUSE": "The old sea-dog's request",
+      "EFFECT": "The old sea-dog becomes a guest at the inn",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "The mutineers attacked the log-house.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Jim Hawkins",
+        "Ben Gunn",
+        "Long John Silver"
+      ],
+      "LOCATION": "The log-house",
+      "CAUSE": "The mutineers' attack",
+      "EFFECT": "The log-house is under attack",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Jim Hawkins and the others defended the log-house.",
+      "FUNCTION": "SACRIFICE",
+      "CHARACTERS": [
+        "Jim Hawkins",
+        "Ben Gunn",
+        "Long John Silver"
+      ],
+      "LOCATION": "The log-house",
+      "CAUSE": "The mutineers' attack",
+      "EFFECT": "The log-house is defended",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Long John Silver escaped and stole some treasure.",
+      "FUNCTION": "BETRAYAL",
+      "CHARACTERS": [
+        "Long John Silver",
+        "Ben Gunn"
+      ],
+      "LOCATION": "The HISPANIOLA",
+      "CAUSE": "Long John Silver's betrayal",
+      "EFFECT": "The treasure is stolen",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Jim Hawkins",
+      "TARGET": "Long John Silver",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Ben Gunn",
+      "TARGET": "Jim Hawkins",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Dr. Livesey",
+      "TARGET": "Jim Hawkins",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Squire Trelawney",
+      "TARGET": "Jim Hawkins",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Captain Smollett",
+      "TARGET": "Jim Hawkins",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "HELPER_APPEARS",
+    "ORDEAL",
+    "SACRIFICE",
+    "BETRAYAL"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "issues": [
+      "event participant 'The old sea-dog' not in CHARACTERS: added as SECONDARY"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.5,
+    "seed": 1,
+    "attempts": 1,
+    "source_chars": 360783,
+    "excerpt_chars": 11870
+  }
+}

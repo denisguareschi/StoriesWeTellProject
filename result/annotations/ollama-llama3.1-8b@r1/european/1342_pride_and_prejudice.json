@@ -1,0 +1,166 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Tragedy",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Elizabeth Bennet",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "From naivety to self-awareness and independence",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Mr. Darcy",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "From pride to humility and love",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Mr. Bingley",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "None",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Jane Bennet",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "None",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Lydia Bennet",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "None",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Mrs. Bennet",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Netherfield Park",
+    "Rosings",
+    "Pemberley"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "The arrival of Mr. Bingley at Netherfield Park",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Mr. Bingley",
+        "Mrs. Bennet"
+      ],
+      "LOCATION": "Netherfield Park",
+      "CAUSE": "Story opening",
+      "EFFECT": "The introduction of a new character and the potential for marriage",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Elizabeth meets Mr. Darcy and he proposes",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Elizabeth Bennet",
+        "Mr. Darcy"
+      ],
+      "LOCATION": "Netherfield Park",
+      "CAUSE": "The introduction of Mr. Darcy and his proposal",
+      "EFFECT": "Elizabeth rejects Mr. Darcy's proposal and he becomes offended",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "The news of Lydia's elopement with Wickham",
+      "FUNCTION": "BETRAYAL",
+      "CHARACTERS": [
+        "Elizabeth Bennet",
+        "Mr. Darcy"
+      ],
+      "LOCATION": "Rosings",
+      "CAUSE": "The news of Lydia's elopement",
+      "EFFECT": "Elizabeth's family is shamed and Mr. Darcy's pride is wounded",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Mr. Darcy's letter to Elizabeth explaining his actions",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Elizabeth Bennet",
+        "Mr. Darcy"
+      ],
+      "LOCATION": "Rosings",
+      "CAUSE": "Mr. Darcy's pride and his desire to explain his actions",
+      "EFFECT": "Elizabeth begins to understand Mr. Darcy's motivations and feelings",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "The marriage of Elizabeth and Mr. Darcy",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Elizabeth Bennet",
+        "Mr. Darcy"
+      ],
+      "LOCATION": "Pemberley",
+      "CAUSE": "The culmination of the story and the union of the two main characters",
+      "EFFECT": "The restoration of the moral order and the happiness of the characters",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Elizabeth Bennet",
+      "TARGET": "Mr. Darcy",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Mr. Darcy",
+      "TARGET": "Elizabeth Bennet",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Mr. Bingley",
+      "TARGET": "Jane Bennet",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "TRICKSTER",
+    "BETRAYAL",
+    "HELPER_APPEARS",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "issues": [
+      "event participant 'Mrs. Bennet' not in CHARACTERS: added as SECONDARY"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.5,
+    "seed": 1,
+    "attempts": 1,
+    "source_chars": 684742,
+    "excerpt_chars": 11753
+  }
+}

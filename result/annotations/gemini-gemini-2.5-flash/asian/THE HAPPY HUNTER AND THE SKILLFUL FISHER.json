@@ -1,0 +1,171 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Hero's Journey",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Happy Hunter",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "Gains magical power and becomes a wise, powerful ruler.",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Skillful Fisher",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "Transforms from a jealous, treacherous brother to a humble, good man.",
+      "TRANSFORMATION_TYPE": "REVERSAL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Ryn Jin",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "NONE",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Princess Tayotama",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "NONE",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Princess Tamayori",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "NONE",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Mountains",
+    "Sea",
+    "Seashore",
+    "Sea King's Palace",
+    "Rice fields",
+    "Japan"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "The Happy Hunter proposes exchanging occupations with his brother, the Skillful Fisher, who agrees.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Happy Hunter",
+        "Skillful Fisher"
+      ],
+      "LOCATION": "Japan",
+      "CAUSE": "Story opening",
+      "EFFECT": "The brothers swap their tools and roles, leading to unforeseen consequences.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "The Happy Hunter loses his brother's prized fishing hook and faces the Skillful Fisher's intense anger.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Happy Hunter",
+        "Skillful Fisher"
+      ],
+      "LOCATION": "Seashore",
+      "CAUSE": "Happy Hunter's lack of fishing skill and the occupation exchange.",
+      "EFFECT": "The Happy Hunter is filled with anxiety and fear, prompting him to seek the lost hook.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "The Happy Hunter travels to the bottom of the sea and is welcomed by Ryn Jin, the Dragon King, and his daughters in the Sea King's Palace.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Happy Hunter",
+        "Ryn Jin",
+        "Princess Tayotama",
+        "Princess Tamayori"
+      ],
+      "LOCATION": "Sea King's Palace",
+      "CAUSE": "Happy Hunter's quest to find the lost hook.",
+      "EFFECT": "The Happy Hunter receives hospitality and assistance in his search for the hook and gains magical jewels.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "The Happy Hunter returns to land with the recovered fishing hook and magical jewels, informing his brother of his safe return and adventures.",
+      "FUNCTION": "RETURN",
+      "CHARACTERS": [
+        "Happy Hunter",
+        "Skillful Fisher"
+      ],
+      "LOCATION": "Japan",
+      "CAUSE": "The successful completion of the Happy Hunter's quest in the Sea King's realm.",
+      "EFFECT": "The Skillful Fisher is surprised by his brother's return and feigns forgiveness while secretly plotting against him.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "The Happy Hunter uses the Jewels of the Flow and Ebb of the Tide to save his attacking brother from drowning, leading to the Skillful Fisher's repentance and the Happy Hunter's peaceful rule.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Happy Hunter",
+        "Skillful Fisher"
+      ],
+      "LOCATION": "Rice fields",
+      "CAUSE": "The Skillful Fisher's attempt to murder his brother.",
+      "EFFECT": "The Skillful Fisher transforms into a good man, and the Happy Hunter establishes a long period of peace and just rule.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Happy Hunter",
+      "TARGET": "Skillful Fisher",
+      "TYPE": "BONDS_WITH"
+    },
+    {
+      "SOURCE": "Skillful Fisher",
+      "TARGET": "Happy Hunter",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Happy Hunter",
+      "TARGET": "Skillful Fisher",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Ryn Jin",
+      "TARGET": "Happy Hunter",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Princess Tayotama",
+      "TARGET": "Happy Hunter",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "ORDEAL",
+    "HELPER_APPEARS",
+    "RETURN",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "gemini:gemini-2.5-flash",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 32644,
+    "excerpt_chars": 11830
+  }
+}

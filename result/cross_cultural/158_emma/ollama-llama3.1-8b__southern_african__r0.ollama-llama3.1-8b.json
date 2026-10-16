@@ -1,0 +1,184 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Emma",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "from lost and alone to confident and in love",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Frank Churchill",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "from stranger to loved one",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Miss Taylor",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "null",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Mr. Woodhouse",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "from intimidated to courageous",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 4
+    },
+    {
+      "CHARACTER": "Mr. Knightley",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "null",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "villagers",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "thieves",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "African savannah",
+    "village"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Emma's governess, Miss Taylor, leaves her side to marry a man of good character and fortune.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Emma",
+        "Miss Taylor"
+      ],
+      "LOCATION": "village",
+      "CAUSE": "Story opening",
+      "EFFECT": "Emma feels lost and alone",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "A stranger, Frank Churchill, arrives in the village and teaches Emma traditional African dances.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Emma",
+        "Frank Churchill"
+      ],
+      "LOCATION": "village",
+      "CAUSE": "Emma's need for companionship",
+      "EFFECT": "Emma and Frank grow closer",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "A group of thieves, led by a cunning and ruthless leader, begin to plague the village.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "villagers",
+        "thieves"
+      ],
+      "LOCATION": "village",
+      "CAUSE": "Emma's father's determination to protect his family and home",
+      "EFFECT": "The villagers are in a state of panic",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Emma's father, Mr. Woodhouse, and his friends, Frank and Mr. Knightley, set out to catch the thieves and restore peace to the village.",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Mr. Woodhouse",
+        "Frank Churchill",
+        "Mr. Knightley"
+      ],
+      "LOCATION": "village",
+      "CAUSE": "Emma's father's determination to protect his family and home",
+      "EFFECT": "The thieves are caught and peace is restored",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Emma and Frank get married in a small ceremony surrounded by the beauty of the African savannah.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Emma",
+        "Frank Churchill"
+      ],
+      "LOCATION": "African savannah",
+      "CAUSE": "Emma and Frank's love for each other",
+      "EFFECT": "Emma and Frank are happy and in love",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Emma",
+      "TARGET": "Frank Churchill",
+      "TYPE": "BONDS_WITH"
+    },
+    {
+      "SOURCE": "Frank Churchill",
+      "TARGET": "Emma",
+      "TYPE": "BONDS_WITH"
+    },
+    {
+      "SOURCE": "Mr. Woodhouse",
+      "TARGET": "thieves",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Mr. Knightley",
+      "TARGET": "thieves",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Emma",
+      "TARGET": "Miss Taylor",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "HELPER_APPEARS",
+    "ORDEAL",
+    "QUEST",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "issues": [
+      "event participant 'villagers' not in CHARACTERS: added as SECONDARY",
+      "event participant 'thieves' not in CHARACTERS: added as SECONDARY"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 2901,
+    "excerpt_chars": 2901
+  }
+}

@@ -1,0 +1,179 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "the monkey-man",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "from being mistreated to being valued",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "the monkey",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "from being mistreated to being valued",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "the boar",
+      "ROLE": "TRICKSTER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "the monkey-man's wife",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "the butcher",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "the child",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "the province of Shinshin in Japan",
+    "the forest near by",
+    "the house",
+    "the porch",
+    "the gate",
+    "the house and the gate"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "The monkey-man came home in a bad temper and decided to sell the monkey to the butcher.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "the monkey-man",
+        "the monkey"
+      ],
+      "LOCATION": "the house",
+      "CAUSE": "Story opening",
+      "EFFECT": "The monkey is in danger of being killed.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "The monkey overheard the monkey-man's plan and decided to seek the boar's help.",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "the monkey",
+        "the boar"
+      ],
+      "LOCATION": "the forest near by",
+      "CAUSE": "The monkey's life is in danger",
+      "EFFECT": "The monkey has a plan to save himself.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "The boar advised the monkey to steal the child and use it as a distraction to save himself.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "the monkey",
+        "the boar"
+      ],
+      "LOCATION": "the forest near by",
+      "CAUSE": "The boar's plan",
+      "EFFECT": "The monkey has a plan to save himself.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "The boar stole the child and the monkey-man and his wife were left to chase after him.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "the monkey-man",
+        "the monkey-man's wife",
+        "the boar"
+      ],
+      "LOCATION": "the house and the gate",
+      "CAUSE": "The boar's plan",
+      "EFFECT": "The monkey-man and his wife are in a difficult situation.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "The monkey successfully rescued the child and brought it back to the monkey-man and his wife.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "the monkey",
+        "the monkey-man",
+        "the monkey-man's wife",
+        "the child"
+      ],
+      "LOCATION": "the house",
+      "CAUSE": "The monkey's bravery",
+      "EFFECT": "The monkey is valued and the monkey-man and his wife are grateful.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "the boar",
+      "TARGET": "the monkey",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "the monkey-man",
+      "TARGET": "the monkey",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "the monkey-man's wife",
+      "TARGET": "the monkey",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "the monkey",
+      "TARGET": "the boar",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "the monkey-man",
+      "TARGET": "the boar",
+      "TYPE": "OPPOSES"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "QUEST",
+    "TRICKSTER",
+    "ORDEAL",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 4772,
+    "excerpt_chars": 4772
+  }
+}

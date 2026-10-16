@@ -1,0 +1,157 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Origin Myth",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Princess Moonlight",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "From tiny human to celestial being, fulfilling her destiny.",
+      "TRANSFORMATION_TYPE": "REVERSAL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Old bamboo wood-cutter",
+      "ROLE": "DEUTERAGONIST",
+      "TRANSFORMATION": "From poor and sad to wealthy and happy, then sorrowful.",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 2
+    },
+    {
+      "CHARACTER": "The Knight",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "None",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Moon Messenger",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "None",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Woods",
+    "Old couple's house",
+    "Mount Horai",
+    "Mount Fuji",
+    "The Moon"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "The old bamboo-cutter discovers a tiny, luminous human child inside a bamboo stalk.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Old bamboo wood-cutter",
+        "Princess Moonlight"
+      ],
+      "LOCATION": "Woods",
+      "CAUSE": "Story opening",
+      "EFFECT": "The old man takes the child home, and his life begins to change.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "The old couple becomes wealthy, and the child, named Princess Moonlight, grows into a beautiful woman.",
+      "FUNCTION": "TRANSFORMATION",
+      "CHARACTERS": [
+        "Old bamboo wood-cutter",
+        "Princess Moonlight"
+      ],
+      "LOCATION": "Old couple's house",
+      "CAUSE": "Princess Moonlight's presence brings fortune.",
+      "EFFECT": "The family becomes rich, and Princess Moonlight's beauty attracts suitors.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "A Knight attempts to trick Princess Moonlight with a fake jeweled branch, but she exposes his deception.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Princess Moonlight",
+        "Old bamboo wood-cutter",
+        "The Knight"
+      ],
+      "LOCATION": "Old couple's house",
+      "CAUSE": "The Knight's desire to win Princess Moonlight's hand through deceit.",
+      "EFFECT": "The Knight's deception is revealed, and he is rejected.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Celestial beings from the moon descend to Earth to reclaim Princess Moonlight.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Princess Moonlight",
+        "Old bamboo wood-cutter",
+        "Moon Messenger"
+      ],
+      "LOCATION": "Old couple's house",
+      "CAUSE": "The pre-ordained time for Princess Moonlight's return to the moon.",
+      "EFFECT": "Princess Moonlight prepares to leave her foster parents and Earth.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 5,
+      "EVENT": "Princess Moonlight returns to the moon, leaving a letter and the Elixir of Life, which is burned on Mount Fuji.",
+      "FUNCTION": "RETURN",
+      "CHARACTERS": [
+        "Princess Moonlight",
+        "Old bamboo wood-cutter",
+        "Moon Messenger"
+      ],
+      "LOCATION": "Old couple's house",
+      "CAUSE": "The moon beings take Princess Moonlight back to her celestial home.",
+      "EFFECT": "Princess Moonlight departs, and the burning of the elixir creates the legend of Mount Fuji's smoke.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Princess Moonlight",
+      "TARGET": "Old bamboo wood-cutter",
+      "TYPE": "BONDS_WITH"
+    },
+    {
+      "SOURCE": "Old bamboo wood-cutter",
+      "TARGET": "Princess Moonlight",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "The Knight",
+      "TARGET": "Princess Moonlight",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "Moon Messenger",
+      "TARGET": "Princess Moonlight",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "HELPER_APPEARS",
+    "TRANSFORMATION",
+    "TRICKSTER",
+    "CALL_TO_ADVENTURE",
+    "RETURN"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "gemini:gemini-2.5-flash",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 30343,
+    "excerpt_chars": 11459
+  }
+}

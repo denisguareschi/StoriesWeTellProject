@@ -1,0 +1,150 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": null,
+  "SETTING_DOMAIN": "Spiritual and Religious",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "The old man",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "grateful and prosperous",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Shiro",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "heroic and magical",
+      "TRANSFORMATION_TYPE": "REVERSAL",
+      "CHANGE_EVENT": 3
+    },
+    {
+      "CHARACTER": "The wicked old man",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "punished and humiliated",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "The Daimio",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "impressed and grateful",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "the old man's garden",
+    "the Daimio's Palace"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "The old man and his wife cultivated a small plot of land, but had no child.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "The old man"
+      ],
+      "LOCATION": "the old man's garden",
+      "CAUSE": "Story opening",
+      "EFFECT": "",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Shiro was heard barking for a long time in the field at the back of his master's house.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Shiro",
+        "The old man"
+      ],
+      "LOCATION": "the old man's garden",
+      "CAUSE": "Shiro's barking",
+      "EFFECT": "The old man went to see what was the matter.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "The old man and Shiro dug up a heap of old and valuable coins.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "The old man",
+        "Shiro"
+      ],
+      "LOCATION": "the old man's garden",
+      "CAUSE": "Shiro's barking",
+      "EFFECT": "The old man became rich.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "The wicked old man tried to borrow Shiro, but the old man agreed.",
+      "FUNCTION": "BETRAYAL",
+      "CHARACTERS": [
+        "The old man",
+        "The wicked old man"
+      ],
+      "LOCATION": "the old man's garden",
+      "CAUSE": "The wicked old man's request",
+      "EFFECT": "The old man lent Shiro to the wicked old man.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "The old man and his wife made cakes with the magic mortar, and it supplied them with food.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "The old man"
+      ],
+      "LOCATION": "the old man's garden",
+      "CAUSE": "The magic mortar",
+      "EFFECT": "The old man and his wife were no longer hungry.",
+      "CAUSED_BY": [
+        3
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "The old man",
+      "TARGET": "Shiro",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "The wicked old man",
+      "TARGET": "The old man",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "The Daimio",
+      "TARGET": "The old man",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "ORDEAL",
+    "HELPER_APPEARS",
+    "BETRAYAL",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "issues": [
+      "NARRATIVE_ARC invalid: 'MORAL_REWARD'",
+      "9 events instead of 5"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.5,
+    "seed": 1,
+    "attempts": 1,
+    "source_chars": 14401,
+    "excerpt_chars": 11983
+  }
+}

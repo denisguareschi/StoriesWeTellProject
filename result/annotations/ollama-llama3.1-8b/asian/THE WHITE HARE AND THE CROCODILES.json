@@ -1,0 +1,158 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Spiritual and Religious",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "The White Hare",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "learns to appreciate kindness and honesty",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "The Crocodiles",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Okuni-nushi-no-Mikoto",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "The Princess",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "The Unkind Man",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "The Island of Oki",
+    "The Mainland of Inaba",
+    "The Sea",
+    "The Pond",
+    "The Princess's Gate",
+    "The Beach"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "The White Hare wanted to cross over to Inaba, but was unable to find a way.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "The White Hare"
+      ],
+      "LOCATION": "The Island of Oki",
+      "CAUSE": "Story opening",
+      "EFFECT": "The White Hare is determined to cross over to Inaba.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "The White Hare tried to trick the crocodiles into forming a bridge for him to cross.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "The White Hare",
+        "The Crocodiles"
+      ],
+      "LOCATION": "The Sea",
+      "CAUSE": "The White Hare's trick",
+      "EFFECT": "The crocodiles form a bridge for the White Hare to cross.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "The White Hare jeered at the crocodiles for their stupidity, and they became angry.",
+      "FUNCTION": "BETRAYAL",
+      "CHARACTERS": [
+        "The White Hare",
+        "The Crocodiles"
+      ],
+      "LOCATION": "The Sea",
+      "CAUSE": "The White Hare's betrayal",
+      "EFFECT": "The crocodiles become angry and decide to take revenge.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "The crocodiles pulled out the White Hare's fur and left him to suffer.",
+      "FUNCTION": "SACRIFICE",
+      "CHARACTERS": [
+        "The White Hare",
+        "The Crocodiles"
+      ],
+      "LOCATION": "The Beach",
+      "CAUSE": "The crocodiles' revenge",
+      "EFFECT": "The White Hare is left to suffer.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Okuni-nushi-no-Mikoto helped the White Hare and cured his wounds.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "The White Hare",
+        "Okuni-nushi-no-Mikoto"
+      ],
+      "LOCATION": "The Pond",
+      "CAUSE": "Okuni-nushi-no-Mikoto's kindness",
+      "EFFECT": "The White Hare is cured and grateful.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "The White Hare",
+      "TARGET": "The Crocodiles",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "The White Hare",
+      "TARGET": "Okuni-nushi-no-Mikoto",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Okuni-nushi-no-Mikoto",
+      "TARGET": "The Princess",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "TRICKSTER",
+    "BETRAYAL",
+    "SACRIFICE",
+    "HELPER_APPEARS"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 11051,
+    "excerpt_chars": 11051
+  }
+}

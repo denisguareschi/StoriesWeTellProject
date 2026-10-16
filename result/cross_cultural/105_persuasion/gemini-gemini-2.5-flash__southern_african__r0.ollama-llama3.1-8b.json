@@ -1,0 +1,194 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Inkosi Vusi Mabena",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "learns to balance pride and humility",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "MaMabena the Elder",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Naledi",
+      "ROLE": "DEUTERAGONIST",
+      "TRANSFORMATION": "finds love and acceptance",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Themba",
+      "ROLE": "TRICKSTER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Ntombi",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Charles Ngubane",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "MaDlamini",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "MaSmith",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "eMakhosi",
+    "KwaMabena",
+    "eLwandle",
+    "KwaNgubane",
+    "distant lands"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Inkosi Vusi Mabena's pride is soothed by his ancestors' praise",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Inkosi Vusi Mabena"
+      ],
+      "LOCATION": "KwaMabena",
+      "CAUSE": "Story opening",
+      "EFFECT": "Inkosi Vusi Mabena feels comforted",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Ntombi is recovering from a fever in eLwandle",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Ntombi",
+        "Charles Ngubane",
+        "Naledi"
+      ],
+      "LOCATION": "eLwandle",
+      "CAUSE": "Ntombi's illness",
+      "EFFECT": "Ntombi is weak but recovering",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Themba's true intentions are revealed",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Themba",
+        "Ntombi",
+        "Charles Ngubane",
+        "Naledi"
+      ],
+      "LOCATION": "eLwandle",
+      "CAUSE": "Themba's actions",
+      "EFFECT": "Ntombi is hurt, but Naledi is not",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Themba helps MaSmith reclaim her husband's lost cattle and land",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Themba",
+        "MaSmith",
+        "Naledi",
+        "Charles Ngubane"
+      ],
+      "LOCATION": "distant lands",
+      "CAUSE": "Themba's actions",
+      "EFFECT": "MaSmith's fortunes improve",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Naledi finds love and acceptance with Themba",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Naledi",
+        "Themba",
+        "MaDlamini",
+        "MaSmith"
+      ],
+      "LOCATION": "eLwandle",
+      "CAUSE": "Themba's love",
+      "EFFECT": "Naledi is happy and at peace",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Inkosi Vusi Mabena",
+      "TARGET": "MaMabena the Elder",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Naledi",
+      "TARGET": "Themba",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Themba",
+      "TARGET": "Naledi",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Ntombi",
+      "TARGET": "Themba",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Charles Ngubane",
+      "TARGET": "Naledi",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "MORAL_REWARD",
+    "CALL_TO_ADVENTURE",
+    "TRICKSTER",
+    "HELPER_APPEARS"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 5842,
+    "excerpt_chars": 5842
+  }
+}

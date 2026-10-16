@@ -1,0 +1,159 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Rabbit",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "From captured and facing death to free and triumphant.",
+      "TRANSFORMATION_TYPE": "REVERSAL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Tortoise",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "NONE",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Lion",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "NONE",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Other animals",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "NONE",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "dry river bed",
+    "edge of the water"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "A severe drought forces animals to gather and decide to dance for water, but Rabbit refuses to participate.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Rabbit",
+        "Other animals"
+      ],
+      "LOCATION": "dry river bed",
+      "CAUSE": "Story opening",
+      "EFFECT": "The animals proceed with their plan to dance for water.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "The animals dance and successfully bring water to the surface, then decide to deny Rabbit any water.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Rabbit",
+        "Other animals"
+      ],
+      "LOCATION": "dry river bed",
+      "CAUSE": "The animals' decision to dance for water.",
+      "EFFECT": "Water is obtained, but Rabbit is excluded.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Rabbit secretly drinks the water at night and then boasts about it, infuriating the other animals.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Rabbit",
+        "Other animals"
+      ],
+      "LOCATION": "dry river bed",
+      "CAUSE": "Rabbit's exclusion from the water.",
+      "EFFECT": "The animals plot to catch Rabbit.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Tortoise devises a plan to use pitch to trap Rabbit and successfully captures him.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Rabbit",
+        "Tortoise",
+        "Other animals"
+      ],
+      "LOCATION": "edge of the water",
+      "CAUSE": "The animals' desire to catch Rabbit for his insolence.",
+      "EFFECT": "Rabbit is captured and brought before the other animals.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Rabbit tricks the animals into choosing a method of execution that allows him to slip free and escape.",
+      "FUNCTION": "RESURRECTION",
+      "CHARACTERS": [
+        "Rabbit",
+        "Lion",
+        "Other animals"
+      ],
+      "LOCATION": "dry river bed",
+      "CAUSE": "The animals' decision to kill Rabbit.",
+      "EFFECT": "Rabbit escapes punishment and remains free.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Rabbit",
+      "TARGET": "Other animals",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "Other animals",
+      "TARGET": "Rabbit",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Tortoise",
+      "TARGET": "Other animals",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Tortoise",
+      "TARGET": "Rabbit",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "Lion",
+      "TARGET": "Other animals",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "ORDEAL",
+    "TRICKSTER",
+    "RESURRECTION"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "gemini:gemini-2.5-flash",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 4245,
+    "excerpt_chars": 4245
+  }
+}

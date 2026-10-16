@@ -1,0 +1,167 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Tragedy",
+  "SETTING_DOMAIN": "Spiritual and Religious",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Urashima Taro",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "from young fisherman to old man due to disobedience",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "The Princess",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "The Man",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "The boys",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "The tortoise",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "The Dragon King of the Sea",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Japan",
+    "Mizu-no-ye",
+    "The Sea Palace",
+    "The beach"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Urashima rescues the tortoise from the boys",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Urashima Taro",
+        "The boys",
+        "The tortoise"
+      ],
+      "LOCATION": "Mizu-no-ye",
+      "CAUSE": "The boys were tormenting the tortoise",
+      "EFFECT": "The tortoise is saved",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Urashima is welcomed to the Sea Palace",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Urashima Taro",
+        "The Princess",
+        "The Dragon King of the Sea"
+      ],
+      "LOCATION": "The Sea Palace",
+      "CAUSE": "The Princess thanks Urashima for saving her life",
+      "EFFECT": "Urashima is invited to stay in the Sea Palace",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Urashima and the Princess get married",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Urashima Taro",
+        "The Princess"
+      ],
+      "LOCATION": "The Sea Palace",
+      "CAUSE": "The Princess asks Urashima to stay in the Sea Palace",
+      "EFFECT": "Urashima and the Princess get married",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Urashima returns to his old home",
+      "FUNCTION": "RETURN",
+      "CHARACTERS": [
+        "Urashima Taro"
+      ],
+      "LOCATION": "The beach",
+      "CAUSE": "Urashima wants to return to his old home",
+      "EFFECT": "Urashima is met by the man who tells him he has been gone for 300 years",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Urashima opens the box and becomes old",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Urashima Taro"
+      ],
+      "LOCATION": "The beach",
+      "CAUSE": "Urashima's disobedience",
+      "EFFECT": "Urashima becomes old and dies",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Urashima Taro",
+      "TARGET": "The Princess",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "The Princess",
+      "TARGET": "Urashima Taro",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "The Man",
+      "TARGET": "Urashima Taro",
+      "TYPE": "OPPOSES"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "HELPER_APPEARS",
+    "RETURN",
+    "TRICKSTER"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "issues": [
+      "event participant 'The boys' not in CHARACTERS: added as SECONDARY",
+      "event participant 'The tortoise' not in CHARACTERS: added as SECONDARY",
+      "event participant 'The Dragon King of the Sea' not in CHARACTERS: added as SECONDARY"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.5,
+    "seed": 1,
+    "attempts": 1,
+    "source_chars": 22259,
+    "excerpt_chars": 11775
+  }
+}

@@ -1,0 +1,173 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Cautionary Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Kaito",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "from cunning to punished",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Hanako",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "from trusting to deceived",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 2
+    },
+    {
+      "CHARACTER": "Taro",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "from grieving to avenger",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Mortar",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "from hidden to avenger",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Bee",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "from hidden to avenger",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Chestnut",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "from hidden to avenger",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    }
+  ],
+  "LOCATIONS": [
+    "the land of cherry blossoms",
+    "the banks of a winding river",
+    "the crab's house"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Kaito and Hanako met by the river.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Kaito",
+        "Hanako"
+      ],
+      "LOCATION": "the banks of a winding river",
+      "CAUSE": "Story opening",
+      "EFFECT": "Kaito and Hanako form a relationship.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Kaito tricked Hanako into exchanging a rice dumpling for a persimmon seed.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Kaito",
+        "Hanako"
+      ],
+      "LOCATION": "the land of cherry blossoms",
+      "CAUSE": "Kaito's cunning",
+      "EFFECT": "Hanako is deceived.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Hanako planted the persimmon seed and it grew into a tree.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Hanako"
+      ],
+      "LOCATION": "the land of cherry blossoms",
+      "CAUSE": "Hanako's care",
+      "EFFECT": "The tree bears fruit.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Kaito tried to steal the persimmons from Hanako.",
+      "FUNCTION": "BETRAYAL",
+      "CHARACTERS": [
+        "Kaito",
+        "Hanako"
+      ],
+      "LOCATION": "the crab's house",
+      "CAUSE": "Kaito's greed",
+      "EFFECT": "Hanako is injured.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Taro and his friends punished Kaito for his wickedness.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Taro",
+        "Mortar",
+        "Bee",
+        "Chestnut",
+        "Kaito"
+      ],
+      "LOCATION": "the crab's house",
+      "CAUSE": "Taro's desire for revenge",
+      "EFFECT": "Kaito is punished.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Kaito",
+      "TARGET": "Hanako",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "Taro",
+      "TARGET": "Kaito",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Mortar",
+      "TARGET": "Kaito",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Bee",
+      "TARGET": "Kaito",
+      "TYPE": "OPPOSES"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "TRICKSTER",
+    "HELPER_APPEARS",
+    "BETRAYAL",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "issues": [
+      "relation dropped: {'SOURCE': 'Hanako', 'TARGET': 'Kaito', 'TYPE': 'TRUSTS'}"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 3301,
+    "excerpt_chars": 3301
+  }
+}

@@ -1,0 +1,162 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Farmer",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "From grief-stricken and unavenged to peaceful and comforted",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Badger",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "From malicious and alive to dead",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Rabbit",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "None",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Farmer's Wife",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "From alive to dead",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 2
+    }
+  ],
+  "LOCATIONS": [
+    "Mountains",
+    "Farmer's house",
+    "Fields",
+    "Hills",
+    "Shore"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "The malicious badger spoils the farmer's crops, leading the farmer to set traps and catch him.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Farmer",
+        "Badger"
+      ],
+      "LOCATION": "Fields",
+      "CAUSE": "Story opening",
+      "EFFECT": "The farmer catches the badger and brings him home.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "The badger tricks the farmer's wife into untying him, then kills her and makes soup.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Badger",
+        "Farmer's Wife"
+      ],
+      "LOCATION": "Farmer's house",
+      "CAUSE": "The farmer leaves the badger tied up, planning to make soup.",
+      "EFFECT": "The farmer's wife is killed, and the badger escapes.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "The farmer discovers his wife's murder, and the kind rabbit appears, promising to avenge her.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Farmer",
+        "Rabbit",
+        "Badger"
+      ],
+      "LOCATION": "Farmer's house",
+      "CAUSE": "The badger reveals his crime to the farmer and escapes.",
+      "EFFECT": "The farmer is comforted, and the rabbit begins to plan revenge.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "The rabbit tricks the badger into carrying a burning bundle of grass, severely burning his back.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Rabbit",
+        "Badger"
+      ],
+      "LOCATION": "Hills",
+      "CAUSE": "The rabbit plans to punish the badger for his crimes.",
+      "EFFECT": "The badger is severely injured but eventually recovers.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "The rabbit tricks the badger into a clay boat, causing him to drown and avenging the farmer's wife.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Rabbit",
+        "Badger",
+        "Farmer"
+      ],
+      "LOCATION": "Shore",
+      "CAUSE": "The rabbit devises a final plan to kill the badger.",
+      "EFFECT": "The badger is killed, the farmer finds peace, and the rabbit lives with him.",
+      "CAUSED_BY": [
+        3
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Farmer",
+      "TARGET": "Badger",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Badger",
+      "TARGET": "Farmer's Wife",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "Rabbit",
+      "TARGET": "Farmer",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Rabbit",
+      "TARGET": "Badger",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "Farmer",
+      "TARGET": "Rabbit",
+      "TYPE": "BONDS_WITH"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "TRICKSTER",
+    "HELPER_APPEARS",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "gemini:gemini-2.5-flash",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 12414,
+    "excerpt_chars": 11966
+  }
+}

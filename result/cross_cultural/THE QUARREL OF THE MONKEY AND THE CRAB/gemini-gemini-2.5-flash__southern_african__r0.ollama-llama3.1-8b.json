@@ -1,0 +1,156 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Spiritual and Religious",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Ntshimmiri the Monkey",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "From clever to wicked",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Kgalagala the Crab",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "From simple-hearted to wise",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Mfana-Kgalagala",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "From sorrowful to avenging",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Imbokodo the Grinding Stone",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "From rumbled to action",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Nyosi the Bee",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "From buzzed to action",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Ilahle the Live Coal",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "From glowed to action",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "the great Limpopo river",
+    "the bushveld",
+    "the kraal"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Kgalagala unearthed a plump, juicy marula fruit.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Kgalagala the Crab",
+        "Ntshimmiri the Monkey"
+      ],
+      "LOCATION": "the great Limpopo river",
+      "CAUSE": "Story opening",
+      "EFFECT": "Kgalagala finds a treasure.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Ntshimmiri snatched the marula, gobbling it down, and reluctantly gave the hard baobab seed to Kgalagala.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Ntshimmiri the Monkey",
+        "Kgalagala the Crab"
+      ],
+      "LOCATION": "the great Limpopo river",
+      "CAUSE": "Ntshimmiri's greed",
+      "EFFECT": "Kgalagala is deceived.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Kgalagala planted the seed. The seasons turned, the rains came, the sun shone, and slowly, slowly, a tiny shoot pushed through the red earth.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Kgalagala the Crab"
+      ],
+      "LOCATION": "the bushveld",
+      "CAUSE": "Kgalagala's hard work",
+      "EFFECT": "A tree grows.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Ntshimmiri awoke, his eyes gleaming when he heard of the mighty *umkhiwane* tree laden with fruit. A wicked plan hatched in his mind. He would climb the tree, eat all the ripe figs, and throw the hard, unripe ones at Kgalagala.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Ntshimmiri the Monkey"
+      ],
+      "LOCATION": "the bushveld",
+      "CAUSE": "Ntshimmiri's wickedness",
+      "EFFECT": "Kgalagala is harmed.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Mfana-Kgalagala scuttled forward, his sharp claws raised. 'Do you remember my father now, you murderer?' he hissed. 'It was... your father's... fault!' gasped Ntshimmiri, still unrepentant. 'Still lying?' cried Mfana-Kgalagala, and with a swift, sharp snap, he ended Ntshimmiri's wicked life.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Mfana-Kgalagala",
+        "Ntshimmiri the Monkey"
+      ],
+      "LOCATION": "the kraal",
+      "CAUSE": "Mfana-Kgalagala's justice",
+      "EFFECT": "Ntshimmiri is punished.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Ntshimmiri the Monkey",
+      "TARGET": "Kgalagala the Crab",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "Mfana-Kgalagala",
+      "TARGET": "Ntshimmiri the Monkey",
+      "TYPE": "OPPOSES"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "TRICKSTER",
+    "HELPER_APPEARS",
+    "ORDEAL",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 5340,
+    "excerpt_chars": 5340
+  }
+}

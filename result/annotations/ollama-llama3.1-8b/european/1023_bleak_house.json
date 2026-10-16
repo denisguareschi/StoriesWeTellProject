@@ -1,0 +1,168 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Tragedy",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Ada",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "from grief to acceptance",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Allan",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "from concern to reassurance",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Charley",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "from illness to recovery",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Esther",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "from loss to acceptance",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Richard",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "from concern to reassurance",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    }
+  ],
+  "LOCATIONS": [
+    "London",
+    "Lincoln's Inn Hall",
+    "Temple Bar",
+    "Esther's room",
+    "Allan's home",
+    "Esther's home"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "The weather is wet and foggy in London.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Ada"
+      ],
+      "LOCATION": "London",
+      "CAUSE": "Story opening",
+      "EFFECT": "The search for Charley begins.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Charley falls ill and is moved to Esther's room.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Esther",
+        "Charley"
+      ],
+      "LOCATION": "Esther's room",
+      "CAUSE": "Charley's illness",
+      "EFFECT": "Esther takes care of Charley.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "The search for Charley continues, but she is nowhere to be found.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Ada",
+        "Esther"
+      ],
+      "LOCATION": "London",
+      "CAUSE": "Charley's disappearance",
+      "EFFECT": "Ada and Esther are worried.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Allan reassures Esther about her appearance and tells her she is still beautiful.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Allan",
+        "Esther"
+      ],
+      "LOCATION": "Allan's home",
+      "CAUSE": "Esther's concern about her appearance",
+      "EFFECT": "Esther feels reassured.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "The family is reunited, and Esther reflects on the lessons she has learned from Charley's illness.",
+      "FUNCTION": "RETURN",
+      "CHARACTERS": [
+        "Ada",
+        "Esther",
+        "Allan",
+        "Charley",
+        "Richard"
+      ],
+      "LOCATION": "Esther's home",
+      "CAUSE": "Charley's recovery",
+      "EFFECT": "The family is reunited.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Ada",
+      "TARGET": "Esther",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Allan",
+      "TARGET": "Esther",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Charley",
+      "TARGET": "Esther",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Richard",
+      "TARGET": "Ada",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "HELPER_APPEARS",
+    "ORDEAL",
+    "MORAL_REWARD",
+    "RETURN"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [
+      "CHANGE_EVENT"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 1934752,
+    "excerpt_chars": 11607
+  }
+}

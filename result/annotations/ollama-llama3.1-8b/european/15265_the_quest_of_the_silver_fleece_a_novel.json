@@ -1,0 +1,169 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Tragedy",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Zora",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "from isolation to self-sacrificing love",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Bles",
+      "ROLE": "DEUTERAGONIST",
+      "TRANSFORMATION": "from love for Zora to love for Emma",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Emma",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "from innocence to sacrifice",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Mrs. Vanderpool",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "from self-centeredness to selflessness",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 2
+    },
+    {
+      "CHARACTER": "Elspeth",
+      "ROLE": "TRICKSTER",
+      "TRANSFORMATION": "from mysterious presence to catalyst for Zora's transformation",
+      "TRANSFORMATION_TYPE": "REVERSAL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "boy",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "swamp",
+    "cabin",
+    "school",
+    "house"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "The boy wearily dropped his heavy bundle and stood still, listening as the voice of crickets split the shadows and made the silence audible.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "boy"
+      ],
+      "LOCATION": "swamp",
+      "CAUSE": "Story opening",
+      "EFFECT": "The boy is alone and afraid in the swamp.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Mrs. Vanderpool had a most uncomfortable sense of being judged, of being weighed,--and there arose within her an impulse to self-justification.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Mrs. Vanderpool",
+        "Zora"
+      ],
+      "LOCATION": "school",
+      "CAUSE": "Mrs. Vanderpool's self-doubt",
+      "EFFECT": "Zora is offered a job as a maid.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Zora rose abruptly, and Mrs. Vanderpool feared, with a tightening of heart, that she had lost this strangely alluring girl.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Zora",
+        "Mrs. Vanderpool"
+      ],
+      "LOCATION": "house",
+      "CAUSE": "Zora's decision to accept the job",
+      "EFFECT": "Zora becomes a part of Mrs. Vanderpool's life.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Zora walked silently with her to the door, where, looking out, she saw Bles and Emma coming from Aunt Rachel's.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Zora",
+        "Bles",
+        "Emma"
+      ],
+      "LOCATION": "house",
+      "CAUSE": "Bles and Emma's arrival",
+      "EFFECT": "Zora is forced to confront her feelings for Bles.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "She stood very still and lifted up her eyes. The swamp was living, vibrant, tremulous. There where the first long note of night lay shot with burning crimson, burst in sudden radiance the wide beauty of the moon.",
+      "FUNCTION": "RESURRECTION",
+      "CHARACTERS": [
+        "Zora"
+      ],
+      "LOCATION": "swamp",
+      "CAUSE": "Zora's realization of her love for Bles",
+      "EFFECT": "Zora's transformation from isolation to self-sacrificing love.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Zora",
+      "TARGET": "Bles",
+      "TYPE": "BONDS_WITH"
+    },
+    {
+      "SOURCE": "Zora",
+      "TARGET": "Emma",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Mrs. Vanderpool",
+      "TARGET": "Zora",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Elspeth",
+      "TARGET": "Zora",
+      "TYPE": "DECEIVES"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "HELPER_APPEARS",
+    "RESURRECTION"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "issues": [
+      "event participant 'boy' not in CHARACTERS: added as SECONDARY"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 621771,
+    "excerpt_chars": 11823
+  }
+}

@@ -1,0 +1,134 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Tragedy",
+  "SETTING_DOMAIN": "Professional and Organizational",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Narrator",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "From detached prudence to profound empathy and sorrow.",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Bartleby",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "From diligent scrivener to passive, despairing, and ultimately dead man.",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    }
+  ],
+  "LOCATIONS": [
+    "Wall-street chambers",
+    "The Tombs",
+    "Yard",
+    "The Tombs (Yard)"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "The prudent lawyer, the Narrator, hires Bartleby as a scrivener for his Wall-street chambers.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Narrator",
+        "Bartleby"
+      ],
+      "LOCATION": "Wall-street chambers",
+      "CAUSE": "Story opening",
+      "EFFECT": "Bartleby begins working diligently, initially fitting into the office routine.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Bartleby begins to refuse to copy documents or perform other tasks, stating 'I would prefer not to'.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Narrator",
+        "Bartleby"
+      ],
+      "LOCATION": "Wall-street chambers",
+      "CAUSE": "Bartleby's inherent, unexplained disorder.",
+      "EFFECT": "The Narrator is perplexed and his peaceful routine is disturbed by Bartleby's passive resistance.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Bartleby's continued refusal to work or leave the office forces the Narrator to relocate his business.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Narrator",
+        "Bartleby"
+      ],
+      "LOCATION": "Wall-street chambers",
+      "CAUSE": "Bartleby's persistent passive resistance (Event 2).",
+      "EFFECT": "Bartleby remains in the abandoned office, and the Narrator's life is further disrupted.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Bartleby is arrested for vagrancy after refusing to leave the building and is subsequently imprisoned in The Tombs.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Bartleby",
+        "Narrator"
+      ],
+      "LOCATION": "The Tombs",
+      "CAUSE": "Bartleby's refusal to leave the building (Event 3) and his continued presence as a vagrant.",
+      "EFFECT": "Bartleby is confined, and the Narrator feels a sense of responsibility and pity.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "The Narrator finds Bartleby dead in the prison yard and later learns of his past employment in the Dead Letter Office.",
+      "FUNCTION": "TRANSFORMATION",
+      "CHARACTERS": [
+        "Narrator",
+        "Bartleby"
+      ],
+      "LOCATION": "The Tombs (Yard)",
+      "CAUSE": "Bartleby's despair and the harsh conditions of imprisonment (Event 4), combined with his past trauma.",
+      "EFFECT": "The Narrator is profoundly affected, gaining a deeper, sorrowful understanding of Bartleby's condition and humanity.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Narrator",
+      "TARGET": "Bartleby",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Narrator",
+      "TARGET": "Bartleby",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Bartleby",
+      "TARGET": "Narrator",
+      "TYPE": "OPPOSES"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "ORDEAL",
+    "TRANSFORMATION"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "gemini:gemini-2.5-flash",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 82408,
+    "excerpt_chars": 11991
+  }
+}

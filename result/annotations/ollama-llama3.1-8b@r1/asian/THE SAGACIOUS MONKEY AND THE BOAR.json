@@ -1,0 +1,160 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "the monkey-man",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "from being treated cruelly to being treated with kindness",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "the monkey",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "from being treated cruelly to being treated with kindness",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "the boar",
+      "ROLE": "TRICKSTER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "the monkey-man's wife",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "the butcher",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "the province of Shinshin in Japan",
+    "the forest near by",
+    "the house"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "The monkey-man came home in a very bad temper and told his wife to send for the butcher the next morning.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "the monkey-man",
+        "the monkey-man's wife"
+      ],
+      "LOCATION": "the house",
+      "CAUSE": "Story opening",
+      "EFFECT": "The monkey-man's temper is revealed",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "The monkey overheard the conversation between the monkey-man and his wife and decided to go to the boar for help.",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "the monkey",
+        "the boar"
+      ],
+      "LOCATION": "the forest near by",
+      "CAUSE": "ID 1",
+      "EFFECT": "The monkey goes to the boar for help",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 3,
+      "EVENT": "The boar came up with a plan to kidnap the monkey-man's child and the monkey would rescue it.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "the boar",
+        "the monkey"
+      ],
+      "LOCATION": "the forest near by",
+      "CAUSE": "ID 2",
+      "EFFECT": "The plan is set in motion",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 4,
+      "EVENT": "The boar kidnapped the monkey-man's child and the monkey had to rescue it.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "the boar",
+        "the monkey",
+        "the monkey-man's wife"
+      ],
+      "LOCATION": "the house",
+      "CAUSE": "ID 3",
+      "EFFECT": "The monkey rescues the child",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 5,
+      "EVENT": "The monkey-man and his wife were grateful to the monkey and decided to spare his life.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "the monkey-man",
+        "the monkey-man's wife",
+        "the monkey"
+      ],
+      "LOCATION": "the house",
+      "CAUSE": "ID 4",
+      "EFFECT": "The monkey is spared",
+      "CAUSED_BY": []
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "the boar",
+      "TARGET": "the monkey",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "the monkey",
+      "TARGET": "the boar",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "the monkey-man",
+      "TARGET": "the monkey",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "the monkey-man's wife",
+      "TARGET": "the monkey",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "the monkey-man",
+      "TARGET": "the boar",
+      "TYPE": "DECEIVES"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "QUEST",
+    "TRICKSTER",
+    "ORDEAL",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.5,
+    "seed": 1,
+    "attempts": 1,
+    "source_chars": 4772,
+    "excerpt_chars": 4772
+  }
+}

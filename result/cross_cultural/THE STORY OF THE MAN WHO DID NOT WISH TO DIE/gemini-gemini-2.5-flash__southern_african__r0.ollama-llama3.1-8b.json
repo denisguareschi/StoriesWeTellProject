@@ -1,0 +1,166 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Spiritual and Religious",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Thabo",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "understands the value of life and death",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Old Man Zola",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Sipho",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "The hunter",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "The ancestral messenger",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "The fish eagle",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "the mopane trees",
+    "Thabo's kraal",
+    "the Land of No End",
+    "uKhahlamba",
+    "Old Man Zola's resting place",
+    "the thorny bushveld"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Thabo, a man from the Mthembu family, is afraid of death and wants to live forever.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Thabo"
+      ],
+      "LOCATION": "Thabo's kraal",
+      "CAUSE": "Story opening",
+      "EFFECT": "Thabo decides to seek the Water of Ever-Youth",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Thabo meets a hunter who tells him about a band of cattle rustlers, but Thabo decides to seek the wisdom of Old Man Zola's sacred place.",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Thabo",
+        "The hunter"
+      ],
+      "LOCATION": "the thorny bushveld",
+      "CAUSE": "Thabo's desire to seek the Water of Ever-Youth",
+      "EFFECT": "Thabo decides to seek the wisdom of Old Man Zola's sacred place",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Thabo has a dream in which he is sent to the Land of No End, where he meets the fish eagle and sees the people who live there.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Thabo",
+        "The fish eagle"
+      ],
+      "LOCATION": "the Land of No End",
+      "CAUSE": "Thabo's desire to seek the Water of Ever-Youth",
+      "EFFECT": "Thabo is sent to the Land of No End",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Thabo realizes that the people in the Land of No End are weary of their endless days and long for death.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Thabo"
+      ],
+      "LOCATION": "the Land of No End",
+      "CAUSE": "Thabo's experience in the Land of No End",
+      "EFFECT": "Thabo begins to understand the value of life and death",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Thabo returns home, understanding the value of life and death, and lives a life of purpose, honouring his ancestors and nurturing his family.",
+      "FUNCTION": "RETURN",
+      "CHARACTERS": [
+        "Thabo"
+      ],
+      "LOCATION": "Thabo's kraal",
+      "CAUSE": "Thabo's experience in the Land of No End",
+      "EFFECT": "Thabo lives a life of purpose",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Thabo",
+      "TARGET": "Old Man Zola",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Old Man Zola",
+      "TARGET": "Thabo",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Thabo",
+      "TARGET": "The ancestral messenger",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "QUEST",
+    "HELPER_APPEARS",
+    "ORDEAL",
+    "RETURN"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "issues": [
+      "event participant 'The fish eagle' not in CHARACTERS: added as SECONDARY"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 8322,
+    "excerpt_chars": 8322
+  }
+}

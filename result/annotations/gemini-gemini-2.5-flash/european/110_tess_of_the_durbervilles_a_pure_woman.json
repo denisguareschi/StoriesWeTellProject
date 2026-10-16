@@ -1,0 +1,164 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Tragedy",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Tess",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "From hopeful worker to tragic victim bound by a fateful decision.",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 4
+    },
+    {
+      "CHARACTER": "Angel Clare",
+      "ROLE": "DEUTERAGONIST",
+      "TRANSFORMATION": "From romantic partner to grieving witness.",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Jack Durbeyfield",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "Believes himself to be of noble lineage.",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 1
+    },
+    {
+      "CHARACTER": "Parson Tringham",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "None",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "'Liza-Lu",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "Becomes a grieving witness.",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Road between Shaston and Marlott",
+    "Marlott, Vale of Blakemore",
+    "Dairy farm",
+    "Gravel-cliff",
+    "Wintoncestrian",
+    "Great West Hill",
+    "Red-brick building"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Parson Tringham reveals to Jack Durbeyfield that he is the lineal representative of the ancient d'Urberville family.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Jack Durbeyfield",
+        "Parson Tringham"
+      ],
+      "LOCATION": "Road between Shaston and Marlott",
+      "CAUSE": "Story opening",
+      "EFFECT": "Jack Durbeyfield's self-perception changes, and the family's aspirations are ignited.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Tess and Angel Clare work at the dairy farm, where their romantic relationship develops.",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Tess",
+        "Angel Clare"
+      ],
+      "LOCATION": "Dairy farm",
+      "CAUSE": "Tess seeking work and a new life.",
+      "EFFECT": "Their relationship deepens, leading to discussions of marriage.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 3,
+      "EVENT": "Angel Clare pressures Tess to marry him, implying she will leave the dairy with him at Christmas.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Tess",
+        "Angel Clare"
+      ],
+      "LOCATION": "Gravel-cliff",
+      "CAUSE": "Angel Clare's desire to marry Tess and the changing needs of the farm.",
+      "EFFECT": "Tess is forced to confront her past and make a difficult decision about her future.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Tess decides to marry Angel Clare, fearing the alternative of returning home or going to a strange place.",
+      "FUNCTION": "TRANSFORMATION",
+      "CHARACTERS": [
+        "Tess",
+        "Angel Clare"
+      ],
+      "LOCATION": "Gravel-cliff",
+      "CAUSE": "Angel Clare's pressure and Tess's fear of an undesirable future.",
+      "EFFECT": "Tess commits to a path that will ultimately lead to her tragic end.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Angel Clare and 'Liza-Lu witness Tess's execution, marked by the raising of a black flag.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Angel Clare",
+        "'Liza-Lu",
+        "Tess"
+      ],
+      "LOCATION": "Great West Hill",
+      "CAUSE": "Tess's actions (implied by 'Justice' being done).",
+      "EFFECT": "The story concludes with Tess's tragic death and the profound grief of her loved ones.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Angel Clare",
+      "TARGET": "Tess",
+      "TYPE": "BONDS_WITH"
+    },
+    {
+      "SOURCE": "Angel Clare",
+      "TARGET": "'Liza-Lu",
+      "TYPE": "BONDS_WITH"
+    },
+    {
+      "SOURCE": "Parson Tringham",
+      "TARGET": "Jack Durbeyfield",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Jack Durbeyfield",
+      "TARGET": "Tess",
+      "TYPE": "BONDS_WITH"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "QUEST",
+    "ORDEAL",
+    "TRANSFORMATION",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "gemini:gemini-2.5-flash",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 837458,
+    "excerpt_chars": 11675
+  }
+}

@@ -1,0 +1,176 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Hero's Journey",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Emma Woodhouse",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "From self-satisfied and meddling to mature and self-aware",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 3
+    },
+    {
+      "CHARACTER": "Mr. Knightley",
+      "ROLE": "DEUTERAGONIST",
+      "TRANSFORMATION": "None",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Mrs. Weston",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "From governess Miss Taylor to married Mrs. Weston",
+      "TRANSFORMATION_TYPE": "REVERSAL",
+      "CHANGE_EVENT": 1
+    },
+    {
+      "CHARACTER": "Mr. Woodhouse",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "None",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Harriet Smith",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "From being influenced by Emma to marrying Robert Martin",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 3
+    },
+    {
+      "CHARACTER": "Frank Churchill",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "None",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Hartfield",
+    "Randalls",
+    "Highbury",
+    "Church"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Miss Taylor's marriage leaves Emma feeling grief and intellectual solitude.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Emma Woodhouse",
+        "Mrs. Weston",
+        "Mr. Woodhouse"
+      ],
+      "LOCATION": "Hartfield",
+      "CAUSE": "Story opening",
+      "EFFECT": "Emma feels a void and is left to her own devices, setting the stage for her meddling.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Emma and Frank Churchill scheme to organize a dance.",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Emma Woodhouse",
+        "Frank Churchill",
+        "Mr. Woodhouse",
+        "Mr. Knightley",
+        "Mrs. Weston"
+      ],
+      "LOCATION": "Randalls",
+      "CAUSE": "Frank Churchill's desire to dance and Emma's inclination to show off her dancing",
+      "EFFECT": "Plans for a social gathering are made, involving many characters.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 3,
+      "EVENT": "Harriet Smith marries Robert Martin, with Emma's full satisfaction.",
+      "FUNCTION": "TRANSFORMATION",
+      "CHARACTERS": [
+        "Emma Woodhouse",
+        "Harriet Smith",
+        "Mr. Knightley"
+      ],
+      "LOCATION": "Church",
+      "CAUSE": "Harriet's natural engagements with the Martins",
+      "EFFECT": "Emma's friendship with Harriet changes, and Emma feels satisfaction, indicating her personal growth.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 4,
+      "EVENT": "Mr. Woodhouse strongly resists Emma and Mr. Knightley's marriage plans.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Emma Woodhouse",
+        "Mr. Knightley",
+        "Mr. Woodhouse"
+      ],
+      "LOCATION": "Hartfield",
+      "CAUSE": "Emma and Mr. Knightley's decision to marry",
+      "EFFECT": "Emma's courage fails, and the marriage plans are stalled.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 5,
+      "EVENT": "A poultry-house robbery frightens Mr. Woodhouse into consenting to Emma's marriage.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Emma Woodhouse",
+        "Mr. Knightley",
+        "Mr. Woodhouse",
+        "Mrs. Weston"
+      ],
+      "LOCATION": "Hartfield",
+      "CAUSE": "Mr. Woodhouse's fear of housebreaking and his dependence on the Knightleys' protection",
+      "EFFECT": "Emma and Mr. Knightley are able to marry, leading to their happiness.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Emma Woodhouse",
+      "TARGET": "Mr. Knightley",
+      "TYPE": "BONDS_WITH"
+    },
+    {
+      "SOURCE": "Mr. Knightley",
+      "TARGET": "Emma Woodhouse",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Emma Woodhouse",
+      "TARGET": "Mrs. Weston",
+      "TYPE": "BONDS_WITH"
+    },
+    {
+      "SOURCE": "Emma Woodhouse",
+      "TARGET": "Harriet Smith",
+      "TYPE": "BONDS_WITH"
+    },
+    {
+      "SOURCE": "Mr. Woodhouse",
+      "TARGET": "Emma Woodhouse",
+      "TYPE": "BONDS_WITH"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "QUEST",
+    "TRANSFORMATION",
+    "ORDEAL",
+    "HELPER_APPEARS"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "gemini:gemini-2.5-flash",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 883027,
+    "excerpt_chars": 11837
+  }
+}

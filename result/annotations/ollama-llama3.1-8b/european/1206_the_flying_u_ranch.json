@@ -1,0 +1,176 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Tragedy",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Weary",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "learns to navigate conflicts and relationships",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Miguel",
+      "ROLE": "TRICKSTER",
+      "TRANSFORMATION": "initially causes tension, but ultimately helps the Happy Family",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 1
+    },
+    {
+      "CHARACTER": "Dunk",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "initially opposed to the Happy Family, but ultimately yields",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 3
+    },
+    {
+      "CHARACTER": "Old Man",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "returns home and recovers",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 4
+    },
+    {
+      "CHARACTER": "Happy Jack",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "recovers",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Oleson",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Flying U ranch",
+    "Denson coulee"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Miguel arrives at the Flying U ranch",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Weary",
+        "Miguel"
+      ],
+      "LOCATION": "Flying U ranch",
+      "CAUSE": "Story opening",
+      "EFFECT": "Tension between the Happy Family and Miguel",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Dunk and Oleson arrive at Denson coulee",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Weary",
+        "Dunk",
+        "Oleson"
+      ],
+      "LOCATION": "Denson coulee",
+      "CAUSE": "New characters arrive",
+      "EFFECT": "Conflict between the Happy Family and Dunk",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Weary negotiates with Dunk",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Weary",
+        "Dunk"
+      ],
+      "LOCATION": "Denson coulee",
+      "CAUSE": "Weary's initiative",
+      "EFFECT": "Tension between the Happy Family and Dunk begins to ease",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Old Man returns home",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Weary",
+        "Old Man"
+      ],
+      "LOCATION": "Flying U ranch",
+      "CAUSE": "Old Man's recovery",
+      "EFFECT": "Hope and optimism return to the Happy Family",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Happy Jack recovers",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Weary",
+        "Happy Jack"
+      ],
+      "LOCATION": "Flying U ranch",
+      "CAUSE": "Old Man's return and recovery",
+      "EFFECT": "The Happy Family is reunited and at peace",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Weary",
+      "TARGET": "Miguel",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Weary",
+      "TARGET": "Dunk",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Dunk",
+      "TARGET": "Weary",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Old Man",
+      "TARGET": "Happy Jack",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Weary",
+      "TARGET": "Happy Jack",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "HELPER_APPEARS",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [
+      "CHANGE_EVENT"
+    ],
+    "issues": [
+      "event participant 'Oleson' not in CHARACTERS: added as SECONDARY"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 229791,
+    "excerpt_chars": 11901
+  }
+}

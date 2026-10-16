@@ -1,0 +1,155 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Jackal",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "None",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Wolf",
+      "ROLE": "DEUTERAGONIST",
+      "TRANSFORMATION": "From foolish and trusting to severely injured and without reward",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 4
+    },
+    {
+      "CHARACTER": "Leader",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "None",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Driver",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "None",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Borders of the colony",
+    "Road",
+    "Wagon"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Jackal sees a wagon laden with fish and desires to obtain some.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Jackal"
+      ],
+      "LOCATION": "Borders of the colony",
+      "CAUSE": "Story opening",
+      "EFFECT": "Jackal devises a plan to get into the wagon.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Jackal pretends to be dead on the road and is thrown into the wagon by the leader and driver.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Jackal",
+        "Leader",
+        "Driver"
+      ],
+      "LOCATION": "Road",
+      "CAUSE": "Jackal's inability to get into the wagon directly and his desire for fish.",
+      "EFFECT": "Jackal gains access to the fish inside the wagon.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Jackal throws fish out of the wagon onto the road and then jumps out to secure his prize.",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Jackal"
+      ],
+      "LOCATION": "Wagon",
+      "CAUSE": "Jackal's successful deception to get into the wagon.",
+      "EFFECT": "Jackal obtains a large quantity of fish, but Wolf eats more than his share, causing Jackal to hold a grudge.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Jackal deceives Wolf into lying in the road to get fish, resulting in Wolf being severely thrashed by the wagon leader.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Jackal",
+        "Wolf",
+        "Leader"
+      ],
+      "LOCATION": "Road",
+      "CAUSE": "Jackal's grudge against Wolf for eating too much fish.",
+      "EFFECT": "Wolf is severely injured and fails to obtain any fish.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Wolf, injured, hobbles off to tell his misfortune to Jackal, who pretends to comfort him.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Wolf",
+        "Jackal"
+      ],
+      "LOCATION": "Borders of the colony",
+      "CAUSE": "Wolf following Jackal's deceptive advice and suffering the consequences.",
+      "EFFECT": "Wolf remains injured and without fish, while Jackal's grudge is satisfied.",
+      "CAUSED_BY": [
+        3
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Jackal",
+      "TARGET": "Wolf",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "Wolf",
+      "TARGET": "Jackal",
+      "TYPE": "BONDS_WITH"
+    },
+    {
+      "SOURCE": "Leader",
+      "TARGET": "Wolf",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Jackal",
+      "TARGET": "Wolf",
+      "TYPE": "OPPOSES"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "TRICKSTER",
+    "QUEST",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [
+      "CAUSED_BY"
+    ],
+    "model": "gemini:gemini-2.5-flash",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 1334,
+    "excerpt_chars": 1334
+  }
+}

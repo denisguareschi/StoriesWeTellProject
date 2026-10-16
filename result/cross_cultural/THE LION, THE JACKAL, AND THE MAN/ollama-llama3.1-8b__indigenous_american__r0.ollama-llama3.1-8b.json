@@ -1,0 +1,143 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Spiritual and Religious",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Takoda, the Lion",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "learns to respect human strength",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Waban, the Jackal",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "encourages Takoda's growth",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Mitakuye Oyasin, the Spirit of the Forest",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "teaches Takoda about human strength",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Teton, the young warrior",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "demonstrates human strength",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "the forest",
+    "the prairie"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Takoda and Waban strolled through the forest.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Takoda, the Lion",
+        "Waban, the Jackal"
+      ],
+      "LOCATION": "the forest",
+      "CAUSE": "Story opening",
+      "EFFECT": "The two begin their journey.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Waban said, 'I will show you one who is stronger than you.'",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Takoda, the Lion",
+        "Waban, the Jackal"
+      ],
+      "LOCATION": "the forest",
+      "CAUSE": "Waban's boast",
+      "EFFECT": "Takoda and Waban set out to find the mysterious being.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Teton stood tall and strong, his eyes fixed on Takoda.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Takoda, the Lion",
+        "Teton, the young warrior"
+      ],
+      "LOCATION": "the prairie",
+      "CAUSE": "Teton's presence",
+      "EFFECT": "Takoda is challenged by Teton.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Teton drew his bow and fired a shot that struck Takoda in the shoulder.",
+      "FUNCTION": "BETRAYAL",
+      "CHARACTERS": [
+        "Takoda, the Lion",
+        "Teton, the young warrior"
+      ],
+      "LOCATION": "the prairie",
+      "CAUSE": "Teton's attack",
+      "EFFECT": "Takoda is wounded.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Takoda said, 'No, Waban, I have seen a true warrior. His strength is not of the body alone, but of the spirit.'",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Takoda, the Lion",
+        "Waban, the Jackal"
+      ],
+      "LOCATION": "the forest",
+      "CAUSE": "Takoda's realization",
+      "EFFECT": "Takoda learns to respect human strength.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Waban, the Jackal",
+      "TARGET": "Takoda, the Lion",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Teton, the young warrior",
+      "TARGET": "Takoda, the Lion",
+      "TYPE": "OPPOSES"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "TRICKSTER",
+    "ORDEAL",
+    "BETRAYAL",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 2878,
+    "excerpt_chars": 2878
+  }
+}

@@ -1,0 +1,166 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Katharine Hilbery",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "loses her sense of purpose and connection with others",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 3
+    },
+    {
+      "CHARACTER": "Ralph Denham",
+      "ROLE": "DEUTERAGONIST",
+      "TRANSFORMATION": "gains a sense of connection and purpose through his interactions with Katharine",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Sally Seal",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "helps Ralph and Katharine find their sense of purpose and connection with others",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Mrs. Hilbery",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "helps Katharine find her sense of purpose and connection with others",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Mr. Fortescue",
+      "ROLE": "TRICKSTER",
+      "TRANSFORMATION": "uses his wit and charm to manipulate the situation",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "London",
+    "Highgate",
+    "Chelsea"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Katharine hosts a tea party for her mother and friends",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Katharine Hilbery",
+        "Mrs. Hilbery",
+        "Mr. Fortescue"
+      ],
+      "LOCATION": "London",
+      "CAUSE": "Story opening",
+      "EFFECT": "Katharine's guests arrive and the party begins",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Katharine is bored and disconnected from her mother and friends",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Katharine Hilbery",
+        "Mrs. Hilbery"
+      ],
+      "LOCATION": "London",
+      "CAUSE": "Katharine's guests arrive and the party begins",
+      "EFFECT": "Katharine feels disconnected and bored",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Katharine meets Ralph Denham and begins to form a connection with him",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Katharine Hilbery",
+        "Ralph Denham"
+      ],
+      "LOCATION": "London",
+      "CAUSE": "Katharine's boredom and disconnection",
+      "EFFECT": "Katharine begins to form a connection with Ralph",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Ralph and Katharine discuss their lives and find common ground",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Ralph Denham",
+        "Katharine Hilbery"
+      ],
+      "LOCATION": "London",
+      "CAUSE": "Katharine's connection with Ralph",
+      "EFFECT": "Ralph and Katharine find common ground and form a deeper connection",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Ralph and Katharine share a moment of understanding and connection",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Ralph Denham",
+        "Katharine Hilbery"
+      ],
+      "LOCATION": "Chelsea",
+      "CAUSE": "Ralph and Katharine's connection",
+      "EFFECT": "Ralph and Katharine share a moment of understanding and connection",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Katharine Hilbery",
+      "TARGET": "Ralph Denham",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Ralph Denham",
+      "TARGET": "Katharine Hilbery",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Sally Seal",
+      "TARGET": "Ralph Denham",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Mrs. Hilbery",
+      "TARGET": "Katharine Hilbery",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Mr. Fortescue",
+      "TARGET": "Katharine Hilbery",
+      "TYPE": "DECEIVES"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "ORDEAL",
+    "HELPER_APPEARS",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.5,
+    "seed": 1,
+    "attempts": 1,
+    "source_chars": 946075,
+    "excerpt_chars": 11870
+  }
+}

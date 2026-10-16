@@ -1,0 +1,164 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Spiritual and Religious",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Takoda, the Tiger",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "learns to respect and honor the power of the great and noble ones",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Hanwi, the Ram",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "uses cunning and bravery to protect his family",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 3
+    },
+    {
+      "CHARACTER": "Ictinike, the Jackal",
+      "ROLE": "TRICKSTER",
+      "TRANSFORMATION": "uses cunning to trick Takoda, but ultimately fails",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Wokiya",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "uses wisdom and bravery to protect her family",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 3
+    },
+    {
+      "CHARACTER": "Little One",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "plays a key role in distracting the hunters",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": 3
+    }
+  ],
+  "LOCATIONS": [
+    "the forest",
+    "Hanwi's clearing",
+    "their den"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Takoda, the Tiger, chanced upon a clearing and saw Hanwi, the Ram.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Takoda, the Tiger",
+        "Hanwi, the Ram"
+      ],
+      "LOCATION": "Hanwi's clearing",
+      "CAUSE": "Story opening",
+      "EFFECT": "Takoda is frightened and flees.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Takoda and Ictinike set out for Hanwi's clearing, their bellies growling with hunger.",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Takoda, the Tiger",
+        "Ictinike, the Jackal"
+      ],
+      "LOCATION": "the forest",
+      "CAUSE": "Takoda and Ictinike want to feast on Hanwi's flesh.",
+      "EFFECT": "Hanwi and his family are in danger.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Hanwi's wife, Wokiya, instructs Hanwi to pinch their child, Little One, to distract the hunters.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Hanwi, the Ram",
+        "Wokiya",
+        "Little One"
+      ],
+      "LOCATION": "Hanwi's clearing",
+      "CAUSE": "Wokiya wants to protect her family.",
+      "EFFECT": "The hunters are distracted and Hanwi and his family escape.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Takoda and Ictinike are bound together and flee in terror, dragging each other through the forest.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Takoda, the Tiger",
+        "Ictinike, the Jackal"
+      ],
+      "LOCATION": "the forest",
+      "CAUSE": "Takoda and Ictinike are tricked by Hanwi and his family.",
+      "EFFECT": "Takoda and Ictinike are exhausted and half-dead.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Takoda and Ictinike return to their den, exhausted and half-dead, and tell the story of their encounter with Hanwi.",
+      "FUNCTION": "RETURN",
+      "CHARACTERS": [
+        "Takoda, the Tiger",
+        "Ictinike, the Jackal"
+      ],
+      "LOCATION": "their den",
+      "CAUSE": "Takoda and Ictinike want to share their story.",
+      "EFFECT": "The story is told as a reminder to respect and honor the power of the great and noble ones.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Hanwi, the Ram",
+      "TARGET": "Takoda, the Tiger",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Wokiya",
+      "TARGET": "Hanwi, the Ram",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Ictinike, the Jackal",
+      "TARGET": "Takoda, the Tiger",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "Takoda, the Tiger",
+      "TARGET": "Hanwi, the Ram",
+      "TYPE": "OPPOSES"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "QUEST",
+    "HELPER_APPEARS",
+    "ORDEAL",
+    "RETURN"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [
+      "CHANGE_EVENT"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 2,
+    "source_chars": 2751,
+    "excerpt_chars": 2751
+  }
+}

@@ -1,0 +1,177 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Hero's Journey",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Pip",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "From fearful child to ambitious young man, then mature.",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Estella",
+      "ROLE": "DEUTERAGONIST",
+      "TRANSFORMATION": "From proud and insensible to softened and understanding through suffering.",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "The Convict",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "NONE",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "My guardian",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "NONE",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Miss Havisham",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "NONE",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Joe Gargery",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "NONE",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Orlick",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Churchyard",
+    "Village",
+    "Satis House",
+    "The Boar",
+    "Blue Boar"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Pip, a young orphan, is threatened by a fearful convict in the churchyard.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Pip",
+        "The Convict"
+      ],
+      "LOCATION": "Churchyard",
+      "CAUSE": "Story opening",
+      "EFFECT": "Pip is terrified and forced to comply with the convict's demands.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Pip plays whist with Estella and Miss Havisham, developing deep feelings for Estella despite her coldness.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Pip",
+        "Estella",
+        "Miss Havisham",
+        "My guardian"
+      ],
+      "LOCATION": "Satis House",
+      "CAUSE": "Pip's presence at Miss Havisham's house.",
+      "EFFECT": "Pip becomes deeply infatuated with Estella and desires to be worthy of her.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 3,
+      "EVENT": "Pip acknowledges his love for Estella and his growing contempt for Joe, reflecting his social aspirations.",
+      "FUNCTION": "TRANSFORMATION",
+      "CHARACTERS": [
+        "Pip",
+        "Estella",
+        "Joe Gargery"
+      ],
+      "LOCATION": "The Boar",
+      "CAUSE": "Pip's infatuation with Estella and desire to elevate his social standing.",
+      "EFFECT": "Pip distances himself emotionally from his humble origins and Joe.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Pip resolves to inform his guardian about his doubts concerning Orlick for a post of trust.",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Pip",
+        "My guardian",
+        "Orlick"
+      ],
+      "LOCATION": "Blue Boar",
+      "CAUSE": "Pip's knowledge of Orlick's character and a sense of responsibility.",
+      "EFFECT": "His guardian agrees to pay Orlick off from the post.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 5,
+      "EVENT": "Pip and Estella meet again in the ruined garden, where Estella reveals her transformation through suffering and they part as friends.",
+      "FUNCTION": "TRANSFORMATION",
+      "CHARACTERS": [
+        "Pip",
+        "Estella"
+      ],
+      "LOCATION": "Satis House",
+      "CAUSE": "Passage of many years and their individual life journeys.",
+      "EFFECT": "Estella is softened, and they achieve a mutual understanding and friendship.",
+      "CAUSED_BY": []
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Pip",
+      "TARGET": "Estella",
+      "TYPE": "BONDS_WITH"
+    },
+    {
+      "SOURCE": "Estella",
+      "TARGET": "Pip",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "The Convict",
+      "TARGET": "Pip",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "My guardian",
+      "TARGET": "Pip",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "ORDEAL",
+    "TRANSFORMATION",
+    "QUEST"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "issues": [
+      "event participant 'Orlick' not in CHARACTERS: added as SECONDARY"
+    ],
+    "model": "gemini:gemini-2.5-flash",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 993835,
+    "excerpt_chars": 11828
+  }
+}

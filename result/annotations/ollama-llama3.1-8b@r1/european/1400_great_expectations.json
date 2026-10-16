@@ -1,0 +1,179 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Tragedy",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Pip",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "from undersized boy to adult",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Miss Havisham",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "from wealthy spinster to isolated eccentric",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 2
+    },
+    {
+      "CHARACTER": "Estella",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "from cold and distant to vulnerable and emotional",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Joe",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "from loyal and kind to ignored and mistreated",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Orlick",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "from minor antagonist to major threat",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Convict",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "marsh country",
+    "churchyard",
+    "Miss Havisham's house",
+    "Blue Boar",
+    "desolate garden"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Pip meets the convict in the churchyard",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Pip",
+        "Convict"
+      ],
+      "LOCATION": "churchyard",
+      "CAUSE": "Story opening",
+      "EFFECT": "Pip is drawn into a world of crime and adventure",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Pip meets Miss Havisham and Estella",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Pip",
+        "Miss Havisham",
+        "Estella"
+      ],
+      "LOCATION": "Miss Havisham's house",
+      "CAUSE": "Pip's meeting with the convict sets him on a path of discovery",
+      "EFFECT": "Pip becomes infatuated with Estella",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Pip's guardian suspects Orlick's loyalty",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Pip"
+      ],
+      "LOCATION": "Blue Boar",
+      "CAUSE": "Pip's experiences raise questions about Orlick's trustworthiness",
+      "EFFECT": "Pip's guardian takes action to investigate Orlick",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Pip and Estella reunite in the desolate garden",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Pip",
+        "Estella"
+      ],
+      "LOCATION": "desolate garden",
+      "CAUSE": "Estella returns to the place where she and Pip first met",
+      "EFFECT": "Pip and Estella reconnect and find closure",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Pip and Estella part ways",
+      "FUNCTION": "RETURN",
+      "CHARACTERS": [
+        "Pip",
+        "Estella"
+      ],
+      "LOCATION": "desolate garden",
+      "CAUSE": "Pip and Estella must say goodbye",
+      "EFFECT": "Pip and Estella find a sense of resolution and friendship",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Pip",
+      "TARGET": "Estella",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Pip",
+      "TARGET": "Joe",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Pip",
+      "TARGET": "Orlick",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Miss Havisham",
+      "TARGET": "Estella",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Estella",
+      "TARGET": "Pip",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "HELPER_APPEARS",
+    "QUEST",
+    "RETURN"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [
+      "CHANGE_EVENT"
+    ],
+    "issues": [
+      "event participant 'Convict' not in CHARACTERS: added as SECONDARY"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.5,
+    "seed": 1,
+    "attempts": 1,
+    "source_chars": 993835,
+    "excerpt_chars": 11828
+  }
+}

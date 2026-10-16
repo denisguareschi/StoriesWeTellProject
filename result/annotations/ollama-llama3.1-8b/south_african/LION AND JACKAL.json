@@ -1,0 +1,164 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Lion",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "from anger to death",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Jackal",
+      "ROLE": "TRICKSTER",
+      "TRANSFORMATION": "from cunning to triumph",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Mrs. Lion",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "from hunger to death",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Mrs. Jackal",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "from hunger to abundance",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Little Jackals",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "from hunger to abundance",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "krantz",
+    "precipice"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "The Lion and the Jackal agreed to hunt on shares.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Lion",
+        "Jackal"
+      ],
+      "LOCATION": "krantz",
+      "CAUSE": "Story opening",
+      "EFFECT": "The hunt commenced.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "The Lion returned to see his family, and also to enjoy, as he thought, a plentiful supply of his spoil; when, to his utter surprise, he found Mrs. Lion and all the young Lions on the point of death from sheer hunger.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Lion",
+        "Mrs. Lion"
+      ],
+      "LOCATION": "krantz",
+      "CAUSE": "The Lion's return",
+      "EFFECT": "The Lion's anger",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "The Jackal was more or less prepared for a storm, and had taken the precaution to remove all his belongings to the top of a krantz (i. e., a cliff), accessible only by a most difficult and circuitous path, which he alone knew.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Jackal"
+      ],
+      "LOCATION": "krantz",
+      "CAUSE": "The Jackal's preparation",
+      "EFFECT": "The Lion's frustration",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "The Jackal suggested that a reim should be lowered to haul up his uncle, and when the Lion was drawn about halfway up by the whole family of Jackals, the reim was cleverly cut, and down went the Lion with a tremendous crash which hurt him very much.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Jackal",
+        "Lion",
+        "Mrs. Jackal",
+        "Little Jackals"
+      ],
+      "LOCATION": "krantz",
+      "CAUSE": "The Jackal's trick",
+      "EFFECT": "The Lion's injury",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "The Jackal had a round stone made red-hot, and wrapped a quantity of inside fat, or suet, round it, to make it appear like a ball of fat. When the Lion saw it held out, he opened his capacious mouth to the utmost extent, and the wily Jackal cleverly dropped the hot ball right into it, which ran through the poor old beast, killing him on the spot.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Jackal",
+        "Lion"
+      ],
+      "LOCATION": "krantz",
+      "CAUSE": "The Jackal's final trick",
+      "EFFECT": "The Lion's death",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Jackal",
+      "TARGET": "Lion",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "Jackal",
+      "TARGET": "Mrs. Lion",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Jackal",
+      "TARGET": "Mrs. Jackal",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Jackal",
+      "TARGET": "Little Jackals",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Lion",
+      "TARGET": "Jackal",
+      "TYPE": "OPPOSES"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "ORDEAL",
+    "TRICKSTER"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 4442,
+    "excerpt_chars": 4442
+  }
+}

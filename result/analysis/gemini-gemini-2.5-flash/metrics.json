@@ -1,0 +1,378 @@
+{
+  "annotator": "gemini-gemini-2.5-flash",
+  "n_stories": 60,
+  "stories_per_zone": {
+    "asian": 20,
+    "european": 20,
+    "south_african": 20
+  },
+  "protocol": {
+    "v2-sampled-single-pass": 60
+  },
+  "derived_fields": {
+    "CAUSED_BY": 4,
+    "CHANGE_EVENT": 3
+  },
+  "mean_similarity": {
+    "ged": 0.16939454068081605,
+    "motif": 0.16141249353292114,
+    "role": 0.164868008907322,
+    "wl": 0.32608552667855933,
+    "composite": 0.20544014244990463
+  },
+  "metric_spearman": {
+    "ged~motif": 0.2146110309079494,
+    "ged~role": 0.3082445835661792,
+    "ged~wl": 0.05976039296912212,
+    "motif~role": 0.5772688772047171,
+    "motif~wl": 0.17999136450107223,
+    "role~wl": 0.2425465166739625
+  },
+  "k": 4,
+  "silhouette_scan": {
+    "2": 0.06149890140294388,
+    "3": 0.043371700328376825,
+    "4": 0.0645503459109816,
+    "5": 0.05233273716346311,
+    "6": 0.039941645633306634,
+    "7": 0.02399185015229016,
+    "8": 0.03164173364390711
+  },
+  "cluster_sizes": {
+    "C0: mixed | european 49%": 37,
+    "C1: Trickster+Call | south_african 65%": 20,
+    "C2: Betrayal+Reward | asian 50%": 2,
+    "C3: Betrayal+Call | asian 100%": 1
+  },
+  "cluster_stability": {
+    "mean_ari": 0.7339435087457679,
+    "sd_ari": 0.23957922232559184,
+    "n_boot": 200
+  },
+  "cluster_zone_association": {
+    "ari": 0.13489065798903674,
+    "p_value": 0.0007998400319936012
+  },
+  "zone_separation": {
+    "overall": {
+      "observed": 0.0338884084930654,
+      "null_mean": 1.691003693831574e-05,
+      "p_value": 0.0001999600079984003
+    },
+    "pairwise": {
+      "asian vs european": {
+        "observed": 0.0069378960150288105,
+        "null_mean": -1.8378381432132508e-05,
+        "p_value": 0.04319136172765447
+      },
+      "asian vs south_african": {
+        "observed": 0.036321372333633084,
+        "null_mean": -1.2543378609074507e-06,
+        "p_value": 0.0001999600079984003
+      },
+      "european vs south_african": {
+        "observed": 0.0584059571305342,
+        "null_mean": -5.639331819897508e-07,
+        "p_value": 0.0001999600079984003
+      }
+    },
+    "silhouette_by_zone": 0.019460506534382305
+  },
+  "mean_within_zone_similarity": {
+    "asian": 0.21549001427030975,
+    "european": 0.2407980659106772,
+    "south_african": 0.22895792376479215
+  },
+  "functions": [
+    {
+      "function": "QUEST",
+      "presence": {
+        "asian": 0.45,
+        "european": 0.55,
+        "south_african": 0.2
+      },
+      "mean_share": {
+        "asian": 0.1,
+        "european": 0.12000000000000002,
+        "south_african": 0.04
+      },
+      "kruskal_H": 5.520319116757436,
+      "p_value": 0.06328167043332086,
+      "epsilon2": 0.061759984504516426,
+      "q_value": 0.17402459369163237,
+      "label": "shared"
+    },
+    {
+      "function": "SACRIFICE",
+      "presence": {
+        "asian": 0.0,
+        "european": 0.1,
+        "south_african": 0.0
+      },
+      "mean_share": {
+        "asian": 0.0,
+        "european": 0.02,
+        "south_african": 0.0
+      },
+      "kruskal_H": 4.068965517241477,
+      "p_value": 0.130748093341092,
+      "epsilon2": 0.03629764065335924,
+      "q_value": 0.239704837792002,
+      "label": "shared"
+    },
+    {
+      "function": "TRICKSTER",
+      "presence": {
+        "asian": 0.35,
+        "european": 0.25,
+        "south_african": 0.9
+      },
+      "mean_share": {
+        "asian": 0.09,
+        "european": 0.05,
+        "south_african": 0.39000000000000007
+      },
+      "kruskal_H": 25.33609394920073,
+      "p_value": 3.15019256704386e-06,
+      "epsilon2": 0.4094051570035216,
+      "q_value": 3.465211823748246e-05,
+      "label": "culture-bound"
+    },
+    {
+      "function": "TRANSFORMATION",
+      "presence": {
+        "asian": 0.4,
+        "european": 0.45,
+        "south_african": 0.1
+      },
+      "mean_share": {
+        "asian": 0.09,
+        "european": 0.10000000000000002,
+        "south_african": 0.02
+      },
+      "kruskal_H": 6.613065040307233,
+      "p_value": 0.03664301262883373,
+      "epsilon2": 0.08093096561942514,
+      "q_value": 0.13435771297239035,
+      "label": "shared"
+    },
+    {
+      "function": "MORAL_REWARD",
+      "presence": {
+        "asian": 0.65,
+        "european": 0.5,
+        "south_african": 0.3
+      },
+      "mean_share": {
+        "asian": 0.13000000000000003,
+        "european": 0.11000000000000001,
+        "south_african": 0.06
+      },
+      "kruskal_H": 4.717995689655166,
+      "p_value": 0.09451489434102464,
+      "epsilon2": 0.04768413490623098,
+      "q_value": 0.2079327675502542,
+      "label": "shared"
+    },
+    {
+      "function": "BETRAYAL",
+      "presence": {
+        "asian": 0.2,
+        "european": 0.1,
+        "south_african": 0.25
+      },
+      "mean_share": {
+        "asian": 0.04,
+        "european": 0.02,
+        "south_african": 0.05
+      },
+      "kruskal_H": 1.5324675324675057,
+      "p_value": 0.46476017169804906,
+      "epsilon2": 0.0,
+      "q_value": 0.568040209853171,
+      "label": "shared"
+    },
+    {
+      "function": "HELPER_APPEARS",
+      "presence": {
+        "asian": 0.55,
+        "european": 0.35,
+        "south_african": 0.4
+      },
+      "mean_share": {
+        "asian": 0.11000000000000001,
+        "european": 0.06999999999999999,
+        "south_african": 0.07999999999999999
+      },
+      "kruskal_H": 1.7352941176470613,
+      "p_value": 0.4199384782364066,
+      "epsilon2": 0.0,
+      "q_value": 0.568040209853171,
+      "label": "shared"
+    },
+    {
+      "function": "RETURN",
+      "presence": {
+        "asian": 0.25,
+        "european": 0.3,
+        "south_african": 0.0
+      },
+      "mean_share": {
+        "asian": 0.05,
+        "european": 0.06,
+        "south_african": 0.0
+      },
+      "kruskal_H": 6.786641929499044,
+      "p_value": 0.03359691724947969,
+      "epsilon2": 0.08397617420173761,
+      "q_value": 0.13435771297239035,
+      "label": "shared"
+    },
+    {
+      "function": "CALL_TO_ADVENTURE",
+      "presence": {
+        "asian": 0.9,
+        "european": 1.0,
+        "south_african": 0.9
+      },
+      "mean_share": {
+        "asian": 0.2,
+        "european": 0.22000000000000003,
+        "south_african": 0.18000000000000005
+      },
+      "kruskal_H": 2.9500000000000774,
+      "p_value": 0.22877872704521354,
+      "epsilon2": 0.016666666666668026,
+      "q_value": 0.359509428213907,
+      "label": "universal"
+    },
+    {
+      "function": "ORDEAL",
+      "presence": {
+        "asian": 0.7,
+        "european": 0.85,
+        "south_african": 0.65
+      },
+      "mean_share": {
+        "asian": 0.17,
+        "european": 0.21000000000000002,
+        "south_african": 0.17
+      },
+      "kruskal_H": 1.2176501974175722,
+      "p_value": 0.543989627877951,
+      "epsilon2": 0.0,
+      "q_value": 0.5983885906657461,
+      "label": "universal"
+    },
+    {
+      "function": "RESURRECTION",
+      "presence": {
+        "asian": 0.1,
+        "european": 0.1,
+        "south_african": 0.05
+      },
+      "mean_share": {
+        "asian": 0.02,
+        "european": 0.02,
+        "south_african": 0.01
+      },
+      "kruskal_H": 0.42909090909091935,
+      "p_value": 0.8069081332558803,
+      "epsilon2": 0.0,
+      "q_value": 0.8069081332558803,
+      "label": "shared"
+    }
+  ],
+  "top_cross_zone_pairs": [
+    {
+      "similarity": 0.5014139516024998,
+      "a": "THE STORY OF THE MAN WHO DID NOT WISH TO DIE",
+      "b": "11_alices_adventures_in_wonderland",
+      "zone_a": "asian",
+      "zone_b": "european"
+    },
+    {
+      "similarity": 0.4837970229034561,
+      "a": "THE WHITE HARE AND THE CROCODILES",
+      "b": "THE HUNT OF LION AND JACKAL",
+      "zone_a": "asian",
+      "zone_b": "south_african"
+    },
+    {
+      "similarity": 0.4780983395962626,
+      "a": "THE FARMER AND THE BADGER",
+      "b": "THE TIGER, THE RAM, AND THE JACKAL",
+      "zone_a": "asian",
+      "zone_b": "south_african"
+    },
+    {
+      "similarity": 0.45208636828940846,
+      "a": "THE ADVENTURES OF KINTARO, THE GOLDEN BOY",
+      "b": "113_the_secret_garden",
+      "zone_a": "asian",
+      "zone_b": "european"
+    },
+    {
+      "similarity": 0.4394245298814314,
+      "a": "MY LORD BAG OF RICE",
+      "b": "113_the_secret_garden",
+      "zone_a": "asian",
+      "zone_b": "european"
+    },
+    {
+      "similarity": 0.4137547714693981,
+      "a": "THE HAPPY HUNTER AND THE SKILLFUL FISHER",
+      "b": "120_treasure_island",
+      "zone_a": "asian",
+      "zone_b": "european"
+    },
+    {
+      "similarity": 0.40869262676627816,
+      "a": "THE WHITE HARE AND THE CROCODILES",
+      "b": "STORY OF LION AND LITTLE JACKAL",
+      "zone_a": "asian",
+      "zone_b": "south_african"
+    },
+    {
+      "similarity": 0.39872587039733554,
+      "a": "THE HAPPY HUNTER AND THE SKILLFUL FISHER",
+      "b": "11231_bartleby_the_scrivener_a_story_of_wallstreet",
+      "zone_a": "asian",
+      "zone_b": "european"
+    },
+    {
+      "similarity": 0.3909762994310577,
+      "a": "THE STORY OF PRINCE YAMATO TAKE",
+      "b": "1327_elizabeth_and_her_german_garden",
+      "zone_a": "asian",
+      "zone_b": "european"
+    },
+    {
+      "similarity": 0.38254099021876437,
+      "a": "THE ADVENTURES OF KINTARO, THE GOLDEN BOY",
+      "b": "1155_the_secret_adversary",
+      "zone_a": "asian",
+      "zone_b": "european"
+    }
+  ],
+  "arc_by_zone": {
+    "asian": {
+      "Hero's Journey": 8,
+      "Origin Myth": 2,
+      "Trickster Tale": 2,
+      "Cautionary Tale": 8
+    },
+    "european": {
+      "Hero's Journey": 16,
+      "Tragedy": 3,
+      "Cautionary Tale": 1
+    },
+    "south_african": {
+      "Trickster Tale": 14,
+      "Cautionary Tale": 3,
+      "Tragedy": 1,
+      "Hero's Journey": 1,
+      "Origin Myth": 1
+    }
+  }
+}

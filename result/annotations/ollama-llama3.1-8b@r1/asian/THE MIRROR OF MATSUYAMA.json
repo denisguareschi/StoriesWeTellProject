@@ -1,0 +1,169 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Tragedy",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "the man",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "loses wife, gains new perspective",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 3
+    },
+    {
+      "CHARACTER": "the wife",
+      "ROLE": "DEUTERAGONIST",
+      "TRANSFORMATION": "dies, becomes a guiding spirit",
+      "TRANSFORMATION_TYPE": "REVERSAL",
+      "CHANGE_EVENT": 2
+    },
+    {
+      "CHARACTER": "the daughter",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "grows in filial piety, becomes a source of love",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "the step-mother",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "repents, becomes a source of love",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "the father",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Matsuyama",
+    "Kyoto"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "The man is summoned to the capital on business.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "the man",
+        "the wife"
+      ],
+      "LOCATION": "Matsuyama",
+      "CAUSE": "Story opening",
+      "EFFECT": "The man must leave his family behind.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "The wife dies, and the man and daughter are left behind.",
+      "FUNCTION": "SACRIFICE",
+      "CHARACTERS": [
+        "the wife",
+        "the man",
+        "the daughter"
+      ],
+      "LOCATION": "Matsuyama",
+      "CAUSE": "The wife's death",
+      "EFFECT": "The man and daughter are left to grieve.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "The daughter discovers the mirror and believes she sees her mother's spirit.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "the daughter"
+      ],
+      "LOCATION": "Matsuyama",
+      "CAUSE": "The daughter's grief",
+      "EFFECT": "The daughter finds comfort in the mirror.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "The step-mother becomes jealous of the daughter and accuses her of using magic to harm her.",
+      "FUNCTION": "BETRAYAL",
+      "CHARACTERS": [
+        "the step-mother",
+        "the daughter"
+      ],
+      "LOCATION": "Matsuyama",
+      "CAUSE": "The step-mother's jealousy",
+      "EFFECT": "The father suspects the daughter and comes to scold her.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "The father understands the situation and apologizes to the daughter, who forgives the step-mother and they all live together in harmony.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "the father",
+        "the daughter",
+        "the step-mother"
+      ],
+      "LOCATION": "Matsuyama",
+      "CAUSE": "The father's realization",
+      "EFFECT": "The family is reunited and lives in harmony.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "the daughter",
+      "TARGET": "the wife",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "the step-mother",
+      "TARGET": "the daughter",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "the father",
+      "TARGET": "the daughter",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "the step-mother",
+      "TARGET": "the father",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "the daughter",
+      "TARGET": "the step-mother",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "SACRIFICE",
+    "HELPER_APPEARS",
+    "BETRAYAL",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "issues": [
+      "event participant 'the father' not in CHARACTERS: added as SECONDARY"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.5,
+    "seed": 1,
+    "attempts": 1,
+    "source_chars": 27801,
+    "excerpt_chars": 11777
+  }
+}

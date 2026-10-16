@@ -1,0 +1,172 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Kaito",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "learns humility and recognizes true strength",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Ryota",
+      "ROLE": "TRICKSTER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Takeo",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "young boy",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "elderly man",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "dogs",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Akakawa",
+    "the forest",
+    "a clearing",
+    "a secluded glade"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Kaito and Ryota sat in contemplation in a clearing.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Kaito",
+        "Ryota"
+      ],
+      "LOCATION": "a clearing",
+      "CAUSE": "Story opening",
+      "EFFECT": "sets the story in motion",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Ryota and Kaito met a young boy and an elderly man.",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Kaito",
+        "Ryota",
+        "young boy",
+        "elderly man"
+      ],
+      "LOCATION": "the forest",
+      "CAUSE": "Ryota's trickster nature",
+      "EFFECT": "tests Kaito's strength",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Ryota and Kaito met Takeo and his dogs.",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Kaito",
+        "Ryota",
+        "Takeo",
+        "dogs"
+      ],
+      "LOCATION": "a secluded glade",
+      "CAUSE": "Ryota's trickster nature",
+      "EFFECT": "tests Kaito's strength",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Kaito was wounded by Takeo's shot and knife.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Kaito",
+        "Takeo"
+      ],
+      "LOCATION": "a secluded glade",
+      "CAUSE": "Takeo's actions",
+      "EFFECT": "Kaito is wounded",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Kaito admitted defeat and recognized Takeo's strength.",
+      "FUNCTION": "SACRIFICE",
+      "CHARACTERS": [
+        "Kaito",
+        "Takeo"
+      ],
+      "LOCATION": "a secluded glade",
+      "CAUSE": "Kaito's pride and Takeo's actions",
+      "EFFECT": "Kaito learns humility",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Ryota",
+      "TARGET": "Kaito",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "Kaito",
+      "TARGET": "Takeo",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Takeo",
+      "TARGET": "Kaito",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "QUEST",
+    "ORDEAL",
+    "SACRIFICE"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "issues": [
+      "event participant 'young boy' not in CHARACTERS: added as SECONDARY",
+      "event participant 'elderly man' not in CHARACTERS: added as SECONDARY",
+      "event participant 'dogs' not in CHARACTERS: added as SECONDARY"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 2971,
+    "excerpt_chars": 2971
+  }
+}

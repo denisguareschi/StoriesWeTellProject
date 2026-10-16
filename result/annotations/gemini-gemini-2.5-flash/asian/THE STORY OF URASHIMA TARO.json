@@ -1,0 +1,150 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Cautionary Tale",
+  "SETTING_DOMAIN": "Spiritual and Religious",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Urashima Taro",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "From a kind, handsome youth to an ancient, dead man.",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Princess",
+      "ROLE": "DEUTERAGONIST",
+      "TRANSFORMATION": "From a tortoise to a beautiful human princess.",
+      "TRANSFORMATION_TYPE": "REVERSAL",
+      "CHANGE_EVENT": 3
+    },
+    {
+      "CHARACTER": "Boys",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "NONE",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Man",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "NONE",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Mizu-no-ye",
+    "Sea Palace",
+    "Beach"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Urashima Taro encounters a group of children tormenting a tortoise.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Urashima Taro",
+        "Boys",
+        "Princess"
+      ],
+      "LOCATION": "Mizu-no-ye",
+      "CAUSE": "Story opening",
+      "EFFECT": "Urashima decides to rescue the tortoise.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Urashima persuades the boys to sell him the tortoise and releases it into the sea.",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Urashima Taro",
+        "Boys",
+        "Princess"
+      ],
+      "LOCATION": "Mizu-no-ye",
+      "CAUSE": "Urashima's kind nature and the boys' cruelty.",
+      "EFFECT": "The tortoise is saved and later invites Urashima to the Sea Palace.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "The tortoise reveals herself as a beautiful Princess and invites Urashima to the Sea Palace, where they marry.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Urashima Taro",
+        "Princess"
+      ],
+      "LOCATION": "Sea Palace",
+      "CAUSE": "Urashima's act of saving the tortoise.",
+      "EFFECT": "Urashima lives in the land of eternal youth with the Princess.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Urashima returns to his village after 'days' in the Sea Palace, only to discover 300 years have passed.",
+      "FUNCTION": "RETURN",
+      "CHARACTERS": [
+        "Urashima Taro",
+        "Man"
+      ],
+      "LOCATION": "Mizu-no-ye",
+      "CAUSE": "Urashima's desire to return home after an unspecified time.",
+      "EFFECT": "Urashima realizes he has lost everything and is bewildered.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Urashima opens the forbidden box, ages rapidly, and dies on the beach.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Urashima Taro"
+      ],
+      "LOCATION": "Beach",
+      "CAUSE": "Urashima's despair and disobedience in opening the box.",
+      "EFFECT": "Urashima dies, illustrating the story's cautionary moral.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Urashima Taro",
+      "TARGET": "Princess",
+      "TYPE": "BONDS_WITH"
+    },
+    {
+      "SOURCE": "Urashima Taro",
+      "TARGET": "Boys",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Princess",
+      "TARGET": "Urashima Taro",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "QUEST",
+    "HELPER_APPEARS",
+    "RETURN",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "gemini:gemini-2.5-flash",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 22259,
+    "excerpt_chars": 11775
+  }
+}

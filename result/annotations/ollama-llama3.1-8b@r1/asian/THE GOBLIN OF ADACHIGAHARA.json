@@ -1,0 +1,122 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Tragedy",
+  "SETTING_DOMAIN": "Spiritual and Religious",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "the priest",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "learns to beware of appearances and to trust in the protection of Buddha",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "the old woman/goblin",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "revealed to be a cannibal goblin",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Adachigahara",
+    "the cottage"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "A priest, a belated traveler, lost in the large plain of Adachigahara, seeks a night's lodging at a nearby cottage.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "the priest"
+      ],
+      "LOCATION": "Adachigahara",
+      "CAUSE": "Story opening",
+      "EFFECT": "The priest is in a precarious situation, lost and seeking shelter.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "The old woman/goblin, who lives in the cottage, is reluctant to let the priest stay, but eventually agrees to let him rest there for the night.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "the old woman/goblin",
+        "the priest"
+      ],
+      "LOCATION": "the cottage",
+      "CAUSE": "The priest's need for shelter",
+      "EFFECT": "The priest is given temporary shelter, but the old woman/goblin's true nature is hinted at.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "The priest, despite the old woman/goblin's warnings, looks into the forbidden room and discovers her true nature as a cannibal goblin.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "the priest",
+        "the old woman/goblin"
+      ],
+      "LOCATION": "the cottage",
+      "CAUSE": "The priest's curiosity",
+      "EFFECT": "The priest is horrified and flees the cottage.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "The old woman/goblin chases the priest, who manages to escape by running away from the cottage.",
+      "FUNCTION": "BETRAYAL",
+      "CHARACTERS": [
+        "the old woman/goblin",
+        "the priest"
+      ],
+      "LOCATION": "the cottage",
+      "CAUSE": "The priest's discovery of the old woman/goblin's true nature",
+      "EFFECT": "The priest is in grave danger, but manages to escape.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "The priest, who has escaped the old woman/goblin's clutches, reflects on his experience and attributes his safety to the protection of Buddha.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "the priest"
+      ],
+      "LOCATION": "Adachigahara",
+      "CAUSE": "The priest's escape",
+      "EFFECT": "The priest learns a valuable lesson about the importance of trusting in a higher power.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "the old woman/goblin",
+      "TARGET": "the priest",
+      "TYPE": "OPPOSES"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "HELPER_APPEARS",
+    "ORDEAL",
+    "BETRAYAL",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.5,
+    "seed": 1,
+    "attempts": 1,
+    "source_chars": 8791,
+    "excerpt_chars": 8791
+  }
+}

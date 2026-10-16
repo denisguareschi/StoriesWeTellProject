@@ -1,0 +1,149 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Little Jackal",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "None",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Lion",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "None",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Lion's wife",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "None",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Little Jackal's children",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "None",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": 2
+    }
+  ],
+  "LOCATIONS": [
+    "Hunting grounds",
+    "Lion's house",
+    "Little Jackal's house",
+    "Hole under a tree",
+    "Meeting place",
+    "Overhanging rock"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Lion and Little Jackal agree to hunt together under specific conditions.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Lion",
+        "Little Jackal"
+      ],
+      "LOCATION": "Hunting grounds",
+      "CAUSE": "Story opening",
+      "EFFECT": "They begin hunting, establishing a partnership.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Little Jackal deceives Lion and takes the large eland meat for his own family.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Little Jackal",
+        "Lion",
+        "Little Jackal's children"
+      ],
+      "LOCATION": "Hunting grounds",
+      "CAUSE": "Lion instructs Little Jackal to call his children for the meat.",
+      "EFFECT": "Little Jackal's family is fed, and Lion becomes angry upon discovering the deception.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Little Jackal repeatedly escapes Lion's pursuit through cunning and deception.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Little Jackal",
+        "Lion"
+      ],
+      "LOCATION": "Hole under a tree",
+      "CAUSE": "Lion's anger over the stolen meat leads him to pursue Little Jackal.",
+      "EFFECT": "Lion is frustrated, and Little Jackal remains free.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Little Jackal attends an animal meeting disguised with wax horns, but is discovered and escapes Lion again.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Little Jackal",
+        "Lion"
+      ],
+      "LOCATION": "Meeting place",
+      "CAUSE": "Little Jackal's desire to attend the meeting despite lacking horns.",
+      "EFFECT": "Little Jackal successfully evades Lion's attempt to catch him.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 5,
+      "EVENT": "Little Jackal tricks Lion with the ox meat, causing distress to Lion's family, and then causes Lion to fall and be hurt with a mouse-skin rope.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Little Jackal",
+        "Lion",
+        "Lion's wife"
+      ],
+      "LOCATION": "Little Jackal's house",
+      "CAUSE": "Lion and Little Jackal become companions again and hunt an ox.",
+      "EFFECT": "Lion is injured and his family is upset, while Little Jackal remains triumphant.",
+      "CAUSED_BY": []
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Little Jackal",
+      "TARGET": "Lion",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "Lion",
+      "TARGET": "Little Jackal",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Little Jackal",
+      "TARGET": "Little Jackal's children",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "TRICKSTER"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [
+      "CHANGE_EVENT"
+    ],
+    "model": "gemini:gemini-2.5-flash",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 4969,
+    "excerpt_chars": 4967
+  }
+}

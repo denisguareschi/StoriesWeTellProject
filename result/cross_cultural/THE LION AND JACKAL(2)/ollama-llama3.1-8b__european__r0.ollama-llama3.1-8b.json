@@ -1,0 +1,144 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Sir Reginald",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "from life to death",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Foxglove",
+      "ROLE": "TRICKSTER",
+      "TRANSFORMATION": "from friend to villain",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Lady Whiskerface",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": 5
+    }
+  ],
+  "LOCATIONS": [
+    "river",
+    "stream",
+    "nearby",
+    "bank",
+    "den"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Sir Reginald lay dying on the banks of the river.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Sir Reginald"
+      ],
+      "LOCATION": "river",
+      "CAUSE": "Story opening",
+      "EFFECT": "Sir Reginald's life is in danger.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Foxglove removed a large stone to prevent Sir Reginald's return.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Foxglove",
+        "Sir Reginald"
+      ],
+      "LOCATION": "bank",
+      "CAUSE": "Foxglove's plan",
+      "EFFECT": "Sir Reginald is unable to return.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Foxglove pretended to help Sir Reginald, but gave him a weak rope.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Foxglove",
+        "Sir Reginald"
+      ],
+      "LOCATION": "bank",
+      "CAUSE": "Foxglove's plan",
+      "EFFECT": "Sir Reginald is injured.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Foxglove gave Sir Reginald a second weak rope, which broke again.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Foxglove",
+        "Sir Reginald"
+      ],
+      "LOCATION": "bank",
+      "CAUSE": "Foxglove's plan",
+      "EFFECT": "Sir Reginald is mortally wounded.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Sir Reginald died, and Foxglove and his wife escaped.",
+      "FUNCTION": "SACRIFICE",
+      "CHARACTERS": [
+        "Sir Reginald",
+        "Foxglove",
+        "Lady Whiskerface"
+      ],
+      "LOCATION": "bank",
+      "CAUSE": "Foxglove's treachery",
+      "EFFECT": "Sir Reginald is dead.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Foxglove",
+      "TARGET": "Sir Reginald",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "Foxglove",
+      "TARGET": "Sir Reginald",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Lady Whiskerface",
+      "TARGET": "Sir Reginald",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "TRICKSTER",
+    "SACRIFICE"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [
+      "CHANGE_EVENT"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 2567,
+    "excerpt_chars": 2567
+  }
+}

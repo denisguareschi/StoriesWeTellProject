@@ -1,0 +1,183 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Hero's Journey",
+  "SETTING_DOMAIN": "Historical and Geographical",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Old Man",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "Brings home treasure to live in peace and plenty",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Old Woman",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "Helps husband and brings home peach",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 1
+    },
+    {
+      "CHARACTER": "Momotaro",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "Subdues devils and brings home treasure",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Dog",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "Joins Momotaro and helps in battle",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Pheasant",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "Fights devils and helps Momotaro",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Monkey",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "Joins Momotaro and helps in battle",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Demon King",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "Surrenders to Momotaro",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    }
+  ],
+  "LOCATIONS": [
+    "River",
+    "Hills",
+    "Valleys",
+    "Island of Devils",
+    "Castle"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "The old woman finds a large peach in the river.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Old Woman"
+      ],
+      "LOCATION": "River",
+      "CAUSE": "Story opening",
+      "EFFECT": "The old woman gets a large peach.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Momotaro meets the dog on his journey to the Island of Devils.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Momotaro",
+        "Dog"
+      ],
+      "LOCATION": "Hills",
+      "CAUSE": "Momotaro is on his way to the Island of Devils",
+      "EFFECT": "The dog joins Momotaro.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Momotaro meets the monkey on his journey to the Island of Devils.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Momotaro",
+        "Monkey"
+      ],
+      "LOCATION": "Valleys",
+      "CAUSE": "Momotaro is on his way to the Island of Devils",
+      "EFFECT": "The monkey joins Momotaro.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Momotaro meets the pheasant on his journey to the Island of Devils.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Momotaro",
+        "Pheasant"
+      ],
+      "LOCATION": "Hills",
+      "CAUSE": "Momotaro is on his way to the Island of Devils",
+      "EFFECT": "The pheasant joins Momotaro.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Momotaro and his helpers defeat the Demon King and his devils.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Momotaro",
+        "Dog",
+        "Pheasant",
+        "Monkey",
+        "Demon King"
+      ],
+      "LOCATION": "Castle",
+      "CAUSE": "Momotaro and his helpers are on their way to defeat the Demon King",
+      "EFFECT": "The Demon King surrenders and Momotaro and his helpers defeat the devils.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Momotaro",
+      "TARGET": "Dog",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Momotaro",
+      "TARGET": "Pheasant",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Momotaro",
+      "TARGET": "Monkey",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Demon King",
+      "TARGET": "Momotaro",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Old Woman",
+      "TARGET": "Old Man",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "HELPER_APPEARS",
+    "ORDEAL"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [
+      "CHANGE_EVENT"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.5,
+    "seed": 1,
+    "attempts": 1,
+    "source_chars": 22605,
+    "excerpt_chars": 11918
+  }
+}

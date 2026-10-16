@@ -1,0 +1,143 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Lion",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "experiences repeated betrayal and deception",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Jackal",
+      "ROLE": "TRICKSTER",
+      "TRANSFORMATION": "uses deception to achieve goals, but ultimately fails",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Jackal's wife",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "initially helps Jackal, but ultimately contributes to Lion's downfall",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    }
+  ],
+  "LOCATIONS": [
+    "bank",
+    "river",
+    "hill"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Lion had caught a large eland and asked Jackal to watch it while he went to drink water.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Lion",
+        "Jackal"
+      ],
+      "LOCATION": "bank",
+      "CAUSE": "Story opening",
+      "EFFECT": "Lion leaves the eland in Jackal's care",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Jackal secretly removed a stone on which Lion had to step to reach the bank on his return.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Jackal"
+      ],
+      "LOCATION": "bank",
+      "CAUSE": "Event 1",
+      "EFFECT": "Lion is unable to return to the eland",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Lion returned and asked Jackal for help, but Jackal provided a rotten rope.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Lion",
+        "Jackal"
+      ],
+      "LOCATION": "bank",
+      "CAUSE": "Event 2",
+      "EFFECT": "Lion falls and is injured",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Lion asked Jackal for help again, but Jackal provided another rotten rope.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Lion",
+        "Jackal"
+      ],
+      "LOCATION": "bank",
+      "CAUSE": "Event 3",
+      "EFFECT": "Lion falls again and is more seriously injured",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Lion asked Jackal for help one last time, but Jackal provided a rope that broke, causing Lion's fatal injury.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Lion",
+        "Jackal"
+      ],
+      "LOCATION": "bank",
+      "CAUSE": "Event 4",
+      "EFFECT": "Lion is fatally injured",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Jackal",
+      "TARGET": "Lion",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "Lion",
+      "TARGET": "Jackal",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Jackal's wife",
+      "TARGET": "Lion",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Lion",
+      "TARGET": "Jackal's wife",
+      "TYPE": "OPPOSES"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "TRICKSTER"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.5,
+    "seed": 1,
+    "attempts": 1,
+    "source_chars": 2447,
+    "excerpt_chars": 2445
+  }
+}

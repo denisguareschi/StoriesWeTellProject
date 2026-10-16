@@ -1,0 +1,164 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Spiritual and Religious",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Takoda",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "Takoda learns to trust the spirits of the land",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Wanbli",
+      "ROLE": "TRICKSTER",
+      "TRANSFORMATION": "Wanbli's true nature is revealed",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Kaga",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "Kaga becomes aware of Wanbli's deception",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Wisaakodewin",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "Wisaakodewin teaches Takoda a lesson",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "The Great Spirit",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "The Great Spirit's wisdom is revealed",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "the land",
+    "the high riverbank",
+    "the bottom"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "The great spirit, Wisaakodewin, created the world and all its creatures.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Wisaakodewin"
+      ],
+      "LOCATION": "the land",
+      "CAUSE": "Story opening",
+      "EFFECT": "The world is created",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Takoda had caught a mighty buffalo, which lay still on the high riverbank.",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Takoda"
+      ],
+      "LOCATION": "the high riverbank",
+      "CAUSE": "Takoda's goal",
+      "EFFECT": "Takoda has a goal",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Wanbli and his wife, Kaga, ate their fill of the buffalo's meat.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Wanbli",
+        "Kaga"
+      ],
+      "LOCATION": "the high riverbank",
+      "CAUSE": "Wanbli's deception",
+      "EFFECT": "Takoda is deceived",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Takoda climbed up, but the rope snapped, and he fell to the bottom.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Takoda",
+        "Wanbli"
+      ],
+      "LOCATION": "the bottom",
+      "CAUSE": "Wanbli's trickery",
+      "EFFECT": "Takoda is injured",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Takoda's spirit rose up, and he spoke to the Great Spirit, Wisaakodewin, 'Why did you create such a cruel and heartless nephew?'",
+      "FUNCTION": "RESURRECTION",
+      "CHARACTERS": [
+        "Takoda",
+        "Wisaakodewin"
+      ],
+      "LOCATION": "the land",
+      "CAUSE": "Takoda's realization",
+      "EFFECT": "Takoda learns a lesson",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Wanbli",
+      "TARGET": "Takoda",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "Kaga",
+      "TARGET": "Wanbli",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Wisaakodewin",
+      "TARGET": "Takoda",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Takoda",
+      "TARGET": "Wanbli",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Takoda",
+      "TARGET": "Kaga",
+      "TYPE": "OPPOSES"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "QUEST",
+    "TRICKSTER",
+    "ORDEAL",
+    "RESURRECTION"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 2815,
+    "excerpt_chars": 2815
+  }
+}

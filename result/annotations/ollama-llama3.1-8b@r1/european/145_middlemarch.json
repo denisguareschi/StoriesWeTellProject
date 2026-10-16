@@ -1,0 +1,175 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Tragedy",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Dorothea Brooke",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "from idealistic and naive to more practical and self-aware",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 3
+    },
+    {
+      "CHARACTER": "Mr. Casaubon",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "from confident and self-assured to increasingly jealous and possessive",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 3
+    },
+    {
+      "CHARACTER": "Will Ladislaw",
+      "ROLE": "TRICKSTER",
+      "TRANSFORMATION": "from charming and flirtatious to more serious and devoted",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 3
+    },
+    {
+      "CHARACTER": "Celia Brooke",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "from calm and practical to more emotionally expressive",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 3
+    },
+    {
+      "CHARACTER": "Sir James Chettam",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "from disapproving to more accepting and tolerant",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 3
+    },
+    {
+      "CHARACTER": "Mr. Brooke",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "from somewhat distant to more involved and supportive",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 3
+    }
+  ],
+  "LOCATIONS": [
+    "Tipton Grange",
+    "Freshitt Hall",
+    "Middlemarch"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Dorothea's uncle brings her and her sister to live at Tipton Grange",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Dorothea Brooke",
+        "Celia Brooke",
+        "Mr. Brooke"
+      ],
+      "LOCATION": "Tipton Grange",
+      "CAUSE": "Story opening",
+      "EFFECT": "",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Dorothea meets Will Ladislaw and is drawn to him",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Dorothea Brooke",
+        "Will Ladislaw"
+      ],
+      "LOCATION": "Freshitt Hall",
+      "CAUSE": "Dorothea's desire for excitement and connection",
+      "EFFECT": "Dorothea becomes more emotionally expressive and attached to Will",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Mr. Casaubon becomes increasingly jealous and possessive of Dorothea",
+      "FUNCTION": "BETRAYAL",
+      "CHARACTERS": [
+        "Mr. Casaubon",
+        "Dorothea Brooke"
+      ],
+      "LOCATION": "Tipton Grange",
+      "CAUSE": "Mr. Casaubon's own insecurities and fears",
+      "EFFECT": "Dorothea feels trapped and unhappy in her marriage",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Dorothea's marriage to Mr. Casaubon ends in tragedy, and she marries Will Ladislaw after Mr. Casaubon's death",
+      "FUNCTION": "RESURRECTION",
+      "CHARACTERS": [
+        "Dorothea Brooke",
+        "Will Ladislaw",
+        "Mr. Casaubon"
+      ],
+      "LOCATION": "Tipton Grange",
+      "CAUSE": "Dorothea's desire for happiness and connection",
+      "EFFECT": "Dorothea finds a new sense of purpose and fulfillment with Will",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Dorothea's son inherits her estate and becomes a prominent figure in Middlemarch",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Dorothea Brooke",
+        "Mr. Brooke"
+      ],
+      "LOCATION": "Middlemarch",
+      "CAUSE": "Dorothea's actions and legacy",
+      "EFFECT": "Dorothea's family and community are affected by her choices and actions",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Dorothea Brooke",
+      "TARGET": "Will Ladislaw",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Dorothea Brooke",
+      "TARGET": "Mr. Casaubon",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Will Ladislaw",
+      "TARGET": "Dorothea Brooke",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Celia Brooke",
+      "TARGET": "Dorothea Brooke",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Sir James Chettam",
+      "TARGET": "Dorothea Brooke",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "HELPER_APPEARS",
+    "BETRAYAL",
+    "RESURRECTION",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.5,
+    "seed": 1,
+    "attempts": 1,
+    "source_chars": 1790395,
+    "excerpt_chars": 11933
+  }
+}

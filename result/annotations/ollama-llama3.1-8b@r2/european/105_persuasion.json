@@ -1,0 +1,158 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Tragedy",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Sir Walter Elliot",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "from vanity and self-importance to self-awareness and humility",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 3
+    },
+    {
+      "CHARACTER": "Lady Russell",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "from being a part of the problem to being a part of the solution",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 4
+    },
+    {
+      "CHARACTER": "Captain Wentworth",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "from being a distant admirer to being a devoted partner",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Mrs. Clay",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "from being a manipulative and cunning woman to being a potential wife",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Anne Elliot",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "from being a shy and uncertain young woman to being a confident and loving partner",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    }
+  ],
+  "LOCATIONS": [
+    "Kellynch Hall",
+    "Uppercross",
+    "Bath",
+    "London"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Sir Walter Elliot reads the Baronetage and contemplates his own history",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Sir Walter Elliot"
+      ],
+      "LOCATION": "Kellynch Hall",
+      "CAUSE": "Story opening",
+      "EFFECT": "Sir Walter becomes aware of his own vanity and self-importance",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Lady Russell's influence on Anne Elliot's life",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Lady Russell",
+        "Anne Elliot"
+      ],
+      "LOCATION": "Kellynch Hall",
+      "CAUSE": "Lady Russell's guidance",
+      "EFFECT": "Anne becomes more confident and self-assured",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Sir Walter Elliot's discovery of Mrs. Clay's true intentions",
+      "FUNCTION": "BETRAYAL",
+      "CHARACTERS": [
+        "Sir Walter Elliot",
+        "Mrs. Clay"
+      ],
+      "LOCATION": "Bath",
+      "CAUSE": "Mrs. Clay's deception",
+      "EFFECT": "Sir Walter's world is turned upside down",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Captain Wentworth's return and his growing feelings for Anne Elliot",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Captain Wentworth",
+        "Anne Elliot"
+      ],
+      "LOCATION": "Uppercross",
+      "CAUSE": "Captain Wentworth's growing feelings",
+      "EFFECT": "Anne and Captain Wentworth's relationship deepens",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Captain Wentworth and Anne Elliot's marriage and their future together",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Captain Wentworth",
+        "Anne Elliot"
+      ],
+      "LOCATION": "Kellynch Hall",
+      "CAUSE": "Captain Wentworth's love and devotion",
+      "EFFECT": "Anne and Captain Wentworth's happiness is secured",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Sir Walter Elliot",
+      "TARGET": "Mrs. Clay",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "Captain Wentworth",
+      "TARGET": "Anne Elliot",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Lady Russell",
+      "TARGET": "Anne Elliot",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "HELPER_APPEARS",
+    "BETRAYAL",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "issues": [
+      "relation dropped: {'SOURCE': 'Mrs. Clay', 'TARGET': 'Sir Walter Elliot', 'TYPE': 'BETRAYS'}"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.5,
+    "seed": 2,
+    "attempts": 1,
+    "source_chars": 466817,
+    "excerpt_chars": 12026
+  }
+}

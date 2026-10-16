@@ -1,0 +1,160 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Tiger",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "Tiger changes from fearful to brave, but ultimately runs away",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 3
+    },
+    {
+      "CHARACTER": "Ram",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "Ram is prepared to sacrifice himself for his child",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Jackal",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "Jackal is tricked into helping Tiger, but ultimately flees",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 3
+    },
+    {
+      "CHARACTER": "his child",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "kraal",
+    "Tiger's home"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Tiger meets Ram and runs away",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Tiger",
+        "Ram"
+      ],
+      "LOCATION": "kraal",
+      "CAUSE": "Story opening",
+      "EFFECT": "Tiger flees in fear",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Jackal tricks Tiger into going to Ram's kraal",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Jackal",
+        "Tiger"
+      ],
+      "LOCATION": "Tiger's home",
+      "CAUSE": "Jackal's trickery",
+      "EFFECT": "Tiger is tricked into going to Ram's kraal",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Ram prepares to sacrifice himself for his child",
+      "FUNCTION": "SACRIFICE",
+      "CHARACTERS": [
+        "Ram",
+        "his child",
+        "Tiger",
+        "Jackal"
+      ],
+      "LOCATION": "kraal",
+      "CAUSE": "Tiger and Jackal's arrival",
+      "EFFECT": "Ram prepares to sacrifice himself for his child",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Tiger and Jackal try to eat Ram",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Tiger",
+        "Jackal",
+        "Ram"
+      ],
+      "LOCATION": "kraal",
+      "CAUSE": "Tiger and Jackal's attempt to eat Ram",
+      "EFFECT": "Ram's child cries to distract Tiger and Jackal",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Tiger and Jackal flee, and Ram escapes",
+      "FUNCTION": "RETURN",
+      "CHARACTERS": [
+        "Tiger",
+        "Jackal",
+        "Ram"
+      ],
+      "LOCATION": "kraal",
+      "CAUSE": "Tiger and Jackal's failure to eat Ram",
+      "EFFECT": "Ram escapes, and Tiger and Jackal flee",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Jackal",
+      "TARGET": "Tiger",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Ram",
+      "TARGET": "his child",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Ram",
+      "TARGET": "Tiger",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Jackal",
+      "TARGET": "Ram",
+      "TYPE": "DECEIVES"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "QUEST",
+    "TRICKSTER",
+    "SACRIFICE",
+    "ORDEAL",
+    "RETURN"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "issues": [
+      "event participant 'his child' not in CHARACTERS: added as SECONDARY"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.5,
+    "seed": 2,
+    "attempts": 1,
+    "source_chars": 2225,
+    "excerpt_chars": 2225
+  }
+}

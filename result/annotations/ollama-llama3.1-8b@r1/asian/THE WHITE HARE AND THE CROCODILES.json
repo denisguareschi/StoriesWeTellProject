@@ -1,0 +1,157 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Spiritual and Religious",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "The White Hare",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "learns to be honest and grateful",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "The Crocodiles",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Okuni-nushi-no-Mikoto",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "helps the hare and wins the Princess's heart",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "The Princess",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "chooses Okuni-nushi-no-Mikoto over his brothers",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "The Young Men",
+      "ROLE": "TRICKSTER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "The Island of Oki",
+    "The Mainland of Inaba",
+    "The Sea",
+    "The Pond",
+    "The Beach"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "The White Hare wants to cross over to Inaba.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "The White Hare"
+      ],
+      "LOCATION": "The Island of Oki",
+      "CAUSE": "Story opening",
+      "EFFECT": "The hare's desire to cross over is established.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "The White Hare tries to get the Crocodiles to form a bridge.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "The White Hare",
+        "The Crocodiles"
+      ],
+      "LOCATION": "The Sea",
+      "CAUSE": "The hare's trickery",
+      "EFFECT": "The Crocodiles form a bridge.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "The White Hare crosses over the bridge and jeers at the Crocodiles.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "The White Hare",
+        "The Crocodiles"
+      ],
+      "LOCATION": "The Mainland of Inaba",
+      "CAUSE": "The hare's trickery",
+      "EFFECT": "The Crocodiles become angry.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "The Crocodiles punish the White Hare.",
+      "FUNCTION": "BETRAYAL",
+      "CHARACTERS": [
+        "The White Hare",
+        "The Crocodiles"
+      ],
+      "LOCATION": "The Beach",
+      "CAUSE": "The hare's trickery",
+      "EFFECT": "The hare is punished.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Okuni-nushi-no-Mikoto helps the White Hare and wins the Princess's heart.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "The White Hare",
+        "Okuni-nushi-no-Mikoto",
+        "The Princess"
+      ],
+      "LOCATION": "The Pond",
+      "CAUSE": "Okuni-nushi-no-Mikoto's kindness",
+      "EFFECT": "The hare is cured and the Princess chooses Okuni-nushi-no-Mikoto.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "The White Hare",
+      "TARGET": "The Crocodiles",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "The White Hare",
+      "TARGET": "Okuni-nushi-no-Mikoto",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Okuni-nushi-no-Mikoto",
+      "TARGET": "The Princess",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "TRICKSTER",
+    "BETRAYAL",
+    "HELPER_APPEARS"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.5,
+    "seed": 1,
+    "attempts": 1,
+    "source_chars": 11051,
+    "excerpt_chars": 11051
+  }
+}

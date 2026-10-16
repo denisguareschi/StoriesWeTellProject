@@ -1,0 +1,173 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Lion",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "From respected leader to a duped victim left to die.",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Jackal",
+      "ROLE": "TRICKSTER",
+      "TRANSFORMATION": "None",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Baboon",
+      "ROLE": "DEUTERAGONIST",
+      "TRANSFORMATION": "From a helper to a foolish, punished victim.",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 3
+    },
+    {
+      "CHARACTER": "Tortoise",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "From a secondary animal to a clever and praised hero.",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 4
+    },
+    {
+      "CHARACTER": "Hyena",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "None",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "The Land",
+    "The Dam",
+    "The Precipice"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "A great drought prompts Lion to gather animals to devise a plan for retaining water.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Lion",
+        "Jackal",
+        "Baboon",
+        "Tortoise",
+        "Hyena"
+      ],
+      "LOCATION": "The Land",
+      "CAUSE": "Story opening",
+      "EFFECT": "The animals agree to build a dam.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Jackal refuses to help build the dam, then pollutes it after it is finished.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Jackal",
+        "Lion",
+        "Baboon",
+        "Tortoise",
+        "Hyena"
+      ],
+      "LOCATION": "The Dam",
+      "CAUSE": "Jackal's laziness and cunning.",
+      "EFFECT": "Lion becomes angry and orders Baboon to guard the water.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Jackal tricks Baboon, who is guarding the dam, and pollutes the water again.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Jackal",
+        "Baboon",
+        "Lion"
+      ],
+      "LOCATION": "The Dam",
+      "CAUSE": "Baboon's assignment to guard the water and Jackal's cunning.",
+      "EFFECT": "Baboon is punished, and Tortoise offers to catch Jackal.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Tortoise, covered in a sticky substance, tricks Jackal and captures him at the dam.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Tortoise",
+        "Jackal",
+        "Lion",
+        "Baboon"
+      ],
+      "LOCATION": "The Dam",
+      "CAUSE": "Tortoise's plan to catch Jackal after Baboon's failure.",
+      "EFFECT": "Jackal is condemned to death, and Tortoise is praised.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Jackal tricks Lion into holding a 'falling' rock and escapes, leaving Lion to die.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Jackal",
+        "Lion",
+        "Hyena"
+      ],
+      "LOCATION": "The Precipice",
+      "CAUSE": "Jackal's death sentence and his request for a specific execution.",
+      "EFFECT": "Jackal escapes, Lion is left in peril.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Lion",
+      "TARGET": "Jackal",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Tortoise",
+      "TARGET": "Lion",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Jackal",
+      "TARGET": "Baboon",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "Jackal",
+      "TARGET": "Lion",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "Jackal",
+      "TARGET": "Hyena",
+      "TYPE": "DECEIVES"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "TRICKSTER"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "gemini:gemini-2.5-flash",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 6011,
+    "excerpt_chars": 6011
+  }
+}

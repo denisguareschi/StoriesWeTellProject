@@ -1,0 +1,160 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Hero's Journey",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Zora",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "From a fearful, lonely boy to a self-sacrificing woman who finds her true love and identity.",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Mrs. Vanderpool",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "From jaded and _ennui_ to vulnerable and finding solace/purpose in Zora.",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 3
+    },
+    {
+      "CHARACTER": "Bles",
+      "ROLE": "DEUTERAGONIST",
+      "TRANSFORMATION": "From an object of Zora's past longing and perceived loss to her declared and committed lover.",
+      "TRANSFORMATION_TYPE": "REVERSAL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Emma",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "NONE",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Mrs. Cresswell",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "NONE",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Swamp",
+    "Cabin",
+    "Mrs. Vanderpool's house",
+    "Zora's room",
+    "Aunt Rachel's"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "The boy (Zora) leaves home, feels lonely and afraid in the swamp, then is drawn by music to a cabin where he sees a dancing girl.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Zora"
+      ],
+      "LOCATION": "Swamp",
+      "CAUSE": "Story opening",
+      "EFFECT": "Zora is drawn into the mysterious swamp and encounters the dancing girl.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Zora is discovered by the people in the cabin, flees in terror, and collapses exhausted.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Zora"
+      ],
+      "LOCATION": "Swamp",
+      "CAUSE": "Zora's involuntary cry after being mesmerized by the dancing girl.",
+      "EFFECT": "Zora experiences profound fear and exhaustion, ending her initial foray into the unknown.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Years later, Zora is interviewed by Mrs. Vanderpool, who admits her unhappiness and offers Zora a job, stating they need each other, which Zora accepts.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Zora",
+        "Mrs. Vanderpool"
+      ],
+      "LOCATION": "Mrs. Vanderpool's house",
+      "CAUSE": "Zora's journey into 'the world' and Mrs. Vanderpool's need for assistance.",
+      "EFFECT": "Zora begins a new life and career, entering a different social sphere.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 4,
+      "EVENT": "Zora learns from Mrs. Cresswell that Bles and Emma might marry, leading Zora to believe Bles never loved her and to contemplate a sacrifice.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Zora",
+        "Mrs. Cresswell",
+        "Bles",
+        "Emma"
+      ],
+      "LOCATION": "Zora's room",
+      "CAUSE": "Mrs. Cresswell's revelation about Bles and Emma.",
+      "EFFECT": "Zora enters a state of deep emotional turmoil, believing she must sacrifice her own desires for Emma's perceived purity.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Zora tells Bles to marry Emma, but Bles declares his love for Zora, leading to Zora's realization and proposal.",
+      "FUNCTION": "RESURRECTION",
+      "CHARACTERS": [
+        "Zora",
+        "Bles"
+      ],
+      "LOCATION": "Swamp",
+      "CAUSE": "Zora's decision to sacrifice her love for Bles for Emma's perceived purity.",
+      "EFFECT": "Zora and Bles confess their love and decide to marry, resolving Zora's long-standing emotional conflict.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Zora",
+      "TARGET": "Bles",
+      "TYPE": "BONDS_WITH"
+    },
+    {
+      "SOURCE": "Mrs. Vanderpool",
+      "TARGET": "Zora",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Zora",
+      "TARGET": "Mrs. Vanderpool",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Mrs. Cresswell",
+      "TARGET": "Zora",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "ORDEAL",
+    "HELPER_APPEARS",
+    "RESURRECTION"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "gemini:gemini-2.5-flash",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 621771,
+    "excerpt_chars": 11823
+  }
+}

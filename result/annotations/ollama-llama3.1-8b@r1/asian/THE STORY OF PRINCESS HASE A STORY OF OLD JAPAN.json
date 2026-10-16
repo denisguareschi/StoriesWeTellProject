@@ -1,0 +1,174 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Spiritual and Religious",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Prince Toyonari Fujiwara",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "learns to accept the loss of his wife and finds a new purpose in life",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Princess Murasaki",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Princess Terute",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "learns a lesson about the consequences of her actions",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Hase-Hime",
+      "ROLE": "DEUTERAGONIST",
+      "TRANSFORMATION": "grows into a wise and devout woman",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Katoda",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Emperor",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Nara",
+    "Hibari Mountains"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Prince Toyonari and his wife go to the temple of Kwannon at Hase to pray for a child.",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Prince Toyonari Fujiwara",
+        "Princess Murasaki"
+      ],
+      "LOCATION": "Nara",
+      "CAUSE": "Story opening",
+      "EFFECT": "They pray for a child.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Princess Murasaki dies, and Prince Toyonari marries Princess Terute.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Prince Toyonari Fujiwara",
+        "Princess Murasaki",
+        "Princess Terute"
+      ],
+      "LOCATION": "Nara",
+      "CAUSE": "Princess Murasaki's death",
+      "EFFECT": "Princess Terute becomes the step-mother of Hase-Hime.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Hase-Hime's step-brother dies after drinking poisoned wine.",
+      "FUNCTION": "BETRAYAL",
+      "CHARACTERS": [
+        "Hase-Hime",
+        "Princess Terute"
+      ],
+      "LOCATION": "Nara",
+      "CAUSE": "Princess Terute's attempt to kill Hase-Hime",
+      "EFFECT": "Hase-Hime's step-brother dies.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Hase-Hime is sent to write a poem to stop the flood.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Hase-Hime",
+        "Prince Toyonari Fujiwara",
+        "Emperor"
+      ],
+      "LOCATION": "Nara",
+      "CAUSE": "The Emperor's illness",
+      "EFFECT": "Hase-Hime is sent to write a poem to stop the flood.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Prince Toyonari finds Hase-Hime in the Hibari Mountains.",
+      "FUNCTION": "RETURN",
+      "CHARACTERS": [
+        "Prince Toyonari Fujiwara",
+        "Hase-Hime"
+      ],
+      "LOCATION": "Hibari Mountains",
+      "CAUSE": "Hase-Hime's disappearance",
+      "EFFECT": "Prince Toyonari finds Hase-Hime.",
+      "CAUSED_BY": [
+        3,
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Prince Toyonari Fujiwara",
+      "TARGET": "Princess Murasaki",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Princess Terute",
+      "TARGET": "Hase-Hime",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Katoda",
+      "TARGET": "Hase-Hime",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Hase-Hime",
+      "TARGET": "Prince Toyonari Fujiwara",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "QUEST",
+    "TRICKSTER",
+    "BETRAYAL",
+    "HELPER_APPEARS",
+    "RETURN"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "issues": [
+      "event participant 'Emperor' not in CHARACTERS: added as SECONDARY",
+      "relation dropped: {'SOURCE': 'Hase-Hime', 'TARGET': 'Princess Terute', 'TYPE': 'OPPOSED'}"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.5,
+    "seed": 1,
+    "attempts": 1,
+    "source_chars": 16641,
+    "excerpt_chars": 11826
+  }
+}

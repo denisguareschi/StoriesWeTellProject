@@ -1,0 +1,170 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Hero's Journey",
+  "SETTING_DOMAIN": "Spiritual and Religious",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Hidesato",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "From warrior seeking adventure to renowned, wealthy lord.",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Dragon King",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "From desperate, fearful king to relieved and grateful one.",
+      "TRANSFORMATION_TYPE": "REVERSAL",
+      "CHANGE_EVENT": 3
+    },
+    {
+      "CHARACTER": "Centipede",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "From living monster to dead body.",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 3
+    },
+    {
+      "CHARACTER": "Dragon King's Family",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "From living in terror to living in peace.",
+      "TRANSFORMATION_TYPE": "REVERSAL",
+      "CHANGE_EVENT": 3
+    },
+    {
+      "CHARACTER": "Hidesato's Household",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "From concerned to joyful and proud.",
+      "TRANSFORMATION_TYPE": "REVERSAL",
+      "CHANGE_EVENT": 5
+    }
+  ],
+  "LOCATIONS": [
+    "Bridge of Seta-no-Karashi",
+    "Lake Biwa",
+    "Dragon King's palace",
+    "Mountain",
+    "Hidesato's house"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Hidesato, seeking adventure, encounters a huge serpent-dragon blocking his path on the bridge.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Hidesato"
+      ],
+      "LOCATION": "Bridge of Seta-no-Karashi",
+      "CAUSE": "Story opening",
+      "EFFECT": "The serpent-dragon transforms into the Dragon King.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "The serpent-dragon transforms into the Dragon King, who requests Hidesato's help against the centipede.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Hidesato",
+        "Dragon King"
+      ],
+      "LOCATION": "Bridge of Seta-no-Karashi",
+      "CAUSE": "Hidesato's bravery in stepping over the dragon.",
+      "EFFECT": "Hidesato promises to help the Dragon King.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Hidesato battles and kills the centipede at the Dragon King's palace.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Hidesato",
+        "Dragon King",
+        "Centipede",
+        "Dragon King's Family"
+      ],
+      "LOCATION": "Dragon King's palace",
+      "CAUSE": "Hidesato's promise to kill the centipede.",
+      "EFFECT": "The centipede is defeated, saving the Dragon King's family.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "The grateful Dragon King hosts a feast and bestows magical gifts upon Hidesato.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Hidesato",
+        "Dragon King",
+        "Dragon King's Family"
+      ],
+      "LOCATION": "Dragon King's palace",
+      "CAUSE": "Hidesato's successful defeat of the centipede.",
+      "EFFECT": "Hidesato receives magical items and prepares to return home.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Hidesato returns home with the magical gifts, becoming wealthy and famous as 'My Lord Bag of Rice'.",
+      "FUNCTION": "TRANSFORMATION",
+      "CHARACTERS": [
+        "Hidesato",
+        "Hidesato's Household"
+      ],
+      "LOCATION": "Hidesato's house",
+      "CAUSE": "Hidesato's desire to return home and the Dragon King's gifts.",
+      "EFFECT": "Hidesato's status and wealth are permanently transformed, and his name changes.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Hidesato",
+      "TARGET": "Centipede",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Dragon King",
+      "TARGET": "Centipede",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Hidesato",
+      "TARGET": "Dragon King",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Dragon King",
+      "TARGET": "Hidesato",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Hidesato",
+      "TARGET": "Dragon King",
+      "TYPE": "BONDS_WITH"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "HELPER_APPEARS",
+    "ORDEAL",
+    "MORAL_REWARD",
+    "TRANSFORMATION"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "gemini:gemini-2.5-flash",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 12359,
+    "excerpt_chars": 11844
+  }
+}

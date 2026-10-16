@@ -1,0 +1,169 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Tragedy",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "monkey",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "from cunning to punished",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "crab",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "from simple-minded to avenger",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "mortar",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "from friend to avenger",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "bee",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "from friend to avenger",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "chestnut",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "from friend to avenger",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    }
+  ],
+  "LOCATIONS": [
+    "Japan",
+    "river",
+    "forest",
+    "pine-tree",
+    "crab's home",
+    "young crab's home",
+    "tree"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "A monkey and a crab were playing together along the bank of a river.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "monkey",
+        "crab"
+      ],
+      "LOCATION": "river",
+      "CAUSE": "Story opening",
+      "EFFECT": "The story begins with the two friends playing together.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "The monkey proposed an exchange of a persimmon-seed for a rice-dumpling.",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "monkey",
+        "crab"
+      ],
+      "LOCATION": "river",
+      "CAUSE": "The monkey's proposal",
+      "EFFECT": "The crab agrees to the exchange.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "The crab planted the persimmon-seed and it grew into a tree.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "crab"
+      ],
+      "LOCATION": "crab's home",
+      "CAUSE": "The crab's actions",
+      "EFFECT": "The tree grows and bears fruit.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "The monkey killed the crab by throwing persimmons at him.",
+      "FUNCTION": "BETRAYAL",
+      "CHARACTERS": [
+        "monkey",
+        "crab"
+      ],
+      "LOCATION": "tree",
+      "CAUSE": "The monkey's actions",
+      "EFFECT": "The crab is killed.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "The young crab avenged his father's death by killing the monkey.",
+      "FUNCTION": "SACRIFICE",
+      "CHARACTERS": [
+        "crab",
+        "monkey"
+      ],
+      "LOCATION": "young crab's home",
+      "CAUSE": "The young crab's actions",
+      "EFFECT": "The monkey is killed.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "monkey",
+      "TARGET": "crab",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "crab",
+      "TARGET": "monkey",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "mortar",
+      "TARGET": "monkey",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "bee",
+      "TARGET": "monkey",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "chestnut",
+      "TARGET": "monkey",
+      "TYPE": "OPPOSES"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "QUEST",
+    "HELPER_APPEARS",
+    "BETRAYAL",
+    "SACRIFICE"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 14241,
+    "excerpt_chars": 11870
+  }
+}

@@ -1,0 +1,157 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Hero's Journey",
+  "SETTING_DOMAIN": "Spiritual and Religious",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Hohodemi",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "learns to forgive and reconcile with his brother",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Skillful Fisher",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "learns to forgive and reconcile with his brother",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Ryn Jin",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "helps the Happy Hunter",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Princess Tayotama",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "helps the Happy Hunter",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Princess Tamayori",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "helps the Happy Hunter",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Japan",
+    "Sea King's Palace",
+    "Rice fields",
+    "Sea"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "The Happy Hunter and the Skillful Fisher decide to try each other's occupation.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Hohodemi",
+        "Skillful Fisher"
+      ],
+      "LOCATION": "Japan",
+      "CAUSE": "Story opening",
+      "EFFECT": "The brothers decide to try each other's occupation.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "The Happy Hunter goes to the sea to fish, but loses his brother's fishing hook.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Hohodemi",
+        "Skillful Fisher"
+      ],
+      "LOCATION": "Sea",
+      "CAUSE": "The Happy Hunter's lack of fishing skills",
+      "EFFECT": "The Happy Hunter loses his brother's fishing hook.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "The Happy Hunter visits the Sea King's Palace and meets Ryn Jin.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Hohodemi",
+        "Ryn Jin"
+      ],
+      "LOCATION": "Sea King's Palace",
+      "CAUSE": "The Happy Hunter's visit to the Sea King's Palace",
+      "EFFECT": "The Happy Hunter meets Ryn Jin and receives the Jewels of the Flow and Ebb of the Tide.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "The Skillful Fisher plots to kill the Happy Hunter.",
+      "FUNCTION": "BETRAYAL",
+      "CHARACTERS": [
+        "Skillful Fisher",
+        "Hohodemi"
+      ],
+      "LOCATION": "Rice fields",
+      "CAUSE": "The Skillful Fisher's jealousy and resentment towards the Happy Hunter",
+      "EFFECT": "The Skillful Fisher plots to kill the Happy Hunter.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "The Happy Hunter uses the Jewels of the Flow and Ebb of the Tide to save his brother and reconcile with him.",
+      "FUNCTION": "SACRIFICE",
+      "CHARACTERS": [
+        "Hohodemi",
+        "Skillful Fisher"
+      ],
+      "LOCATION": "Rice fields",
+      "CAUSE": "The Happy Hunter's use of the Jewels of the Flow and Ebb of the Tide",
+      "EFFECT": "The Skillful Fisher is saved and the brothers reconcile.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Hohodemi",
+      "TARGET": "Skillful Fisher",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Hohodemi",
+      "TARGET": "Ryn Jin",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Skillful Fisher",
+      "TARGET": "Hohodemi",
+      "TYPE": "OPPOSES"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "ORDEAL",
+    "HELPER_APPEARS",
+    "BETRAYAL",
+    "SACRIFICE"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 32644,
+    "excerpt_chars": 11830
+  }
+}

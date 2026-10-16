@@ -1,0 +1,168 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Origin Myth",
+  "SETTING_DOMAIN": "Spiritual and Religious",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Kanaq",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "from a troubled leader to a wise and just leader",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Shiyu",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "defeated and put an end to his wicked ways",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Yuhi",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Kanaq's wife",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "the wise ones of his tribe",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "the great dragon",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "a time before our time",
+    "a place where Kanaq's people lived",
+    "a place where Shiyu's stronghold was located",
+    "a pond",
+    "the afterlife"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Kanaq was born, prophesied to become a great leader",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Kanaq"
+      ],
+      "LOCATION": "a place where Kanaq's people lived",
+      "CAUSE": "Story opening",
+      "EFFECT": "Kanaq's birth sets the story in motion",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Shiyu, a wicked magician, troubles Kanaq's reign",
+      "FUNCTION": "BETRAYAL",
+      "CHARACTERS": [
+        "Shiyu",
+        "Kanaq"
+      ],
+      "LOCATION": "a place where Kanaq's people lived",
+      "CAUSE": "Shiyu's actions",
+      "EFFECT": "Kanaq's reign is troubled",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Kanaq consults with the wise ones of his tribe and learns of the shinansha",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Kanaq",
+        "the wise ones of his tribe"
+      ],
+      "LOCATION": "a place where Kanaq's people lived",
+      "CAUSE": "Kanaq's desire to defeat Shiyu",
+      "EFFECT": "Kanaq learns of the shinansha",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Kanaq builds the shinansha and leads his army against Shiyu",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Kanaq",
+        "Shiyu"
+      ],
+      "LOCATION": "a place where Shiyu's stronghold was located",
+      "CAUSE": "Kanaq's desire to defeat Shiyu",
+      "EFFECT": "Kanaq's army is able to defeat Shiyu",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Kanaq is taken to the afterlife by a great dragon",
+      "FUNCTION": "RESURRECTION",
+      "CHARACTERS": [
+        "Kanaq",
+        "the great dragon"
+      ],
+      "LOCATION": "the afterlife",
+      "CAUSE": "Kanaq's old age",
+      "EFFECT": "Kanaq's spirit lives on",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Kanaq",
+      "TARGET": "Shiyu",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Kanaq",
+      "TARGET": "the wise ones of his tribe",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Kanaq's wife",
+      "TARGET": "Kanaq",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "BETRAYAL",
+    "HELPER_APPEARS",
+    "QUEST",
+    "RESURRECTION"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "issues": [
+      "event participant 'the wise ones of his tribe' not in CHARACTERS: added as SECONDARY",
+      "event participant 'the great dragon' not in CHARACTERS: added as SECONDARY"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 3187,
+    "excerpt_chars": 3187
+  }
+}

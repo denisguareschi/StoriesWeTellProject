@@ -1,0 +1,182 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Hero's Journey",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Momotaro",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "Grows from a peach-child into a national hero.",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 2
+    },
+    {
+      "CHARACTER": "Old Woman",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "NONE",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Old Man",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "NONE",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Dog",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "NONE",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Monkey",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "NONE",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Demon King",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "Changes from a powerful oppressor to a defeated captive.",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 4
+    }
+  ],
+  "LOCATIONS": [
+    "River bank",
+    "Old couple's home",
+    "Hills",
+    "Island of Devils"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "The old woman finds a giant peach in the river.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Old Woman"
+      ],
+      "LOCATION": "River bank",
+      "CAUSE": "Story opening",
+      "EFFECT": "She takes the peach home to share with her husband.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Momotaro is born from the peach and grows into a strong young man.",
+      "FUNCTION": "TRANSFORMATION",
+      "CHARACTERS": [
+        "Momotaro",
+        "Old Woman",
+        "Old Man"
+      ],
+      "LOCATION": "Old couple's home",
+      "CAUSE": "The old woman bringing the peach home.",
+      "EFFECT": "Momotaro is ready to embark on a quest to subdue devils.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Momotaro sets out to subdue the devils and gathers animal companions.",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Momotaro",
+        "Dog",
+        "Monkey"
+      ],
+      "LOCATION": "Hills",
+      "CAUSE": "Momotaro's desire to fight the devils.",
+      "EFFECT": "He forms a strong fighting party for his expedition.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Momotaro and his companions invade the Island of Devils and defeat the Demon King.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Momotaro",
+        "Dog",
+        "Monkey",
+        "Demon King"
+      ],
+      "LOCATION": "Island of Devils",
+      "CAUSE": "Momotaro's expedition reaching the devils' stronghold.",
+      "EFFECT": "The devils are defeated, treasure is gained, and captives are freed.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Momotaro returns home triumphantly with treasure and the captive Demon King.",
+      "FUNCTION": "RETURN",
+      "CHARACTERS": [
+        "Momotaro",
+        "Old Woman",
+        "Old Man",
+        "Demon King"
+      ],
+      "LOCATION": "Old couple's home",
+      "CAUSE": "The successful defeat of the devils and liberation of the island.",
+      "EFFECT": "The country is freed, and the old couple lives in peace and plenty.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Momotaro",
+      "TARGET": "Old Woman",
+      "TYPE": "BONDS_WITH"
+    },
+    {
+      "SOURCE": "Momotaro",
+      "TARGET": "Old Man",
+      "TYPE": "BONDS_WITH"
+    },
+    {
+      "SOURCE": "Momotaro",
+      "TARGET": "Dog",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Momotaro",
+      "TARGET": "Monkey",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Momotaro",
+      "TARGET": "Demon King",
+      "TYPE": "OPPOSES"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "TRANSFORMATION",
+    "QUEST",
+    "ORDEAL",
+    "RETURN"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "issues": [
+      "ROLE invalid for 'Demon King': 'ANTAOGNIST' -> SECONDARY"
+    ],
+    "model": "gemini:gemini-2.5-flash",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 22605,
+    "excerpt_chars": 11918
+  }
+}

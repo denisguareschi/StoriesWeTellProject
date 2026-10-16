@@ -1,0 +1,139 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Jackal",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "successful trickster",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 1
+    },
+    {
+      "CHARACTER": "Wolf",
+      "ROLE": "DEUTERAGONIST",
+      "TRANSFORMATION": "victim of trick",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 1
+    },
+    {
+      "CHARACTER": "Man",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "house"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Jackal and Wolf went and hired themselves to a man to be his servants.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Jackal",
+        "Wolf"
+      ],
+      "LOCATION": "house",
+      "CAUSE": "Story opening",
+      "EFFECT": "The man becomes the master of Jackal and Wolf.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Jackal rose and smeared Wolf's tail with some fat, and then ate all the rest of it in the house.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Jackal",
+        "Wolf"
+      ],
+      "LOCATION": "house",
+      "CAUSE": "Event 1",
+      "EFFECT": "Wolf's tail is smeared with fat, and Jackal eats the rest of the fat.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "The man missed the fat, and he immediately accused Jackal of having eaten it.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Man",
+        "Jackal"
+      ],
+      "LOCATION": "house",
+      "CAUSE": "Event 2",
+      "EFFECT": "The man accuses Jackal of the theft.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "The man did so, and then thrashed Wolf till he was nearly dead.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Man",
+        "Wolf"
+      ],
+      "LOCATION": "house",
+      "CAUSE": "Event 3",
+      "EFFECT": "Wolf is beaten nearly to death.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "The man thrashed Wolf till he was nearly dead.",
+      "FUNCTION": "SACRIFICE",
+      "CHARACTERS": [
+        "Man",
+        "Wolf"
+      ],
+      "LOCATION": "house",
+      "CAUSE": "Event 4",
+      "EFFECT": "Wolf is nearly killed.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Jackal",
+      "TARGET": "Wolf",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "Man",
+      "TARGET": "Wolf",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Man",
+      "TARGET": "Jackal",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "TRICKSTER",
+    "ORDEAL",
+    "SACRIFICE"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.5,
+    "seed": 1,
+    "attempts": 1,
+    "source_chars": 447,
+    "excerpt_chars": 447
+  }
+}

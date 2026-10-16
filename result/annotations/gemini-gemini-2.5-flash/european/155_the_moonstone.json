@@ -1,0 +1,158 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Cautionary Tale",
+  "SETTING_DOMAIN": "Spiritual and Religious",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Narrator",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "NONE",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "John Herncastle",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "NONE",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Godfrey Ablewhite",
+      "ROLE": "TRICKSTER",
+      "TRANSFORMATION": "His true deceptive nature is revealed.",
+      "TRANSFORMATION_TYPE": "REVERSAL",
+      "CHANGE_EVENT": 3
+    },
+    {
+      "CHARACTER": "Rachel Verinder",
+      "ROLE": "DEUTERAGONIST",
+      "TRANSFORMATION": "NONE",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Three Brahmins",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "Forfeit caste and undertake a lifelong pilgrimage for purification.",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 4
+    }
+  ],
+  "LOCATIONS": [
+    "India",
+    "Seringapatam",
+    "Benares",
+    "Lady Verinder's house",
+    "Hidden shrine"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Vishnu commands the Moonstone be guarded and predicts disaster for anyone who lays hands on it.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Three Brahmins"
+      ],
+      "LOCATION": "Benares",
+      "CAUSE": "Story opening",
+      "EFFECT": "The Moonstone is guarded by Brahmins, and a curse is established.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "The storming of Seringapatam leads to John Herncastle acquiring the Moonstone.",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Narrator",
+        "John Herncastle"
+      ],
+      "LOCATION": "Seringapatam",
+      "CAUSE": "Desire for treasure and military conquest",
+      "EFFECT": "The Moonstone leaves India, and John Herncastle becomes subject to the curse.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "The Narrator overhears Godfrey Ablewhite's deceptive conversation with Rachel Verinder.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Narrator",
+        "Godfrey Ablewhite",
+        "Rachel Verinder"
+      ],
+      "LOCATION": "Lady Verinder's house",
+      "CAUSE": "Narrator's suspicion and eavesdropping",
+      "EFFECT": "The Narrator discovers Godfrey's duplicity, changing her perception of him.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 4,
+      "EVENT": "Three Brahmins forfeit their caste and begin a lifelong pilgrimage for purification.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Three Brahmins"
+      ],
+      "LOCATION": "Hidden shrine",
+      "CAUSE": "Their failure to protect the Moonstone and the god's command",
+      "EFFECT": "The Brahmins undertake a lifelong penance, leading towards the Moonstone's return.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "The Moonstone is returned to the forehead of the Moon-god in its sacred shrine in India.",
+      "FUNCTION": "RETURN",
+      "CHARACTERS": [
+        "Three Brahmins"
+      ],
+      "LOCATION": "Hidden shrine",
+      "CAUSE": "The Brahmins' actions and the unfolding of the prophecy/curse",
+      "EFFECT": "The sacred order is restored, and the Moonstone is back in its native land.",
+      "CAUSED_BY": [
+        1,
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Narrator",
+      "TARGET": "John Herncastle",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Godfrey Ablewhite",
+      "TARGET": "Narrator",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "Narrator",
+      "TARGET": "Rachel Verinder",
+      "TYPE": "BONDS_WITH"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "QUEST",
+    "TRICKSTER",
+    "ORDEAL",
+    "RETURN"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "issues": [
+      "relation dropped: {'SOURCE': 'Three Brahmins', 'TARGET': 'Moon-god', 'TYPE': 'HELPS'}"
+    ],
+    "model": "gemini:gemini-2.5-flash",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 1073926,
+    "excerpt_chars": 11953
+  }
+}

@@ -1,0 +1,172 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Cautionary Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Finnley",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "from innocent to deceitful",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 3
+    },
+    {
+      "CHARACTER": "Cedric",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "from trusting to betrayed",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 3
+    },
+    {
+      "CHARACTER": "Cedric junior",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "from grieving to avenging",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "The chestnut",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "from passive to active",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "The bee",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "from passive to active",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "The mortar",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "from passive to active",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    }
+  ],
+  "LOCATIONS": [
+    "Ashwood",
+    "River Avon",
+    "the woods"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Finnley and Cedric met along the banks of the River Avon.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Finnley",
+        "Cedric"
+      ],
+      "LOCATION": "River Avon",
+      "CAUSE": "Story opening",
+      "EFFECT": "The beginning of their friendship.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Finnley exchanged a persimmon seed for a rice dumpling, and Cedric planted the seed.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Finnley",
+        "Cedric"
+      ],
+      "LOCATION": "the woods",
+      "CAUSE": "Finnley's cunning words",
+      "EFFECT": "Cedric was deceived.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "The seed sprouted, grew, and eventually bore fruit – a veritable paradise of golden persimmons.",
+      "FUNCTION": "TRANSFORMATION",
+      "CHARACTERS": [
+        "Cedric"
+      ],
+      "LOCATION": "the woods",
+      "CAUSE": "The seed's growth",
+      "EFFECT": "Cedric became a devoted guardian of the tree.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Finnley hurled the unripe persimmons at Cedric, who fell to the ground, his life extinguished.",
+      "FUNCTION": "BETRAYAL",
+      "CHARACTERS": [
+        "Finnley",
+        "Cedric"
+      ],
+      "LOCATION": "the woods",
+      "CAUSE": "Finnley's avaricious nature",
+      "EFFECT": "Cedric was killed.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Cedric junior and his allies brought Finnley to justice, ending his life with a swift, merciful stroke.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Cedric junior",
+        "Finnley"
+      ],
+      "LOCATION": "Ashwood",
+      "CAUSE": "Cedric junior's desire for vengeance",
+      "EFFECT": "Justice was served.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Finnley",
+      "TARGET": "Cedric",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "Cedric junior",
+      "TARGET": "Finnley",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "The chestnut",
+      "TARGET": "Finnley",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "The bee",
+      "TARGET": "Finnley",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "The mortar",
+      "TARGET": "Finnley",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "TRICKSTER",
+    "TRANSFORMATION",
+    "BETRAYAL",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 2924,
+    "excerpt_chars": 2924
+  }
+}

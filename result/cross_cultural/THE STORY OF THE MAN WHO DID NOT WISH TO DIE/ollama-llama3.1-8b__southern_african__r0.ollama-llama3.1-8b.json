@@ -1,0 +1,175 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Spiritual and Religious",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Sentaro",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "learns to appreciate the value of life and the importance of honoring ancestors",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Jofuku",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "null",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "The Hunter",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "null",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "The Robber",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "null",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "The Messenger",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "null",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "The wise old man",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "the mountains",
+    "the shrine of Jofuku",
+    "the country of Perpetual Life",
+    "Sentaro's old home",
+    "under the shade of a tall baobab tree"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Sentaro thought to himself, 'What is the point of living if I am going to die one day?'",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Sentaro"
+      ],
+      "LOCATION": "under the shade of a tall baobab tree",
+      "CAUSE": "Story opening",
+      "EFFECT": "Sentaro decides to live forever",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Sentaro met a wise old man who looked at him with kind eyes and said, 'You are not like other men, Sentaro. You are soft and weak, not suited to a life of hardship and simplicity.'",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Sentaro",
+        "The wise old man"
+      ],
+      "LOCATION": "the shrine of Jofuku",
+      "CAUSE": "Sentaro seeks out the shrine of Jofuku",
+      "EFFECT": "The wise old man offers to help Sentaro in another way",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Sentaro was amazed and grateful and mounted a paper crane that Jofuku had given him, and it carried him to the country of Perpetual Life.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Sentaro",
+        "Jofuku"
+      ],
+      "LOCATION": "the country of Perpetual Life",
+      "CAUSE": "The wise old man sends Sentaro to the country of Perpetual Life",
+      "EFFECT": "Sentaro finds a people who live in a state of bliss, longing for death",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Sentaro grew tired of the monotony of life and longed to return to his own land.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Sentaro"
+      ],
+      "LOCATION": "the country of Perpetual Life",
+      "CAUSE": "Sentaro's desire for eternal life is revealed to be vain",
+      "EFFECT": "Sentaro prays to Jofuku to save him",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "A messenger appeared before him, holding a book. 'This is a message from Jofuku,' the messenger said. 'You have been tested, Sentaro. You have seen the country of Perpetual Life and realized that your desire for eternal life was vain. You must return to your own land and live a good and industrious life. Never neglect to honor your ancestors and provide for your children's future. This is the path to true happiness.'",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Sentaro",
+        "The Messenger"
+      ],
+      "LOCATION": "Sentaro's old home",
+      "CAUSE": "Sentaro's prayer is answered",
+      "EFFECT": "Sentaro takes the book to heart and returns to his old home",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Sentaro",
+      "TARGET": "Jofuku",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Jofuku",
+      "TARGET": "Sentaro",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "The Hunter",
+      "TARGET": "Sentaro",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "The Messenger",
+      "TARGET": "Sentaro",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Sentaro",
+      "TARGET": "The Robber",
+      "TYPE": "OPPOSES"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "HELPER_APPEARS",
+    "ORDEAL",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "issues": [
+      "event participant 'The wise old man' not in CHARACTERS: added as SECONDARY"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 3074,
+    "excerpt_chars": 3074
+  }
+}

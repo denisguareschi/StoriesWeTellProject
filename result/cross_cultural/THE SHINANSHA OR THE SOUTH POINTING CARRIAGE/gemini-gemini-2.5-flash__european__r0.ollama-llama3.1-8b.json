@@ -1,0 +1,142 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Hero's Journey",
+  "SETTING_DOMAIN": "Historical and Geographical",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "King Corvin",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "From uncertain leader to wise and inventive monarch",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Malakor",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "None",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Queen Elara",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "None",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "The Dragon",
+      "ROLE": "TRICKSTER",
+      "TRANSFORMATION": "None",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "The Realm of Eldoria",
+    "The Plains of Aethel",
+    "The Great River",
+    "The Castle"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "King Corvin's birth was heralded by a celestial sign.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "King Corvin"
+      ],
+      "LOCATION": "The Realm of Eldoria",
+      "CAUSE": "Story opening",
+      "EFFECT": "The prophecy of King Corvin's greatness",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "King Corvin's early reign was shadowed by the malevolence of Malakor.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "King Corvin",
+        "Malakor"
+      ],
+      "LOCATION": "The Realm of Eldoria",
+      "CAUSE": "Malakor's rebellion",
+      "EFFECT": "The war between King Corvin and Malakor",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "King Corvin's army clashed with Malakor's forces on the Plains of Aethel.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "King Corvin",
+        "Malakor"
+      ],
+      "LOCATION": "The Plains of Aethel",
+      "CAUSE": "Malakor's fog spell",
+      "EFFECT": "The royal host was disoriented and lost",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "King Corvin unveiled the Wayfinder Cart, a device that would guide him through Malakor's magical mists.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "King Corvin"
+      ],
+      "LOCATION": "The Castle",
+      "CAUSE": "King Corvin's ingenuity",
+      "EFFECT": "The Wayfinder Cart was created",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "King Corvin and his army defeated Malakor, bringing an end to the war and ushering in an age of peace and prosperity.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "King Corvin",
+        "Malakor"
+      ],
+      "LOCATION": "The Castle",
+      "CAUSE": "King Corvin's determination and ingenuity",
+      "EFFECT": "The war was won and peace was restored",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "King Corvin",
+      "TARGET": "Malakor",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "King Corvin",
+      "TARGET": "The Dragon",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "ORDEAL",
+    "HELPER_APPEARS",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 4332,
+    "excerpt_chars": 4332
+  }
+}

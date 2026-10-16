@@ -1,0 +1,140 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Tragedy",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Lioness",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "From confident and dominant to deceived and killed.",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Ostrich",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "From perceived equal to cunning killer.",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Cubs",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "NONE",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Wilderness",
+    "Shade",
+    "Ant-hill"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "The Lioness and Ostrich meet and establish their equality in roaring.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Lioness",
+        "Ostrich"
+      ],
+      "LOCATION": "Wilderness",
+      "CAUSE": "Story opening",
+      "EFFECT": "They decide to hunt together.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "The Lioness and Ostrich hunt together, revealing the Ostrich's superior hunting ability.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Lioness",
+        "Ostrich"
+      ],
+      "LOCATION": "Wilderness",
+      "CAUSE": "Their agreement to hunt together.",
+      "EFFECT": "The Lioness observes the Ostrich's greater kill count.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "The Lioness's cubs discover the sleeping Ostrich has no teeth and inform their mother.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Cubs",
+        "Ostrich",
+        "Lioness"
+      ],
+      "LOCATION": "Shade",
+      "CAUSE": "The cubs playing near the sleeping Ostrich.",
+      "EFFECT": "The Lioness feels insulted and challenges the Ostrich.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 4,
+      "EVENT": "The Lioness, feeling insulted by the Ostrich's deception, challenges him to a fight.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Lioness",
+        "Ostrich"
+      ],
+      "LOCATION": "Wilderness",
+      "CAUSE": "The cubs' revelation about the Ostrich's lack of teeth.",
+      "EFFECT": "The Lioness and Ostrich begin to fight.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "The Ostrich strikes the Lioness in a vulnerable spot, killing her.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Ostrich",
+        "Lioness"
+      ],
+      "LOCATION": "Ant-hill",
+      "CAUSE": "The fight initiated by the Lioness.",
+      "EFFECT": "The Lioness dies, and the Ostrich prevails.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Lioness",
+      "TARGET": "Ostrich",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Ostrich",
+      "TARGET": "Lioness",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "Cubs",
+      "TARGET": "Lioness",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "ORDEAL",
+    "HELPER_APPEARS",
+    "TRICKSTER"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "gemini:gemini-2.5-flash",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 1707,
+    "excerpt_chars": 1707
+  }
+}

@@ -1,0 +1,178 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Hero's Journey",
+  "SETTING_DOMAIN": "Historical and Geographical",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Prince Yamato Take",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "Becomes a renowned warrior, fulfilling all duties and overcoming all enemies.",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Princess Yamato",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "NONE",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Kumaso and Takeru",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "Are subdued and rid from the land.",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 2
+    },
+    {
+      "CHARACTER": "Governor of Suruga",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "His treacherous plot is foiled, and he is defeated.",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 4
+    },
+    {
+      "CHARACTER": "Emperor Keiko",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "NONE",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Monster Serpent",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "Is slain by Prince Yamato Take.",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    }
+  ],
+  "LOCATIONS": [
+    "Palace",
+    "Shrine of Ise",
+    "Southern Island of Kiushiu",
+    "Province of Suruga",
+    "Ibuki Mountain",
+    "Hot mineral springs"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Emperor Keiko orders Prince Yamato Take to subdue the brigands Kumaso and Takeru.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Prince Yamato Take",
+        "Emperor Keiko"
+      ],
+      "LOCATION": "Palace",
+      "CAUSE": "Story opening",
+      "EFFECT": "Prince Yamato Take prepares for and embarks on his first expedition.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Prince Yamato Take, aided by his aunt's gift, subdues the brigands Kumaso and Takeru in Kiushiu.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Prince Yamato Take",
+        "Princess Yamato",
+        "Kumaso and Takeru"
+      ],
+      "LOCATION": "Southern Island of Kiushiu",
+      "CAUSE": "Prince Yamato Take's expedition to the Southern Island.",
+      "EFFECT": "The brigands are defeated, and Prince Yamato Take gains renown.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Emperor Keiko orders Prince Yamato Take to subjugate the Eastern Barbarians, and his aunt gives him the sacred sword of Murakumo.",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Prince Yamato Take",
+        "Emperor Keiko",
+        "Princess Yamato"
+      ],
+      "LOCATION": "Shrine of Ise",
+      "CAUSE": "The King's new command and the Prince's previous success.",
+      "EFFECT": "Prince Yamato Take embarks on a new expedition to the East, equipped with a sacred sword.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "The Governor of Suruga traps Prince Yamato Take in a burning plain, but the Prince uses the sword of Murakumo to escape, renaming it Kusanagi-no-Tsrugugi.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Prince Yamato Take",
+        "Governor of Suruga"
+      ],
+      "LOCATION": "Province of Suruga",
+      "CAUSE": "The Governor's feigned cordiality and treacherous plot.",
+      "EFFECT": "Prince Yamato Take survives the trap, the sword is renamed, and he continues his mission.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Prince Yamato Take slays a monster serpent on Ibuki Mountain, recovers from its poison at hot springs, and returns to the Shrine of Ise, having fulfilled all his father's orders.",
+      "FUNCTION": "RESURRECTION",
+      "CHARACTERS": [
+        "Prince Yamato Take",
+        "Monster Serpent",
+        "Princess Yamato"
+      ],
+      "LOCATION": "Ibuki Mountain",
+      "CAUSE": "Prince Yamato Take's decision to take another route and the monster's terrorizing of the people.",
+      "EFFECT": "Prince Yamato Take is fully recovered, his renown is great, and his journey concludes.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Prince Yamato Take",
+      "TARGET": "Princess Yamato",
+      "TYPE": "BONDS_WITH"
+    },
+    {
+      "SOURCE": "Princess Yamato",
+      "TARGET": "Prince Yamato Take",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Prince Yamato Take",
+      "TARGET": "Kumaso and Takeru",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Governor of Suruga",
+      "TARGET": "Prince Yamato Take",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "Prince Yamato Take",
+      "TARGET": "Monster Serpent",
+      "TYPE": "OPPOSES"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "ORDEAL",
+    "QUEST",
+    "RESURRECTION"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "gemini:gemini-2.5-flash",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 28421,
+    "excerpt_chars": 11811
+  }
+}

@@ -1,0 +1,198 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Rabbit",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "Outwitted by Tortoise, learns humility",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Tortoise",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "Used cunning to catch Rabbit",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Lion",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "Used strength to save Rabbit",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Other animals",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "Learned to work together",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Tiger",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Wolf",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Jackal",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Elephant",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "dry river bed"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "A great gathering of animals was held to discuss the drought.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Lion",
+        "Tiger",
+        "Wolf",
+        "Jackal",
+        "Elephant"
+      ],
+      "LOCATION": "dry river bed",
+      "CAUSE": "Story opening",
+      "EFFECT": "Animals discuss the drought",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "The animals decided to dance to bring water to the surface.",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Lion",
+        "Tiger",
+        "Wolf",
+        "Jackal",
+        "Elephant",
+        "Rabbit"
+      ],
+      "LOCATION": "dry river bed",
+      "CAUSE": "Animals decide to dance",
+      "EFFECT": "Animals dance, water appears",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Rabbit refused to dance with the other animals.",
+      "FUNCTION": "BETRAYAL",
+      "CHARACTERS": [
+        "Rabbit",
+        "Lion",
+        "Tiger",
+        "Wolf",
+        "Jackal",
+        "Elephant"
+      ],
+      "LOCATION": "dry river bed",
+      "CAUSE": "Rabbit refuses to dance",
+      "EFFECT": "Animals decide to punish Rabbit",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Tortoise and the other animals came up with a plan to catch Rabbit.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Tortoise",
+        "Lion",
+        "Tiger",
+        "Wolf",
+        "Jackal",
+        "Elephant"
+      ],
+      "LOCATION": "dry river bed",
+      "CAUSE": "Animals plan to catch Rabbit",
+      "EFFECT": "Tortoise and animals prepare to catch Rabbit",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Rabbit was caught and punished by Lion.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Rabbit",
+        "Lion",
+        "Tortoise",
+        "Other animals"
+      ],
+      "LOCATION": "dry river bed",
+      "CAUSE": "Animals catch Rabbit",
+      "EFFECT": "Rabbit learns humility, animals learn to work together",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Tortoise",
+      "TARGET": "Rabbit",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Lion",
+      "TARGET": "Rabbit",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Rabbit",
+      "TARGET": "Tortoise",
+      "TYPE": "DECEIVES"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "QUEST",
+    "BETRAYAL",
+    "HELPER_APPEARS",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "issues": [
+      "event participant 'Tiger' not in CHARACTERS: added as SECONDARY",
+      "event participant 'Wolf' not in CHARACTERS: added as SECONDARY",
+      "event participant 'Jackal' not in CHARACTERS: added as SECONDARY",
+      "event participant 'Elephant' not in CHARACTERS: added as SECONDARY"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.5,
+    "seed": 1,
+    "attempts": 1,
+    "source_chars": 4245,
+    "excerpt_chars": 4245
+  }
+}

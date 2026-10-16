@@ -1,0 +1,173 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Cautionary Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Mabolelo",
+      "ROLE": "TRICKSTER",
+      "TRANSFORMATION": "from cunning to villainy",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 3
+    },
+    {
+      "CHARACTER": "Makhulu",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "from victim to avenger",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "young Makhulu",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "from victim to avenger",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "chestnut",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "from inanimate to active",
+      "TRANSFORMATION_TYPE": "REVERSAL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "bee",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "from inanimate to active",
+      "TRANSFORMATION_TYPE": "REVERSAL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "mortar",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "from inanimate to active",
+      "TRANSFORMATION_TYPE": "REVERSAL",
+      "CHANGE_EVENT": 5
+    }
+  ],
+  "LOCATIONS": [
+    "savannah's golden grasslands",
+    "river's winding waters"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Mabolelo and Makhulu were inseparable companions.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Mabolelo",
+        "Makhulu"
+      ],
+      "LOCATION": "savannah's golden grasslands",
+      "CAUSE": "Story opening",
+      "EFFECT": "",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Mabolelo convinced Makhulu to exchange his precious rice-dumpling for the persimmon seed.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Mabolelo",
+        "Makhulu"
+      ],
+      "LOCATION": "river's winding waters",
+      "CAUSE": "Mabolelo's cunning",
+      "EFFECT": "Makhulu loses his rice-dumpling",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Mabolelo plucked the persimmons from the tree and hurled them at Makhulu.",
+      "FUNCTION": "BETRAYAL",
+      "CHARACTERS": [
+        "Mabolelo",
+        "Makhulu"
+      ],
+      "LOCATION": "river's winding waters",
+      "CAUSE": "Mabolelo's greed",
+      "EFFECT": "Makhulu is battered and bruised",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "The young Makhulu vowed to avenge his father's death.",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "young Makhulu"
+      ],
+      "LOCATION": "savannah's golden grasslands",
+      "CAUSE": "Makhulu's death",
+      "EFFECT": "The young Makhulu sets out to avenge his father",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "The chestnut, bee, and mortar brought Mabolelo to justice.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "chestnut",
+        "bee",
+        "mortar",
+        "Mabolelo"
+      ],
+      "LOCATION": "savannah's golden grasslands",
+      "CAUSE": "The young Makhulu's plan",
+      "EFFECT": "Mabolelo is punished for his crimes",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Mabolelo",
+      "TARGET": "Makhulu",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "young Makhulu",
+      "TARGET": "Mabolelo",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "chestnut",
+      "TARGET": "Mabolelo",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "bee",
+      "TARGET": "Mabolelo",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "mortar",
+      "TARGET": "Mabolelo",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "TRICKSTER",
+    "BETRAYAL",
+    "QUEST",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 3062,
+    "excerpt_chars": 3062
+  }
+}

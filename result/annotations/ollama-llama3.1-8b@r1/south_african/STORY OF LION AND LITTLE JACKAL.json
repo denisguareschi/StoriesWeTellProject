@@ -1,0 +1,156 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Little Jackal",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "from naive to cunning",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 3
+    },
+    {
+      "CHARACTER": "Lion",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "from trusting to deceived",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 2
+    },
+    {
+      "CHARACTER": "Lion's wife",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "from trusting to deceived",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Little Jackal's wife",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "from trusting to deceived",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "water",
+    "tree",
+    "rock",
+    "Lion's house",
+    "Little Jackal's house",
+    "field"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Little Jackal and Lion agreed to hunt together.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Little Jackal",
+        "Lion"
+      ],
+      "LOCATION": "field",
+      "CAUSE": "Story opening",
+      "EFFECT": "They start hunting together.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Lion went away to hunt, and Little Jackal stole the meat.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Little Jackal",
+        "Lion"
+      ],
+      "LOCATION": "field",
+      "CAUSE": "Lion's absence",
+      "EFFECT": "Little Jackal gets the meat.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Little Jackal's children carried the meat to their home, and Lion couldn't get to it.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Little Jackal",
+        "Lion"
+      ],
+      "LOCATION": "rock",
+      "CAUSE": "Lion's failure to get to the meat",
+      "EFFECT": "Lion is stuck.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Lion tried to catch Little Jackal, but Little Jackal escaped.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Little Jackal",
+        "Lion"
+      ],
+      "LOCATION": "field",
+      "CAUSE": "Lion's pursuit",
+      "EFFECT": "Little Jackal escapes.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Lion finally caught Little Jackal, but then let him go.",
+      "FUNCTION": "SACRIFICE",
+      "CHARACTERS": [
+        "Little Jackal",
+        "Lion"
+      ],
+      "LOCATION": "field",
+      "CAUSE": "Lion's anger",
+      "EFFECT": "Lion lets Little Jackal go.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Little Jackal",
+      "TARGET": "Lion",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Lion",
+      "TARGET": "Little Jackal",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Lion's wife",
+      "TARGET": "Little Jackal",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Little Jackal's wife",
+      "TARGET": "Lion",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "TRICKSTER",
+    "ORDEAL",
+    "SACRIFICE"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.5,
+    "seed": 1,
+    "attempts": 1,
+    "source_chars": 4969,
+    "excerpt_chars": 4967
+  }
+}

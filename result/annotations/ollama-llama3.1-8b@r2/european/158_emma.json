@@ -1,0 +1,175 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Cautionary Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Emma Woodhouse",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "learns to balance her own desires with the needs of others",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Mr. Knightley",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "becomes more confident in his relationship with Emma",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Miss Taylor",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "leaves Emma's life, but is replaced by Mr. Knightley",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 1
+    },
+    {
+      "CHARACTER": "Mr. Weston",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "marries and becomes a part of Emma's life",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 1
+    },
+    {
+      "CHARACTER": "Mr. Elton",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "learns to accept Emma's marriage to Mr. Knightley",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Harriet Smith",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "gets married and moves away",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Hartfield",
+    "Randalls",
+    "Highbury",
+    "Kingston"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Emma's governess, Miss Taylor, marries Mr. Weston.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Emma Woodhouse",
+        "Mr. Weston",
+        "Miss Taylor"
+      ],
+      "LOCATION": "Hartfield",
+      "CAUSE": "Miss Taylor's marriage",
+      "EFFECT": "Emma loses her governess and companion",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Emma begins to realize the importance of her relationship with Mr. Knightley.",
+      "FUNCTION": "TRANSFORMATION",
+      "CHARACTERS": [
+        "Emma Woodhouse",
+        "Mr. Knightley"
+      ],
+      "LOCATION": "Hartfield",
+      "CAUSE": "Emma's growing feelings for Mr. Knightley",
+      "EFFECT": "Emma begins to see Mr. Knightley in a new light",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Emma and Mr. Knightley begin to dance together at a ball.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Emma Woodhouse",
+        "Mr. Knightley"
+      ],
+      "LOCATION": "Highbury",
+      "CAUSE": "Emma and Mr. Knightley's growing feelings for each other",
+      "EFFECT": "Emma and Mr. Knightley's relationship deepens",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Emma and Mr. Knightley become engaged.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Emma Woodhouse",
+        "Mr. Knightley"
+      ],
+      "LOCATION": "Hartfield",
+      "CAUSE": "Emma and Mr. Knightley's love for each other",
+      "EFFECT": "Emma and Mr. Knightley's engagement is announced",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Emma and Mr. Knightley get married.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Emma Woodhouse",
+        "Mr. Knightley"
+      ],
+      "LOCATION": "Hartfield",
+      "CAUSE": "Emma and Mr. Knightley's love for each other",
+      "EFFECT": "Emma and Mr. Knightley's marriage is a happy one",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Emma Woodhouse",
+      "TARGET": "Mr. Knightley",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Mr. Knightley",
+      "TARGET": "Emma Woodhouse",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Miss Taylor",
+      "TARGET": "Emma Woodhouse",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Mr. Weston",
+      "TARGET": "Emma Woodhouse",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Mr. Elton",
+      "TARGET": "Emma Woodhouse",
+      "TYPE": "OPPOSES"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "HELPER_APPEARS",
+    "TRANSFORMATION",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [
+      "CHANGE_EVENT"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.5,
+    "seed": 2,
+    "attempts": 1,
+    "source_chars": 883027,
+    "excerpt_chars": 11837
+  }
+}

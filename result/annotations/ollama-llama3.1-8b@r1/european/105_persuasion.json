@@ -1,0 +1,193 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Tragedy",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Sir Walter Elliot",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "Vanity and self-importance lead to downfall",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 3
+    },
+    {
+      "CHARACTER": "Lady Elliot",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "From youth to maturity, from love to sense",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Anne Elliot",
+      "ROLE": "DEUTERAGONIST",
+      "TRANSFORMATION": "From self-doubt to self-acceptance, from love to happiness",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Captain Wentworth",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "From heartbreak to love, from isolation to connection",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Mrs. Clay",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "From scheming to self-interest, from loyalty to betrayal",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 3
+    },
+    {
+      "CHARACTER": "Mary Elliot",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Lady Russell",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Mrs. Smith",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Kellynch Hall",
+    "Uppercross",
+    "Bath",
+    "London"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Sir Walter Elliot reads the Baronetage and contemplates his family's history",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Sir Walter Elliot"
+      ],
+      "LOCATION": "Kellynch Hall",
+      "CAUSE": "Story opening",
+      "EFFECT": "Sir Walter's vanity and self-importance are highlighted",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Mary Elliot suffers from illness and is unable to return home",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Mary Elliot",
+        "Sir Walter Elliot",
+        "Lady Elliot"
+      ],
+      "LOCATION": "Uppercross",
+      "CAUSE": "Mary's illness",
+      "EFFECT": "The family is forced to stay in Uppercross",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Sir Walter Elliot and Mrs. Clay's deception is revealed, and they are forced to confront the consequences of their actions",
+      "FUNCTION": "BETRAYAL",
+      "CHARACTERS": [
+        "Sir Walter Elliot",
+        "Mrs. Clay",
+        "Lady Elliot"
+      ],
+      "LOCATION": "Kellynch Hall",
+      "CAUSE": "The discovery of their deception",
+      "EFFECT": "The family is shocked and mortified",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Anne Elliot and Captain Wentworth's love is rekindled, and they begin to plan their future together",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Anne Elliot",
+        "Captain Wentworth",
+        "Lady Russell",
+        "Mrs. Smith"
+      ],
+      "LOCATION": "Kellynch Hall",
+      "CAUSE": "The rekindling of their love",
+      "EFFECT": "Their happiness is secured",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Captain Wentworth and Anne Elliot get married, and their happiness is complete",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Anne Elliot",
+        "Captain Wentworth",
+        "Lady Russell",
+        "Mrs. Smith"
+      ],
+      "LOCATION": "Kellynch Hall",
+      "CAUSE": "Their marriage",
+      "EFFECT": "Their happiness is complete",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Sir Walter Elliot",
+      "TARGET": "Mrs. Clay",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "Captain Wentworth",
+      "TARGET": "Anne Elliot",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Lady Russell",
+      "TARGET": "Anne Elliot",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Mrs. Smith",
+      "TARGET": "Anne Elliot",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "ORDEAL",
+    "BETRAYAL",
+    "HELPER_APPEARS",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "issues": [
+      "event participant 'Mary Elliot' not in CHARACTERS: added as SECONDARY",
+      "event participant 'Lady Russell' not in CHARACTERS: added as SECONDARY",
+      "event participant 'Mrs. Smith' not in CHARACTERS: added as SECONDARY"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.5,
+    "seed": 1,
+    "attempts": 1,
+    "source_chars": 466817,
+    "excerpt_chars": 12026
+  }
+}

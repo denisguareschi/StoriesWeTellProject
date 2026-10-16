@@ -1,0 +1,229 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Cautionary Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Crocodile",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "NONE",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Lion",
+      "ROLE": "DEUTERAGONIST",
+      "TRANSFORMATION": "NONE",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Jackal",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "NONE",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Elephant",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "Dies during the ambush.",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Boer",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "NONE",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Otter",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Tortoise",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Alligator",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Wolf",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Baboon",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Yellow Snake",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "River",
+    "Other river",
+    "Boer's farm",
+    "Veldt",
+    "Vaarland willow tree",
+    "Sea-cow pool"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "A severe drought forces Crocodile to plan a trek for the water animals to another river.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Crocodile",
+        "Otter"
+      ],
+      "LOCATION": "River",
+      "CAUSE": "Story opening",
+      "EFFECT": "Crocodile sends messengers to Lion to secure safe passage.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Crocodile sends Tortoise and Alligator to Lion to propose a peace treaty and request an escort for the trek.",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Crocodile",
+        "Tortoise",
+        "Alligator",
+        "Lion"
+      ],
+      "LOCATION": "Veldt",
+      "CAUSE": "The need for safe passage past the Boer's farm and other land animals.",
+      "EFFECT": "Lion agrees to meet Crocodile and his advisers to discuss the treaty.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Lion, after consulting his advisers, agrees to the peace treaty and the escort plan for the water animals.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Lion",
+        "Crocodile",
+        "Jackal",
+        "Wolf",
+        "Baboon"
+      ],
+      "LOCATION": "Vaarland willow tree",
+      "CAUSE": "Crocodile's persuasive plea and the shared threat from the Boer.",
+      "EFFECT": "The trek is organized, and land animals prepare to escort the water animals.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Crocodile secretly instructs Yellow Snake to harass the Boer's dogs upon arrival at the sea-cow pool, setting up an ambush for the land animals.",
+      "FUNCTION": "BETRAYAL",
+      "CHARACTERS": [
+        "Crocodile",
+        "Yellow Snake",
+        "Boer"
+      ],
+      "LOCATION": "Vaarland willow tree",
+      "CAUSE": "Crocodile's treacherous nature and desire to eliminate the land animals.",
+      "EFFECT": "The land animals are led into a trap during the trek.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "During the trek, the land animals are ambushed by the Boer's shots, Crocodile escapes, and he later receives his 'well-earned reward' of meeting dynamite.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Lion",
+        "Elephant",
+        "Jackal",
+        "Crocodile",
+        "Boer",
+        "Yellow Snake"
+      ],
+      "LOCATION": "Sea-cow pool",
+      "CAUSE": "Crocodile's betrayal and Yellow Snake's actions.",
+      "EFFECT": "Some land animals die, Crocodile is punished, and the moral order is restored.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Crocodile",
+      "TARGET": "Lion",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "Lion",
+      "TARGET": "Crocodile",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Jackal",
+      "TARGET": "Lion",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Boer",
+      "TARGET": "Elephant",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Crocodile",
+      "TARGET": "Yellow Snake",
+      "TYPE": "BONDS_WITH"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "QUEST",
+    "HELPER_APPEARS",
+    "BETRAYAL",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "issues": [
+      "event participant 'Otter' not in CHARACTERS: added as SECONDARY",
+      "event participant 'Tortoise' not in CHARACTERS: added as SECONDARY",
+      "event participant 'Alligator' not in CHARACTERS: added as SECONDARY",
+      "event participant 'Wolf' not in CHARACTERS: added as SECONDARY",
+      "event participant 'Baboon' not in CHARACTERS: added as SECONDARY",
+      "event participant 'Yellow Snake' not in CHARACTERS: added as SECONDARY"
+    ],
+    "model": "gemini:gemini-2.5-flash",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 8714,
+    "excerpt_chars": 8714
+  }
+}

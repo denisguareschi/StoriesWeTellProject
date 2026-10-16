@@ -1,0 +1,159 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Spiritual and Religious",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Sentaro",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "understands the value of living a good and industrious life",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Jofuku",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "null",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "The Emperor",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "null",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "The Hunter",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "null",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "The Messenger",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "null",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Japan",
+    "Mount Fuji",
+    "The Country of Perpetual Life",
+    "The Island",
+    "The Shrine"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Sentaro wishes to live a long life free from sickness",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Sentaro"
+      ],
+      "LOCATION": "Japan",
+      "CAUSE": "Story opening",
+      "EFFECT": "Sentaro decides to find the Elixir of Life",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Jofuku helps Sentaro find the paper crane",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Sentaro",
+        "Jofuku"
+      ],
+      "LOCATION": "The Shrine",
+      "CAUSE": "Sentaro prays for help",
+      "EFFECT": "Sentaro rides the paper crane to the Country of Perpetual Life",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Sentaro discovers the Country of Perpetual Life",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Sentaro"
+      ],
+      "LOCATION": "The Country of Perpetual Life",
+      "CAUSE": "Sentaro arrives in the Country of Perpetual Life",
+      "EFFECT": "Sentaro learns about the inhabitants' desire for death",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Sentaro's life in the Country of Perpetual Life becomes monotonous",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Sentaro"
+      ],
+      "LOCATION": "The Country of Perpetual Life",
+      "CAUSE": "Sentaro's life becomes monotonous",
+      "EFFECT": "Sentaro prays to Jofuku to return to his native land",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Sentaro is awakened from his dream and given a lesson by Jofuku",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Sentaro",
+        "The Messenger"
+      ],
+      "LOCATION": "The Shrine",
+      "CAUSE": "Sentaro prays to Jofuku",
+      "EFFECT": "Sentaro returns to his old home and tries to live a good and useful life",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Jofuku",
+      "TARGET": "Sentaro",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "The Emperor",
+      "TARGET": "Jofuku",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "The Messenger",
+      "TARGET": "Sentaro",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Sentaro",
+      "TARGET": "Jofuku",
+      "TYPE": "OPPOSES"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "QUEST",
+    "HELPER_APPEARS",
+    "ORDEAL",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.5,
+    "seed": 2,
+    "attempts": 1,
+    "source_chars": 13878,
+    "excerpt_chars": 11848
+  }
+}

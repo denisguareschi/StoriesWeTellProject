@@ -1,0 +1,162 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Spiritual and Religious",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Fukutomi Sentaro",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "learns to appreciate mortality and live a good life",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Jofuku-sama",
+      "ROLE": "TRICKSTER",
+      "TRANSFORMATION": "null",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "The Princess of Yamato",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "null",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "The Chinese Emperor",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "null",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "The messenger",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "null",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Japan",
+    "Tokoyo no Kuni",
+    "Jofuku-sama's shrine"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Fukutomi Sentaro wished to live for five or six hundred years, free from suffering.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Fukutomi Sentaro"
+      ],
+      "LOCATION": "Japan",
+      "CAUSE": "Story opening",
+      "EFFECT": "Sentaro's desire for immortality",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Jofuku-sama appeared to Sentaro and sent him to Tokoyo no Kuni.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Fukutomi Sentaro",
+        "Jofuku-sama"
+      ],
+      "LOCATION": "Jofuku-sama's shrine",
+      "CAUSE": "Sentaro's prayer",
+      "EFFECT": "Sentaro was sent to Tokoyo no Kuni",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Sentaro settled in Tokoyo no Kuni, where no one ever died.",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Fukutomi Sentaro"
+      ],
+      "LOCATION": "Tokoyo no Kuni",
+      "CAUSE": "Jofuku-sama's instructions",
+      "EFFECT": "Sentaro lived in Tokoyo no Kuni for 300 years",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Sentaro grew weary of immortality and prayed to return to Japan.",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Fukutomi Sentaro"
+      ],
+      "LOCATION": "Tokoyo no Kuni",
+      "CAUSE": "Sentaro's desire for mortality",
+      "EFFECT": "Sentaro was sent back to Japan",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Jofuku-sama tested Sentaro and taught him to appreciate mortality and live a good life.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Fukutomi Sentaro",
+        "Jofuku-sama"
+      ],
+      "LOCATION": "Jofuku-sama's shrine",
+      "CAUSE": "Sentaro's prayer",
+      "EFFECT": "Sentaro learned to appreciate mortality and live a good life",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Fukutomi Sentaro",
+      "TARGET": "Jofuku-sama",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Jofuku-sama",
+      "TARGET": "Fukutomi Sentaro",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Fukutomi Sentaro",
+      "TARGET": "The Princess of Yamato",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "The Chinese Emperor",
+      "TARGET": "Fukutomi Sentaro",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "The messenger",
+      "TARGET": "Fukutomi Sentaro",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "HELPER_APPEARS",
+    "QUEST",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 3426,
+    "excerpt_chars": 3426
+  }
+}

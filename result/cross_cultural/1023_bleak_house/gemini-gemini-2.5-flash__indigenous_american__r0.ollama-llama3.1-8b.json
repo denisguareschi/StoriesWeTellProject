@@ -1,0 +1,163 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Spiritual and Religious",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "The Narrator",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "learns to love her sister's voice and finds inner peace",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Little Willow-Child",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "teaches the narrator a lesson about inner strength",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 3
+    },
+    {
+      "CHARACTER": "Bright Star",
+      "ROLE": "DEUTERAGONIST",
+      "TRANSFORMATION": "learns to let go and find inner peace",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Steadfast Oak",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "supports the narrator and helps her find inner peace",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "The Elder of Disputes",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "opposes the narrator and creates conflict",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 2
+    }
+  ],
+  "LOCATIONS": [
+    "The Great Gathering Place",
+    "The Council Lodge",
+    "The Narrator's Lodge"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "The mist was everywhere, and the people struggled to navigate the muddy paths.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "The Narrator",
+        "Little Willow-Child"
+      ],
+      "LOCATION": "The Great Gathering Place",
+      "CAUSE": "Story opening",
+      "EFFECT": "The people are struggling to navigate the muddy paths.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "The Elder of Disputes held court, and the people argued and disputed.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "The Elder of Disputes",
+        "The Narrator",
+        "Little Willow-Child"
+      ],
+      "LOCATION": "The Council Lodge",
+      "CAUSE": "The Elder of Disputes' court",
+      "EFFECT": "The people are arguing and disputing.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Little Willow-Child fell ill, and the narrator nursed her.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "The Narrator",
+        "Little Willow-Child"
+      ],
+      "LOCATION": "The Narrator's Lodge",
+      "CAUSE": "Little Willow-Child's illness",
+      "EFFECT": "The narrator is nursing Little Willow-Child.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "The narrator's sister, Bright Star, came to visit, but the narrator asked her to stay away.",
+      "FUNCTION": "BETRAYAL",
+      "CHARACTERS": [
+        "The Narrator",
+        "Bright Star"
+      ],
+      "LOCATION": "The Narrator's Lodge",
+      "CAUSE": "Bright Star's visit",
+      "EFFECT": "The narrator is asking Bright Star to stay away.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "The narrator reflects on her experiences and finds inner peace.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "The Narrator",
+        "Steadfast Oak",
+        "Bright Star"
+      ],
+      "LOCATION": "The Narrator's Lodge",
+      "CAUSE": "The narrator's reflections",
+      "EFFECT": "The narrator has found inner peace.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "The Narrator",
+      "TARGET": "Little Willow-Child",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "The Narrator",
+      "TARGET": "Bright Star",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Steadfast Oak",
+      "TARGET": "The Narrator",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "The Elder of Disputes",
+      "TARGET": "The Narrator",
+      "TYPE": "OPPOSES"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "ORDEAL",
+    "HELPER_APPEARS",
+    "BETRAYAL",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 10013,
+    "excerpt_chars": 10013
+  }
+}

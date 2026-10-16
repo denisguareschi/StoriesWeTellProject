@@ -1,0 +1,142 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Tragedy",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Prince Prospero",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "From a confident ruler to a dead victim of the pestilence.",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Red Death",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "From a widespread pestilence to a personified entity with illimitable dominion.",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Courtiers",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "From light-hearted revelers to terrified, dead victims.",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    }
+  ],
+  "LOCATIONS": [
+    "The country",
+    "Castellated abbey",
+    "Seven chambers"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "The 'Red Death' pestilence devastates the country.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Red Death"
+      ],
+      "LOCATION": "The country",
+      "CAUSE": "Story opening",
+      "EFFECT": "Prince Prospero decides to retreat and seclude himself.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Prince Prospero secludes himself and a thousand friends in a fortified castellated abbey.",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Prince Prospero",
+        "Courtiers"
+      ],
+      "LOCATION": "Castellated abbey",
+      "CAUSE": "The devastation caused by the Red Death.",
+      "EFFECT": "The group is temporarily safe from the pestilence and indulges in pleasures.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Prince Prospero hosts a magnificent masked ball in the abbey's seven chambers, seeking to defy the pestilence through revelry.",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Prince Prospero",
+        "Courtiers"
+      ],
+      "LOCATION": "Seven chambers",
+      "CAUSE": "The prince's desire to ignore the external world and his prolonged seclusion.",
+      "EFFECT": "The revelry creates an environment for the Red Death's intrusion.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "A mummer, costumed as the Red Death, appears among the revellers at midnight.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Red Death",
+        "Prince Prospero",
+        "Courtiers"
+      ],
+      "LOCATION": "Seven chambers",
+      "CAUSE": "The ongoing masked ball and the prince's disregard for _decora_.",
+      "EFFECT": "Prince Prospero is enraged and confronts the figure.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Prince Prospero confronts the mummer and dies, followed by all the revellers.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Prince Prospero",
+        "Red Death",
+        "Courtiers"
+      ],
+      "LOCATION": "Seven chambers",
+      "CAUSE": "The mummer's appearance and Prospero's furious pursuit.",
+      "EFFECT": "Darkness, Decay, and the Red Death hold illimitable dominion over all.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Prince Prospero",
+      "TARGET": "Red Death",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Red Death",
+      "TARGET": "Courtiers",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "Prince Prospero",
+      "TARGET": "Courtiers",
+      "TYPE": "BONDS_WITH"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "QUEST",
+    "TRICKSTER",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "gemini:gemini-2.5-flash",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 13808,
+    "excerpt_chars": 11677
+  }
+}

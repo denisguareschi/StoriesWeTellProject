@@ -1,0 +1,170 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Emiko",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "grows from a sheltered girl to a strong and capable young woman",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 3
+    },
+    {
+      "CHARACTER": "O-Sensei",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "leaves her role as governess and companion",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 2
+    },
+    {
+      "CHARACTER": "Kenji",
+      "ROLE": "TRICKSTER",
+      "TRANSFORMATION": "helps Emiko find happiness and a partner",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Isabella",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "marries and moves away",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Emiko's father",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "grudgingly gives his blessing for Emiko's marriage",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Mr. Weston",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "a tranquil valley nestled between two great mountains",
+    "a small estate nearby",
+    "a cozy home"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "O-Sensei is leaving to marry Mr. Weston",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "O-Sensei",
+        "Mr. Weston"
+      ],
+      "LOCATION": "a small estate nearby",
+      "CAUSE": "Story opening",
+      "EFFECT": "Emiko is devastated",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Emiko begins to see the beauty of the changing seasons",
+      "FUNCTION": "TRANSFORMATION",
+      "CHARACTERS": [
+        "Emiko"
+      ],
+      "LOCATION": "a tranquil valley nestled between two great mountains",
+      "CAUSE": "O-Sensei's departure",
+      "EFFECT": "Emiko's heart grows lighter",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Emiko meets Kenji and they begin to make plans for a future together",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Emiko",
+        "Kenji"
+      ],
+      "LOCATION": "a tranquil valley nestled between two great mountains",
+      "CAUSE": "Emiko's growing happiness",
+      "EFFECT": "Emiko and Kenji's love grows strong",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Emiko's father is persuaded to give his blessing for Emiko's marriage",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Emiko's father",
+        "Kenji"
+      ],
+      "LOCATION": "a cozy home",
+      "CAUSE": "Emiko and Kenji's love",
+      "EFFECT": "Emiko and Kenji are married",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Emiko and Kenji are married in a small ceremony",
+      "FUNCTION": "RETURN",
+      "CHARACTERS": [
+        "Emiko",
+        "Kenji"
+      ],
+      "LOCATION": "a tranquil valley nestled between two great mountains",
+      "CAUSE": "Emiko's father's blessing",
+      "EFFECT": "Emiko and Kenji's love is celebrated",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "O-Sensei",
+      "TARGET": "Emiko",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Kenji",
+      "TARGET": "Emiko",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Emiko's father",
+      "TARGET": "Emiko",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Kenji",
+      "TARGET": "Emiko's father",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "HELPER_APPEARS",
+    "TRANSFORMATION",
+    "QUEST",
+    "MORAL_REWARD",
+    "RETURN"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "issues": [
+      "event participant 'Mr. Weston' not in CHARACTERS: added as SECONDARY"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 2589,
+    "excerpt_chars": 2589
+  }
+}

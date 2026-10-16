@@ -1,0 +1,147 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Origin Myth",
+  "SETTING_DOMAIN": "Spiritual and Religious",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Emperor Kotei",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "from a wise and just ruler to a legendary figure",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Emperor Yuhi",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Shiyu",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "The Spider",
+      "ROLE": "TRICKSTER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "The Dragon",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Ashwood",
+    "Rural England"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Emperor Kotei was born to Emperor Yuhi.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Emperor Kotei",
+        "Emperor Yuhi"
+      ],
+      "LOCATION": "Rural England",
+      "CAUSE": "Story opening",
+      "EFFECT": "The prophecy of Kotei's greatness is foretold.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Shiyu, a dark sorcerer, brought chaos and despair to the land.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Shiyu"
+      ],
+      "LOCATION": "Rural England",
+      "CAUSE": "Shiyu's actions",
+      "EFFECT": "The people suffer under Shiyu's rule.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Kotei conceived the South Pointing Chariot.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Emperor Kotei"
+      ],
+      "LOCATION": "Ashwood",
+      "CAUSE": "Kotei's determination to defeat Shiyu",
+      "EFFECT": "The chariot is created, giving Kotei an advantage.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Kotei's soldiers, led by the South Pointing Chariot, defeated Shiyu's army.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Emperor Kotei",
+        "Shiyu"
+      ],
+      "LOCATION": "Rural England",
+      "CAUSE": "The chariot's guidance",
+      "EFFECT": "Shiyu's army is defeated.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Emperor Kotei was taken by a dragon to the realm of the gods.",
+      "FUNCTION": "RESURRECTION",
+      "CHARACTERS": [
+        "Emperor Kotei",
+        "The Dragon"
+      ],
+      "LOCATION": "Rural England",
+      "CAUSE": "The dragon's arrival",
+      "EFFECT": "Kotei's earthly tenure ends.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Emperor Kotei",
+      "TARGET": "Shiyu",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Emperor Kotei",
+      "TARGET": "The Dragon",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "HELPER_APPEARS",
+    "ORDEAL",
+    "RESURRECTION"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 3494,
+    "excerpt_chars": 3494
+  }
+}

@@ -1,0 +1,165 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Tragedy",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Jack Durbeyfield",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "discovers his noble ancestry",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 1
+    },
+    {
+      "CHARACTER": "Parson Tringham",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "helps Jack discover his noble ancestry",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 1
+    },
+    {
+      "CHARACTER": "Tess Durbeyfield",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "faces hardship and loss",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Angel Clare",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "helps Tess",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "'Liza-Lu",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "helps Tess",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Marlott",
+    "Vale of Blakemore",
+    "Stagfoot Lane",
+    "Wintoncester",
+    "The dairy"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Parson Tringham meets Jack Durbeyfield and reveals his noble ancestry",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Jack Durbeyfield",
+        "Parson Tringham"
+      ],
+      "LOCATION": "Marlott",
+      "CAUSE": "Story opening",
+      "EFFECT": "Jack Durbeyfield learns of his noble ancestry",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Tess Durbeyfield is forced to leave the dairy",
+      "FUNCTION": "BETRAYAL",
+      "CHARACTERS": [
+        "Tess Durbeyfield",
+        "Angel Clare"
+      ],
+      "LOCATION": "The dairy",
+      "CAUSE": "Angel Clare's decision to leave at Christmas",
+      "EFFECT": "Tess Durbeyfield is forced to leave the dairy",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Tess Durbeyfield and Angel Clare walk out of Wintoncester",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Tess Durbeyfield",
+        "Angel Clare"
+      ],
+      "LOCATION": "Wintoncester",
+      "CAUSE": "Tess Durbeyfield's decision to leave the dairy",
+      "EFFECT": "Tess Durbeyfield and Angel Clare escape the city",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Tess Durbeyfield and Angel Clare see the black flag on the tower",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Tess Durbeyfield",
+        "Angel Clare"
+      ],
+      "LOCATION": "Wintoncester",
+      "CAUSE": "The black flag is raised",
+      "EFFECT": "Tess Durbeyfield and Angel Clare realize the consequences of their actions",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Tess Durbeyfield and Angel Clare are left motionless beside the milestone",
+      "FUNCTION": "SACRIFICE",
+      "CHARACTERS": [
+        "Tess Durbeyfield",
+        "Angel Clare"
+      ],
+      "LOCATION": "Wintoncester",
+      "CAUSE": "The black flag is raised",
+      "EFFECT": "Tess Durbeyfield and Angel Clare are left to face the consequences of their actions",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Parson Tringham",
+      "TARGET": "Jack Durbeyfield",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Angel Clare",
+      "TARGET": "Tess Durbeyfield",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Tess Durbeyfield",
+      "TARGET": "Angel Clare",
+      "TYPE": "BONDS_WITH"
+    },
+    {
+      "SOURCE": "Tess Durbeyfield",
+      "TARGET": "Angel Clare",
+      "TYPE": "OPPOSES"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "HELPER_APPEARS",
+    "BETRAYAL",
+    "QUEST",
+    "ORDEAL",
+    "SACRIFICE"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [
+      "CHANGE_EVENT"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 837458,
+    "excerpt_chars": 11675
+  }
+}

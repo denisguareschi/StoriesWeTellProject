@@ -1,0 +1,148 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Hero's Journey",
+  "SETTING_DOMAIN": "Spiritual and Religious",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Hidesato",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "a brave warrior who becomes a hero",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "The Dragon King",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "a monster who becomes a grateful ally",
+      "TRANSFORMATION_TYPE": "REVERSAL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "The Centipede",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "a monster who is killed",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    }
+  ],
+  "LOCATIONS": [
+    "Lake Biwa",
+    "The mountain beyond the lake",
+    "The palace beneath the lake",
+    "Hidesato's home"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Hidesato encounters the serpent-dragon on the bridge of Seta-no-Karashi.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Hidesato"
+      ],
+      "LOCATION": "Lake Biwa",
+      "CAUSE": "Story opening",
+      "EFFECT": "Hidesato is challenged to help the Dragon King.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Hidesato meets the Dragon King, who asks for his help in killing the centipede.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Hidesato",
+        "The Dragon King"
+      ],
+      "LOCATION": "The palace beneath the lake",
+      "CAUSE": "The Dragon King's request",
+      "EFFECT": "Hidesato agrees to help the Dragon King.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Hidesato and the Dragon King prepare for battle, but the centipede is invulnerable to Hidesato's arrows.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Hidesato",
+        "The Dragon King",
+        "The Centipede"
+      ],
+      "LOCATION": "The mountain beyond the lake",
+      "CAUSE": "The centipede's invulnerability",
+      "EFFECT": "Hidesato is forced to think of a new plan.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Hidesato remembers that human saliva is deadly to centipedes and uses his last arrow to kill the centipede.",
+      "FUNCTION": "TRANSFORMATION",
+      "CHARACTERS": [
+        "Hidesato",
+        "The Centipede"
+      ],
+      "LOCATION": "The mountain beyond the lake",
+      "CAUSE": "Hidesato's memory",
+      "EFFECT": "The centipede is killed.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Hidesato returns home, where he is greeted as a hero and receives magical presents from the Dragon King.",
+      "FUNCTION": "RETURN",
+      "CHARACTERS": [
+        "Hidesato",
+        "The Dragon King"
+      ],
+      "LOCATION": "Hidesato's home",
+      "CAUSE": "Hidesato's return",
+      "EFFECT": "Hidesato becomes rich and prosperous.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Hidesato",
+      "TARGET": "The Dragon King",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "The Dragon King",
+      "TARGET": "Hidesato",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Hidesato",
+      "TARGET": "The Centipede",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "The Dragon King",
+      "TARGET": "The Centipede",
+      "TYPE": "OPPOSES"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "HELPER_APPEARS",
+    "ORDEAL",
+    "TRANSFORMATION",
+    "RETURN"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.5,
+    "seed": 1,
+    "attempts": 1,
+    "source_chars": 12359,
+    "excerpt_chars": 11844
+  }
+}

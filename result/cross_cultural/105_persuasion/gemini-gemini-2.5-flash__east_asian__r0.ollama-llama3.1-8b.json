@@ -1,0 +1,221 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Lord Arata Masayuki",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "becomes aware of his own vanity and the importance of family legacy",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 3
+    },
+    {
+      "CHARACTER": "Mari-san",
+      "ROLE": "DEUTERAGONIST",
+      "TRANSFORMATION": "finds happiness in her marriage and her relationships with her friends",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 4
+    },
+    {
+      "CHARACTER": "Akane-hime",
+      "ROLE": "DEUTERAGONIST",
+      "TRANSFORMATION": "finds happiness in her marriage and her relationships with her friends",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 4
+    },
+    {
+      "CHARACTER": "Kageyama Shinjiro",
+      "ROLE": "TRICKSTER",
+      "TRANSFORMATION": "exposes his true nature and is punished",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 3
+    },
+    {
+      "CHARACTER": "Okusama Kikuko",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "helps the family and is forgiven by Kenshin-dono",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 4
+    },
+    {
+      "CHARACTER": "Kenshin-dono",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "helps O-haru-san and Akane-hime",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 4
+    },
+    {
+      "CHARACTER": "Etsuko-hime",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "is mortified by Kageyama's deception",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 3
+    },
+    {
+      "CHARACTER": "Charles Musashi",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "helps to reveal the truth about Kageyama's intentions",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 3
+    },
+    {
+      "CHARACTER": "Okusama Arata",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "is remembered as a wise and gentle woman",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Lady Ayame",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "is remembered as a noble woman",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Kiyo-san",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "is revealed to be under Kageyama's protection",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 3
+    },
+    {
+      "CHARACTER": "O-haru-san",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "has her husband's lost properties recovered by Kenshin-dono",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 4
+    },
+    {
+      "CHARACTER": "Kaigun Taisho Hayato",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "is revealed to be interested in Akane-hime",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 3
+    }
+  ],
+  "LOCATIONS": [
+    "Izu Province",
+    "Minato-cho",
+    "Ueno-mura",
+    "Onsen-kyo",
+    "the capital"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Lord Arata Masayuki spent countless hours in the 'Meika Keifu no Maki', the Scroll of Illustrious Houses.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Lord Arata Masayuki"
+      ],
+      "LOCATION": "Izu Province",
+      "CAUSE": "Story opening",
+      "EFFECT": "He becomes aware of his own vanity and the importance of family legacy.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Mari-san was recovering from a minor ailment in Minato-cho.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Mari-san"
+      ],
+      "LOCATION": "Minato-cho",
+      "CAUSE": "Story opening",
+      "EFFECT": "She finds happiness in her marriage and her relationships with her friends.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 3,
+      "EVENT": "Kageyama Shinjiro's double-hearted game was exposed, and Lord Arata and Etsuko-hime were mortified.",
+      "FUNCTION": "BETRAYAL",
+      "CHARACTERS": [
+        "Kageyama Shinjiro",
+        "Lord Arata Masayuki",
+        "Etsuko-hime"
+      ],
+      "LOCATION": "Izu Province",
+      "CAUSE": "Kageyama's deception",
+      "EFFECT": "Lord Arata and Etsuko-hime are mortified, and Kageyama's true nature is revealed.",
+      "CAUSED_BY": [
+        1,
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Akane-hime found her true happiness in her marriage and her relationships with her friends.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Akane-hime",
+        "Kenshin-dono",
+        "O-haru-san"
+      ],
+      "LOCATION": "Izu Province",
+      "CAUSE": "Kenshin-dono's help",
+      "EFFECT": "Akane-hime finds happiness in her marriage and her relationships with her friends.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Kageyama Shinjiro was punished for his deception.",
+      "FUNCTION": "SACRIFICE",
+      "CHARACTERS": [
+        "Kageyama Shinjiro"
+      ],
+      "LOCATION": "Izu Province",
+      "CAUSE": "Kageyama's deception",
+      "EFFECT": "Kageyama's true nature is revealed, and he is punished.",
+      "CAUSED_BY": [
+        3
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Kageyama Shinjiro",
+      "TARGET": "Lord Arata Masayuki",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "Kageyama Shinjiro",
+      "TARGET": "Etsuko-hime",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "Kenshin-dono",
+      "TARGET": "O-haru-san",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Kenshin-dono",
+      "TARGET": "Akane-hime",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Akane-hime",
+      "TARGET": "Kenshin-dono",
+      "TYPE": "BONDS_WITH"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "BETRAYAL",
+    "MORAL_REWARD",
+    "SACRIFICE"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 4222,
+    "excerpt_chars": 4222
+  }
+}

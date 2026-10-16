@@ -1,0 +1,167 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Hero's Journey",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Watanabe",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "From a challenged knight to a celebrated hero who secures peace for Kyoto.",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 3
+    },
+    {
+      "CHARACTER": "Ogre",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "From a terrifying, active threat to a defeated and permanently scared entity.",
+      "TRANSFORMATION_TYPE": "REVERSAL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Old Woman",
+      "ROLE": "TRICKSTER",
+      "TRANSFORMATION": "From a disguised old woman to the ogre.",
+      "TRANSFORMATION_TYPE": "REVERSAL",
+      "CHANGE_EVENT": 4
+    },
+    {
+      "CHARACTER": "Hojo",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "NONE",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Raiko",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "NONE",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Other Knights",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "NONE",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Kyoto",
+    "Gate of Rashomon",
+    "Watanabe's house"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "The dreadful ogre haunts the Gate of Rashomon, terrifying the city of Kyoto.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Ogre"
+      ],
+      "LOCATION": "Gate of Rashomon",
+      "CAUSE": "Story opening",
+      "EFFECT": "No one dares venture out after sunset near the Gate.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Hojo challenges Watanabe to go to Rashomon Gate to prove the ogre's existence.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Hojo",
+        "Watanabe",
+        "Other Knights"
+      ],
+      "LOCATION": "Watanabe's house",
+      "CAUSE": "Hojo's skepticism about the ogre rumors.",
+      "EFFECT": "Watanabe accepts the challenge and prepares to depart.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Watanabe confronts and fights the ogre at Rashomon Gate, cutting off its arm.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Watanabe",
+        "Ogre"
+      ],
+      "LOCATION": "Gate of Rashomon",
+      "CAUSE": "Watanabe's journey to the gate to prove the ogre's existence.",
+      "EFFECT": "Watanabe secures the ogre's arm as a trophy and becomes a celebrated hero.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "The ogre, disguised as an old woman, tricks Watanabe into opening the box and retrieves its arm.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Watanabe",
+        "Old Woman"
+      ],
+      "LOCATION": "Watanabe's house",
+      "CAUSE": "The ogre's desire to retrieve its lost arm and Watanabe's trust in his 'old nurse'.",
+      "EFFECT": "The ogre escapes with its arm, leaving Watanabe disappointed.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "The ogre, scared by Watanabe, never troubles Kyoto again, restoring peace to the city.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Ogre",
+        "Watanabe"
+      ],
+      "LOCATION": "Kyoto",
+      "CAUSE": "The ogre's narrow escape and fear of Watanabe's prowess.",
+      "EFFECT": "The people of Kyoto live without fear, and Watanabe's deeds are remembered.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Watanabe",
+      "TARGET": "Ogre",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Old Woman",
+      "TARGET": "Watanabe",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "Watanabe",
+      "TARGET": "Hojo",
+      "TYPE": "BONDS_WITH"
+    },
+    {
+      "SOURCE": "Watanabe",
+      "TARGET": "Other Knights",
+      "TYPE": "BONDS_WITH"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "ORDEAL",
+    "TRICKSTER",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "gemini:gemini-2.5-flash",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 11415,
+    "excerpt_chars": 11415
+  }
+}

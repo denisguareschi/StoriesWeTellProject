@@ -1,0 +1,160 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Spiritual and Religious",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "The Old Man",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "learns about his wife's true nature and the consequences of her actions",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "The Old Woman",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "repents of her cross, unkind ways",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "The Lady Sparrow",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "helps the old man and teaches him about the consequences of his wife's actions",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "The Sparrow",
+      "ROLE": "TRICKSTER",
+      "TRANSFORMATION": "helps the old man and teaches him about the consequences of his wife's actions",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    }
+  ],
+  "LOCATIONS": [
+    "Japan",
+    "The Bamboo Grove",
+    "The Old Man's Home",
+    "The Old Woman's Home"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "The old man's wife scolds and cuts off the sparrow's tongue.",
+      "FUNCTION": "BETRAYAL",
+      "CHARACTERS": [
+        "The Old Man",
+        "The Old Woman"
+      ],
+      "LOCATION": "The Old Man's Home",
+      "CAUSE": "The Old Woman's cross temper",
+      "EFFECT": "The sparrow loses its tongue and is unable to speak",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "The old man searches for the sparrow and finds it in the bamboo grove.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "The Old Man",
+        "The Lady Sparrow"
+      ],
+      "LOCATION": "The Bamboo Grove",
+      "CAUSE": "The old man's search for the sparrow",
+      "EFFECT": "The old man finds the sparrow and learns about its true nature",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "The old man is entertained by the Lady Sparrow and her family.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "The Old Man",
+        "The Lady Sparrow",
+        "The Sparrow"
+      ],
+      "LOCATION": "The Bamboo Grove",
+      "CAUSE": "The old man's kindness and respect for the sparrow",
+      "EFFECT": "The old man is rewarded with food, drink, and entertainment",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "The old woman discovers the bamboo grove and seeks out the Lady Sparrow.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "The Old Woman",
+        "The Lady Sparrow"
+      ],
+      "LOCATION": "The Bamboo Grove",
+      "CAUSE": "The old woman's desire for the treasure",
+      "EFFECT": "The old woman is led to the Lady Sparrow's house",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 5,
+      "EVENT": "The old woman is punished for her wickedness and repents of her ways.",
+      "FUNCTION": "SACRIFICE",
+      "CHARACTERS": [
+        "The Old Woman",
+        "The Old Man",
+        "The Lady Sparrow"
+      ],
+      "LOCATION": "The Old Woman's Home",
+      "CAUSE": "The old woman's wickedness and the consequences of her actions",
+      "EFFECT": "The old woman is punished and repents of her ways",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "The Old Man",
+      "TARGET": "The Lady Sparrow",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "The Lady Sparrow",
+      "TARGET": "The Old Man",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "The Old Woman",
+      "TARGET": "The Old Man",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "The Old Woman",
+      "TARGET": "The Lady Sparrow",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "The Sparrow",
+      "TARGET": "The Old Man",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "BETRAYAL",
+    "HELPER_APPEARS",
+    "MORAL_REWARD",
+    "CALL_TO_ADVENTURE",
+    "SACRIFICE"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.5,
+    "seed": 1,
+    "attempts": 1,
+    "source_chars": 17436,
+    "excerpt_chars": 11709
+  }
+}

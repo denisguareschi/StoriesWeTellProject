@@ -1,0 +1,165 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Lioness",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "learns to value equality and humility",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Ostrich",
+      "ROLE": "TRICKSTER",
+      "TRANSFORMATION": "learns to respect the lioness's strength",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Young lions",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "learn to respect and defend their mother",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Lioness's cubs",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "learn to respect and defend their mother",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Ant-hill",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "used as a tool in the fight",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "a place",
+    "the shade",
+    "the side of the ant-hill"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "A lioness roared, and the ostrich also roared.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Lioness",
+        "Ostrich"
+      ],
+      "LOCATION": "a place",
+      "CAUSE": "Story opening",
+      "EFFECT": "The lioness and ostrich meet",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "The lioness and ostrich hunt game together.",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Lioness",
+        "Ostrich"
+      ],
+      "LOCATION": "a place",
+      "CAUSE": "The lioness and ostrich are equals",
+      "EFFECT": "The lioness and ostrich have a successful hunt",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "The lioness and ostrich eat together.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Lioness",
+        "Ostrich"
+      ],
+      "LOCATION": "the shade",
+      "CAUSE": "The lioness and ostrich have a successful hunt",
+      "EFFECT": "The lioness and ostrich have a peaceful meal",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "The young lions discover the ostrich's weakness.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Young lions",
+        "Ostrich"
+      ],
+      "LOCATION": "the shade",
+      "CAUSE": "The ostrich's weakness is discovered",
+      "EFFECT": "The ostrich is challenged",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "The lioness and ostrich fight, and the ostrich kills the lioness.",
+      "FUNCTION": "BETRAYAL",
+      "CHARACTERS": [
+        "Lioness",
+        "Ostrich"
+      ],
+      "LOCATION": "the side of the ant-hill",
+      "CAUSE": "The ostrich's weakness is discovered",
+      "EFFECT": "The lioness is killed",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Lioness",
+      "TARGET": "Ostrich",
+      "TYPE": "BONDS_WITH"
+    },
+    {
+      "SOURCE": "Ostrich",
+      "TARGET": "Lioness",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Young lions",
+      "TARGET": "Ostrich",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Lioness",
+      "TARGET": "Ostrich",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "QUEST",
+    "MORAL_REWARD",
+    "ORDEAL",
+    "BETRAYAL"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "issues": [
+      "ROLE invalid for 'Ant-hill': 'INANIMATE' -> SECONDARY",
+      "relation dropped: {'SOURCE': 'Ostrich', 'TARGET': 'Ant-hill', 'TYPE': 'USES'}"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.5,
+    "seed": 1,
+    "attempts": 1,
+    "source_chars": 1707,
+    "excerpt_chars": 1707
+  }
+}

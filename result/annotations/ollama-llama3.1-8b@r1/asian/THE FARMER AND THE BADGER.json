@@ -1,0 +1,160 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Tragedy",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "The Farmer",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "learns to avenge his wife's death",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 2
+    },
+    {
+      "CHARACTER": "The Badger",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "punished for his crimes",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "The Old Woman",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "killed by the badger",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 3
+    },
+    {
+      "CHARACTER": "The Rabbit",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "avenges the old woman's death",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    }
+  ],
+  "LOCATIONS": [
+    "the mountains",
+    "the farmer's field",
+    "the storehouse",
+    "the hills",
+    "Crackling Mountain",
+    "the sea"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "The badger spoils the farmer's vegetables and rice.",
+      "FUNCTION": "BETRAYAL",
+      "CHARACTERS": [
+        "The Badger"
+      ],
+      "LOCATION": "the farmer's field",
+      "CAUSE": "Story opening",
+      "EFFECT": "The farmer decides to catch the badger.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "The farmer catches the badger in a trap.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "The Farmer",
+        "The Badger"
+      ],
+      "LOCATION": "the storehouse",
+      "CAUSE": "The farmer's trouble and patience are rewarded.",
+      "EFFECT": "The badger is caught and the farmer is happy.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "The badger deceives the old woman and kills her.",
+      "FUNCTION": "BETRAYAL",
+      "CHARACTERS": [
+        "The Badger",
+        "The Old Woman"
+      ],
+      "LOCATION": "the storehouse",
+      "CAUSE": "The badger's cunning and the old woman's kindness.",
+      "EFFECT": "The old woman is killed and the farmer is unaware.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "The rabbit avenges the old woman's death by setting the badger on fire.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "The Rabbit",
+        "The Badger"
+      ],
+      "LOCATION": "Crackling Mountain",
+      "CAUSE": "The rabbit's anger and determination.",
+      "EFFECT": "The badger is punished and the old woman's death is avenged.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "The rabbit kills the badger by drowning him in his clay boat.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "The Rabbit",
+        "The Badger"
+      ],
+      "LOCATION": "the sea",
+      "CAUSE": "The rabbit's plan and the badger's foolishness.",
+      "EFFECT": "The badger is punished and the old woman's death is fully avenged.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "The Badger",
+      "TARGET": "The Old Woman",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "The Rabbit",
+      "TARGET": "The Badger",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "The Farmer",
+      "TARGET": "The Badger",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "The Rabbit",
+      "TARGET": "The Old Woman",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "BETRAYAL",
+    "HELPER_APPEARS",
+    "ORDEAL",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [
+      "CHANGE_EVENT"
+    ],
+    "issues": [
+      "relation dropped: {'SOURCE': 'The Old Farmer', 'TARGET': 'The Rabbit', 'TYPE': 'HELPS'}"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.5,
+    "seed": 1,
+    "attempts": 1,
+    "source_chars": 12414,
+    "excerpt_chars": 11966
+  }
+}

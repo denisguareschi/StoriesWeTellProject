@@ -1,0 +1,143 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "The Lioness",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "learns to respect the ostrich's abilities",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "The Ostrich",
+      "ROLE": "TRICKSTER",
+      "TRANSFORMATION": "initially deceives the lioness, but ultimately proves himself",
+      "TRANSFORMATION_TYPE": "REVERSAL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "The Lioness's Cubs",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "initially deceived by the ostrich, but ultimately help their mother",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 3
+    }
+  ],
+  "LOCATIONS": [
+    "the place where the ostrich was",
+    "the shade"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "The lioness and the ostrich meet and roar equally.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "The Lioness",
+        "The Ostrich"
+      ],
+      "LOCATION": "the place where the ostrich was",
+      "CAUSE": "Story opening",
+      "EFFECT": "The lioness and the ostrich become aware of each other.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "The lioness and the ostrich hunt game together, with the ostrich killing many eland.",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "The Lioness",
+        "The Ostrich"
+      ],
+      "LOCATION": "the place where the ostrich was",
+      "CAUSE": "The lioness and the ostrich's initial meeting",
+      "EFFECT": "The lioness and the ostrich have a successful hunt.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "The lioness's cubs discover the ostrich's weakness and inform their mother.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "The Lioness's Cubs",
+        "The Lioness"
+      ],
+      "LOCATION": "the shade",
+      "CAUSE": "The lioness's cubs' discovery",
+      "EFFECT": "The lioness becomes aware of the ostrich's weakness.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "The lioness and the ostrich fight, with the ostrich ultimately killing the lioness.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "The Lioness",
+        "The Ostrich"
+      ],
+      "LOCATION": "the place where the ostrich was",
+      "CAUSE": "The lioness's cubs' discovery",
+      "EFFECT": "The lioness is killed by the ostrich.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "The ostrich eats the lioness's blood.",
+      "FUNCTION": "SACRIFICE",
+      "CHARACTERS": [
+        "The Ostrich",
+        "The Lioness"
+      ],
+      "LOCATION": "the place where the ostrich was",
+      "CAUSE": "The ostrich's victory over the lioness",
+      "EFFECT": "The ostrich consumes the lioness's blood.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "The Lioness",
+      "TARGET": "The Ostrich",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "The Lioness's Cubs",
+      "TARGET": "The Ostrich",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "The Ostrich",
+      "TARGET": "The Lioness",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "QUEST",
+    "HELPER_APPEARS",
+    "ORDEAL",
+    "SACRIFICE"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [
+      "CHANGE_EVENT"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 1707,
+    "excerpt_chars": 1707
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Spiritual and Religious",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Rin Jin",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "learns the value of trust and loyalty",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "The Dragon Queen",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "falls ill and is unable to recover",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 2
+    },
+    {
+      "CHARACTER": "The Doctor",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "unable to find the liver of a live monkey",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 2
+    },
+    {
+      "CHARACTER": "The Monkey",
+      "ROLE": "TRICKSTER",
+      "TRANSFORMATION": "deceives the jelly fish and the Dragon King",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "The Jelly Fish",
+      "ROLE": "DEUTERAGONIST",
+      "TRANSFORMATION": "learns a lesson about deception and loyalty",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    }
+  ],
+  "LOCATIONS": [
+    "The Kingdom of the Sea",
+    "Monkey Island"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "The Dragon King decides to take a wife and sends ambassadors to find a young Dragon Princess.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Rin Jin"
+      ],
+      "LOCATION": "The Kingdom of the Sea",
+      "CAUSE": "Story opening",
+      "EFFECT": "The search for a bride begins.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "The Dragon Queen falls ill and the Dragon King sends for the doctor to find a cure.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Rin Jin",
+        "The Dragon Queen",
+        "The Doctor"
+      ],
+      "LOCATION": "The Kingdom of the Sea",
+      "CAUSE": "The Dragon Queen's illness",
+      "EFFECT": "The doctor is unable to find the liver of a live monkey.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "The jelly fish is sent to Monkey Island to retrieve the liver of a live monkey.",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Rin Jin",
+        "The Jelly Fish"
+      ],
+      "LOCATION": "Monkey Island",
+      "CAUSE": "The doctor's inability to find the liver",
+      "EFFECT": "The jelly fish is deceived by the monkey.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "The monkey deceives the jelly fish and refuses to give him the liver.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "The Monkey",
+        "The Jelly Fish"
+      ],
+      "LOCATION": "Monkey Island",
+      "CAUSE": "The monkey's deception",
+      "EFFECT": "The jelly fish is forced to return to the Dragon King empty-handed.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "The jelly fish returns to the Dragon King and confesses his failure, and is punished for his stupidity.",
+      "FUNCTION": "SACRIFICE",
+      "CHARACTERS": [
+        "Rin Jin",
+        "The Jelly Fish"
+      ],
+      "LOCATION": "The Kingdom of the Sea",
+      "CAUSE": "The jelly fish's failure",
+      "EFFECT": "The jelly fish is severely punished.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "The Monkey",
+      "TARGET": "The Jelly Fish",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "The Doctor",
+      "TARGET": "The Dragon Queen",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "QUEST",
+    "TRICKSTER",
+    "SACRIFICE"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "issues": [
+      "relation dropped: {'SOURCE': 'The Dragon King', 'TARGET': 'The Jelly Fish', 'TYPE': 'OPPOSES'}"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 16706,
+    "excerpt_chars": 11959
+  }
+}

@@ -1,0 +1,154 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Spiritual and Religious",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Rin Jin",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "learns that his wife's illness is a trick to obtain the liver of a monkey",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 2
+    },
+    {
+      "CHARACTER": "The Dragon Queen",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "uses her illness to trick the Dragon King into sending a jellyfish to obtain a monkey's liver",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": 2
+    },
+    {
+      "CHARACTER": "The Doctor",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "uses his position to trick the Dragon King into sending a jellyfish to obtain a monkey's liver",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": 2
+    },
+    {
+      "CHARACTER": "The Monkey",
+      "ROLE": "TRICKSTER",
+      "TRANSFORMATION": "tricks the jellyfish into returning to the Palace without the liver",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "The Jellyfish",
+      "ROLE": "DEUTERAGONIST",
+      "TRANSFORMATION": "learns a lesson about trusting others and the consequences of his actions",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "The Kingdom of the Sea",
+    "Monkey Island"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "The Dragon King decides to take a wife and sends ambassadors to find a young Dragon Princess.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Rin Jin"
+      ],
+      "LOCATION": "The Kingdom of the Sea",
+      "CAUSE": "Story opening",
+      "EFFECT": "",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "The Dragon Queen falls ill and the Doctor tells the Dragon King that the only cure is the liver of a live monkey.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "The Dragon Queen",
+        "The Doctor",
+        "Rin Jin"
+      ],
+      "LOCATION": "The Kingdom of the Sea",
+      "CAUSE": "The Dragon Queen's illness",
+      "EFFECT": "The Dragon King sends a jellyfish to obtain the liver of a monkey",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "The jellyfish is sent to Monkey Island to obtain the liver of a monkey.",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "The Jellyfish"
+      ],
+      "LOCATION": "Monkey Island",
+      "CAUSE": "The Dragon King's order",
+      "EFFECT": "The jellyfish is sent to obtain the liver of a monkey",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "The jellyfish tricks the monkey into coming with him, but then realizes that the monkey has no liver.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "The Jellyfish",
+        "The Monkey"
+      ],
+      "LOCATION": "Monkey Island",
+      "CAUSE": "The jellyfish's trick",
+      "EFFECT": "The monkey is tricked into coming with the jellyfish",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "The monkey tricks the jellyfish into returning without the liver, and the jellyfish is punished by the Dragon King.",
+      "FUNCTION": "BETRAYAL",
+      "CHARACTERS": [
+        "The Monkey",
+        "The Jellyfish",
+        "Rin Jin"
+      ],
+      "LOCATION": "The Kingdom of the Sea",
+      "CAUSE": "The monkey's trick",
+      "EFFECT": "The jellyfish is punished",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "The Monkey",
+      "TARGET": "The Jellyfish",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "Rin Jin",
+      "TARGET": "The Jellyfish",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "ORDEAL",
+    "QUEST",
+    "TRICKSTER",
+    "BETRAYAL"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "issues": [
+      "relation dropped: {'SOURCE': 'The Dragon Queen', 'TARGET': 'Rin Jin', 'TYPE': 'TRICKSTER'}",
+      "relation dropped: {'SOURCE': 'The Doctor', 'TARGET': 'Rin Jin', 'TYPE': 'TRICKSTER'}"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.5,
+    "seed": 1,
+    "attempts": 1,
+    "source_chars": 16706,
+    "excerpt_chars": 11959
+  }
+}

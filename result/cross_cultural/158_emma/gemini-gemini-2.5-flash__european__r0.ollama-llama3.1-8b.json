@@ -1,0 +1,192 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Cautionary Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Emma Woodhouse",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "learns to balance her will with others' opinions",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Mr. Knightley",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "helps Emma grow and eventually wins her hand",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Mr. Woodhouse",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "eventually gives consent for Emma's marriage",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Miss Taylor (Mrs. Weston)",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "marries and leaves Emma, but remains a friend",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 2
+    },
+    {
+      "CHARACTER": "Harriet Smith",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "finds her rightful place in society",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Mr. Frank Churchill",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "pursues Emma, but his role is minor",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Mr. Elton",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "marries and is mentioned as a contrast",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Isabella (Mrs. Robert Martin)",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "marries and is mentioned as a contrast",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Miss Fairfax",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "marries and leaves Highbury",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Hartfield",
+    "Highbury"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Emma Woodhouse navigates her life with ease, but her flaws remain unperceived.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Emma Woodhouse"
+      ],
+      "LOCATION": "Hartfield",
+      "CAUSE": "Story opening",
+      "EFFECT": "Emma's life is described as easy, but with flaws.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Miss Taylor marries and leaves Emma, casting a shadow over Emma's world.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Miss Taylor (Mrs. Weston)",
+        "Emma Woodhouse"
+      ],
+      "LOCATION": "Hartfield",
+      "CAUSE": "Miss Taylor's marriage",
+      "EFFECT": "Emma is left alone and begins to observe her society.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Emma watches the intricate dance of alliances and affections in Highbury, including Mr. Knightley's apples.",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Emma Woodhouse",
+        "Mr. Knightley"
+      ],
+      "LOCATION": "Highbury",
+      "CAUSE": "Emma's observations and meddling",
+      "EFFECT": "Emma becomes more aware of her society and its relationships.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "A series of pilferings from local poultry-yards, including the theft of Mrs. Weston's turkeys, alarms Mr. Woodhouse and makes him rely on Mr. Knightley.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Mr. Woodhouse",
+        "Mr. Knightley"
+      ],
+      "LOCATION": "Highbury",
+      "CAUSE": "The pilferings and Mr. Woodhouse's nervous alarm",
+      "EFFECT": "Mr. Woodhouse gives consent for Emma's marriage.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Emma and Mr. Knightley get married, with a small circle of true friends in attendance.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Emma Woodhouse",
+        "Mr. Knightley"
+      ],
+      "LOCATION": "Hartfield",
+      "CAUSE": "Mr. Woodhouse's consent and the wedding preparations",
+      "EFFECT": "Emma and Mr. Knightley's happiness is fulfilled.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Emma Woodhouse",
+      "TARGET": "Mr. Knightley",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Mr. Knightley",
+      "TARGET": "Emma Woodhouse",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Mr. Woodhouse",
+      "TARGET": "Emma Woodhouse",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Miss Taylor (Mrs. Weston)",
+      "TARGET": "Emma Woodhouse",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Mr. Elton",
+      "TARGET": "Emma Woodhouse",
+      "TYPE": "OPPOSES"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "HELPER_APPEARS",
+    "QUEST",
+    "ORDEAL",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 3950,
+    "excerpt_chars": 3950
+  }
+}

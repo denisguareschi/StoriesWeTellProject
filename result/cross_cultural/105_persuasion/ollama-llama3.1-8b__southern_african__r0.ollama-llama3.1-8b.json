@@ -1,0 +1,145 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Khaya Elliot",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "from pride to humility",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Nokwane",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "null",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Nomonde",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "null",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Nandi",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "null",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Kellynch",
+    "Eastern Cape"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Khaya Elliot spent hours gazing at his own reflection, admiring the chiseled features of his face and the strong lines of his body.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Khaya Elliot"
+      ],
+      "LOCATION": "Kellynch",
+      "CAUSE": "Story opening",
+      "EFFECT": "Khaya's pride is established",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Khaya's pride was not just in his physical appearance, but also in his family's history and heritage.",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Khaya Elliot"
+      ],
+      "LOCATION": "Kellynch",
+      "CAUSE": "Khaya's pride",
+      "EFFECT": "Khaya's family history is established",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Khaya's wife, Nokwane, passed on to the great beyond, leaving Khaya and their children to carry on the family name.",
+      "FUNCTION": "BETRAYAL",
+      "CHARACTERS": [
+        "Khaya Elliot",
+        "Nokwane"
+      ],
+      "LOCATION": "Kellynch",
+      "CAUSE": "Nokwane's death",
+      "EFFECT": "Khaya's family is affected",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Khaya's children, Nomonde and Nandi, were grown now, with their own lives and their own struggles.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Nomonde",
+        "Nandi"
+      ],
+      "LOCATION": "Kellynch",
+      "CAUSE": "Khaya's family struggles",
+      "EFFECT": "Khaya's family is affected",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Khaya would often sit on his porch, surrounded by the beauty of nature, and reflect on his life and his legacy.",
+      "FUNCTION": "RESURRECTION",
+      "CHARACTERS": [
+        "Khaya Elliot"
+      ],
+      "LOCATION": "Kellynch",
+      "CAUSE": "Khaya's reflection",
+      "EFFECT": "Khaya's transformation is established",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Khaya Elliot",
+      "TARGET": "Nokwane",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Khaya Elliot",
+      "TARGET": "Nomonde",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Khaya Elliot",
+      "TARGET": "Nandi",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "QUEST",
+    "BETRAYAL",
+    "ORDEAL",
+    "RESURRECTION"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 3259,
+    "excerpt_chars": 3259
+  }
+}

@@ -1,0 +1,198 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Historical and Geographical",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Jim Hawkins",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "from boy to man, through experiences on the island",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Ben Gunn",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "from marooned castaway to trusted ally",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Long John Silver",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "from trusted cook to revealed traitor",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 3
+    },
+    {
+      "CHARACTER": "Captain Smollett",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "from injured to recovered",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Dr. Livesey",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "from concerned doctor to active participant",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Squire Trelawney",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "from owner to active participant",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Israel Hands",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "from mutineer to killed",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 2
+    },
+    {
+      "CHARACTER": "Benjamin Gunn",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "from marooned castaway to trusted ally",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    }
+  ],
+  "LOCATIONS": [
+    "Treasure Island",
+    "The Admiral Benbow",
+    "The log-house",
+    "The HISPANIOLA",
+    "Bristol"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "The Old Sea-dog at the Admiral Benbow",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Jim Hawkins",
+        "Ben Gunn"
+      ],
+      "LOCATION": "The Admiral Benbow",
+      "CAUSE": "Story opening",
+      "EFFECT": "Introduction to the story and its protagonist",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "The mutineers attack the log-house",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Jim Hawkins",
+        "Ben Gunn",
+        "Long John Silver",
+        "Israel Hands"
+      ],
+      "LOCATION": "The log-house",
+      "CAUSE": "The mutineers' attack",
+      "EFFECT": "The protagonist and his friends are in danger",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Long John Silver's betrayal is revealed",
+      "FUNCTION": "BETRAYAL",
+      "CHARACTERS": [
+        "Jim Hawkins",
+        "Ben Gunn",
+        "Long John Silver"
+      ],
+      "LOCATION": "The log-house",
+      "CAUSE": "Long John Silver's actions",
+      "EFFECT": "The protagonist and his friends are betrayed",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "The HISPANIOLA is repaired and sets sail",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Jim Hawkins",
+        "Ben Gunn",
+        "Captain Smollett",
+        "Dr. Livesey",
+        "Squire Trelawney"
+      ],
+      "LOCATION": "The HISPANIOLA",
+      "CAUSE": "The need to escape the island",
+      "EFFECT": "The protagonist and his friends escape the island",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "The treasure is divided and the story concludes",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Jim Hawkins",
+        "Ben Gunn",
+        "Captain Smollett",
+        "Dr. Livesey",
+        "Squire Trelawney"
+      ],
+      "LOCATION": "Bristol",
+      "CAUSE": "The conclusion of the story",
+      "EFFECT": "The protagonist and his friends are rewarded",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Jim Hawkins",
+      "TARGET": "Ben Gunn",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Long John Silver",
+      "TARGET": "Jim Hawkins",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "Ben Gunn",
+      "TARGET": "Long John Silver",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Captain Smollett",
+      "TARGET": "Jim Hawkins",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Dr. Livesey",
+      "TARGET": "Jim Hawkins",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "ORDEAL",
+    "BETRAYAL",
+    "QUEST",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 360783,
+    "excerpt_chars": 11870
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Red-ant",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "united in purpose but failed to protect themselves",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Rice-ant",
+      "ROLE": "DEUTERAGONIST",
+      "TRANSFORMATION": "failed to protect themselves",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Black-ant",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "failed to protect themselves",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Beetle",
+      "ROLE": "TRICKSTER",
+      "TRANSFORMATION": "failed to deliver the message",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 4
+    },
+    {
+      "CHARACTER": "Insect-king",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "sent the secret of unity",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 4
+    }
+  ],
+  "LOCATIONS": [
+    "ground",
+    "trees"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "The ants gathered to discuss their safety but couldn't agree.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Red-ant",
+        "Rice-ant",
+        "Black-ant"
+      ],
+      "LOCATION": "ground",
+      "CAUSE": "Story opening",
+      "EFFECT": "No decision was made.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Each group went to work in its own way, but none protected themselves against birds or Anteater.",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Red-ant",
+        "Rice-ant",
+        "Black-ant"
+      ],
+      "LOCATION": "ground",
+      "CAUSE": "Event 1",
+      "EFFECT": "The ants were still vulnerable to attacks.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "The Red-ants' house was destroyed by Anteater, and the Rice-ants were taken out by Anteater.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Red-ant",
+        "Rice-ant"
+      ],
+      "LOCATION": "ground",
+      "CAUSE": "Event 2",
+      "EFFECT": "The ants suffered losses.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "The Insect-king sent the secret of unity and the message of Work-together, but the Beetle failed to deliver it.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Insect-king",
+        "Beetle"
+      ],
+      "LOCATION": "ground",
+      "CAUSE": "Event 3",
+      "EFFECT": "The ants remained divided.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "The ants are still the embodiment of discord and are prey to their enemies.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Red-ant",
+        "Rice-ant",
+        "Black-ant"
+      ],
+      "LOCATION": "ground",
+      "CAUSE": "Event 4",
+      "EFFECT": "The moral order is not restored.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Beetle",
+      "TARGET": "Insect-king",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "Insect-king",
+      "TARGET": "Red-ant",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "QUEST",
+    "ORDEAL",
+    "HELPER_APPEARS",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [
+      "CHANGE_EVENT"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.5,
+    "seed": 1,
+    "attempts": 1,
+    "source_chars": 2891,
+    "excerpt_chars": 2891
+  }
+}

@@ -1,0 +1,177 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Tragedy",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Weary",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "from concern to resolution",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 4
+    },
+    {
+      "CHARACTER": "Miguel Rapponi",
+      "ROLE": "TRICKSTER",
+      "TRANSFORMATION": "from indifference to acceptance",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 1
+    },
+    {
+      "CHARACTER": "Dunk Whittaker",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "from reluctance to cooperation",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 3
+    },
+    {
+      "CHARACTER": "Old Man",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "from illness to recovery",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Happy Jack",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "from illness to recovery",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Oleson",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Denson coulee",
+    "Flying U ranch"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Miguel arrives at the Flying U ranch",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Weary",
+        "Miguel Rapponi"
+      ],
+      "LOCATION": "Flying U ranch",
+      "CAUSE": "Story opening",
+      "EFFECT": "Introduction of new character",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Dunk Whittaker arrives at the Flying U ranch",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Weary",
+        "Dunk Whittaker"
+      ],
+      "LOCATION": "Denson coulee",
+      "CAUSE": "Miguel's presence",
+      "EFFECT": "Introduction of new antagonist",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Weary negotiates with Dunk Whittaker over the sheep",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Weary",
+        "Dunk Whittaker",
+        "Oleson"
+      ],
+      "LOCATION": "Denson coulee",
+      "CAUSE": "Dunk's reluctance",
+      "EFFECT": "Resolution of conflict",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Weary buys out Oleson's share of the ranch",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Weary",
+        "Oleson"
+      ],
+      "LOCATION": "Flying U ranch",
+      "CAUSE": "Weary's negotiation",
+      "EFFECT": "Resolution of conflict",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "The Old Man returns home and recovers",
+      "FUNCTION": "RESURRECTION",
+      "CHARACTERS": [
+        "Old Man"
+      ],
+      "LOCATION": "Flying U ranch",
+      "CAUSE": "Chip's letter",
+      "EFFECT": "Resolution of conflict",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Weary",
+      "TARGET": "Miguel Rapponi",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Weary",
+      "TARGET": "Dunk Whittaker",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Weary",
+      "TARGET": "Oleson",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Weary",
+      "TARGET": "Old Man",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Dunk Whittaker",
+      "TARGET": "Weary",
+      "TYPE": "OPPOSES"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "HELPER_APPEARS",
+    "ORDEAL",
+    "MORAL_REWARD",
+    "RESURRECTION"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [
+      "CHANGE_EVENT"
+    ],
+    "issues": [
+      "event participant 'Oleson' not in CHARACTERS: added as SECONDARY"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.5,
+    "seed": 1,
+    "attempts": 1,
+    "source_chars": 229791,
+    "excerpt_chars": 11901
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Lion",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "Lion learns to be cautious of Jackal's tricks",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Jackal",
+      "ROLE": "TRICKSTER",
+      "TRANSFORMATION": "Jackal's trickster nature is revealed",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Jackal's wife",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "Jackal's wife is complicit in Jackal's tricks",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "river",
+    "high bank",
+    "hill"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Lion caught a large eland and asked Jackal to watch it",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Lion",
+        "Jackal"
+      ],
+      "LOCATION": "high bank",
+      "CAUSE": "Story opening",
+      "EFFECT": "Lion's thirst and need for water",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Jackal removed a stone to prevent Lion from returning",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Jackal",
+        "Lion"
+      ],
+      "LOCATION": "high bank",
+      "CAUSE": "ID 1",
+      "EFFECT": "Lion's inability to return",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Lion asked Jackal for help and Jackal let down a rope",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Lion",
+        "Jackal"
+      ],
+      "LOCATION": "hill",
+      "CAUSE": "ID 2",
+      "EFFECT": "Lion's attempt to climb up",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Jackal gave Lion a rotten rope and it broke",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Jackal",
+        "Lion"
+      ],
+      "LOCATION": "hill",
+      "CAUSE": "ID 3",
+      "EFFECT": "Lion's fall",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Lion was fatally hurt and Jackal and his wife walked away",
+      "FUNCTION": "SACRIFICE",
+      "CHARACTERS": [
+        "Lion",
+        "Jackal",
+        "Jackal's wife"
+      ],
+      "LOCATION": "hill",
+      "CAUSE": "ID 4",
+      "EFFECT": "Lion's death",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Jackal",
+      "TARGET": "Lion",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "Jackal's wife",
+      "TARGET": "Jackal",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "TRICKSTER",
+    "HELPER_APPEARS",
+    "SACRIFICE"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.5,
+    "seed": 2,
+    "attempts": 1,
+    "source_chars": 2447,
+    "excerpt_chars": 2445
+  }
+}

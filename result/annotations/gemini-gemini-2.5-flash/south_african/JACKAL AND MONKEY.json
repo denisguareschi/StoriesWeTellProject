@@ -1,0 +1,145 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Jackal",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "From caught in a trap to free and triumphant.",
+      "TRANSFORMATION_TYPE": "REVERSAL",
+      "CHANGE_EVENT": 3
+    },
+    {
+      "CHARACTER": "Monkey",
+      "ROLE": "DEUTERAGONIST",
+      "TRANSFORMATION": "From free and mocking to trapped and dead.",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Boer",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "NONE",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Boer's kraal"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Jackal repeatedly steals fat young lambs from Boer's kraal.",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Jackal",
+        "Boer"
+      ],
+      "LOCATION": "Boer's kraal",
+      "CAUSE": "Story opening",
+      "EFFECT": "Boer sets a trap for the thief.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Boer sets a trap and catches Jackal in the noose.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Jackal",
+        "Boer"
+      ],
+      "LOCATION": "Boer's kraal",
+      "CAUSE": "Jackal's repeated thefts",
+      "EFFECT": "Jackal is trapped and vulnerable.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Jackal tricks Monkey into freeing him and taking his place in the trap.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Jackal",
+        "Monkey"
+      ],
+      "LOCATION": "Boer's kraal",
+      "CAUSE": "Jackal being caught and Monkey's presence",
+      "EFFECT": "Monkey is caught, and Jackal is free.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Jackal runs away, abandoning Monkey to Boer's wrath.",
+      "FUNCTION": "BETRAYAL",
+      "CHARACTERS": [
+        "Jackal",
+        "Monkey"
+      ],
+      "LOCATION": "Boer's kraal",
+      "CAUSE": "Jackal's successful trick",
+      "EFFECT": "Monkey is left alone to face Boer.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Boer arrives, mistakes Monkey for the thief, and shoots him dead.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Boer",
+        "Monkey"
+      ],
+      "LOCATION": "Boer's kraal",
+      "CAUSE": "Monkey being caught in the trap and Jackal's escape",
+      "EFFECT": "Monkey dies, and Boer believes the thief is caught.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Jackal",
+      "TARGET": "Monkey",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "Boer",
+      "TARGET": "Monkey",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Boer",
+      "TARGET": "Jackal",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Monkey",
+      "TARGET": "Jackal",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "QUEST",
+    "ORDEAL",
+    "TRICKSTER",
+    "BETRAYAL",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "gemini:gemini-2.5-flash",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 2008,
+    "excerpt_chars": 2008
+  }
+}

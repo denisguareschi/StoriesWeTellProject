@@ -1,0 +1,201 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Saru-san",
+      "ROLE": "TRICKSTER",
+      "TRANSFORMATION": "from cunning to defeated",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Kani-san",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "from humble to proud",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 4
+    },
+    {
+      "CHARACTER": "Waka-kani",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "from sorrow to justice",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Usu-san",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "null",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Hachi-san",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "null",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Kuri-san",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "null",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "the seed",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "a land where the rivers flowed with clear water and the mountains were cloaked in ancient pines",
+    "by the riverbank",
+    "the water's edge",
+    "the pine trees",
+    "the bamboo groves",
+    "the stony paths",
+    "the *matsu*",
+    "the *kaki* tree",
+    "the base of the tree",
+    "Kani-san's simple home",
+    "the *ocha-no-ma*",
+    "the *irori*",
+    "the gate"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Kani-san unearthed a plump *onigiri*, while Saru-san found only a hard *kaki no tane*.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Saru-san",
+        "Kani-san"
+      ],
+      "LOCATION": "the water's edge",
+      "CAUSE": "Story opening",
+      "EFFECT": "Saru-san envies Kani-san's *onigiri*",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Saru-san devoured the *onigiri* and handed over the hard seed.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Saru-san",
+        "Kani-san"
+      ],
+      "LOCATION": "the water's edge",
+      "CAUSE": "Saru-san's trickery",
+      "EFFECT": "Kani-san is deceived",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Kani-san planted the seed, and it grew into a mighty *kaki* tree.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Kani-san",
+        "the seed"
+      ],
+      "LOCATION": "the pine trees",
+      "CAUSE": "Kani-san's care",
+      "EFFECT": "The tree bears golden fruits",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Saru-san plucked the ripest *kaki* for himself and hurled the unripe fruits at Kani-san.",
+      "FUNCTION": "BETRAYAL",
+      "CHARACTERS": [
+        "Saru-san",
+        "Kani-san"
+      ],
+      "LOCATION": "the *kaki* tree",
+      "CAUSE": "Saru-san's wicked plan",
+      "EFFECT": "Kani-san is killed",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Waka-kani and his friends defeated Saru-san, and he was killed.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Waka-kani",
+        "Usu-san",
+        "Hachi-san",
+        "Kuri-san",
+        "Saru-san"
+      ],
+      "LOCATION": "Kani-san's simple home",
+      "CAUSE": "Waka-kani's justice",
+      "EFFECT": "Saru-san is punished",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Saru-san",
+      "TARGET": "Kani-san",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "Kani-san",
+      "TARGET": "Saru-san",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Waka-kani",
+      "TARGET": "Saru-san",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Usu-san",
+      "TARGET": "Saru-san",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Hachi-san",
+      "TARGET": "Saru-san",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Kuri-san",
+      "TARGET": "Saru-san",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "TRICKSTER",
+    "HELPER_APPEARS",
+    "BETRAYAL",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "issues": [
+      "event participant 'the seed' not in CHARACTERS: added as SECONDARY"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 4555,
+    "excerpt_chars": 4555
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Hero's Journey",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Narrator",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "From exasperation and reflection to renewed joy and desire for personal growth",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Stork",
+      "ROLE": "DEUTERAGONIST",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Aunt Bertha",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Minora",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Garden",
+    "House",
+    "Russia",
+    "Hirschwald"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "The narrator expresses deep happiness and contentment living in her wild garden, observing nature.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Narrator"
+      ],
+      "LOCATION": "Garden",
+      "CAUSE": "Story opening",
+      "EFFECT": "She establishes her chosen lifestyle and finds initial joy and peace in her surroundings.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "The narrator questions a lame worker, 'Stork,' about his travel, learning he has a family in Russia and pays seven marks for the journey.",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Narrator",
+        "Stork"
+      ],
+      "LOCATION": "Garden",
+      "CAUSE": "Narrator's desire to keep Stork over winter and understand her workers.",
+      "EFFECT": "Narrator gains insight into the workers' lives and motivations, fostering empathy.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 3,
+      "EVENT": "The narrator details the challenges of managing the Russian and Polish laborers, who often escape or refuse to work on Saints' days.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Narrator"
+      ],
+      "LOCATION": "Garden",
+      "CAUSE": "The ongoing reality of employing foreign laborers and their cultural practices.",
+      "EFFECT": "The narrator feels exasperated by the practical difficulties but also pities the workers.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 4,
+      "EVENT": "The narrator recounts her exasperation with her relatives, especially Aunt Bertha's critical riddles and Minora's ungracious behavior.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Narrator",
+        "Aunt Bertha",
+        "Minora"
+      ],
+      "LOCATION": "House",
+      "CAUSE": "Interactions with her relatives and their social demands.",
+      "EFFECT": "The narrator resolves to distance herself from Minora and views relatives as 'pernicious'.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 5,
+      "EVENT": "The narrator experiences a 'resurrection of beauty' and 'brightest hope' in her garden during Easter, feeling humble and desiring personal growth.",
+      "FUNCTION": "RESURRECTION",
+      "CHARACTERS": [
+        "Narrator"
+      ],
+      "LOCATION": "Garden",
+      "CAUSE": "The arrival of spring and Easter, and her time spent in nature.",
+      "EFFECT": "The narrator feels renewed joy, gratitude, and resolves to grow in grace, patience, and cheerfulness.",
+      "CAUSED_BY": []
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Narrator",
+      "TARGET": "Aunt Bertha",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Narrator",
+      "TARGET": "Minora",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Narrator",
+      "TARGET": "Stork",
+      "TYPE": "BONDS_WITH"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "QUEST",
+    "ORDEAL",
+    "RESURRECTION"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "issues": [
+      "relation dropped: {'SOURCE': 'Narrator', 'TARGET': 'Garden', 'TYPE': 'BONDS_WITH'}"
+    ],
+    "model": "gemini:gemini-2.5-flash",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 261861,
+    "excerpt_chars": 11963
+  }
+}

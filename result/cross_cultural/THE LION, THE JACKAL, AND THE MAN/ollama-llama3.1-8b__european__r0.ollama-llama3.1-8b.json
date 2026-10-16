@@ -1,0 +1,159 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Lion",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "learns humility",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Jackal",
+      "ROLE": "TRICKSTER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "King of the Forest",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Young Lad",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Elderly Gentleman",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Young Huntsman",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "England",
+    "Forest",
+    "Woods"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "A mighty Lion and a cunning Jackal set off on a journey to prove the Lion's mettle.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Lion",
+        "Jackal"
+      ],
+      "LOCATION": "England",
+      "CAUSE": "Story opening",
+      "EFFECT": "The unlikely duo sets off on a journey.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "The pair comes upon a young lad, no more than a stripling, who wandered through the woods with an air of innocence about him.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Lion",
+        "Jackal",
+        "Young Lad"
+      ],
+      "LOCATION": "Woods",
+      "CAUSE": "The pair continues on their way",
+      "EFFECT": "The pair meets the young lad.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "The pair comes upon an elderly gentleman, bent with age and leaning on a sturdy stick for support.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Lion",
+        "Jackal",
+        "Elderly Gentleman"
+      ],
+      "LOCATION": "Woods",
+      "CAUSE": "The pair continues on their way",
+      "EFFECT": "The pair meets the elderly gentleman.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "The pair comes upon a young huntsman, his rugged features weathered from the sun, and his dogs at his heels like loyal attendants.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Lion",
+        "Jackal",
+        "Young Huntsman"
+      ],
+      "LOCATION": "Woods",
+      "CAUSE": "The pair continues on their way",
+      "EFFECT": "The pair meets the young huntsman.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "The Lion, seemingly unbothered, continues to advance, until the huntsman draws his steel knife and deals the Lion a series of swift, deadly jabs.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Lion",
+        "Young Huntsman"
+      ],
+      "LOCATION": "Woods",
+      "CAUSE": "The Lion's advance",
+      "EFFECT": "The Lion is wounded.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Jackal",
+      "TARGET": "Lion",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "Young Huntsman",
+      "TARGET": "Lion",
+      "TYPE": "OPPOSES"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "HELPER_APPEARS",
+    "ORDEAL"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 2724,
+    "excerpt_chars": 2724
+  }
+}

@@ -1,0 +1,158 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Lion",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "learns that strength is not the only measure of power",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Jackal",
+      "ROLE": "TRICKSTER",
+      "TRANSFORMATION": "uses deception to teach Lion a lesson",
+      "TRANSFORMATION_TYPE": "REVERSAL",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "The Man",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "helps Lion learn a lesson",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "The King",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "has Jackal as his adviser",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "The Boy",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "The Old Man",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "the forest",
+    "a rocky kopje"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Lion and Jackal came together to converse on affairs of land and state.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Lion",
+        "Jackal"
+      ],
+      "LOCATION": "the forest",
+      "CAUSE": "Story opening",
+      "EFFECT": "Conversation begins",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Jackal said, 'See here, Lion, I will show you an animal that is still more powerful than you are.'",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Lion",
+        "Jackal"
+      ],
+      "LOCATION": "the forest",
+      "CAUSE": "Jackal's boast",
+      "EFFECT": "Lion is challenged",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Lion and Jackal met first a little boy.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Lion",
+        "Jackal",
+        "The Boy"
+      ],
+      "LOCATION": "the forest",
+      "CAUSE": "Jackal's challenge",
+      "EFFECT": "Lion is disappointed",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "They came across a young hunter, in the prime of youth, and accompanied by some of his dogs.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Lion",
+        "Jackal",
+        "The Man"
+      ],
+      "LOCATION": "the forest",
+      "CAUSE": "Jackal's challenge",
+      "EFFECT": "Lion is challenged again",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Lion retreated, followed by the flying bullets of the hunter.",
+      "FUNCTION": "SACRIFICE",
+      "CHARACTERS": [
+        "Lion",
+        "The Man"
+      ],
+      "LOCATION": "a rocky kopje",
+      "CAUSE": "The Man's attack",
+      "EFFECT": "Lion learns a lesson",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Jackal",
+      "TARGET": "Lion",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "The Man",
+      "TARGET": "Lion",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "TRICKSTER",
+    "ORDEAL",
+    "SACRIFICE"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.5,
+    "seed": 2,
+    "attempts": 1,
+    "source_chars": 2675,
+    "excerpt_chars": 2673
+  }
+}

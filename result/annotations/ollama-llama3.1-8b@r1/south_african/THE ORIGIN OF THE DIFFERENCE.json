@@ -1,0 +1,157 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Origin Myth",
+  "SETTING_DOMAIN": "Historical and Geographical",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "The Blind Man",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "regains sight and becomes a leader",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 2
+    },
+    {
+      "CHARACTER": "The Hunter",
+      "ROLE": "DEUTERAGONIST",
+      "TRANSFORMATION": "learns to respect the blind man's knowledge",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "The Bushmen",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "emerges as a distinct race",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "The Hottentots",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "remains in their native state",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "the earth",
+    "the hills"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "In the beginning there were two.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "The Blind Man",
+        "The Hunter"
+      ],
+      "LOCATION": "the earth",
+      "CAUSE": "Story opening",
+      "EFFECT": "",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "The blind man, feeling and smelling them, said, 'They are not game, but cattle.'",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "The Blind Man"
+      ],
+      "LOCATION": "the earth",
+      "CAUSE": "1",
+      "EFFECT": "The Blind Man regains sight",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "The other, who now with great trouble had to seek his game, came and saw this, he wanted to anoint himself also.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "The Hunter"
+      ],
+      "LOCATION": "the earth",
+      "CAUSE": "2",
+      "EFFECT": "The Hunter is burnt",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "The other, however, called to him: 'Here, take the kirri, and run to the hills to hunt there for honey.'",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "The Blind Man",
+        "The Hunter"
+      ],
+      "LOCATION": "the earth",
+      "CAUSE": "3",
+      "EFFECT": "The Hunter learns to respect the blind man's knowledge",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Hence sprung the race of Bushmen.",
+      "FUNCTION": "RETURN",
+      "CHARACTERS": [
+        "The Blind Man",
+        "The Hunter",
+        "The Bushmen"
+      ],
+      "LOCATION": "the hills",
+      "CAUSE": "4",
+      "EFFECT": "The Bushmen emerge as a distinct race",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "The Blind Man",
+      "TARGET": "The Hunter",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "The Blind Man",
+      "TARGET": "The Bushmen",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "The Hunter",
+      "TARGET": "The Blind Man",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "The Blind Man",
+      "TARGET": "The Hottentots",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "The Hunter",
+      "TARGET": "The Hottentots",
+      "TYPE": "OPPOSES"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "HELPER_APPEARS",
+    "ORDEAL",
+    "MORAL_REWARD",
+    "RETURN"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.5,
+    "seed": 1,
+    "attempts": 1,
+    "source_chars": 1112,
+    "excerpt_chars": 1112
+  }
+}

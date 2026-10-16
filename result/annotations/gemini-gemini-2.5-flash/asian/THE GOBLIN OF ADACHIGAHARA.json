@@ -1,0 +1,140 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Cautionary Tale",
+  "SETTING_DOMAIN": "Spiritual and Religious",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Priest",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "From naive and curious to enlightened about evil and Buddha's protection",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Old Woman / Goblin",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "Reveals her true monstrous, cannibalistic nature",
+      "TRANSFORMATION_TYPE": "REVERSAL",
+      "CHANGE_EVENT": 4
+    },
+    {
+      "CHARACTER": "Buddha",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "NONE",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Adachigahara",
+    "Miserable-looking little cottage"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "The priest, a belated traveler, arrives on the haunted plain of Adachigahara, lost and seeking lodging.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Priest"
+      ],
+      "LOCATION": "Adachigahara",
+      "CAUSE": "Story opening",
+      "EFFECT": "He spots a light and heads towards a cottage.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "The old woman in the cottage reluctantly offers the priest shelter but strictly warns him not to look into the inner room.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Priest",
+        "Old Woman / Goblin"
+      ],
+      "LOCATION": "Miserable-looking little cottage",
+      "CAUSE": "The priest's plea for shelter.",
+      "EFFECT": "The priest stays in the hut, his curiosity piqued by the warning.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Overcome by curiosity, the priest disobeys the warning and discovers the inner room filled with human bones and blood.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Priest"
+      ],
+      "LOCATION": "Miserable-looking little cottage",
+      "CAUSE": "The old woman's warning and the priest's inability to resist curiosity.",
+      "EFFECT": "The priest realizes the old woman is the cannibal goblin and flees in terror.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "The old woman transforms into a raging demon with a blood-stained knife and pursues the fleeing priest.",
+      "FUNCTION": "TRANSFORMATION",
+      "CHARACTERS": [
+        "Priest",
+        "Old Woman / Goblin"
+      ],
+      "LOCATION": "Adachigahara",
+      "CAUSE": "The priest's discovery of her secret and his escape.",
+      "EFFECT": "The priest runs for his life, praying desperately to Buddha.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "At dawn, the goblin vanishes, and the priest, safe and thankful to Buddha, leaves the haunted plain.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Priest",
+        "Old Woman / Goblin",
+        "Buddha"
+      ],
+      "LOCATION": "Adachigahara",
+      "CAUSE": "The priest's desperate flight and prayers, combined with the arrival of dawn.",
+      "EFFECT": "The priest is saved, his faith in Buddha is affirmed, and he avoids the haunted place.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Priest",
+      "TARGET": "Old Woman / Goblin",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Old Woman / Goblin",
+      "TARGET": "Priest",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "Buddha",
+      "TARGET": "Priest",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "HELPER_APPEARS",
+    "ORDEAL",
+    "TRANSFORMATION",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "gemini:gemini-2.5-flash",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 8791,
+    "excerpt_chars": 8791
+  }
+}

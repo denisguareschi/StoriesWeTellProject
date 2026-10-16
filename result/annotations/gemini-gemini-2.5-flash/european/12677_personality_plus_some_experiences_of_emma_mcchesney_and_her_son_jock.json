@@ -1,0 +1,167 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Hero's Journey",
+  "SETTING_DOMAIN": "Professional and Organizational",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Emma McChesney",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "From a mother whose primary purpose is her son to an independent woman finding new purpose and love.",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Jock McChesney",
+      "ROLE": "DEUTERAGONIST",
+      "TRANSFORMATION": "From a young man needing guidance to a successful, assured professional.",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 3
+    },
+    {
+      "CHARACTER": "T.A. Buck",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "NONE",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Sam Hupp",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "NONE",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Bartholomew Berg",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "NONE",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Mother's bedroom",
+    "Office",
+    "Train station"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Emma McChesney advises her son Jock on his attire, implying he needs to present himself more professionally for his career.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Emma McChesney",
+        "Jock McChesney"
+      ],
+      "LOCATION": "Mother's bedroom",
+      "CAUSE": "Story opening",
+      "EFFECT": "Jock becomes aware of the need to adapt his image for professional success.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "During a business meeting, Emma McChesney's practical advertising ideas for everyday women are dismissed by colleagues in favor of novelty.",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Emma McChesney",
+        "Sam Hupp",
+        "T.A. Buck",
+        "Bartholomew Berg"
+      ],
+      "LOCATION": "Office",
+      "CAUSE": "Emma's participation in the advertising project and differing business philosophies.",
+      "EFFECT": "Emma feels silenced and distressed, but her perspective is noted by Bartholomew Berg.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 3,
+      "EVENT": "Jock McChesney departs for Chicago, appearing successful and assured, having made a place in the world.",
+      "FUNCTION": "TRANSFORMATION",
+      "CHARACTERS": [
+        "Jock McChesney",
+        "Emma McChesney",
+        "T.A. Buck",
+        "Sam Hupp"
+      ],
+      "LOCATION": "Train station",
+      "CAUSE": "Jock's personal growth and career development over the preceding weeks.",
+      "EFFECT": "Emma feels exultant and proud of Jock's achievement, but also a sense of emptiness.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Emma McChesney expresses profound loneliness and fear of her empty home after Jock's departure, longing for someone to care for.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Emma McChesney",
+        "T.A. Buck"
+      ],
+      "LOCATION": "Office",
+      "CAUSE": "Jock's successful departure and Emma's realization of her changed role as a mother.",
+      "EFFECT": "T.A. Buck recognizes Emma's deep need for companionship and purpose.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "T.A. Buck proposes marriage to Emma McChesney, and she accepts, finding a new companion and purpose in her life.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Emma McChesney",
+        "T.A. Buck"
+      ],
+      "LOCATION": "Office",
+      "CAUSE": "Emma's expressed desire for someone to worry about and T.A. Buck's affection for her.",
+      "EFFECT": "Emma embarks on a new personal chapter, overcoming her loneliness.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Emma McChesney",
+      "TARGET": "Jock McChesney",
+      "TYPE": "BONDS_WITH"
+    },
+    {
+      "SOURCE": "Emma McChesney",
+      "TARGET": "Jock McChesney",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "T.A. Buck",
+      "TARGET": "Emma McChesney",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Sam Hupp",
+      "TARGET": "Emma McChesney",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Emma McChesney",
+      "TARGET": "T.A. Buck",
+      "TYPE": "BONDS_WITH"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "ORDEAL",
+    "TRANSFORMATION",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "gemini:gemini-2.5-flash",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 144600,
+    "excerpt_chars": 12009
+  }
+}

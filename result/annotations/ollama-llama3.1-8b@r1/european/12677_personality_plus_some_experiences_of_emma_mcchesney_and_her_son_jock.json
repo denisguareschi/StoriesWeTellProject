@@ -1,0 +1,183 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Cautionary Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Emma McChesney",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "From a mother to a woman who has a new sense of purpose and fulfillment",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Jock McChesney",
+      "ROLE": "DEUTERAGONIST",
+      "TRANSFORMATION": "From a young man to a confident and successful adult",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 1
+    },
+    {
+      "CHARACTER": "T.A. Buck",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "From a colleague to a romantic partner",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Sam Hupp",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "None",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": 2
+    },
+    {
+      "CHARACTER": "Hopper",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "None",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": 2
+    },
+    {
+      "CHARACTER": "Bartholomew Berg",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "None",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": 2
+    },
+    {
+      "CHARACTER": "Grace Galt",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "None",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Chicago",
+    "New York"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Emma McChesney's son Jock is about to leave for Chicago",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Jock McChesney",
+        "Emma McChesney"
+      ],
+      "LOCATION": "New York",
+      "CAUSE": "Story opening",
+      "EFFECT": "Sets the story in motion",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Emma McChesney and her colleagues discuss advertising strategies for Featherloom petticoats",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Emma McChesney",
+        "T.A. Buck",
+        "Sam Hupp",
+        "Hopper",
+        "Bartholomew Berg"
+      ],
+      "LOCATION": "New York",
+      "CAUSE": "Emma McChesney's son is leaving for Chicago",
+      "EFFECT": "Introduces the theme of advertising and consumerism",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Emma McChesney realizes that she has been neglecting her own needs and desires",
+      "FUNCTION": "ORDEAL",
+      "CHARACTERS": [
+        "Emma McChesney"
+      ],
+      "LOCATION": "New York",
+      "CAUSE": "Her son's departure and her own feelings of loneliness",
+      "EFFECT": "Creates tension and conflict within Emma McChesney",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "T.A. Buck proposes to Emma McChesney",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "T.A. Buck",
+        "Emma McChesney"
+      ],
+      "LOCATION": "New York",
+      "CAUSE": "Emma McChesney's emotional state and her desire for companionship",
+      "EFFECT": "Resolves the conflict and tension within Emma McChesney",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Emma McChesney accepts T.A. Buck's proposal",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "Emma McChesney",
+        "T.A. Buck"
+      ],
+      "LOCATION": "New York",
+      "CAUSE": "T.A. Buck's proposal and Emma McChesney's emotional state",
+      "EFFECT": "Concludes the story on a positive note",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Emma McChesney",
+      "TARGET": "Jock McChesney",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "T.A. Buck",
+      "TARGET": "Emma McChesney",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Sam Hupp",
+      "TARGET": "Emma McChesney",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Hopper",
+      "TARGET": "Emma McChesney",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Bartholomew Berg",
+      "TARGET": "Emma McChesney",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "QUEST",
+    "ORDEAL",
+    "HELPER_APPEARS",
+    "MORAL_REWARD"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [
+      "CHANGE_EVENT"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.5,
+    "seed": 1,
+    "attempts": 1,
+    "source_chars": 144600,
+    "excerpt_chars": 12009
+  }
+}

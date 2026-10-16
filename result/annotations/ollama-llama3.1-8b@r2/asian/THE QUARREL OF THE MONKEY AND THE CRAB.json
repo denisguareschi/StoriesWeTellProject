@@ -1,0 +1,175 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Tragedy",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "monkey",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "From cunning to punished",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "crab",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "From simple-minded to clever",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "young crab",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "From avenger to avenger and punisher",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "mortar",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "bee",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "chestnut",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "river bank",
+    "forest",
+    "stones along the river-side",
+    "home of the monkey",
+    "home of the crab",
+    "gate of the crab"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "A monkey and a crab were playing together along the bank of a river.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "monkey",
+        "crab"
+      ],
+      "LOCATION": "river bank",
+      "CAUSE": "Story opening",
+      "EFFECT": "The story begins",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "The monkey and the crab exchanged a rice-dumpling for a persimmon-seed.",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "monkey",
+        "crab"
+      ],
+      "LOCATION": "river bank",
+      "CAUSE": "The monkey's persuasion",
+      "EFFECT": "The persimmon-seed is given to the crab",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "The crab's persimmon-seed grew into a tree and bore fruit.",
+      "FUNCTION": "TRANSFORMATION",
+      "CHARACTERS": [
+        "crab"
+      ],
+      "LOCATION": "home of the crab",
+      "CAUSE": "The seed was sown",
+      "EFFECT": "The tree grows and bears fruit",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "The monkey killed the crab to get the persimmons.",
+      "FUNCTION": "BETRAYAL",
+      "CHARACTERS": [
+        "monkey",
+        "crab"
+      ],
+      "LOCATION": "home of the crab",
+      "CAUSE": "The monkey's greed",
+      "EFFECT": "The crab is killed",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "The young crab avenged his father's death by killing the monkey.",
+      "FUNCTION": "SACRIFICE",
+      "CHARACTERS": [
+        "young crab",
+        "monkey"
+      ],
+      "LOCATION": "gate of the crab",
+      "CAUSE": "The young crab's desire for revenge",
+      "EFFECT": "The monkey is punished",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "monkey",
+      "TARGET": "crab",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "young crab",
+      "TARGET": "monkey",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "mortar",
+      "TARGET": "monkey",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "bee",
+      "TARGET": "monkey",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "chestnut",
+      "TARGET": "monkey",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "QUEST",
+    "TRANSFORMATION",
+    "BETRAYAL",
+    "SACRIFICE"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.5,
+    "seed": 2,
+    "attempts": 1,
+    "source_chars": 14241,
+    "excerpt_chars": 11870
+  }
+}

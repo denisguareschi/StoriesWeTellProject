@@ -1,0 +1,53 @@
+{
+  "annotator": "ollama-llama3.1-8b",
+  "grounding": {
+    "asian": {
+      "grounding_rate": 1.0,
+      "mean_schema_repairs": 0.75,
+      "stories": 20
+    },
+    "european": {
+      "grounding_rate": 0.9831932773109243,
+      "mean_schema_repairs": 0.65,
+      "stories": 20
+    },
+    "south_african": {
+      "grounding_rate": 0.9903846153846154,
+      "mean_schema_repairs": 0.55,
+      "stories": 20
+    }
+  },
+  "litbank": {
+    "n_novels": 20,
+    "llm_recall_at_k": 0.39333333333333337,
+    "spacy_recall_at_k": 0.4800000000000001
+  },
+  "reliability_vs_ollama-llama3.1-8b@r1": {
+    "n": 60,
+    "arc_agreement": 0.9833333333333333,
+    "arc_kappa": 0.9716446124763705,
+    "function_position_agreement": 0.5233333333333333,
+    "function_kappa": 0.4536075909061962,
+    "mean_pair_composite": 0.41790597905512333,
+    "mean_nonpair_composite": 0.2021572552777206,
+    "retrieval_top1": 0.5833333333333334,
+    "chance_top1": 0.016666666666666666
+  },
+  "manual": {
+    "n_stories": 12,
+    "arc_agreement": 0.4166666666666667,
+    "function_agreement": 0.55,
+    "function_kappa": 0.4951698348395138
+  },
+  "reliability_vs_gemini-gemini-2.5-flash": {
+    "n": 60,
+    "arc_agreement": 0.4166666666666667,
+    "arc_kappa": 0.2582126457082302,
+    "function_position_agreement": 0.44,
+    "function_kappa": 0.3639335159079723,
+    "mean_pair_composite": 0.2807945233172962,
+    "mean_nonpair_composite": 0.18779310456251605,
+    "retrieval_top1": 0.2,
+    "chance_top1": 0.016666666666666666
+  }
+}

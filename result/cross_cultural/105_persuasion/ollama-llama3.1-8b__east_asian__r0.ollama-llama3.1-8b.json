@@ -1,0 +1,185 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Sir Tadakatsu Elliot",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "learns to let go of past and appreciate present",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Lady Hiroko",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "null",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Lady Noriko",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "null",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Elizabeth Elliot",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "null",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Anne Elliot",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "null",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Captain Benwick",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "null",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Captain Wentworth",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "null",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Mary Musgrove",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "null",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Kellynch Hall",
+    "Somersetshire",
+    "Kellynch"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Sir Tadakatsu Elliot dwelled in Kellynch Hall, a stately residence nestled in the verdant heart of Somersetshire.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Sir Tadakatsu Elliot"
+      ],
+      "LOCATION": "Kellynch Hall",
+      "CAUSE": "Story opening",
+      "EFFECT": "Introduction to the protagonist and setting",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Lady Hiroko's passing had left a void in Sir Tadakatsu's life, but he found solace in the knowledge that she had guided their daughters with the utmost care.",
+      "FUNCTION": "SACRIFICE",
+      "CHARACTERS": [
+        "Sir Tadakatsu Elliot",
+        "Lady Hiroko"
+      ],
+      "LOCATION": "Kellynch Hall",
+      "CAUSE": "Lady Hiroko's passing",
+      "EFFECT": "Introduction to the protagonist's emotional state",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "The arrival of the Musgrove children brought fresh vitality to Kellynch Hall, and Sir Tadakatsu's attention turned to the young Mary.",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Sir Tadakatsu Elliot",
+        "Mary Musgrove"
+      ],
+      "LOCATION": "Kellynch Hall",
+      "CAUSE": "Arrival of the Musgrove children",
+      "EFFECT": "Introduction to the new characters and plot development",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Anne Elliot's heart, once heavy with the weight of unrequited affection, now beat with renewed hope as she came to know Captain Wentworth.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Anne Elliot",
+        "Captain Wentworth"
+      ],
+      "LOCATION": "Kellynch Hall",
+      "CAUSE": "Anne Elliot's encounter with Captain Wentworth",
+      "EFFECT": "Introduction to the romantic plot development",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "As the tale of the Elliot family unfolded, Sir Tadakatsu Elliot learned to let go of past and appreciate present.",
+      "FUNCTION": "TRANSFORMATION",
+      "CHARACTERS": [
+        "Sir Tadakatsu Elliot"
+      ],
+      "LOCATION": "Kellynch Hall",
+      "CAUSE": "The passing of time and the unfolding of the family's tale",
+      "EFFECT": "The protagonist's transformation and the resolution of the story",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Sir Tadakatsu Elliot",
+      "TARGET": "Lady Hiroko",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Sir Tadakatsu Elliot",
+      "TARGET": "Lady Noriko",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Anne Elliot",
+      "TARGET": "Captain Wentworth",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Sir Tadakatsu Elliot",
+      "TARGET": "Mary Musgrove",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Captain Benwick",
+      "TARGET": "Mary Musgrove",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "SACRIFICE",
+    "QUEST",
+    "HELPER_APPEARS",
+    "TRANSFORMATION"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 3123,
+    "excerpt_chars": 3123
+  }
+}

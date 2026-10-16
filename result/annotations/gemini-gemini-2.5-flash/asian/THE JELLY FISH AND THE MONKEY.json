@@ -1,0 +1,175 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Origin Myth",
+  "SETTING_DOMAIN": "Spiritual and Religious",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Jellyfish",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "Lost his shell and bones, becoming soft and boneless.",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Monkey",
+      "ROLE": "TRICKSTER",
+      "TRANSFORMATION": "NONE",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Dragon King",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "NONE",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Dragon Queen",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "NONE",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Doctor",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "NONE",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Chief Steward",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "NONE",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Palace of Rin Jin",
+    "Monkey Island",
+    "Sea"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "The Dragon King marries, and his Queen falls gravely ill, requiring a monkey's liver as a cure.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Dragon King",
+        "Dragon Queen",
+        "Doctor"
+      ],
+      "LOCATION": "Palace of Rin Jin",
+      "CAUSE": "Story opening",
+      "EFFECT": "The King seeks a cure, leading to a quest.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "The Jellyfish is chosen and departs on a mission to Monkey Island to retrieve a live monkey's liver.",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "Jellyfish",
+        "Dragon King",
+        "Chief Steward"
+      ],
+      "LOCATION": "Palace of Rin Jin",
+      "CAUSE": "The Queen's illness and the doctor's prescription.",
+      "EFFECT": "Jellyfish travels to Monkey Island and encounters the Monkey.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "The Jellyfish deceives the Monkey into riding on his back, but foolishly reveals the true purpose of the journey.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Jellyfish",
+        "Monkey"
+      ],
+      "LOCATION": "Sea",
+      "CAUSE": "Jellyfish's mission to get the liver.",
+      "EFFECT": "Monkey becomes aware of the deception and plans his escape.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "The Monkey, realizing the danger, tricks the Jellyfish into returning to Monkey Island to retrieve his 'left-behind' liver.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Monkey",
+        "Jellyfish"
+      ],
+      "LOCATION": "Sea",
+      "CAUSE": "Jellyfish's revelation of the plan.",
+      "EFFECT": "Monkey escapes, and Jellyfish fails his mission.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "The Jellyfish returns to the Palace, confesses his failure, and is severely punished by the Dragon King, losing his bones.",
+      "FUNCTION": "TRANSFORMATION",
+      "CHARACTERS": [
+        "Jellyfish",
+        "Dragon King",
+        "Chief Steward"
+      ],
+      "LOCATION": "Palace of Rin Jin",
+      "CAUSE": "Jellyfish's failure and confession.",
+      "EFFECT": "Jellyfish becomes boneless, establishing the origin of jellyfish.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Dragon King",
+      "TARGET": "Dragon Queen",
+      "TYPE": "BONDS_WITH"
+    },
+    {
+      "SOURCE": "Dragon King",
+      "TARGET": "Jellyfish",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Jellyfish",
+      "TARGET": "Monkey",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "Monkey",
+      "TARGET": "Jellyfish",
+      "TYPE": "DECEIVES"
+    },
+    {
+      "SOURCE": "Doctor",
+      "TARGET": "Dragon King",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "QUEST",
+    "TRICKSTER",
+    "TRANSFORMATION"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [],
+    "model": "gemini:gemini-2.5-flash",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 16706,
+    "excerpt_chars": 11959
+  }
+}

@@ -1,0 +1,223 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "man",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "learns to appreciate his loyal dog",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 1
+    },
+    {
+      "CHARACTER": "dog",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "uses his intelligence to protect his master",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "bull",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "joins the dog in his plan",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "ram",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "joins the dog in his plan",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "donkey",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "joins the dog in his plan",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "cat",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "joins the dog in his plan",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "goose",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "joins the dog in his plan",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "cock",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "joins the dog in his plan",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "robber",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "tries to defend himself but fails",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    }
+  ],
+  "LOCATIONS": [
+    "the veldt",
+    "the land of the aged",
+    "the man's house",
+    "the house of the robbers"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "The man wants to put aside his old dog.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "man",
+        "dog"
+      ],
+      "LOCATION": "the man's house",
+      "CAUSE": "Story opening",
+      "EFFECT": "The dog decides to leave.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "The dog meets the bull in the veldt and convinces him to join the journey.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "dog",
+        "bull"
+      ],
+      "LOCATION": "the veldt",
+      "CAUSE": "The dog's plan",
+      "EFFECT": "The bull joins the dog.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "The group of animals decides to go to the land of the aged.",
+      "FUNCTION": "QUEST",
+      "CHARACTERS": [
+        "dog",
+        "bull",
+        "ram",
+        "donkey",
+        "cat",
+        "goose",
+        "cock"
+      ],
+      "LOCATION": "the land of the aged",
+      "CAUSE": "The dog's plan",
+      "EFFECT": "The group sets out on their journey.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "The group of animals enters the house of the robbers and eats the food.",
+      "FUNCTION": "MORAL_REWARD",
+      "CHARACTERS": [
+        "dog",
+        "bull",
+        "ram",
+        "donkey",
+        "cat",
+        "goose",
+        "cock"
+      ],
+      "LOCATION": "the house of the robbers",
+      "CAUSE": "The group's hunger",
+      "EFFECT": "The group eats the food.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "The robber tries to defend himself but is attacked by the group of animals.",
+      "FUNCTION": "BETRAYAL",
+      "CHARACTERS": [
+        "robber",
+        "dog",
+        "bull",
+        "ram",
+        "donkey",
+        "cat",
+        "goose",
+        "cock"
+      ],
+      "LOCATION": "the house of the robbers",
+      "CAUSE": "The robber's attempt to defend himself",
+      "EFFECT": "The robber is attacked and injured.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "dog",
+      "TARGET": "bull",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "dog",
+      "TARGET": "ram",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "dog",
+      "TARGET": "donkey",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "dog",
+      "TARGET": "cat",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "dog",
+      "TARGET": "goose",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "dog",
+      "TARGET": "cock",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "robber",
+      "TARGET": "dog",
+      "TYPE": "OPPOSES"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "HELPER_APPEARS",
+    "QUEST",
+    "MORAL_REWARD",
+    "BETRAYAL"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [
+      "CHANGE_EVENT"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.5,
+    "seed": 1,
+    "attempts": 1,
+    "source_chars": 4687,
+    "excerpt_chars": 4687
+  }
+}

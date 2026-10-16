@@ -1,0 +1,136 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Jackal",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "Successful trickster",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Wolf",
+      "ROLE": "TRICKSTER",
+      "TRANSFORMATION": "Victim of trick",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Driver",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Leader",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "road",
+    "sea"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Jackal tries to get into the wagon but fails.",
+      "FUNCTION": "CALL_TO_ADVENTURE",
+      "CHARACTERS": [
+        "Jackal"
+      ],
+      "LOCATION": "road",
+      "CAUSE": "Story opening",
+      "EFFECT": "Jackal comes up with a plan.",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Jackal lies in the road and gets thrown into the wagon.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Jackal"
+      ],
+      "LOCATION": "road",
+      "CAUSE": "ID 1",
+      "EFFECT": "Jackal gets into the wagon.",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Jackal throws out the fish and gets out of the wagon.",
+      "FUNCTION": "SACRIFICE",
+      "CHARACTERS": [
+        "Jackal"
+      ],
+      "LOCATION": "road",
+      "CAUSE": "ID 2",
+      "EFFECT": "Jackal gets a great prize.",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Wolf lies in the road and gets kicked and thrashed by the driver.",
+      "FUNCTION": "BETRAYAL",
+      "CHARACTERS": [
+        "Wolf",
+        "Driver"
+      ],
+      "LOCATION": "road",
+      "CAUSE": "ID 3",
+      "EFFECT": "Wolf gets hurt.",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Wolf tells Jackal about his misfortune, and Jackal pretends to comfort him.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Wolf",
+        "Jackal"
+      ],
+      "LOCATION": "road",
+      "CAUSE": "ID 4",
+      "EFFECT": "Wolf gets tricked again.",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Jackal",
+      "TARGET": "Wolf",
+      "TYPE": "DECEIVES"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "CALL_TO_ADVENTURE",
+    "TRICKSTER",
+    "SACRIFICE",
+    "BETRAYAL"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [
+      "CHANGE_EVENT"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.5,
+    "seed": 1,
+    "attempts": 1,
+    "source_chars": 1334,
+    "excerpt_chars": 1334
+  }
+}

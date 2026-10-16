@@ -1,0 +1,165 @@
+{
+  "SCHEMA_VERSION": 2,
+  "NARRATIVE_ARC": "Trickster Tale",
+  "SETTING_DOMAIN": "Social and Familiar",
+  "CHARACTERS": [
+    {
+      "CHARACTER": "Jackal",
+      "ROLE": "PROTAGONIST",
+      "TRANSFORMATION": "uses cunning to deceive and manipulate others",
+      "TRANSFORMATION_TYPE": "GROWTH",
+      "CHANGE_EVENT": 5
+    },
+    {
+      "CHARACTER": "Tiger",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "trusting and naive",
+      "TRANSFORMATION_TYPE": "FALL",
+      "CHANGE_EVENT": 3
+    },
+    {
+      "CHARACTER": "Wolf",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Lion",
+      "ROLE": "ANTAGONIST",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": null
+    },
+    {
+      "CHARACTER": "Mrs. Tiger",
+      "ROLE": "HELPER",
+      "TRANSFORMATION": "none",
+      "TRANSFORMATION_TYPE": "NONE",
+      "CHANGE_EVENT": 4
+    },
+    {
+      "CHARACTER": "children",
+      "ROLE": "SECONDARY",
+      "TRANSFORMATION": "",
+      "TRANSFORMATION_TYPE": null,
+      "CHANGE_EVENT": null
+    }
+  ],
+  "LOCATIONS": [
+    "Jackal's dwelling",
+    "Tiger's farm",
+    "Boer's goose pen",
+    "neighborhood"
+  ],
+  "EVENTS": [
+    {
+      "ID": 1,
+      "EVENT": "Jackal convinces the neighbors that he is a 'progressive man' by speaking English and pretending to be well-educated.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Jackal"
+      ],
+      "LOCATION": "neighborhood",
+      "CAUSE": "Story opening",
+      "EFFECT": "Jackal gains reputation as a 'progressive man'",
+      "CAUSED_BY": []
+    },
+    {
+      "ID": 2,
+      "EVENT": "Jackal loses his tail in an iron trap, but convinces the other jackals that Lion has issued a proclamation making taillessness mandatory.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Jackal"
+      ],
+      "LOCATION": "Boer's goose pen",
+      "CAUSE": "Jackal's tail gets caught in a trap",
+      "EFFECT": "Jackals become tailless",
+      "CAUSED_BY": [
+        1
+      ]
+    },
+    {
+      "ID": 3,
+      "EVENT": "Tiger hires Jackal as a schoolmaster for his children, despite Jackal's lack of qualifications.",
+      "FUNCTION": "HELPER_APPEARS",
+      "CHARACTERS": [
+        "Tiger",
+        "Jackal"
+      ],
+      "LOCATION": "Tiger's farm",
+      "CAUSE": "Tiger wants his children to have a good education",
+      "EFFECT": "Jackal becomes schoolmaster",
+      "CAUSED_BY": [
+        2
+      ]
+    },
+    {
+      "ID": 4,
+      "EVENT": "Mrs. Tiger visits Jackal's dwelling to check on the children, but Jackal deceives her by showing her fake children.",
+      "FUNCTION": "TRICKSTER",
+      "CHARACTERS": [
+        "Jackal",
+        "Mrs. Tiger"
+      ],
+      "LOCATION": "Jackal's dwelling",
+      "CAUSE": "Mrs. Tiger wants to check on the children",
+      "EFFECT": "Mrs. Tiger is deceived",
+      "CAUSED_BY": [
+        3
+      ]
+    },
+    {
+      "ID": 5,
+      "EVENT": "Jackal and the children go on a picnic, and then Jackal and the children leave Tiger's farm for good, leaving behind a fake letter.",
+      "FUNCTION": "RETURN",
+      "CHARACTERS": [
+        "Jackal",
+        "children"
+      ],
+      "LOCATION": "Tiger's farm",
+      "CAUSE": "Jackal and the children have completed their education",
+      "EFFECT": "Jackal and the children leave Tiger's farm",
+      "CAUSED_BY": [
+        4
+      ]
+    }
+  ],
+  "RELATIONS": [
+    {
+      "SOURCE": "Jackal",
+      "TARGET": "Tiger",
+      "TYPE": "HELPS"
+    },
+    {
+      "SOURCE": "Jackal",
+      "TARGET": "Lion",
+      "TYPE": "OPPOSES"
+    },
+    {
+      "SOURCE": "Jackal",
+      "TARGET": "Mrs. Tiger",
+      "TYPE": "HELPS"
+    }
+  ],
+  "NARRATIVE_FUNCTIONS": [
+    "TRICKSTER",
+    "HELPER_APPEARS",
+    "RETURN"
+  ],
+  "_meta": {
+    "protocol": "v2-sampled-single-pass",
+    "derived": [
+      "CHANGE_EVENT"
+    ],
+    "issues": [
+      "event participant 'children' not in CHARACTERS: added as SECONDARY"
+    ],
+    "model": "ollama:llama3.1:8b",
+    "temperature": 0.0,
+    "seed": 0,
+    "attempts": 1,
+    "source_chars": 8231,
+    "excerpt_chars": 8231
+  }
+}
